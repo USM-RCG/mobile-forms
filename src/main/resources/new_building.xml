@@ -1,0 +1,98 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>New Building</h:title>
+        <model>
+            <instance>
+                <data id="new_building">
+                    <processedByMirth />
+                    <parentId />
+                    <fieldWorkerId />
+                    <visitId />
+                    <buildingNumber />
+                    <buildingString />
+                    <buildingId />
+                </data>
+            </instance>
+            <itext>
+                <translation lang="eng">
+                    <text id="/data/parentId:label">
+                        <value>Parent Id</value>
+                    </text>
+                    <text id="/data/parentId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldWorkerId:label">
+                        <value>Field Worker Id</value>
+                    </text>
+                    <text id="/data/fieldWorkerId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitId:label">
+                        <value>Visit Id</value>
+                    </text>
+                    <text id="/data/visitId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/buildingNumber:label">
+                        <value>Building Number</value>
+                    </text>
+                    <text id="/data/buildingNumber:hint">
+                        <value />
+                    </text>
+                    <text id="/data/buildingString:label">
+                        <value>Building String</value>
+                    </text>
+                    <text id="/data/buildingString:hint">
+                        <value />
+                    </text>
+                    <text id="/data/buildingId:label">
+                        <value>Building Id</value>
+                    </text>
+                    <text id="/data/buildingId:hint">
+                        <value />
+                    </text>
+                </translation>
+            </itext>
+            <bind nodeset="/data/processedByMirth" type="boolean" />
+            <bind nodeset="/data/parentId" type="string" required="true()" />
+            <bind nodeset="/data/fieldWorkerId" type="string"
+                required="true()" />
+            <bind nodeset="/data/visitId" type="string" required="true()" />
+            <bind nodeset="/data/buildingNumber" type="int"
+                required="true()" constraint="not(. &lt; 0 or . &gt; 99)" />
+            <bind nodeset="/data/buildingString" type="string"
+                readonly="true()"
+                calculate="if(/data/buildingNumber &lt; 10, concat('0', /data/buildingNumber), /data/buildingNumber)" />
+            <bind nodeset="/data/buildingId" type="string"
+                readonly="true()" calculate="concat(/data/parentId, 'E', /data/buildingString)" />
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/parentId">
+            <label ref="jr:itext('/data/parentId:label')" />
+            <hint ref="jr:itext('/data/parentId:hint')" />
+        </input>
+        <input ref="/data/fieldWorkerId">
+            <label ref="jr:itext('/data/fieldWorkerId:label')" />
+            <hint ref="jr:itext('/data/fieldWorkerId:hint')" />
+        </input>
+        <input ref="/data/visitId">
+            <label ref="jr:itext('/data/visitId:label')" />
+            <hint ref="jr:itext('/data/visitId:hint')" />
+        </input>
+        <input ref="/data/buildingNumber">
+            <label ref="jr:itext('/data/buildingNumber:label')" />
+            <hint ref="jr:itext('/data/buildingNumber:hint')" />
+        </input>
+        <input ref="/data/buildingString">
+            <label ref="jr:itext('/data/buildingString:label')" />
+            <hint ref="jr:itext('/data/buildingString:hint')" />
+        </input>
+        <input ref="/data/buildingId">
+            <label ref="jr:itext('/data/buildingId:label')" />
+            <hint ref="jr:itext('/data/buildingId:hint')" />
+        </input>
+    </h:body>
+</h:html>
