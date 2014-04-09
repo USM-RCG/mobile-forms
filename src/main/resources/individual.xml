@@ -1,0 +1,169 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Individual</h:title>
+        <model>
+            <instance>
+                <data id="individual">
+                    <processedByMirth />
+                    <individualId>abcde</individualId>
+                    <householdId>fghij</householdId>
+                    <individualName />
+                    <relationshipToGroupHead />
+                    <gender />
+                    <age />
+                </data>
+            </instance>
+            <itext>
+                <translation lang="eng">
+                    <text id="/data/individualId:label">
+                        <value>Individual Id</value>
+                    </text>
+                    <text id="/data/individualId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/householdId:label">
+                        <value>Household Id</value>
+                    </text>
+                    <text id="/data/householdId:hint">
+                        <value></value>
+                    </text>
+                    <text id="/data/individualName:label">
+                        <value>Name</value>
+                    </text>
+                    <text id="/data/individualName:hint">
+                        <value />
+                    </text>
+                    <text id="/data/gender:label">
+                        <value>Gender</value>
+                    </text>
+                    <text id="/data/gender:hint">
+                        <value />
+                    </text>
+                    <text id="/data/gender:option0">
+                        <value>Male</value>
+                    </text>
+                    <text id="/data/gender:option1">
+                        <value>Female</value>
+                    </text>
+                    <text id="/data/age:label">
+                        <value>Age</value>
+                    </text>
+                    <text id="/data/age:hint">
+                        <value />
+                    </text>
+                    <text id="/data/relationshipToGroupHead:label">
+                        <value>Relationship to Group Head</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:hint">
+                        <value />
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option0">
+                        <value>Head (self)</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option1">
+                        <value>Spouse</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option2">
+                        <value>Son/Daughter</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option3">
+                        <value>Brother/Sister</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option4">
+                        <value>Parent</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option5">
+                        <value>Grandchild</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option6">
+                        <value>Not Related</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option7">
+                        <value>Other Relative</value>
+                    </text>
+                    <text id="/data/relationshipToGroupHead:option8">
+                        <value>Don't Know</value>
+                    </text>
+                </translation>
+            </itext>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()"/>
+            <bind nodeset="/data/individualId" type="string" readonly="true()" />
+            <bind nodeset="/data/householdId" type="string" readonly="true()" />
+            <bind nodeset="/data/individualName" type="string" required="true()" />
+            <bind nodeset="/data/relationshipToGroupHead" type="select1" required="true()"/>
+            <bind nodeset="/data/gender" type="select1" required="true()"/>
+            <bind nodeset="/data/age" type="int" required="true()"/>
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/individualId">
+            <label ref="jr:itext('/data/individualId:label')" />
+            <hint ref="jr:itext('/data/individualId:hint')" />
+        </input>
+        <input ref="/data/householdId">
+            <label ref="jr:itext('/data/householdId:label')" />
+            <hint ref="jr:itext('/data/householdId:hint')" />
+        </input>
+        <select1 ref="/data/relationshipToGroupHead">
+            <label ref="jr:itext('/data/relationshipToGroupHead:label')" />
+            <hint ref="jr:itext('/data/relationshipToGroupHead:hint')" />
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option0')" />
+                <value>1</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option1')" />
+                <value>2</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option2')" />
+                <value>3</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option3')" />
+                <value>4</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option4')" />
+                <value>5</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option5')" />
+                <value>6</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option6')" />
+                <value>7</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option7')" />
+                <value>8</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/relationshipToGroupHead:option8')" />
+                <value>9</value>
+            </item>
+        </select1>
+        <input ref="/data/individualName">
+            <label ref="jr:itext('/data/individualName:label')" />
+            <hint ref="jr:itext('/data/individualName:hint')" />
+        </input>
+        <select1 ref="/data/gender">
+            <label ref="jr:itext('/data/gender:label')" />
+            <hint ref="jr:itext('/data/gender:hint')" />
+            <item>
+                <label ref="jr:itext('/data/gender:option0')" />
+                <value>1</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/gender:option1')" />
+                <value>2</value>
+            </item>
+         </select1>
+        <input ref="/data/age">
+            <label ref="jr:itext('/data/age:label')" />
+            <hint ref="jr:itext('/data/age:hint')" />
+        </input>
+    </h:body>
+</h:html>
