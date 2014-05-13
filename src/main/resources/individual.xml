@@ -1,6 +1,6 @@
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
-    <h:head>
+    <h:head><!-- ODK Aggregate upload time: 2014-04-30T18:14:43.048+0000 on http://130.111.132.88:8080/ODKAggregate -->
         <h:title>Individual</h:title>
         <model>
             <instance>
@@ -21,6 +21,8 @@
 		    <individualPhoneNumber />
 		    <individualOtherPhoneNumber />
    		    <individualLanguagePreference />
+		    <individualPointOfContactName />
+   		    <individualPointOfContactPhoneNumber />
 		    <individualDip />
 		    <individualMemberStatus/>
                 </data>
@@ -162,6 +164,18 @@
                     <text id="/data/individualOtherPhoneNumber:hint">
                         <value />
                     </text>
+		    <text id="/data/individualPointOfContactName:label">
+                        <value>Point of Contact Name</value>
+                    </text>
+                    <text id="/data/individualPointOfContactName:hint">
+                        <value />
+                    </text>
+		    <text id="/data/individualPointOfContactPhoneNumber:label">
+                        <value>Point of Contact Phone Number</value>
+                    </text>
+                    <text id="/data/individualPointOfContactPhoneNumber:hint">
+                        <value />
+                    </text>
 		    <text id="/data/individualLanguagePreference:label">
                         <value>Language Preference</value>
                     </text>
@@ -176,6 +190,12 @@
                     </text>
                     <text id="/data/individualLanguagePreference:option2">
                         <value>Bube</value>
+                    </text>
+		    <text id="/data/individualLanguagePreference:option3">
+                        <value>English</value>
+                    </text>
+                    <text id="/data/individualLanguagePreference:option4">
+                        <value>French</value>
                     </text>
                     <text id="/data/individualDip:label">
                         <value>DIP</value>
@@ -223,11 +243,22 @@
 
             <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()"/>
 
-            <bind nodeset="/data/individualPhoneNumber" type="int" required="true()" constraint="(regex(., '^[0-9]{9}$'))"
-										 constraintMsg="Phone Number must be 9 digits."/>
 
-            <bind nodeset="/data/individualOtherPhoneNumber" type="int" required="true()" constraint="(regex(., '^[0-9]{9}$'))"
-										 constraintMsg="Phone Number must be 9 digits."/>
+
+            <bind nodeset="/data/individualPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
+										 jr:constraintMsg="Phone Number must be 9 digits."/>
+
+
+            <bind nodeset="/data/individualOtherPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
+										 jr:constraintMsg="Phone Number must be 9 digits."/>
+
+	    <bind nodeset="/data/individualPointOfContactName" type="string" required="false()" />
+
+
+
+	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
+										 jr:constraintMsg="Phone Number must be 9 digits."/>
+
 
             <bind nodeset="/data/individualLanguagePreference" type="select1" required="true()"/>
 
@@ -348,6 +379,15 @@
 		    <label ref="jr:itext('/data/individualOtherPhoneNumber:label')" />
 		    <hint ref="jr:itext('/data/individualOtherPhoneNumber:hint')" />
 		</input>
+		<input ref="/data/individualPointOfContactName">
+		    <label ref="jr:itext('/data/individualPointOfContactName:label')" />
+		    <hint ref="jr:itext('/data/individualPointOfContactName:hint')" />
+		</input>
+		<input ref="/data/individualPointOfContactPhoneNumber">
+		    <label ref="jr:itext('/data/individualPointOfContactPhoneNumber:label')" />
+		    <hint ref="jr:itext('/data/individualPointOfContactPhoneNumber:hint')" />
+		</input>
+
 	</group>
 
         <select1 ref="/data/individualLanguagePreference">
@@ -363,7 +403,15 @@
             </item>
             <item>
                 <label ref="jr:itext('/data/individualLanguagePreference:option2')" />
-                <value>DIP</value>
+                <value>Bube</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/individualLanguagePreference:option3')" />
+                <value>English</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/individualLanguagePreference:option4')" />
+                <value>French</value>
             </item>
         </select1>
         <input ref="/data/individualDip">
