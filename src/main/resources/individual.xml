@@ -153,7 +153,7 @@
                         <value>Don't Know</value>
                     </text>
 		    <text id="/data/individualPhoneNumber:label">
-                        <value>Personal Phone Number</value>
+                        <value>Personal Phone Numberhurr</value>
                     </text>
                     <text id="/data/individualPhoneNumber:hint">
                         <value />
@@ -243,23 +243,16 @@
 
             <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()"/>
 
-
-
             <bind nodeset="/data/individualPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
-
-
             <bind nodeset="/data/individualOtherPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
-
 	    <bind nodeset="/data/individualPointOfContactName" type="string" required="false()" />
 
-
-
-	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
+	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0 and (not(selected(/data/individualAgeUnits, 'Months')) and not(/data/individualAge &lt; 12))"
+jr:requiredMsg="hueruberbl"
+ constraint="(regex(., '^[0-9]{9}$'))"
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
-
-
             <bind nodeset="/data/individualLanguagePreference" type="select1" required="true()"/>
 
 	    <bind nodeset="/data/individualDip" type="int" required="true()" constraint="not(. &lt; 0)" />
@@ -379,6 +372,9 @@
 		    <label ref="jr:itext('/data/individualOtherPhoneNumber:label')" />
 		    <hint ref="jr:itext('/data/individualOtherPhoneNumber:hint')" />
 		</input>
+	</group>
+
+	<group appearance="field-list">
 		<input ref="/data/individualPointOfContactName">
 		    <label ref="jr:itext('/data/individualPointOfContactName:label')" />
 		    <hint ref="jr:itext('/data/individualPointOfContactName:hint')" />
@@ -387,7 +383,6 @@
 		    <label ref="jr:itext('/data/individualPointOfContactPhoneNumber:label')" />
 		    <hint ref="jr:itext('/data/individualPointOfContactPhoneNumber:hint')" />
 		</input>
-
 	</group>
 
         <select1 ref="/data/individualLanguagePreference">
