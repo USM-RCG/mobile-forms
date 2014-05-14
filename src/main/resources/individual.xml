@@ -6,16 +6,16 @@
             <instance>
                 <data id="individual">	     
                     <processedByMirth />
-		    <fieldworkerExtId />	
+		    <fieldWorkerExtId />
 		    <collectionDateTime />
 		    <householdExtId />
                     <individualExtId />
                     <individualFirstName />
 		    <individualLastName />
 		    <individualOtherNames />
-	            <individualDateOfBirth/>
                     <individualAge />
                     <individualAgeUnits />
+	            <individualDateOfBirth/>
                     <individualGender />
                     <individualRelationshipToHeadOfHousehold />
 		    <individualPhoneNumber />
@@ -29,10 +29,10 @@
             </instance>
             <itext>
                 <translation lang="eng">
-                    <text id="/data/fieldworkerExtId:label">
+                    <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext Id</value>
                     </text>
-                    <text id="/data/fieldworkerExtId:hint">
+                    <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
 
@@ -79,13 +79,6 @@
                         <value />
                     </text>
 
-		    <text id="/data/individualDateOfBirth:label">
-                        <value>Date of Birth</value>
-                    </text>
-                    <text id="/data/individualDateOfBirth:hint">
-                        <value />
-                    </text>
-
                     <text id="/data/individualAge:label">
                         <value>Age</value>
                     </text>
@@ -104,6 +97,13 @@
                     </text>
                     <text id="/data/individualAgeUnits:option1">
                         <value>Months</value>
+                    </text>
+
+		    <text id="/data/individualDateOfBirth:label">
+                        <value>Date of Birth</value>
+                    </text>
+                    <text id="/data/individualDateOfBirth:hint">
+                        <value />
                     </text>
 
                     <text id="/data/individualGender:label">
@@ -153,7 +153,7 @@
                         <value>Don't Know</value>
                     </text>
 		    <text id="/data/individualPhoneNumber:label">
-                        <value>Personal Phone Numberhurr</value>
+                        <value>Personal Phone Number</value>
                     </text>
                     <text id="/data/individualPhoneNumber:hint">
                         <value />
@@ -219,7 +219,7 @@
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()"/>
 
-            <bind nodeset="/data/fieldworkerExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
 
             <bind nodeset="/data/collectionDateTime" type="string" readonly="true()" />
 
@@ -231,13 +231,13 @@
 
 	    <bind nodeset="/data/individualLastName" type="string" required="true()" />
 
-	    <bind nodeset="/data/individualOtherNames" type="string" required="true()" />
-
-	    <bind nodeset="/data/individualDateOfBirth" type="date" required="true()" />
+	    <bind nodeset="/data/individualOtherNames" type="string" required="false()" />
 
 	    <bind nodeset="/data/individualAge" type="int" required="true()" constraint="not(. &lt; 0)" />
 
 	    <bind nodeset="/data/individualAgeUnits" type="select1" required="true()" />
+
+	    <bind nodeset="/data/individualDateOfBirth" type="date" required="true()" />
 
 	    <bind nodeset="/data/individualGender" type="select1" required="true()" />
 
@@ -259,9 +259,9 @@ jr:requiredMsg="hueruberbl"
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/fieldworkerExtId">
-            <label ref="jr:itext('/data/fieldworkerExtId:label')" />
-            <hint ref="jr:itext('/data/fieldworkerExtId:hint')" />
+        <input ref="/data/fieldWorkerExtId">
+            <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+            <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
         </input>
         <input ref="/data/collectionDateTime">
             <label ref="jr:itext('/data/collectionDateTime:label')" />
@@ -288,10 +288,6 @@ jr:requiredMsg="hueruberbl"
             <label ref="jr:itext('/data/individualOtherNames:label')" />
             <hint ref="jr:itext('/data/individualOtherNames:hint')" />
         </input>
-        <input ref="/data/individualDateOfBirth">
-            <label ref="jr:itext('/data/individualDateOfBirth:label')" />
-            <hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
-        </input>
 	<group appearance="field-list">
 		<input ref="/data/individualAge">
 		    <label ref="jr:itext('/data/individualAge:label')" />
@@ -310,6 +306,10 @@ jr:requiredMsg="hueruberbl"
 		    </item>
 		 </select1>
 	</group>
+        <input ref="/data/individualDateOfBirth">
+            <label ref="jr:itext('/data/individualDateOfBirth:label')" />
+            <hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
+        </input>
         <select1 ref="/data/individualGender">
             <label ref="jr:itext('/data/individualGender:label')" />
             <hint ref="jr:itext('/data/individualGender:hint')" />
