@@ -249,10 +249,12 @@
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
 	    <bind nodeset="/data/individualPointOfContactName" type="string" required="false()" />
 
-	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0 and (not(selected(/data/individualAgeUnits, 'Months')) and not(/data/individualAge &lt; 12))"
-jr:requiredMsg="hueruberbl"
- constraint="(regex(., '^[0-9]{9}$'))"
-										 jr:constraintMsg="Phone Number must be 9 digits."/>
+	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0 )"
+												 constraint="(regex(., '^[0-9]{9}$'))"
+												 jr:constraintMsg="Phone Number must be 9 digits."/>
+
+
+
             <bind nodeset="/data/individualLanguagePreference" type="select1" required="true()"/>
 
 	    <bind nodeset="/data/individualDip" type="int" required="true()" constraint="not(. &lt; 0)" />
