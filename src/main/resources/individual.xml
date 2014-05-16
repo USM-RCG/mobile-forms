@@ -27,7 +27,198 @@
 		    <individualMemberStatus/>
                 </data>
             </instance>
+
             <itext>
+                
+               <translation lang="Spanish">
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Investigador de Campo ID Externa</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+
+
+                    <text id="/data/collectionDateTime:label">
+                        <value>Fecha de Recogida</value>
+                    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/householdExtId:label">
+                        <value>Domicilio ID Externa</value>
+                    </text>
+                    <text id="/data/householdExtId:hint">
+                        <value />
+                    </text>
+
+            <text id="/data/individualExtId:label">
+                        <value>Individuo ID Externa</value>
+                    </text>
+                    <text id="/data/individualExtId:hint">
+                        <value />
+                    </text>
+
+            <text id="/data/individualFirstName:label">
+                        <value>Nombre</value>
+                    </text>
+                    <text id="/data/individualFirstName:hint">
+                        <value />
+                    </text>
+
+            <text id="/data/individualLastName:label">
+                        <value>Apellido</value>
+                    </text>
+                    <text id="/data/individualLastName:hint">
+                        <value />
+                    </text>
+
+            <text id="/data/individualOtherNames:label">
+                        <value>Otros Nombres</value>
+                    </text>
+                    <text id="/data/individualOtherNames:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/individualAge:label">
+                        <value>Edad</value>
+                    </text>
+                    <text id="/data/individualAge:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/individualAgeUnits:label">
+                        <value>Unidades de Edad</value>
+                    </text>
+                    <text id="/data/individualAgeUnits:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualAgeUnits:option0">
+                        <value>Años</value>
+                    </text>
+                    <text id="/data/individualAgeUnits:option1">
+                        <value>Meses</value>
+                    </text>
+
+            <text id="/data/individualDateOfBirth:label">
+                        <value>Fecha de Nacimiento</value>
+                    </text>
+                    <text id="/data/individualDateOfBirth:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/individualGender:label">
+                        <value>Genero</value>
+                    </text>
+                    <text id="/data/individualGender:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualGender:option0">
+                        <value>Masculino</value>
+                    </text>
+                    <text id="/data/individualGender:option1">
+                        <value>Femenino</value>
+                    </text>
+
+                    <text id="/data/individualRelationshipToHeadOfHousehold:label">
+                        <value>Relación con la Cabeza de Familia</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option0">
+                        <value>Cabeza (mismo)</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option1">
+                        <value>Cónyuge</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option2">
+                        <value>Hijo/Hija</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option3">
+                        <value>Hermano/Hermana</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option4">
+                        <value>Padre</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option5">
+                        <value>Nieto</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option6">
+                        <value>No Relacionada</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option7">
+                        <value>Otro Pariente</value>
+                    </text>
+                    <text id="/data/individualRelationshipToHeadOfHousehold:option8">
+                        <value>No Sé</value>
+                    </text>
+            <text id="/data/individualPhoneNumber:label">
+                        <value>Número de Teléfono Personal</value>
+                    </text>
+                    <text id="/data/individualPhoneNumber:hint">
+                        <value />
+                    </text>
+            <text id="/data/individualOtherPhoneNumber:label">
+                        <value>Otro Número de Teléfono</value>
+                    </text>
+                    <text id="/data/individualOtherPhoneNumber:hint">
+                        <value />
+                    </text>
+            <text id="/data/individualPointOfContactName:label">
+                        <value>Punto de Contacto Nombre</value>
+                    </text>
+                    <text id="/data/individualPointOfContactName:hint">
+                        <value />
+                    </text>
+            <text id="/data/individualPointOfContactPhoneNumber:label">
+                        <value>Punto de Contacto Número de Teléfono</value>
+                    </text>
+                    <text id="/data/individualPointOfContactPhoneNumber:hint">
+                        <value />
+                    </text>
+            <text id="/data/individualLanguagePreference:label">
+                        <value>Preferencia de Idioma</value>
+                    </text>
+                    <text id="/data/individualLanguagePreference:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualLanguagePreference:option0">
+                        <value>Español</value>
+                    </text>
+                    <text id="/data/individualLanguagePreference:option1">
+                        <value>Fang</value>
+                    </text>
+                    <text id="/data/individualLanguagePreference:option2">
+                        <value>Bube</value>
+                    </text>
+            <text id="/data/individualLanguagePreference:option3">
+                        <value>Inglés</value>
+                    </text>
+                    <text id="/data/individualLanguagePreference:option4">
+                        <value>Frances</value>
+                    </text>
+                    <text id="/data/individualDip:label">
+                        <value>DIP</value>
+                    </text>
+                    <text id="/data/individualDip:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualMemberStatus:label">
+                        <value>Estado del Miembro </value>
+                    </text>
+                    <text id="/data/individualMemberStatus:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualMemberStatus:option0">
+                        <value>Permanente</value>
+                    </text>
+                    <text id="/data/individualMemberStatus:option1">
+                        <value>Visitante</value>
+                    </text>    
+                </translation>
+                
                 <translation lang="eng">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext Id</value>
