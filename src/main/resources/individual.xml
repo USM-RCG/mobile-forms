@@ -128,7 +128,7 @@
                         <value />
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option0">
-                        <value>Cabeza (mismo)</value>
+                        <value>Cabeza</value>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option1">
                         <value>Cónyuge</value>
@@ -317,7 +317,7 @@
                         <value />
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option0">
-                        <value>Head (self)</value>
+                        <value>Head</value>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option1">
                         <value>Spouse</value>
@@ -440,7 +440,7 @@
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
 	    <bind nodeset="/data/individualPointOfContactName" type="string" required="false()" />
 
-	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0 )"
+	    <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0 "
 												 constraint="(regex(., '^[0-9]{9}$'))"
 												 jr:constraintMsg="Phone Number must be 9 digits."/>
 
@@ -520,7 +520,7 @@
             <hint ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:hint')" />
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option0')" />
-                <value>Head (self)</value>
+                <value>Head</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option1')" />
