@@ -432,7 +432,8 @@
 
 	    <bind nodeset="/data/individualGender" type="select1" required="true()" />
 
-            <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()"/>
+            <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()" constraint="not((selected(., 'Head') or selected(., 'Spouse') or selected(., 'Parent')) and selected(/data/individualAgeUnits, 'Months'))"
+												jr:constraintMsg="Individual is too young."/>
 
             <bind nodeset="/data/individualPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
 										 jr:constraintMsg="Phone Number must be 9 digits."/>
