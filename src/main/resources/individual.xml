@@ -219,7 +219,7 @@
                     </text>    
                 </translation>
                 
-                <translation lang="eng">
+                <translation lang="English">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext Id</value>
                     </text>
@@ -432,7 +432,7 @@
 
 	    <bind nodeset="/data/individualGender" type="select1" required="true()" />
 
-            <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()" constraint="not((selected(., 'Head') or selected(., 'Spouse') or selected(., 'Parent')) and selected(/data/individualAgeUnits, 'Months'))"
+            <bind nodeset="/data/individualRelationshipToHeadOfHousehold" type="select1" required="true()" constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
 												jr:constraintMsg="Individual is too young."/>
 
             <bind nodeset="/data/individualPhoneNumber" type="int" required="false()" constraint="(regex(., '^[0-9]{9}$'))"
@@ -521,39 +521,39 @@
             <hint ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:hint')" />
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option0')" />
-                <value>Head</value>
+                <value>1</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option1')" />
-                <value>Spouse</value>
+                <value>2</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option2')" />
-                <value>Son/Daughter</value>
+                <value>3</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option3')" />
-                <value>Brother/Sister</value>
+                <value>4</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option4')" />
-                <value>Parent</value>
+                <value>5</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option5')" />
-                <value>Grandchild</value>
+                <value>6</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option6')" />
-                <value>Not Related</value>
+                <value>7</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option7')" />
-                <value>Other Relative</value>
+                <value>8</value>
             </item>
             <item>
                 <label ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option8')" />
-                <value>Don't Know</value>
+                <value>9</value>
             </item>
         </select1>
 
