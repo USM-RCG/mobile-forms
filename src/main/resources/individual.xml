@@ -439,7 +439,7 @@
 				required="true()" />
 
 			<bind nodeset="/data/individualGender" type="select1" required="true()" />
-
+						
 			<bind nodeset="/data/individualRelationshipToHeadOfHousehold"
 				type="select1" required="true()"
 				constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
@@ -460,7 +460,7 @@
 			<bind nodeset="/data/individualLanguagePreference" type="select1"
 				required="true()" />
 
-			<bind nodeset="/data/individualDip" type="int" required="true()"
+			<bind nodeset="/data/individualDip" type="int" required="false()"
 				constraint="not(. &lt; 0)" />
 		</model>
 	</h:head>
