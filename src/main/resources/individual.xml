@@ -19,6 +19,7 @@
 					<individualAgeUnits />
 					<individualDateOfBirth />
 					<individualGender />
+					<headPrefilledFlag />
 					<individualRelationshipToHeadOfHousehold />
 					<individualPhoneNumber />
 					<individualOtherPhoneNumber />
@@ -439,9 +440,11 @@
 				required="true()" />
 
 			<bind nodeset="/data/individualGender" type="select1" required="true()" />
+
+			<bind nodeset="/data/headPrefilledFlag" type="string" />
 						
 			<bind nodeset="/data/individualRelationshipToHeadOfHousehold"
-				type="select1" required="true()"
+				type="select1" required="true()" relevant="not(boolean-from-string(/data/headPrefilledFlag))"
 				constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
 				jr:constraintMsg="Individual is too young." />
 
