@@ -6,37 +6,30 @@
             <instance>
                 <data id="visit_registration">
                     <processedByMirth />
-                    <visitId />
-                    <fieldWorkerId />
-                    <locationId />
-                    <roundNumber />
+                    <visitExtId />
+                    <fieldWorkerExtId />
+                    <locationExtId />
                     <visitDate />
                 </data>
             </instance>
             <itext>
                 <translation lang="eng">
-                    <text id="/data/visitId:label">
-                        <value>Visit Id</value>
+                    <text id="/data/visitExtId:label">
+                        <value>Visit Ext Id</value>
                     </text>
-                    <text id="/data/visitId:hint">
+                    <text id="/data/visitExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/fieldWorkerId:label">
-                        <value>Field Worker Id</value>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Field Worker Ext Id</value>
                     </text>
-                    <text id="/data/fieldWorkerId:hint">
+                    <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/locationId:label">
-                        <value>Location Id</value>
+                    <text id="/data/locationExtId:label">
+                        <value>Location Ext Id</value>
                     </text>
-                    <text id="/data/locationId:hint">
-                        <value />
-                    </text>
-                    <text id="/data/roundNumber:label">
-                        <value>Round Number</value>
-                    </text>
-                    <text id="/data/roundNumber:hint">
+                    <text id="/data/locationExtId:hint">
                         <value />
                     </text>
                     <text id="/data/visitDate:label">
@@ -48,29 +41,24 @@
                 </translation>
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-            <bind nodeset="/data/visitId" type="string" required="true()" />
-            <bind nodeset="/data/fieldWorkerId" type="string" required="true()" />
-            <bind nodeset="/data/locationId" type="string" required="true()" />
-            <bind nodeset="/data/roundNumber" type="int" required="true()" constraint="(. &gt;= 1 and . &lt; 20)" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" />
+            <bind nodeset="/data/locationExtId" type="string" required="true()" />
             <bind nodeset="/data/visitDate" type="date" required="true()" />
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/visitId">
-            <label ref="jr:itext('/data/visitId:label')" />
-            <hint ref="jr:itext('/data/visitId:hint')" />
+        <input ref="/data/visitExtId">
+            <label ref="jr:itext('/data/visitExtId:label')" />
+            <hint ref="jr:itext('/data/visitExtId:hint')" />
         </input>
-        <input ref="/data/fieldWorkerId">
-            <label ref="jr:itext('/data/fieldWorkerId:label')" />
-            <hint ref="jr:itext('/data/fieldWorkerId:hint')" />
+        <input ref="/data/fieldWorkerExtId">
+            <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+            <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
         </input>
-        <input ref="/data/locationId">
-            <label ref="jr:itext('/data/locationId:label')" />
-            <hint ref="jr:itext('/data/locationId:hint')" />
-        </input>
-        <input ref="/data/roundNumber">
-            <label ref="jr:itext('/data/roundNumber:label')" />
-            <hint ref="jr:itext('/data/roundNumber:hint')" />
+        <input ref="/data/locationExtId">
+            <label ref="jr:itext('/data/locationExtId:label')" />
+            <hint ref="jr:itext('/data/locationExtId:hint')" />
         </input>
         <input ref="/data/visitDate">
             <label ref="jr:itext('/data/visitDate:label')" />
