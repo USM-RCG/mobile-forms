@@ -1,0 +1,68 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Visit</h:title>
+        <model>
+            <instance>
+                <data id="visit">
+                    <processedByMirth />
+                    <visitExtId />
+                    <fieldWorkerExtId />
+                    <locationExtId />
+                    <visitDate />
+                </data>
+            </instance>
+            <itext>
+                <translation lang="eng">
+                    <text id="/data/visitExtId:label">
+                        <value>Visit Ext Id</value>
+                    </text>
+                    <text id="/data/visitExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Field Worker Ext Id</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationExtId:label">
+                        <value>Location Ext Id</value>
+                    </text>
+                    <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitDate:label">
+                        <value>Visit Date</value>
+                    </text>
+                    <text id="/data/visitDate:hint">
+                        <value />
+                    </text>
+                </translation>
+            </itext>
+            <bind nodeset="/data/processedByMirth" type="boolean" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" />
+            <bind nodeset="/data/locationExtId" type="string" required="true()" />
+            <bind nodeset="/data/visitDate" type="date" required="true()" />
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/visitExtId">
+            <label ref="jr:itext('/data/visitExtId:label')" />
+            <hint ref="jr:itext('/data/visitExtId:hint')" />
+        </input>
+        <input ref="/data/fieldWorkerExtId">
+            <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+            <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+        </input>
+        <input ref="/data/locationExtId">
+            <label ref="jr:itext('/data/locationExtId:label')" />
+            <hint ref="jr:itext('/data/locationExtId:hint')" />
+        </input>
+        <input ref="/data/visitDate">
+            <label ref="jr:itext('/data/visitDate:label')" />
+            <hint ref="jr:itext('/data/visitDate:hint')" />
+        </input>
+    </h:body>
+</h:html>
