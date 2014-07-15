@@ -1,10 +1,10 @@
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
-        <h:title>Visit Registration</h:title>
+        <h:title>Visit</h:title>
         <model>
             <instance>
-                <data id="visit_registration">
+                <data id="visit">
                     <processedByMirth />
                     <visitExtId />
                     <fieldWorkerExtId />
