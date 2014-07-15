@@ -4,7 +4,7 @@
         <h:title>Out Migration Registration</h:title>
         <model>
             <instance>
-                <data id="out_migration_registration">
+                <data id="out_migration">
                     <processedByMirth />
                     <individualId />
                     <fieldWorkerId />
