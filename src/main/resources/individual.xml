@@ -194,7 +194,7 @@
 						<value>Fang</value>
 					</text>
 					<text id="/data/individualLanguagePreference:option2">
-						<value>Bube</value>
+						<value>Bubi</value>
 					</text>
 					<text id="/data/individualLanguagePreference:option3">
 						<value>Inglés</value>
@@ -383,7 +383,7 @@
 						<value>Fang</value>
 					</text>
 					<text id="/data/individualLanguagePreference:option2">
-						<value>Bube</value>
+						<value>Bubi</value>
 					</text>
 					<text id="/data/individualLanguagePreference:option3">
 						<value>English</value>
@@ -434,7 +434,8 @@
 				constraint="not(. &lt; 0)" />
 
 			<bind nodeset="/data/individualAgeUnits" type="select1"
-				required="true()" />
+				required="true()" constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag))"
+				jr:constraintMsg="Head of Household's age can't be in months."/>
 
 			<bind nodeset="/data/individualDateOfBirth" type="date"
 				required="true()" />
@@ -450,9 +451,11 @@
 
 			<bind nodeset="/data/individualPhoneNumber" type="int" required="false()"
 				constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits." />
+
 			<bind nodeset="/data/individualOtherPhoneNumber" type="int"
 				required="false()" constraint="(regex(., '^[0-9]{9}$'))"
 				jr:constraintMsg="Phone Number must be 9 digits." />
+
 			<bind nodeset="/data/individualPointOfContactName" type="string"
 				required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0" />
 
@@ -618,7 +621,7 @@
 			</item>
 			<item>
 				<label ref="jr:itext('/data/individualLanguagePreference:option2')" />
-				<value>Bube</value>
+				<value>Bubi</value>
 			</item>
 			<item>
 				<label ref="jr:itext('/data/individualLanguagePreference:option3')" />
