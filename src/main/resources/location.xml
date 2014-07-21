@@ -44,6 +44,12 @@
                     <text id="/data/locationName:hint">
                         <value />
                     </text>
+                    <text id="/data/hierarchyExtId:label">
+                        <value>Hierarchy Ext Id</value>
+                    </text>
+                    <text id="/data/hierarchyExtId:hint">
+                        <value />
+                    </text>
                     <text id="/data/locationType:label">
                         <value>Location Type</value>
                     </text>
