@@ -471,14 +471,17 @@
 		</model>
 	</h:head>
 	<h:body>
-		<input ref="/data/fieldWorkerExtId">
-			<label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-			<hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
-		</input>
-		<input ref="/data/collectionDateTime">
-			<label ref="jr:itext('/data/collectionDateTime:label')" />
-			<hint ref="jr:itext('/data/collectionDateTime:hint')" />
-		</input>
+
+		<group appearance="field-list">
+			<input ref="/data/fieldWorkerExtId">
+				<label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+				<hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+			</input>
+			<input ref="/data/collectionDateTime">
+				<label ref="jr:itext('/data/collectionDateTime:label')" />
+				<hint ref="jr:itext('/data/collectionDateTime:hint')" />
+			</input>
+		</group>
 		<input ref="/data/householdExtId">
 			<label ref="jr:itext('/data/householdExtId:label')" />
 			<hint ref="jr:itext('/data/householdExtId:hint')" />

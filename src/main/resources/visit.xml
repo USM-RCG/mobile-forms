@@ -48,21 +48,23 @@
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/visitExtId">
-            <label ref="jr:itext('/data/visitExtId:label')" />
-            <hint ref="jr:itext('/data/visitExtId:hint')" />
-        </input>
-        <input ref="/data/fieldWorkerExtId">
-            <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-            <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
-        </input>
-        <input ref="/data/locationExtId">
-            <label ref="jr:itext('/data/locationExtId:label')" />
-            <hint ref="jr:itext('/data/locationExtId:hint')" />
-        </input>
-        <input ref="/data/visitDate">
-            <label ref="jr:itext('/data/visitDate:label')" />
-            <hint ref="jr:itext('/data/visitDate:hint')" />
-        </input>
+	<group appearance="field-list">
+		<input ref="/data/visitExtId">
+		    <label ref="jr:itext('/data/visitExtId:label')" />
+		    <hint ref="jr:itext('/data/visitExtId:hint')" />
+		</input>
+		<input ref="/data/fieldWorkerExtId">
+		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+		</input>
+		<input ref="/data/locationExtId">
+		    <label ref="jr:itext('/data/locationExtId:label')" />
+		    <hint ref="jr:itext('/data/locationExtId:hint')" />
+		</input>
+		<input ref="/data/visitDate">
+		    <label ref="jr:itext('/data/visitDate:label')" />
+		    <hint ref="jr:itext('/data/visitDate:hint')" />
+		</input>
+	</group>
     </h:body>
 </h:html>
