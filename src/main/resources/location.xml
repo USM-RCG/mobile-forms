@@ -7,7 +7,7 @@
                 <data id="location">
                     <processedByMirth />
 		    <fieldWorkerExtId />
-		    <collectionDateTime />
+		    <collectedDateTime />
                     <hierarchyExtId />
                     <locationExtId />
                     <locationName />
@@ -26,10 +26,10 @@
                     <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text> 
-                    <text id="/data/collectionDateTime:label">
+                    <text id="/data/collectedDateTime:label">
                         <value>Collected Date Time</value>
                     </text>
-                    <text id="/data/collectionDateTime:hint">
+                    <text id="/data/collectedDateTime:hint">
                         <value />
                     </text>
                     <text id="/data/locationExtId:label">
@@ -84,7 +84,7 @@
             </itext>
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 	    <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
-	    <bind nodeset="/data/collectionDateTime" type="datetime"
+	    <bind nodeset="/data/collectedDateTime" type="datetime"
 			readonly="true()" />
 
             <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
@@ -112,9 +112,9 @@
 				<label ref="jr:itext('/data/fieldWorkerExtId:label')" />
 				<hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
 			</input>
-			<input ref="/data/collectionDateTime">
-				<label ref="jr:itext('/data/collectionDateTime:label')" />
-				<hint ref="jr:itext('/data/collectionDateTime:hint')" />
+			<input ref="/data/collectedDateTime">
+				<label ref="jr:itext('/data/collectedDateTime:label')" />
+				<hint ref="jr:itext('/data/collectedDateTime:hint')" />
 			</input>
 		</group>
 		<group appearance="field-list">
