@@ -40,10 +40,10 @@
                     </text>
                 </translation>
             </itext>
-            <bind nodeset="/data/processedByMirth" type="boolean" />
-            <bind nodeset="/data/visitExtId" type="string" required="true()" />
-            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" />
-            <bind nodeset="/data/locationExtId" type="string" required="true()" />
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true" />
+            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true" />
             <bind nodeset="/data/visitDate" type="date" required="true()" />
         </model>
     </h:head>
