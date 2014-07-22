@@ -56,6 +56,12 @@
                     <text id="/data/locationType:hint">
                         <value />
                     </text>
+                   <text id="/data/locationType:option0">
+                        <value>Rural</value>
+                    </text>
+                    <text id="/data/locationType:option1">
+                        <value>Urban</value>
+                    </text>
                     <text id="/data/communityName:label">
                         <value>Community Name</value>
                     </text>
@@ -99,7 +105,7 @@
 
             <bind nodeset="/data/locationName" type="string" required="true()"/>
 
-            <bind nodeset="/data/locationType" type="string" required="true()"/>
+            <bind nodeset="/data/locationType" type="select1" required="true()"/>
 
             <bind nodeset="/data/communityName" type="string" required="true()"/>
 
@@ -144,10 +150,18 @@
 			<label ref="jr:itext('/data/locationName:label')" />
 			<hint ref="jr:itext('/data/locationName:hint')" />
 		</input>
-		<input ref="/data/locationType">
-			<label ref="jr:itext('/data/locationType:label')" />
-			<hint ref="jr:itext('/data/locationType:hint')" />
-		</input>
+        <select1 ref="/data/locationType">
+            <label ref="jr:itext('/data/locationType:label')" />
+            <hint ref="jr:itext('/data/locationType:hint')" />
+            <item>
+                <label ref="jr:itext('/data/locationType:option0')" />
+                <value>RUR</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/locationType:option1')" />
+                <value>URB</value>
+            </item>
+        </select1>
 		<input ref="/data/communityName">
 			<label ref="jr:itext('/data/communityName:label')" />
 			<hint ref="jr:itext('/data/communityName:hint')" />
