@@ -10,7 +10,7 @@
 		    <locationExtId />
 		    <distributionDateTime />
 		    <numberOfSleepingAreas />
-		    <addMoreBedNetIds />
+	 	    <numberOfBednetsDistributed />
 		    <bednetId1 />
 		    <bednetId2 />
 		    <bednetId3 />
@@ -44,9 +44,15 @@
                         <value />
                     </text>
                     <text id="/data/numberOfSleepingAreas:label">
-                        <value>Numero de Camas u otras superficies donde se duerme</value>
+                        <value>Número de camas u otras superficies donde se duerme</value>
                     </text>
                     <text id="/data/numberOfSleepingAreas:hint">
+                        <value />
+                    </text>
+                    <text id="/data/numberOfBednetsDistributed:label">
+                        <value>Número de telas mosquiteras distribuido</value>
+                    </text>
+                    <text id="/data/numberOfBednetsDistributed:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId1:label">
@@ -54,19 +60,6 @@
                     </text>
                     <text id="/data/bednetId1:hint">
                         <value />
-                    </text>
-
-                   <text id="/data/addMoreBedNetIds:label">
-                        <value>Añadir mas tela mosquitera IDs</value>
-                    </text>
-                    <text id="/data/addMoreBedNetIds:hint">
-                        <value />
-                    </text>
-                   <text id="/data/addMoreBedNetIds:option0">
-                        <value>No</value>
-                    </text>
-                   <text id="/data/addMoreBedNetIds:option1">
-                        <value>Si</value>
                     </text>
 
                     <text id="/data/bednetId2:label">
@@ -149,76 +142,68 @@
                     <text id="/data/numberOfSleepingAreas:hint">
                         <value />
                     </text>
+                    <text id="/data/numberOfBednetsDistributed:label">
+                        <value>Number of Bed Nets Distributed</value>
+                    </text>
+                    <text id="/data/numberOfBednetsDistributed:hint">
+                        <value />
+                    </text>
                     <text id="/data/bednetId1:label">
-                        <value>Bed-net ID - 1</value>
+                        <value>Bed Net ID - 1</value>
                     </text>
                     <text id="/data/bednetId1:hint">
                         <value />
                     </text>
-
-                   <text id="/data/addMoreBedNetIds:label">
-                        <value>Add More Bed Net IDs</value>
-                    </text>
-                    <text id="/data/addMoreBedNetIds:hint">
-                        <value />
-                    </text>
-                   <text id="/data/addMoreBedNetIds:option0">
-                        <value>No</value>
-                    </text>
-                   <text id="/data/addMoreBedNetIds:option1">
-                        <value>Yes</value>
-                    </text>
-
                     <text id="/data/bednetId2:label">
-                        <value>Bed-net ID - 2</value>
+                        <value>Bed Net ID - 2</value>
                     </text>
                     <text id="/data/bednetId2:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId3:label">
-                        <value>Bed-net ID - 3</value>
+                        <value>Bed Net ID - 3</value>
                     </text>
                     <text id="/data/bednetId3:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId4:label">
-                        <value>Bed-net ID - 4</value>
+                        <value>Bed Net ID - 4</value>
                     </text>
                     <text id="/data/bednetId4:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId5:label">
-                        <value>Bed-net ID - 5</value>
+                        <value>Bed Net ID - 5</value>
                     </text>
                     <text id="/data/bednetId5:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId6:label">
-                        <value>Bed-net ID - 6</value>
+                        <value>Bed Net ID - 6</value>
                     </text>
                     <text id="/data/bednetId6:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId7:label">
-                        <value>Bed-net ID - 7</value>
+                        <value>Bed Net ID - 7</value>
                     </text>
                     <text id="/data/bednetId7:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId8:label">
-                        <value>Bed-net ID - 8</value>
+                        <value>Bed Net ID - 8</value>
                     </text>
                     <text id="/data/bednetId8:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId9:label">
-                        <value>Bed-net ID - 9</value>
+                        <value>Bed Net ID - 9</value>
                     </text>
                     <text id="/data/bednetId9:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId10:label">
-                        <value>Bed-net ID - 10</value>
+                        <value>Bed Net ID - 10</value>
                     </text>
                     <text id="/data/bednetId10:hint">
                         <value />
@@ -231,18 +216,28 @@
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
 	    <bind nodeset="/data/numberOfSleepingAreas" type="int" required="true()" />
 
-	    <bind nodeset="/data/bednetId1" type="string" required="true()" />
-	    <bind nodeset="/data/bednetId2" type="string" />
-	    <bind nodeset="/data/bednetId3" type="string" />
-	    <bind nodeset="/data/bednetId4" type="string" />
-	    <bind nodeset="/data/bednetId5" type="string" />
-	    <bind nodeset="/data/addMoreBedNetIds" type="select1" />
+	    <bind nodeset="/data/numberOfBednetsDistributed" type="int" required="true()"
+			constraint=". > 0 and not(. > 10)" jr:constraintMsg="Min = 1, Max = 10"/>
 
-	    <bind nodeset="/data/bednetId6" type="string" relevant="selected(/data/addMoreBedNetIds, 'Yes')" />
-	    <bind nodeset="/data/bednetId7" type="string" relevant="selected(/data/addMoreBedNetIds, 'Yes')" />
-	    <bind nodeset="/data/bednetId8" type="string" relevant="selected(/data/addMoreBedNetIds, 'Yes')" />
-	    <bind nodeset="/data/bednetId9" type="string" relevant="selected(/data/addMoreBedNetIds, 'Yes')" />
-	    <bind nodeset="/data/bednetId10" type="string" relevant="selected(/data/addMoreBedNetIds, 'Yes')" />
+	    <bind nodeset="/data/bednetId1" type="string" required="true()" />
+	    <bind nodeset="/data/bednetId2" type="string" required="/data/numberOfBednetsDistributed > 1"
+				relevant="/data/numberOfBednetsDistributed > 1"/>
+	    <bind nodeset="/data/bednetId3" type="string" required="/data/numberOfBednetsDistributed > 2"
+				relevant="/data/numberOfBednetsDistributed > 2"/>
+	    <bind nodeset="/data/bednetId4" type="string" required="/data/numberOfBednetsDistributed > 3"
+				relevant="/data/numberOfBednetsDistributed > 3"/>
+	    <bind nodeset="/data/bednetId5" type="string" required="/data/numberOfBednetsDistributed > 4"
+				relevant="/data/numberOfBednetsDistributed > 4"/>
+	    <bind nodeset="/data/bednetId6" type="string" required="/data/numberOfBednetsDistributed > 5"
+				relevant="/data/numberOfBednetsDistributed > 5"/>
+	    <bind nodeset="/data/bednetId7" type="string" required="/data/numberOfBednetsDistributed > 6"
+				relevant="/data/numberOfBednetsDistributed > 6"/>
+	    <bind nodeset="/data/bednetId8" type="string" required="/data/numberOfBednetsDistributed > 7"
+				relevant="/data/numberOfBednetsDistributed > 7"/>
+	    <bind nodeset="/data/bednetId9" type="string" required="/data/numberOfBednetsDistributed > 8"
+				relevant="/data/numberOfBednetsDistributed > 8"/>
+	    <bind nodeset="/data/bednetId10" type="string" required="/data/numberOfBednetsDistributed > 9"
+				relevant="/data/numberOfBednetsDistributed > 9"/>
 
         </model>
     </h:head>
@@ -266,7 +261,10 @@
 			<label ref="jr:itext('/data/numberOfSleepingAreas:label')" />
 			<hint ref="jr:itext('/data/numberOfSleepingAreas:hint')" />
 		</input>
-
+		<input ref="/data/numberOfBednetsDistributed">
+			<label ref="jr:itext('/data/numberOfBednetsDistributed:label')" />
+			<hint ref="jr:itext('/data/numberOfBednetsDistributed:hint')" />
+		</input>
 		<group appearance="field-list">
 			<input ref="/data/bednetId1">
 				<label ref="jr:itext('/data/bednetId1:label')" />
@@ -288,21 +286,6 @@
 				<label ref="jr:itext('/data/bednetId5:label')" />
 				<hint ref="jr:itext('/data/bednetId5:hint')" />
 			</input>
-			<select1 ref="/data/addMoreBedNetIds">
-				<label ref="jr:itext('/data/addMoreBedNetIds:label')" />
-				<hint ref="jr:itext('/data/addMoreBedNetIds:hint')" />
-				<item>
-					<label ref="jr:itext('/data/addMoreBedNetIds:option0')" />
-					<value>No</value>
-				</item>
-				<item>
-					<label ref="jr:itext('/data/addMoreBedNetIds:option1')" />
-					<value>Yes</value>
-				</item>
-			</select1>
-		</group>
-		
-		<group appearance="field-list">
 			<input ref="/data/bednetId6">
 				<label ref="jr:itext('/data/bednetId6:label')" />
 				<hint ref="jr:itext('/data/bednetId6:hint')" />
