@@ -10,6 +10,7 @@
 		    <locationExtId />
 		    <distributionDateTime />
 		    <numberOfSleepingAreas />
+		    <numberOfPeopleSleepingInHousehold />
 	 	    <numberOfBednetsDistributed />
 		    <bednetId1 />
 		    <bednetId2 />
@@ -53,6 +54,12 @@
                         <value>Número de telas mosquiteras distribuido</value>
                     </text>
                     <text id="/data/numberOfBednetsDistributed:hint">
+                        <value />
+                    </text>
+                    <text id="/data/numberOfPeopleSleepingInHousehold:label">
+                        <value>Número de personas que duermen en el hogar</value>
+                    </text>
+                    <text id="/data/numberOfPeopleSleepingInHousehold:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId1:label">
@@ -137,15 +144,21 @@
                         <value />
                     </text>
                     <text id="/data/numberOfSleepingAreas:label">
-                        <value>Number of Sleeping Areas</value>
+                        <value>Number of sleeping areas</value>
                     </text>
                     <text id="/data/numberOfSleepingAreas:hint">
                         <value />
                     </text>
                     <text id="/data/numberOfBednetsDistributed:label">
-                        <value>Number of Bed Nets Distributed</value>
+                        <value>Number of bed nets distributed</value>
                     </text>
                     <text id="/data/numberOfBednetsDistributed:hint">
+                        <value />
+                    </text>
+                    <text id="/data/numberOfPeopleSleepingInHousehold:label">
+                        <value>Number of people sleeping in the household</value>
+                    </text>
+                    <text id="/data/numberOfPeopleSleepingInHousehold:hint">
                         <value />
                     </text>
                     <text id="/data/bednetId1:label">
@@ -215,6 +228,7 @@
 	    <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
 	    <bind nodeset="/data/numberOfSleepingAreas" type="int" required="true()" />
+	    <bind nodeset="/data/numberOfPeopleSleepingInHousehold" type="int" required="true()" />
 
 	    <bind nodeset="/data/numberOfBednetsDistributed" type="int" required="true()"
 			constraint=". > 0 and not(. > 10)" jr:constraintMsg="Min = 1, Max = 10"/>
@@ -257,14 +271,20 @@
 			</input>
 		</group>
 
-		<input ref="/data/numberOfSleepingAreas">
-			<label ref="jr:itext('/data/numberOfSleepingAreas:label')" />
-			<hint ref="jr:itext('/data/numberOfSleepingAreas:hint')" />
-		</input>
-		<input ref="/data/numberOfBednetsDistributed">
-			<label ref="jr:itext('/data/numberOfBednetsDistributed:label')" />
-			<hint ref="jr:itext('/data/numberOfBednetsDistributed:hint')" />
-		</input>
+		<group appearance="field-list">
+			<input ref="/data/numberOfPeopleSleepingInHousehold">
+				<label ref="jr:itext('/data/numberOfPeopleSleepingInHousehold:label')" />
+				<hint ref="jr:itext('/data/numberOfPeopleSleepingInHousehold:hint')" />
+			</input>
+			<input ref="/data/numberOfSleepingAreas">
+				<label ref="jr:itext('/data/numberOfSleepingAreas:label')" />
+				<hint ref="jr:itext('/data/numberOfSleepingAreas:hint')" />
+			</input>
+			<input ref="/data/numberOfBednetsDistributed">
+				<label ref="jr:itext('/data/numberOfBednetsDistributed:label')" />
+				<hint ref="jr:itext('/data/numberOfBednetsDistributed:hint')" />
+			</input>
+		</group>
 		<group appearance="field-list">
 			<input ref="/data/bednetId1">
 				<label ref="jr:itext('/data/bednetId1:label')" />
