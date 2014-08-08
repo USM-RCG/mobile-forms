@@ -6,16 +6,19 @@
             <instance>
                 <data id="location">
                     <processedByMirth />
+		    <needsReview />
 		    <fieldWorkerExtId />
 		    <collectionDateTime />
                     <hierarchyExtId />
-                    <locationExtId />
+		    <locationBuildingNumber />
+	            <locationFloorNumber />
                     <locationName />
                     <locationType />
                     <communityName />
                     <mapAreaName />
                     <localityName />
                     <sectorName />
+                    <locationExtId />
                 </data>
             </instance>
             <itext>
@@ -36,6 +39,18 @@
                         <value>Locación ID Externa</value>
                     </text>
                     <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationBuildingNumber:label">
+                        <value>Edificio #</value>
+                    </text>
+                    <text id="/data/locationBuildingNumber:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationFloorNumber:label">
+                        <value>Piso #</value>
+                    </text>
+                    <text id="/data/locationFloorNumber:hint">
                         <value />
                     </text>
                     <text id="/data/locationName:label">
@@ -106,6 +121,18 @@
                     <text id="/data/locationExtId:hint">
                         <value />
                     </text>
+                    <text id="/data/locationBuildingNumber:label">
+                        <value>Building #</value>
+                    </text>
+                    <text id="/data/locationBuildingNumber:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationFloorNumber:label">
+                        <value>Floor #</value>
+                    </text>
+                    <text id="/data/locationFloorNumber:hint">
+                        <value />
+                    </text>
                     <text id="/data/locationName:label">
                         <value>Location Name</value>
                     </text>
@@ -157,6 +184,8 @@
                 </translation>
             </itext>
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+
 	    <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
 	    <bind nodeset="/data/collectionDateTime" type="datetime"
 			readonly="true()" />
@@ -169,14 +198,18 @@
 
             <bind nodeset="/data/sectorName" type="string" required="true()" readonly="true()"/>
 
-            <bind nodeset="/data/locationExtId" type="string" required="true()"/>
+            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"/>
+
+            <bind nodeset="/data/locationFloorNumber" type="string" required="true()"/>
+
+            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"
+			calculate="concat(/data/mapAreaName, /data/sectorName, /data/locationBuildingNumber, /data/locationFloorNumber)"/>
 
             <bind nodeset="/data/locationName" type="string" required="true()"/>
 
             <bind nodeset="/data/locationType" type="select1" required="true()"/>
 
             <bind nodeset="/data/communityName" type="string" required="true()"/>
-
 
         </model>
     </h:head>
@@ -209,6 +242,16 @@
 				<hint ref="jr:itext('/data/sectorName:hint')" />
 			</input>
 
+		</group>
+		<group>	
+			<input ref="/data/locationBuildingNumber">
+				<label ref="jr:itext('/data/locationBuildingNumber:label')" />
+				<hint ref="jr:itext('/data/locationBuildingNumber:hint')" />
+			</input>
+			<input ref="/data/locationFloorNumber">
+				<label ref="jr:itext('/data/locationFloorNumber:label')" />
+				<hint ref="jr:itext('/data/locationFloorNumber:hint')" />
+			</input>		
 		</group>
 		<input ref="/data/locationExtId">
 			<label ref="jr:itext('/data/locationExtId:label')" />

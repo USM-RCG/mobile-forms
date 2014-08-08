@@ -8,6 +8,7 @@
 			<instance>
 				<data id="individual">
 					<processedByMirth />
+					<needsReview />
 					<fieldWorkerExtId />
 					<collectionDateTime />
 					<householdExtId />
@@ -47,7 +48,7 @@
 					</text>
 					<text id="/data/collectionDateTime:hint">
 						<value />
-					</text>
+					</text>getContentResolver
 
 					<text id="/data/householdExtId:label">
 						<value>Domicilio ID Externa</value>
@@ -412,6 +413,8 @@
 				</translation>
 			</itext>
 			<bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
+
+			<bind nodeset="/data/needsReview" type="string" readonly="true()" />
 
 			<bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
 

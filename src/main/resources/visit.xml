@@ -6,6 +6,7 @@
             <instance>
                 <data id="visit">
                     <processedByMirth />
+		    <needsReview />
                     <visitExtId />
                     <fieldWorkerExtId />
                     <locationExtId />
@@ -67,6 +68,7 @@
                 </translation>
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true" />
+	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true" />
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true" />
