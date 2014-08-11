@@ -3,23 +3,24 @@
 	xmlns:jr="http://openrosa.org/javarosa">
 	<h:head><!-- ODK Aggregate upload time: 2014-04-30T18:14:43.048+0000 on 
 			http://130.111.132.88:8080/ODKAggregate -->
-		<h:title>Individual</h:title>
+		<h:title>IndividualAgeDobDEMO</h:title>
 		<model>
 			<instance>
-				<data id="individual">
+				<data id="individual-age-dob-demo">
 					<processedByMirth />
 					<fieldWorkerExtId />
 					<collectionDateTime />
 					<householdExtId />
+
 					<individualExtId />
 					<individualFirstName />
 					<individualLastName />
 					<individualOtherNames />
 					<individualAge />
-					<individualAgeUnits />
+					<individualAgeUnits>Years</individualAgeUnits>
+					<individualAgeUncertaintyRange />
 					<individualDateOfBirth />
 					<individualGender />
-					<headPrefilledFlag />
 					<individualRelationshipToHeadOfHousehold />
 					<individualPhoneNumber />
 					<individualOtherPhoneNumber />
@@ -28,6 +29,8 @@
 					<individualPointOfContactPhoneNumber />
 					<individualDip />
 					<individualMemberStatus />
+
+					<headPrefilledFlag />
 				</data>
 			</instance>
 
@@ -103,7 +106,21 @@
 					<text id="/data/individualAgeUnits:option1">
 						<value>Meses</value>
 					</text>
-
+					<text id="/data/individualAgeUncertaintyRange:label">
+						<value>Age Uncertainty</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:hint">
+						<value />
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option0">
+						<value>1</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option1">
+						<value>5</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option2">
+						<value>10</value>
+					</text>
 					<text id="/data/individualDateOfBirth:label">
 						<value>Fecha de Nacimiento</value>
 					</text>
@@ -208,6 +225,9 @@
 					<text id="/data/individualDip:hint">
 						<value />
 					</text>
+
+
+
 					<text id="/data/individualMemberStatus:label">
 						<value>Estado del Miembro </value>
 					</text>
@@ -286,6 +306,23 @@
 					<text id="/data/individualAgeUnits:hint">
 						<value />
 					</text>
+
+					<text id="/data/individualAgeUncertaintyRange:label">
+						<value>Age Uncertainty (+ or -)</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:hint">
+						<value />
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option0">
+						<value>1</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option1">
+						<value>5</value>
+					</text>
+					<text id="/data/individualAgeUncertaintyRange:option2">
+						<value>10</value>
+					</text>
+
 					<text id="/data/individualAgeUnits:option0">
 						<value>Years</value>
 					</text>
@@ -397,6 +434,9 @@
 					<text id="/data/individualDip:hint">
 						<value />
 					</text>
+
+
+
 					<text id="/data/individualMemberStatus:label">
 						<value>Member Status</value>
 					</text>
@@ -431,18 +471,60 @@
 				required="false()" />
 
 			<bind nodeset="/data/individualAge" type="int" required="true()"
-				constraint="not(. &lt; 0)" />
+				constraint="not(. &lt; 0) and (. &lt; 120)" />
+
+
 
 			<bind nodeset="/data/individualAgeUnits" type="select1"
-				required="true()" constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag))"
-				jr:constraintMsg="Head of Household's age can't be in months."/>
+				required="true()" constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag)) and if(/data/individualAge > 12,not(selected(.,'Months')), true())"
+				jr:constraintMsg="Head of Household's age can't be in months and age in Months should be less than 12 (use years if it's greater than 12)."/>
 
-			<bind nodeset="/data/individualDateOfBirth" type="date"
-				required="true()" />
+
+			<bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()" relevant="selected(/data/individualAgeUnits,'Years')" />
+
+
+
+
+
+			<bind nodeset="/data/individualDateOfBirth" type="date" required="true()" 
+
+			calculate="if(  (string(/data/individualAge) != ''), 
+					if(selected(/data/individualAgeUnits, 'Years'),
+						date(concat(string(int(substr(string(today()),0,4))-(/data/individualAge)), substr(string(today()),4,10))),
+						if(int(substr(string(today()),5,7)) > (/data/individualAge),
+							date(concat(substr(string(today()),0,4),'-', string(int(substr(string(today()),5,7)) - (/data/individualAge)),'-',substr(string(today()),8,10))),
+							date(concat( string(int(substr(string(today()),0,4)) - 1),'-',string(12 - ((/data/individualAge) - int(substr(string(today()),5,7))) ),'-',substr(string(today()),8,10) )) )), 
+					today() )"
+	
+						
+
+                        constraint="not(. > today()) 
+				    and if(selected(/data/individualAgeUnits, 'Years'), 
+				    not(. > date(concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/data/individualAgeUncertaintyRange)),'-01-01'))) 
+	    			    and not(. &lt; date(concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'))), 
+				    true())"
+
+			jr:constraintMsg="Date of birth must be within the range of uncertainty and not in the future."/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
 
 			<bind nodeset="/data/individualGender" type="select1" required="true()" />
 
 			<bind nodeset="/data/headPrefilledFlag" type="string" />
+
 						
 			<bind nodeset="/data/individualRelationshipToHeadOfHousehold"
 				type="select1" required="true()" relevant="not(boolean-from-string(/data/headPrefilledFlag))"
@@ -450,11 +532,11 @@
 				jr:constraintMsg="Individual is too young." />
 
 			<bind nodeset="/data/individualPhoneNumber" type="int" required="false()"
-				constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits." />
+				constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits."/>
 
 			<bind nodeset="/data/individualOtherPhoneNumber" type="int"
 				required="false()" constraint="(regex(., '^[0-9]{9}$'))"
-				jr:constraintMsg="Phone Number must be 9 digits." />
+				jr:constraintMsg="Phone Number must be 9 digits."/>
 
 			<bind nodeset="/data/individualPointOfContactName" type="string"
 				required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0" />
@@ -481,62 +563,80 @@
 				<label ref="jr:itext('/data/collectionDateTime:label')" />
 				<hint ref="jr:itext('/data/collectionDateTime:hint')" />
 			</input>
-		</group>
-		<input ref="/data/householdExtId">
-			<label ref="jr:itext('/data/householdExtId:label')" />
-			<hint ref="jr:itext('/data/householdExtId:hint')" />
-		</input>
-		<input ref="/data/individualExtId">
-			<label ref="jr:itext('/data/individualExtId:label')" />
-			<hint ref="jr:itext('/data/individualExtId:hint')" />
-		</input>
-
-		<input ref="/data/individualFirstName">
-			<label ref="jr:itext('/data/individualFirstName:label')" />
-			<hint ref="jr:itext('/data/individualFirstName:hint')" />
-		</input>
-		<input ref="/data/individualLastName">
-			<label ref="jr:itext('/data/individualLastName:label')" />
-			<hint ref="jr:itext('/data/individualLastName:hint')" />
-		</input>
-		<input ref="/data/individualOtherNames">
-			<label ref="jr:itext('/data/individualOtherNames:label')" />
-			<hint ref="jr:itext('/data/individualOtherNames:hint')" />
-		</input>
-		<group appearance="field-list">
-			<input ref="/data/individualAge">
-				<label ref="jr:itext('/data/individualAge:label')" />
-				<hint ref="jr:itext('/data/individualAge:hint')" />
+			<input ref="/data/householdExtId">
+				<label ref="jr:itext('/data/householdExtId:label')" />
+				<hint ref="jr:itext('/data/householdExtId:hint')" />
 			</input>
-			<select1 ref="/data/individualAgeUnits">
-				<label ref="jr:itext('/data/individualAgeUnits:label')" />
-				<hint ref="jr:itext('/data/individualAgeUnits:hint')" />
+			<input ref="/data/individualExtId">
+				<label ref="jr:itext('/data/individualExtId:label')" />
+				<hint ref="jr:itext('/data/individualExtId:hint')" />
+			</input>
+		</group>
+		<group appearance="field-list">
+			<input ref="/data/individualFirstName">
+				<label ref="jr:itext('/data/individualFirstName:label')" />
+				<hint ref="jr:itext('/data/individualFirstName:hint')" />
+			</input>
+			<input ref="/data/individualLastName">
+				<label ref="jr:itext('/data/individualLastName:label')" />
+				<hint ref="jr:itext('/data/individualLastName:hint')" />
+			</input>
+			<input ref="/data/individualOtherNames">
+				<label ref="jr:itext('/data/individualOtherNames:label')" />
+				<hint ref="jr:itext('/data/individualOtherNames:hint')" />
+			</input>
+			<select1 ref="/data/individualGender">
+				<label ref="jr:itext('/data/individualGender:label')" />
+				<hint ref="jr:itext('/data/individualGender:hint')" />
 				<item>
-					<label ref="jr:itext('/data/individualAgeUnits:option0')" />
-					<value>Years</value>
+					<label ref="jr:itext('/data/individualGender:option0')" />
+					<value>Male</value>
 				</item>
 				<item>
-					<label ref="jr:itext('/data/individualAgeUnits:option1')" />
-					<value>Months</value>
+					<label ref="jr:itext('/data/individualGender:option1')" />
+					<value>Female</value>
 				</item>
 			</select1>
 		</group>
+
+		<input ref="/data/individualAge">
+			<label ref="jr:itext('/data/individualAge:label')" />
+			<hint ref="jr:itext('/data/individualAge:hint')" />
+		</input>
+		<select1 ref="/data/individualAgeUnits">
+			<label ref="jr:itext('/data/individualAgeUnits:label')" />
+			<hint ref="jr:itext('/data/individualAgeUnits:hint')" />
+			<item>
+				<label ref="jr:itext('/data/individualAgeUnits:option0')" />
+				<value>Years</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualAgeUnits:option1')" />
+				<value>Months</value>
+			</item>
+		</select1>
+
+		<select1 ref="/data/individualAgeUncertaintyRange">
+			<label ref="jr:itext('/data/individualAgeUncertaintyRange:label')" />
+			<hint ref="jr:itext('/data/individualAgeUncertaintyRange:hint')" />
+			<item>
+				<label ref="jr:itext('/data/individualAgeUncertaintyRange:option0')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualAgeUncertaintyRange:option1')" />
+				<value>5</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualAgeUncertaintyRange:option2')" />
+				<value>10</value>
+			</item>
+		</select1>
 		<input ref="/data/individualDateOfBirth">
 			<label ref="jr:itext('/data/individualDateOfBirth:label')" />
 			<hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
 		</input>
-		<select1 ref="/data/individualGender">
-			<label ref="jr:itext('/data/individualGender:label')" />
-			<hint ref="jr:itext('/data/individualGender:hint')" />
-			<item>
-				<label ref="jr:itext('/data/individualGender:option0')" />
-				<value>Male</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/individualGender:option1')" />
-				<value>Female</value>
-			</item>
-		</select1>
+		
 		<select1 ref="/data/individualRelationshipToHeadOfHousehold">
 			<label
 				ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:label')" />
