@@ -3,10 +3,10 @@
 	xmlns:jr="http://openrosa.org/javarosa">
 	<h:head><!-- ODK Aggregate upload time: 2014-04-30T18:14:43.048+0000 on 
 			http://130.111.132.88:8080/ODKAggregate -->
-		<h:title>IndividualAgeDobDEMO</h:title>
+		<h:title>Individual</h:title>
 		<model>
 			<instance>
-				<data id="individual-age-dob-demo">
+				<data id="individual">
 					<processedByMirth />
 					<needsReview />
 					<fieldWorkerExtId />
