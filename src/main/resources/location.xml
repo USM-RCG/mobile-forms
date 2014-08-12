@@ -203,7 +203,7 @@
             <bind nodeset="/data/locationFloorNumber" type="string" required="true()"/>
 
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"
-			calculate="concat(/data/mapAreaName, /data/sectorName, /data/locationBuildingNumber, /data/locationFloorNumber)"/>
+			calculate="concat(/data/mapAreaName, /data/sectorName,'E' ,/data/locationBuildingNumber,'P' , /data/locationFloorNumber)"/>
 
             <bind nodeset="/data/locationName" type="string" required="true()"/>
 
