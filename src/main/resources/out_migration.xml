@@ -96,9 +96,9 @@
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/outMigrationIndividualExtId" type="string" required="true()" />
-            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" />
-            <bind nodeset="/data/visitExtId" type="string" required="true()" />
+            <bind nodeset="/data/outMigrationIndividualExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/outMigrationDate" type="date" />
             <bind nodeset="/data/outMigrationNameOfDestination" type="string" required="true()" />
             <bind nodeset="/data/outMigrationReason" type="string" required="true()" />

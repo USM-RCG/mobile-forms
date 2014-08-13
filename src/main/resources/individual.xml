@@ -108,7 +108,7 @@
 						<value>Meses</value>
 					</text>
 					<text id="/data/individualAgeUncertaintyRange:label">
-						<value>Age Uncertainty</value>
+						<value>Incertidumbre Edad</value>
 					</text>
 					<text id="/data/individualAgeUncertaintyRange:hint">
 						<value />
@@ -494,9 +494,7 @@
 			calculate="if(  (string(/data/individualAge) != ''), 
 					if(selected(/data/individualAgeUnits, 'Years'),
 						date(concat(string(int(substr(string(today()),0,4))-(/data/individualAge)), substr(string(today()),4,10))),
-						if(int(substr(string(today()),5,7)) > (/data/individualAge),
-							date(concat(substr(string(today()),0,4),'-', string(int(substr(string(today()),5,7)) - (/data/individualAge)),'-',substr(string(today()),8,10))),
-							date(concat( string(int(substr(string(today()),0,4)) - 1),'-',string(12 - ((/data/individualAge) - int(substr(string(today()),5,7))) ),'-',substr(string(today()),8,10) )) )), 
+						today()), 
 					today() )"
 	
 						
