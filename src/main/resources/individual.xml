@@ -220,6 +220,9 @@
 					<text id="/data/individualLanguagePreference:option4">
 						<value>Frances</value>
 					</text>
+					<text id="/data/individualLanguagePreference:option5">
+						<value>Otros</value>
+					</text>
 					<text id="/data/individualDip:label">
 						<value>DIP</value>
 					</text>
@@ -429,6 +432,9 @@
 					<text id="/data/individualLanguagePreference:option4">
 						<value>French</value>
 					</text>
+					<text id="/data/individualLanguagePreference:option5">
+						<value>Other</value>
+					</text>
 					<text id="/data/individualDip:label">
 						<value>DIP</value>
 					</text>
@@ -508,29 +514,16 @@
 			jr:constraintMsg="Date of birth must be within the range of uncertainty and not in the future."/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
 			<bind nodeset="/data/individualGender" type="select1" required="true()" />
 
 			<bind nodeset="/data/headPrefilledFlag" type="string" />
 
-						
+					
 			<bind nodeset="/data/individualRelationshipToHeadOfHousehold"
 				type="select1" required="true()" relevant="not(boolean-from-string(/data/headPrefilledFlag))"
 				constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
 				jr:constraintMsg="Individual is too young." />
+			
 
 			<bind nodeset="/data/individualPhoneNumber" type="int" required="false()"
 				constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits."/>
@@ -734,6 +727,10 @@
 			<item>
 				<label ref="jr:itext('/data/individualLanguagePreference:option4')" />
 				<value>French</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualLanguagePreference:option5')" />
+				<value>Other</value>
 			</item>
 		</select1>
 		<input ref="/data/individualDip">
