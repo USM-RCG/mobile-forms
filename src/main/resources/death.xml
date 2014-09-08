@@ -7,6 +7,7 @@
             <instance>
                 <data id="death">
                     <processedByMirth />
+		    <collectionDateTime />
                     <individualExtId />
                     <fieldworkerExtId />
                     <visitExtId />
@@ -17,6 +18,9 @@
             </instance>
             <itext>
                 <translation lang="Spanish">
+		    <text id="/data/collectionDateTime:label">
+			<value>Fecha de Recogida</value>
+		    </text>
                     <text id="/data/individualExtId:label">
                         <value>Individuo ID Externa</value>
                     </text>
@@ -56,6 +60,9 @@
                 </translation>
 
                 <translation lang="eng">
+		    <text id="/data/collectionDateTime:label">
+			<value>Collection Date</value>
+		    </text>
                     <text id="/data/individualExtId:label">
                         <value>Individual Ext Id</value>
                     </text>
@@ -95,38 +102,47 @@
                 </translation>
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-            <bind nodeset="/data/individualExtId" type="string" required="true()" />
-            <bind nodeset="/data/fieldworkerExtId" type="string" required="true()" />
-            <bind nodeset="/data/visitExtId" type="string" required="true()" />
+	   <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/fieldworkerExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/dateOfDeath" type="date" required="true()" />
             <bind nodeset="/data/placeOfDeath" type="string" required="true()" />
             <bind nodeset="/data/causeOfDeath" type="string" required="true()" />
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/individualExtId">
-            <label ref="jr:itext('/data/individualExtId:label')" />
-            <hint ref="jr:itext('/data/individualExtId:hint')" />
-        </input>
-        <input ref="/data/fieldworkerExtId">
-            <label ref="jr:itext('/data/fieldworkerExtId:label')" />
-            <hint ref="jr:itext('/data/fieldworkerExtId:hint')" />
-        </input>
-        <input ref="/data/visitExtId">
-            <label ref="jr:itext('/data/visitExtId:label')" />
-            <hint ref="jr:itext('/data/visitExtId:hint')" />
-        </input>
+	<group appearance="field-list">
+		<input ref="/data/collectionDateTime">
+			<label ref="jr:itext('/data/collectionDateTime:label')" />
+			<hint ref="jr:itext('/data/collectionDateTime:hint')" />
+		</input>
+		<input ref="/data/individualExtId">
+		    <label ref="jr:itext('/data/individualExtId:label')" />
+		    <hint ref="jr:itext('/data/individualExtId:hint')" />
+		</input>
+		<input ref="/data/fieldworkerExtId">
+		    <label ref="jr:itext('/data/fieldworkerExtId:label')" />
+		    <hint ref="jr:itext('/data/fieldworkerExtId:hint')" />
+		</input>
+		<input ref="/data/visitExtId">
+		    <label ref="jr:itext('/data/visitExtId:label')" />
+		    <hint ref="jr:itext('/data/visitExtId:hint')" />
+		</input>
+	</group>
         <input ref="/data/dateOfDeath">
             <label ref="jr:itext('/data/dateOfDeath:label')" />
             <hint ref="jr:itext('/data/dateOfDeath:hint')" />
         </input>
-        <input ref="/data/placeOfDeath">
-            <label ref="jr:itext('/data/placeOfDeath:label')" />
-            <hint ref="jr:itext('/data/placeOfDeath:hint')" />
-        </input>
-        <input ref="/data/causeOfDeath">
-            <label ref="jr:itext('/data/causeOfDeath:label')" />
-            <hint ref="jr:itext('/data/causeOfDeath:hint')" />
-        </input>
+	<group appearance="field-list">
+		<input ref="/data/placeOfDeath">
+		    <label ref="jr:itext('/data/placeOfDeath:label')" />
+		    <hint ref="jr:itext('/data/placeOfDeath:hint')" />
+		</input>
+		<input ref="/data/causeOfDeath">
+		    <label ref="jr:itext('/data/causeOfDeath:label')" />
+		    <hint ref="jr:itext('/data/causeOfDeath:hint')" />
+		</input>
+	</group>
     </h:body>
 </h:html>
