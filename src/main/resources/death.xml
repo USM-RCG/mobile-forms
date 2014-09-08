@@ -2,14 +2,14 @@
     xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
-        <h:title>Death Registration</h:title>
+        <h:title>Death</h:title>
         <model>
             <instance>
                 <data id="death">
                     <processedByMirth />
 		    <collectionDateTime />
                     <individualExtId />
-                    <fieldworkerExtId />
+                    <fieldWorkerExtId />
                     <visitExtId />
                     <dateOfDeath />
                     <placeOfDeath />
@@ -30,10 +30,10 @@
                     <text id="/data/individualExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/fieldworkerExtId:label">
+                    <text id="/data/fieldWorkerExtId:label">
                         <value>Investigador de Campo ID Externa</value>
                     </text>
-                    <text id="/data/fieldworkerExtId:hint">
+                    <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
                     <text id="/data/visitExtId:label">
@@ -75,10 +75,10 @@
                     <text id="/data/individualExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/fieldworkerExtId:label">
+                    <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext Id</value>
                     </text>
-                    <text id="/data/fieldworkerExtId:hint">
+                    <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
                     <text id="/data/visitExtId:label">
@@ -110,7 +110,7 @@
             <bind nodeset="/data/processedByMirth" type="boolean" />
 	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
-            <bind nodeset="/data/fieldworkerExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/dateOfDeath" type="date" required="true()" />
             <bind nodeset="/data/placeOfDeath" type="string" required="true()" />
@@ -127,9 +127,9 @@
 		    <label ref="jr:itext('/data/individualExtId:label')" />
 		    <hint ref="jr:itext('/data/individualExtId:hint')" />
 		</input>
-		<input ref="/data/fieldworkerExtId">
-		    <label ref="jr:itext('/data/fieldworkerExtId:label')" />
-		    <hint ref="jr:itext('/data/fieldworkerExtId:hint')" />
+		<input ref="/data/fieldWorkerExtId">
+		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
 		</input>
 		<input ref="/data/visitExtId">
 		    <label ref="jr:itext('/data/visitExtId:label')" />
