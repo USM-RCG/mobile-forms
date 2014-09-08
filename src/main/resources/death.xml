@@ -1,0 +1,132 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Death Registration</h:title>
+        <model>
+            <instance>
+                <data id="death">
+                    <processedByMirth />
+                    <individualExtId />
+                    <fieldworkerExtId />
+                    <visitExtId />
+                    <dateOfDeath />
+                    <placeOfDeath />
+                    <causeOfDeath />
+                </data>
+            </instance>
+            <itext>
+                <translation lang="Spanish">
+                    <text id="/data/individualExtId:label">
+                        <value>Individuo ID Externa</value>
+                    </text>
+                    <text id="/data/individualExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldworkerExtId:label">
+                        <value>Investigador de Campo ID Externa</value>
+                    </text>
+                    <text id="/data/fieldworkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitExtId:label">
+                        <value>Visita ID Externa</value>
+                    </text>
+                    <text id="/data/visitExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/dateOfDeath:label">
+                        <value>Fecha de la Muerte</value>
+                    </text>
+                    <text id="/data/dateOfDeath:hint">
+                        <value />
+                    </text>
+                    <text id="/data/placeOfDeath:label">
+                        <value>Lugar de la Muerte</value>
+                    </text>
+                    <text id="/data/placeOfDeath:hint">
+                        <value />
+                    </text>
+                    <text id="/data/causeOfDeath:label">
+                        <value>Causa de la Muerte</value>
+                    </text>
+                    <text id="/data/causeOfDeath:hint">
+                        <value />
+                    </text>
+                </translation>
+
+                <translation lang="eng">
+                    <text id="/data/individualExtId:label">
+                        <value>Individual Ext Id</value>
+                    </text>
+                    <text id="/data/individualExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldworkerExtId:label">
+                        <value>Field Worker Ext Id</value>
+                    </text>
+                    <text id="/data/fieldworkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitExtId:label">
+                        <value>Visit Ext Id</value>
+                    </text>
+                    <text id="/data/visitExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/dateOfDeath:label">
+                        <value>Date of Death</value>
+                    </text>
+                    <text id="/data/dateOfDeath:hint">
+                        <value />
+                    </text>
+                    <text id="/data/placeOfDeath:label">
+                        <value>Place of Death</value>
+                    </text>
+                    <text id="/data/placeOfDeath:hint">
+                        <value />
+                    </text>
+                    <text id="/data/causeOfDeath:label">
+                        <value>Cause of Death</value>
+                    </text>
+                    <text id="/data/causeOfDeath:hint">
+                        <value />
+                    </text>
+                </translation>
+            </itext>
+            <bind nodeset="/data/processedByMirth" type="boolean" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()" />
+            <bind nodeset="/data/fieldworkerExtId" type="string" required="true()" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" />
+            <bind nodeset="/data/dateOfDeath" type="date" required="true()" />
+            <bind nodeset="/data/placeOfDeath" type="string" required="true()" />
+            <bind nodeset="/data/causeOfDeath" type="string" required="true()" />
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/individualExtId">
+            <label ref="jr:itext('/data/individualExtId:label')" />
+            <hint ref="jr:itext('/data/individualExtId:hint')" />
+        </input>
+        <input ref="/data/fieldworkerExtId">
+            <label ref="jr:itext('/data/fieldworkerExtId:label')" />
+            <hint ref="jr:itext('/data/fieldworkerExtId:hint')" />
+        </input>
+        <input ref="/data/visitExtId">
+            <label ref="jr:itext('/data/visitExtId:label')" />
+            <hint ref="jr:itext('/data/visitExtId:hint')" />
+        </input>
+        <input ref="/data/dateOfDeath">
+            <label ref="jr:itext('/data/dateOfDeath:label')" />
+            <hint ref="jr:itext('/data/dateOfDeath:hint')" />
+        </input>
+        <input ref="/data/placeOfDeath">
+            <label ref="jr:itext('/data/placeOfDeath:label')" />
+            <hint ref="jr:itext('/data/placeOfDeath:hint')" />
+        </input>
+        <input ref="/data/causeOfDeath">
+            <label ref="jr:itext('/data/causeOfDeath:label')" />
+            <hint ref="jr:itext('/data/causeOfDeath:hint')" />
+        </input>
+    </h:body>
+</h:html>
