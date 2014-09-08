@@ -21,6 +21,9 @@
 		    <text id="/data/collectionDateTime:label">
 			<value>Fecha de Recogida</value>
 		    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
                     <text id="/data/individualExtId:label">
                         <value>Individuo ID Externa</value>
                     </text>
@@ -63,6 +66,9 @@
 		    <text id="/data/collectionDateTime:label">
 			<value>Collection Date</value>
 		    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
                     <text id="/data/individualExtId:label">
                         <value>Individual Ext Id</value>
                     </text>
@@ -102,7 +108,7 @@
                 </translation>
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-	   <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
+	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/fieldworkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
