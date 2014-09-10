@@ -6,31 +6,64 @@
             <instance>
                 <data id="pregnancy_observation">
                     <processedByMirth />
-                    <individualId />
-                    <fieldWorkerId />
-                    <visitId />
+		    <needsReview />
+                    <individualExtId />
+                    <fieldWorkerExtId />
+                    <visitExtId />
                     <expectedDeliveryDate />
                     <recordedDate />
                 </data>
             </instance>
             <itext>
+                <translation lang="Spanish">
+                    <text id="/data/individualExtId:label">
+                        <value>Madre Ext Id</value>
+                    </text>
+                    <text id="/data/individualExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Investigador de Campo ID Externa</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitExtId:label">
+                        <value>Visit ID Externa</value>
+                    </text>
+                    <text id="/data/visitExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/expectedDeliveryDate:label">
+                        <value>Fecha Tentativa</value>
+                    </text>
+                    <text id="/data/expectedDeliveryDate:hint">
+                        <value />
+                    </text>
+                    <text id="/data/recordedDate:label">
+                        <value>Fecha de la Observación</value>
+                    </text>
+                    <text id="/data/recordedDate:hint">
+                        <value />
+                    </text>
+                </translation>
                 <translation lang="eng">
-                    <text id="/data/individualId:label">
-                        <value>Mother Id</value>
+                    <text id="/data/individualExtId:label">
+                        <value>Mother Ext Id</value>
                     </text>
-                    <text id="/data/individualId:hint">
+                    <text id="/data/individualExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/fieldWorkerId:label">
-                        <value>Field Worker Id</value>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Field Worker Ext Id</value>
                     </text>
-                    <text id="/data/fieldWorkerId:hint">
+                    <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/visitId:label">
-                        <value>Visit Id</value>
+                    <text id="/data/visitExtId:label">
+                        <value>Visit Ext Id</value>
                     </text>
-                    <text id="/data/visitId:hint">
+                    <text id="/data/visitExtId:hint">
                         <value />
                     </text>
                     <text id="/data/expectedDeliveryDate:label">
@@ -48,33 +81,36 @@
                 </translation>
             </itext>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-            <bind nodeset="/data/individualId" type="string" required="true()" />
-            <bind nodeset="/data/fieldWorkerId" type="string" required="true()" />
-            <bind nodeset="/data/visitId" type="string" required="true()" />
+	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/expectedDeliveryDate" type="date" required="true()" />
             <bind nodeset="/data/recordedDate" type="date" required="true()" />
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/individualId">
-            <label ref="jr:itext('/data/individualId:label')" />
-            <hint ref="jr:itext('/data/individualId:hint')" />
-        </input>
-        <input ref="/data/fieldWorkerId">
-            <label ref="jr:itext('/data/fieldWorkerId:label')" />
-            <hint ref="jr:itext('/data/fieldWorkerId:hint')" />
-        </input>
-        <input ref="/data/visitId">
-            <label ref="jr:itext('/data/visitId:label')" />
-            <hint ref="jr:itext('/data/visitId:hint')" />
-        </input>
+	<group appearance="field-list">
+		<input ref="/data/individualExtId">
+		    <label ref="jr:itext('/data/individualExtId:label')" />
+		    <hint ref="jr:itext('/data/individualExtId:hint')" />
+		</input>
+		<input ref="/data/fieldWorkerExtId">
+		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+		</input>
+		<input ref="/data/visitExtId">
+		    <label ref="jr:itext('/data/visitExtId:label')" />
+		    <hint ref="jr:itext('/data/visitExtId:hint')" />
+		</input>
+		<input ref="/data/recordedDate">
+		    <label ref="jr:itext('/data/recordedDate:label')" />
+		    <hint ref="jr:itext('/data/recordedDate:hint')" />
+		</input>
+	</group>
         <input ref="/data/expectedDeliveryDate">
             <label ref="jr:itext('/data/expectedDeliveryDate:label')" />
             <hint ref="jr:itext('/data/expectedDeliveryDate:hint')" />
-        </input>
-        <input ref="/data/recordedDate">
-            <label ref="jr:itext('/data/recordedDate:label')" />
-            <hint ref="jr:itext('/data/recordedDate:hint')" />
         </input>
     </h:body>
 </h:html>
