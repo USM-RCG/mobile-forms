@@ -1,131 +1,53 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
-    <h:head>
-        <h:title>Bed Net</h:title>
-        <model>
-            <instance>
-                <data id="bed_net">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Bed Net</h:title>
+    <model>
+      <instance>
+        <data id="bed_net">
                     <processedByMirth />
 		    <needsReview />
 		    <fieldWorkerExtId />
 		    <locationExtId />
 		    <distributionDateTime />
-		    <numberOfSleepingAreas />
-		    <numberOfPeopleSleepingInHousehold />
-	 	    <numberOfBednetsDistributed />
-		    <bednetId1 />
-		    <bednetId2 />
-		    <bednetId3 />
-		    <bednetId4 />
-		    <bednetId5 />
-		    <bednetId6 />
-		    <bednetId7 />
-		    <bednetId8 />
-		    <bednetId9 />
-		    <bednetId10 />
-                </data>
-            </instance>
-            <itext>
-                <translation lang="Spanish">
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>Investigador de Campo ID Externa</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value />
-                    </text> 
-                    <text id="/data/distributionDateTime:label">
-                        <value>Fecha de Distribución</value>
-                    </text>
-                    <text id="/data/distributionDateTime:hint">
-                        <value />
-                    </text>
-                    <text id="/data/locationExtId:label">
-                        <value>Locación ID Externa</value>
-                    </text>
-                    <text id="/data/locationExtId:hint">
-                        <value />
-                    </text>
-                    <text id="/data/numberOfSleepingAreas:label">
-                        <value>Número de camas u otras superficies donde se duerme</value>
-                    </text>
-                    <text id="/data/numberOfSleepingAreas:hint">
-                        <value />
-                    </text>
-                    <text id="/data/numberOfBednetsDistributed:label">
-                        <value>Número de telas mosquiteras distribuido</value>
-                    </text>
-                    <text id="/data/numberOfBednetsDistributed:hint">
-                        <value />
-                    </text>
-                    <text id="/data/numberOfPeopleSleepingInHousehold:label">
-                        <value>Número de personas que duermen en el hogar</value>
-                    </text>
-                    <text id="/data/numberOfPeopleSleepingInHousehold:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId1:label">
-                        <value>Tela Mosquitera ID - 1</value>
-                    </text>
-                    <text id="/data/bednetId1:hint">
-                        <value />
-                    </text>
-
-                    <text id="/data/bednetId2:label">
-                        <value>Tela Mosquitera ID - 2</value>
-                    </text>
-                    <text id="/data/bednetId2:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId3:label">
-                        <value>Tela Mosquitera ID - 3</value>
-                    </text>
-                    <text id="/data/bednetId3:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId4:label">
-                        <value>Tela Mosquitera ID - 4</value>
-                    </text>
-                    <text id="/data/bednetId4:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId5:label">
-                        <value>Tela Mosquitera ID - 5</value>
-                    </text>
-                    <text id="/data/bednetId5:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId6:label">
-                        <value>Tela Mosquitera ID - 6</value>
-                    </text>
-                    <text id="/data/bednetId6:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId7:label">
-                        <value>Tela Mosquitera ID - 7</value>
-                    </text>
-                    <text id="/data/bednetId7:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId8:label">
-                        <value>Tela Mosquitera ID - 8</value>
-                    </text>
-                    <text id="/data/bednetId8:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId9:label">
-                        <value>Tela Mosquitera ID - 9</value>
-                    </text>
-                    <text id="/data/bednetId9:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId10:label">
-                        <value>Tela Mosquitera ID - 10</value>
-                    </text>
-                    <text id="/data/bednetId10:hint">
-                        <value />
-                    </text>
-                </translation>
-                <translation lang="English">
+		  <beds/>
+		  <netsCurrent/>
+		  <netsCurrentInstance jr:template="">
+		    <type/>
+		    <condition/>
+		  </netsCurrentInstance>
+		  <netsNeeded />
+		  <netsSupplied jr:template="">
+			<netCode />
+			<netHung />
+		  </netsSupplied>
+		<walls/>
+		<wallGaps />
+		<roof />
+		<roofGaps />
+		<eaves />
+		<patio />
+		<doors />
+		<windows />
+		<aircondition />
+		<electricity />
+		<houseSprayed />
+		<reasonWhyNotSprayed />
+		<whyNotSprayed01 />
+		<whyNotSprayed02 />
+		<whyNotSprayed03 />
+		<whyNotSprayed04 />
+		<whyNotSprayed05 />
+		<whyNotSprayed06 />
+		<whyNotSprayed07 />
+		<whyNotSprayed08 />
+		<whyNotSprayed09 />
+		<whyNotSprayed10 />
+		<whyNotSprayed11 />
+		<whyNotSprayed12 />
+        </data>
+      </instance>
+      <itext>
+        <translation lang="eng">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext ID</value>
                     </text>
@@ -144,190 +66,818 @@
                     <text id="/data/locationExtId:hint">
                         <value />
                     </text>
-                    <text id="/data/numberOfSleepingAreas:label">
-                        <value>Number of sleeping areas</value>
-                    </text>
-                    <text id="/data/numberOfSleepingAreas:hint">
-                        <value />
-                    </text>
-                    <text id="/data/numberOfBednetsDistributed:label">
-                        <value>Number of bed nets distributed</value>
-                    </text>
-                    <text id="/data/numberOfBednetsDistributed:hint">
-                        <value />
-                    </text>
-                    <text id="/data/numberOfPeopleSleepingInHousehold:label">
-                        <value>Number of people sleeping in the household</value>
-                    </text>
-                    <text id="/data/numberOfPeopleSleepingInHousehold:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId1:label">
-                        <value>Bed Net ID - 1</value>
-                    </text>
-                    <text id="/data/bednetId1:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId2:label">
-                        <value>Bed Net ID - 2</value>
-                    </text>
-                    <text id="/data/bednetId2:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId3:label">
-                        <value>Bed Net ID - 3</value>
-                    </text>
-                    <text id="/data/bednetId3:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId4:label">
-                        <value>Bed Net ID - 4</value>
-                    </text>
-                    <text id="/data/bednetId4:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId5:label">
-                        <value>Bed Net ID - 5</value>
-                    </text>
-                    <text id="/data/bednetId5:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId6:label">
-                        <value>Bed Net ID - 6</value>
-                    </text>
-                    <text id="/data/bednetId6:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId7:label">
-                        <value>Bed Net ID - 7</value>
-                    </text>
-                    <text id="/data/bednetId7:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId8:label">
-                        <value>Bed Net ID - 8</value>
-                    </text>
-                    <text id="/data/bednetId8:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId9:label">
-                        <value>Bed Net ID - 9</value>
-                    </text>
-                    <text id="/data/bednetId9:hint">
-                        <value />
-                    </text>
-                    <text id="/data/bednetId10:label">
-                        <value>Bed Net ID - 10</value>
-                    </text>
-                    <text id="/data/bednetId10:hint">
-                        <value />
-                    </text>
-                </translation>
-            </itext>
+          <text id="/data/beds:label">
+            <value>Number of sleeping areas</value>
+          </text>
+          <text id="/data/netsCurrent:label">
+            <value>Current bed nets</value>
+          </text>
+          <text id="/data/netsCurrentInstance:label">
+            <value>Current Nets</value>
+          </text>
+          <text id="/data/netsCurrentInstance/type:label">
+            <value>Type</value>
+          </text>
+          <text id="/data/netsCurrentInstance/type:option0">
+            <value>Permanet 3.0</value>
+          </text>
+          <text id="/data/netsCurrentInstance/type:option1">
+            <value>Other net</value>
+          </text>
+          <text id="/data/netsCurrentInstance/condition:label">
+            <value>Condition</value>
+          </text>
+          <text id="/data/netsCurrentInstance/condition:option0">
+            <value>Never Verified</value>
+          </text>
+          <text id="/data/netsCurrentInstance/condition:option1">
+            <value>Never Used</value>
+          </text>
+          <text id="/data/netsCurrentInstance/condition:option2">
+            <value>Good (only thumb-sized holes or no holes)</value>
+          </text>
+          <text id="/data/netsCurrentInstance/condition:option3">
+            <value>Poor (fist-sized or head-sized holes)</value>
+          </text>
+          <text id="/data/netsNeeded:label">
+            <value>How many bed nets were distributed?</value>
+          </text>
+          <text id="/data/netsSupplied:label">
+            <value>Bed Net Distributed</value>
+          </text>
+          <text id="/data/netsSupplied/netCode:label">
+            <value>Net Code</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:label">
+            <value>Hung</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:option1">
+            <value>Yes</value>
+          </text>
+
+          <text id="/data/walls:label">
+            <value>Enter the primary (most common) wall material</value>
+          </text>
+          <text id="/data/walls:option0">
+            <value>Brick</value>
+          </text>
+          <text id="/data/walls:option1">
+            <value>Wood</value>
+          </text>
+          <text id="/data/walls:option2">
+            <value>Cement</value>
+          </text>
+          <text id="/data/walls:option3">
+            <value>Mud</value>
+          </text>
+          <text id="/data/walls:option4">
+            <value>Tin Sheeting</value>
+          </text>
+          <text id="/data/walls:option5">
+            <value>Other</value>
+          </text>
+
+          <text id="/data/wallGaps:label">
+            <value>Are there gaps (open spaces where mosquitos can enter) in the walls?</value>
+          </text>
+          <text id="/data/wallGaps:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/wallGaps:option1">
+            <value>Yes (a few)</value>
+          </text>
+          <text id="/data/wallGaps:option2">
+            <value>Yes (many)</value>
+          </text>
+
+          <text id="/data/roof:label">
+            <value>Enter the primary (most common) roofing material</value>
+          </text>
+          <text id="/data/roof:option0">
+            <value>Tin Sheeting</value>
+          </text>
+          <text id="/data/roof:option1">
+            <value>Cement</value>
+          </text>
+          <text id="/data/roof:option2">
+            <value>Tiles</value>
+          </text>
+          <text id="/data/roof:option3">
+            <value>Wood</value>
+          </text>
+          <text id="/data/roof:option4">
+            <value>Palm or thatch</value>
+          </text>
+          <text id="/data/roof:option5">
+            <value>Asphalt tiles</value>
+          </text>
+          <text id="/data/roof:option6">
+            <value>Pitch</value>
+          </text>
+          <text id="/data/roof:option7">
+            <value>Other</value>
+          </text>
+
+          <text id="/data/roofGaps:label">
+            <value>Are there gaps (open spaces where mosquitos can enter) in the roof?</value>
+          </text>
+          <text id="/data/roofGaps:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/roofGaps:option1">
+            <value>Yes (a few)</value>
+          </text>
+          <text id="/data/roofGaps:option2">
+            <value>Yes (many)</value>
+          </text>
+
+          <text id="/data/eaves:label">
+            <value>Enter the primary (most common) condition of the eaves</value>
+          </text>
+          <text id="/data/eaves:option0">
+            <value>Open</value>
+          </text>
+          <text id="/data/eaves:option1">
+            <value>Open but screened</value>
+          </text>
+          <text id="/data/eaves:option2">
+            <value>Closed</value>
+          </text>
+
+          <text id="/data/patio:label">
+            <value>Enter whether there is a patio and what its primary (most common) condition is</value>
+          </text>
+          <text id="/data/patio:option0">
+            <value>No patio</value>
+          </text>
+          <text id="/data/patio:option1">
+            <value>Unscreened patio</value>
+          </text>
+          <text id="/data/patio:option2">
+            <value>Screened patio</value>
+          </text>
+
+          <text id="/data/doors:label">
+            <value>Enter whether doors are screened</value>
+          </text>
+          <text id="/data/doors:option0">
+            <value>No doors screened</value>
+          </text>
+          <text id="/data/doors:option1">
+            <value>Some doors screened</value>
+          </text>
+          <text id="/data/doors:option2">
+            <value>All doors screened</value>
+          </text>
+
+          <text id="/data/windows:label">
+            <value>Enter whether windows are screened</value>
+          </text>
+          <text id="/data/windows:option0">
+            <value>No windows screened</value>
+          </text>
+          <text id="/data/windows:option1">
+            <value>Some windows screened</value>
+          </text>
+          <text id="/data/windows:option2">
+            <value>All windows screened</value>
+          </text>
+
+          <text id="/data/aircondition:label">
+            <value>Enter whether the house is airconditioned</value>
+          </text>
+          <text id="/data/aircondition:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/aircondition:option1">
+            <value>Some rooms airconditioned</value>
+          </text>
+          <text id="/data/aircondition:option2">
+            <value>All rooms airconditioned</value>
+          </text>
+
+          <text id="/data/electricity:label">
+            <value>Enter electrical source</value>
+          </text>
+          <text id="/data/electricity:option0">
+            <value>None</value>
+          </text>
+          <text id="/data/electricity:option1">
+            <value>"L1" metered connection</value>
+          </text>
+          <text id="/data/electricity:option2">
+            <value>"L2" metered connection</value>
+          </text>
+          <text id="/data/electricity:option3">
+            <value>Paid connection to neighbor's L1 or L2 source</value>
+          </text>
+          <text id="/data/electricity:option4">
+            <value>Other free public electrical connection</value>
+          </text>
+          <text id="/data/electricity:option5">
+            <value>Private generator</value>
+          </text>
+          <text id="/data/electricity:option6">
+            <value>Solar panels</value>
+          </text>
+          <text id="/data/electricity:option7">
+            <value>Gas or kerosene lamps</value>
+          </text>
+          <text id="/data/electricity:option8">
+            <value>Candles</value>
+          </text>
+          <text id="/data/electricity:option9">
+            <value>Wood fire</value>
+          </text>
+          <text id="/data/electricity:option10">
+            <value>Don't know / not sure</value>
+          </text>
+          <text id="/data/electricity:option11">
+            <value>Other</value>
+          </text>
+
+          <text id="/data/houseSprayed:label">
+            <value>Was your house sprayed in the past 12 months?</value>
+          </text>
+          <text id="/data/houseSprayed:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/houseSprayed:option1">
+            <value>Yes</value>
+          </text>
+          <text id="/data/houseSprayed:option2">
+            <value>Don't Know / Not Sure</value>
+          </text>
+
+          <text id="/data/reasonWhyNotSprayed:label">
+            <value>Why was your house not sprayed in the past 12 months?</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option0">
+            <value>Not contacted</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option1">
+            <value>Nobody came back to spray my house</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option2">
+            <value>Don't Know / Not Sure</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option3">
+            <value>Didn't want house sprayed</value>
+          </text>
+
+          <text id="/data/whyNotSprayed01:label">
+            <value>Causes ill health effects</value>
+          </text>
+	  <text id="/data/whyNotSprayed02:label">
+            <value>Dangerous for animals</value>
+          </text>
+          <text id="/data/whyNotSprayed03:label">
+            <value>Disruptive, annoying or disagreeable</value>
+          </text>
+          <text id="/data/whyNotSprayed04:label">
+            <value>Attitude of sprayers</value>
+          </text>
+          <text id="/data/whyNotSprayed05:label">
+            <value>Damages furniture or walls</value>
+          </text>
+          <text id="/data/whyNotSprayed06:label">
+            <value>Not effective</value>
+          </text>
+          <text id="/data/whyNotSprayed07:label">
+            <value>Not applicable to us</value>
+          </text>
+          <text id="/data/whyNotSprayed08:label">
+            <value>Use bed nets instead</value>
+          </text>
+          <text id="/data/whyNotSprayed09:label">
+            <value>Don't have time</value>
+          </text>
+          <text id="/data/whyNotSprayed10:label">
+            <value>Time is inconvenient</value>
+          </text>
+          <text id="/data/whyNotSprayed11:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/whyNotSprayed12:label">
+            <value>Don't know / not sure</value>
+          </text>
+  
+
+        </translation>
+      </itext>
+
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 	    <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
 	    <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
-	    <bind nodeset="/data/numberOfSleepingAreas" type="int" required="true()" />
-	    <bind nodeset="/data/numberOfPeopleSleepingInHousehold" type="int" required="true()" />
 
-	    <bind nodeset="/data/numberOfBednetsDistributed" type="int" required="true()"
-			constraint=". > 0 and not(. > 10)" jr:constraintMsg="Min = 1, Max = 10"/>
+      <bind nodeset="/data/beds" type="int" required="true()"/>
+      <bind nodeset="/data/netsCurrent" type="int" required="true()"/>
+      <bind nodeset="/data/netsCurrentInstance/type" type="select1"/>
+      <bind nodeset="/data/netsCurrentInstance/condition" type="select1"/>
+      <bind nodeset="/data/netsNeeded" type="int"/>
+      <bind nodeset="/data/netsSupplied/netCode" type="string"/>
+      <bind nodeset="/data/netsSupplied/netHung" type="select1"/>
+      <bind nodeset="/data/walls" type="select1" required="true()" />
+      <bind nodeset="/data/wallGaps" type="select1" required="true()" />
+      <bind nodeset="/data/roof" type="select1" required="true()" />
+      <bind nodeset="/data/roofGaps" type="select1" required="true()" />
+      <bind nodeset="/data/eaves" type="select1" required="true()" />
+      <bind nodeset="/data/patio" type="select1" required="true()" />
+      <bind nodeset="/data/doors" type="select1" required="true()" />
+      <bind nodeset="/data/windows" type="select1" required="true()" />
+      <bind nodeset="/data/aircondition" type="select1" required="true()" />
+      <bind nodeset="/data/electricity" type="select1" required="true()" />
+      <bind nodeset="/data/houseSprayed" type="select1" required="true()" />
+      <bind nodeset="/data/reasonWhyNotSprayed" type="select1" required="selected(/data/houseSprayed, '0')" relevant="selected(/data/houseSprayed, '0')" />
+      <bind nodeset="/data/whyNotSprayed01" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed02" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed03" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed04" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed05" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed06" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed07" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed08" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed09" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed10" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed11" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed12" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
 
-	    <bind nodeset="/data/bednetId1" type="string" required="true()" />
-	    <bind nodeset="/data/bednetId2" type="string" required="/data/numberOfBednetsDistributed > 1"
-				relevant="/data/numberOfBednetsDistributed > 1"/>
-	    <bind nodeset="/data/bednetId3" type="string" required="/data/numberOfBednetsDistributed > 2"
-				relevant="/data/numberOfBednetsDistributed > 2"/>
-	    <bind nodeset="/data/bednetId4" type="string" required="/data/numberOfBednetsDistributed > 3"
-				relevant="/data/numberOfBednetsDistributed > 3"/>
-	    <bind nodeset="/data/bednetId5" type="string" required="/data/numberOfBednetsDistributed > 4"
-				relevant="/data/numberOfBednetsDistributed > 4"/>
-	    <bind nodeset="/data/bednetId6" type="string" required="/data/numberOfBednetsDistributed > 5"
-				relevant="/data/numberOfBednetsDistributed > 5"/>
-	    <bind nodeset="/data/bednetId7" type="string" required="/data/numberOfBednetsDistributed > 6"
-				relevant="/data/numberOfBednetsDistributed > 6"/>
-	    <bind nodeset="/data/bednetId8" type="string" required="/data/numberOfBednetsDistributed > 7"
-				relevant="/data/numberOfBednetsDistributed > 7"/>
-	    <bind nodeset="/data/bednetId9" type="string" required="/data/numberOfBednetsDistributed > 8"
-				relevant="/data/numberOfBednetsDistributed > 8"/>
-	    <bind nodeset="/data/bednetId10" type="string" required="/data/numberOfBednetsDistributed > 9"
-				relevant="/data/numberOfBednetsDistributed > 9"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/beds">
+      <label ref="jr:itext('/data/beds:label')"/>
+    </input>
+    <input ref="/data/netsCurrent">
+      <label ref="jr:itext('/data/netsCurrent:label')"/>
+    </input>
+    <group>
+      <label ref="jr:itext('/data/netsCurrentInstance:label')"/>
+      <repeat nodeset="/data/netsCurrentInstance" jr:count="/data/netsCurrent">
+        <select1 ref="/data/netsCurrentInstance/type">
+          <label ref="jr:itext('/data/netsCurrentInstance/type:label')"/>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/type:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/type:option1')"/>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 ref="/data/netsCurrentInstance/condition">
+          <label ref="jr:itext('/data/netsCurrentInstance/condition:label')"/>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/condition:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/condition:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/condition:option2')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/netsCurrentInstance/condition:option3')"/>
+            <value>3</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
 
-        </model>
-    </h:head>
-    <h:body>
-		<group appearance="field-list">
-			<input ref="/data/fieldWorkerExtId">
-				<label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-				<hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+			<input ref="/data/netsNeeded">
+				<label ref="jr:itext('/data/netsNeeded:label')" />				
 			</input>
-			<input ref="/data/distributionDateTime">
-				<label ref="jr:itext('/data/distributionDateTime:label')" />
-				<hint ref="jr:itext('/data/distributionDateTime:hint')" />
-			</input>
-			<input ref="/data/locationExtId">
-				<label ref="jr:itext('/data/locationExtId:label')" />
-				<hint ref="jr:itext('/data/locationExtId:hint')" />
-			</input>
-		</group>
 
-		<group appearance="field-list">
-			<input ref="/data/numberOfPeopleSleepingInHousehold">
-				<label ref="jr:itext('/data/numberOfPeopleSleepingInHousehold:label')" />
-				<hint ref="jr:itext('/data/numberOfPeopleSleepingInHousehold:hint')" />
-			</input>
-			<input ref="/data/numberOfSleepingAreas">
-				<label ref="jr:itext('/data/numberOfSleepingAreas:label')" />
-				<hint ref="jr:itext('/data/numberOfSleepingAreas:hint')" />
-			</input>
-			<input ref="/data/numberOfBednetsDistributed">
-				<label ref="jr:itext('/data/numberOfBednetsDistributed:label')" />
-				<hint ref="jr:itext('/data/numberOfBednetsDistributed:hint')" />
-			</input>
-		</group>
-		<group appearance="field-list">
-			<input ref="/data/bednetId1">
-				<label ref="jr:itext('/data/bednetId1:label')" />
-				<hint ref="jr:itext('/data/bednetId1:hint')" />
-			</input>
-			<input ref="/data/bednetId2">
-				<label ref="jr:itext('/data/bednetId2:label')" />
-				<hint ref="jr:itext('/data/bednetId2:hint')" />
-			</input>
-			<input ref="/data/bednetId3">
-				<label ref="jr:itext('/data/bednetId3:label')" />
-				<hint ref="jr:itext('/data/bednetId3:hint')" />
-			</input>
-			<input ref="/data/bednetId4">
-				<label ref="jr:itext('/data/bednetId4:label')" />
-				<hint ref="jr:itext('/data/bednetId4:hint')" />
-			</input>
-			<input ref="/data/bednetId5">
-				<label ref="jr:itext('/data/bednetId5:label')" />
-				<hint ref="jr:itext('/data/bednetId5:hint')" />
-			</input>
-			<input ref="/data/bednetId6">
-				<label ref="jr:itext('/data/bednetId6:label')" />
-				<hint ref="jr:itext('/data/bednetId6:hint')" />
-			</input>
-			<input ref="/data/bednetId7">
-				<label ref="jr:itext('/data/bednetId7:label')" />
-				<hint ref="jr:itext('/data/bednetId7:hint')" />
-			</input>
-			<input ref="/data/bednetId8">
-				<label ref="jr:itext('/data/bednetId8:label')" />
-				<hint ref="jr:itext('/data/bednetId8:hint')" />
-			</input>
-			<input ref="/data/bednetId9">
-				<label ref="jr:itext('/data/bednetId9:label')" />
-				<hint ref="jr:itext('/data/bednetId9:hint')" />
-			</input>
-			<input ref="/data/bednetId10">
-				<label ref="jr:itext('/data/bednetId10:label')" />
-				<hint ref="jr:itext('/data/bednetId10:hint')" />
-			</input>
-		</group>
-    </h:body>
+
+    <group>
+      <label ref="jr:itext('/data/netsSupplied:label')"/>
+      <repeat nodeset="/data/netsSupplied" jr:count="/data/netsNeeded">
+        <input ref="/data/netsSupplied/netCode">
+      		<label ref="jr:itext('/data/netsSupplied/netCode:label')"/>
+    	</input>	
+        <select1 ref="/data/netsSupplied/netHung">
+          <label ref="jr:itext('/data/netsSupplied/netHung:label')"/>
+          <item>
+            <label ref="jr:itext('/data/netsSupplied/netHung:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/netsSupplied/netHung:option1')"/>
+            <value>1</value>
+          </item>
+        </select1>       
+      </repeat>
+    </group>
+
+	<select1 ref="/data/walls">
+          <label ref="jr:itext('/data/walls:label')"/>
+          <item>
+            <label ref="jr:itext('/data/walls:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/walls:option1')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/walls:option2')"/>
+            <value>3</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/walls:option3')"/>
+            <value>4</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/walls:option4')"/>
+            <value>5</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/walls:option5')"/>
+            <value>9</value>
+          </item>
+        </select1>
+
+	<select1 ref="/data/wallGaps">
+          <label ref="jr:itext('/data/wallGaps:label')"/>
+          <item>
+            <label ref="jr:itext('/data/wallGaps:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/wallGaps:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/wallGaps:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/roof">
+          <label ref="jr:itext('/data/roof:label')"/>
+          <item>
+            <label ref="jr:itext('/data/roof:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option1')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option2')"/>
+            <value>3</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option3')"/>
+            <value>4</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option4')"/>
+            <value>5</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option5')"/>
+            <value>6</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option5')"/>
+            <value>7</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roof:option5')"/>
+            <value>9</value>
+          </item>
+        </select1>
+
+	<select1 ref="/data/roofGaps">
+          <label ref="jr:itext('/data/roofGaps:label')"/>
+          <item>
+            <label ref="jr:itext('/data/roofGaps:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roofGaps:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/roofGaps:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/eaves">
+          <label ref="jr:itext('/data/eaves:label')"/>
+          <item>
+            <label ref="jr:itext('/data/eaves:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/eaves:option1')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/eaves:option2')"/>
+            <value>3</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/patio">
+          <label ref="jr:itext('/data/patio:label')"/>
+          <item>
+            <label ref="jr:itext('/data/patio:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/patio:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/patio:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/doors">
+          <label ref="jr:itext('/data/doors:label')"/>
+          <item>
+            <label ref="jr:itext('/data/doors:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/doors:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/doors:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/windows">
+          <label ref="jr:itext('/data/windows:label')"/>
+          <item>
+            <label ref="jr:itext('/data/windows:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/windows:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/windows:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/aircondition">
+          <label ref="jr:itext('/data/aircondition:label')"/>
+          <item>
+            <label ref="jr:itext('/data/aircondition:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/aircondition:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/aircondition:option2')"/>
+            <value>2</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/electricity">
+          <label ref="jr:itext('/data/electricity:label')"/>
+          <item>
+            <label ref="jr:itext('/data/electricity:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option2')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option3')"/>
+            <value>3</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option4')"/>
+            <value>4</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option5')"/>
+            <value>5</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option6')"/>
+            <value>6</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option7')"/>
+            <value>7</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option8')"/>
+            <value>8</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option9')"/>
+            <value>9</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option10')"/>
+            <value>10</value>
+          </item>              
+          <item>
+            <label ref="jr:itext('/data/electricity:option11')"/>
+            <value>99</value>
+          </item>    
+        </select1>
+
+	<select1 ref="/data/houseSprayed">
+          <label ref="jr:itext('/data/houseSprayed:label')"/>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option2')"/>
+            <value>3</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/reasonWhyNotSprayed">
+          <label ref="jr:itext('/data/reasonWhyNotSprayed:label')"/>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option1')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option2')"/>
+            <value>3</value>
+          </item>     
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option3')"/>
+            <value>4</value>
+          </item>     
+        </select1>
+
+	<group appearance="field-list">
+		<label>Why didn't you want your house sprayed? </label>	
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed01">
+                	<label ref="jr:itext('/data/whyNotSprayed01:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed02">
+                	<label ref="jr:itext('/data/whyNotSprayed02:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed03">
+			<label ref="jr:itext('/data/whyNotSprayed03:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed04">
+			<label ref="jr:itext('/data/whyNotSprayed04:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed05">
+			<label ref="jr:itext('/data/whyNotSprayed05:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed06">
+			<label ref="jr:itext('/data/whyNotSprayed06:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed07" >
+			<label ref="jr:itext('/data/whyNotSprayed07:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed08" >
+			<label ref="jr:itext('/data/whyNotSprayed08:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed09" >
+			<label ref="jr:itext('/data/whyNotSprayed09:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed10" >
+			<label ref="jr:itext('/data/whyNotSprayed10:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed11" >
+			<label ref="jr:itext('/data/whyNotSprayed11:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 appearance="compact-2" ref="/data/whyNotSprayed12" >
+			<label ref="jr:itext('/data/whyNotSprayed12:label')"/>
+			<item>
+				<label>Yes</label>
+				<value>1</value>
+			</item>
+			<item>
+				<label>No</label>
+				<value>0</value>
+			</item>
+		</select1>	
+	</group>
+
+
+
+  </h:body>
 </h:html>
