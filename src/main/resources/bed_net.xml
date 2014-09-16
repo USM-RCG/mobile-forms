@@ -410,12 +410,32 @@
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/beds">
-      <label ref="jr:itext('/data/beds:label')"/>
-    </input>
-    <input ref="/data/netsCurrent">
-      <label ref="jr:itext('/data/netsCurrent:label')"/>
-    </input>
+	<group appearance="field-list">
+		<input ref="/data/fieldWorkerExtId">
+		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+		</input>
+		<input ref="/data/visitExtId">
+		    <label ref="jr:itext('/data/visitExtId:label')" />
+		    <hint ref="jr:itext('/data/visitExtId:hint')" />
+		</input>
+		<input ref="/data/locationExtId">
+		    <label ref="jr:itext('/data/locationExtId:label')" />
+		    <hint ref="jr:itext('/data/locationExtId:hint')" />
+		</input>
+		<input ref="/data/collectionDateTime">
+		    <label ref="jr:itext('/data/collectionDateTime:label')" />
+		    <hint ref="jr:itext('/data/collectionDateTime:hint')" />
+		</input>
+	</group>
+
+	    <input ref="/data/beds">
+	      <label ref="jr:itext('/data/beds:label')"/>
+	    </input>
+	    <input ref="/data/netsCurrent">
+	      <label ref="jr:itext('/data/netsCurrent:label')"/>
+	    </input>
+
     <group>
       <label ref="jr:itext('/data/netsCurrentInstance:label')"/>
       <repeat nodeset="/data/netsCurrentInstance" jr:count="/data/netsCurrent">
