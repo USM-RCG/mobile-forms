@@ -11,10 +11,8 @@
 		    <distributionDateTime />
 		  <beds/>
 		  <netsCurrent/>
-		  <netsCurrentInstance jr:template="">
-		    <type/>
-		    <condition/>
-		  </netsCurrentInstance>
+		  <ITNsCurrent />
+		  <ITNGoodN />
 		  <netsNeeded />
 		  <netsSupplied jr:template="">
 			<netCode />
@@ -72,35 +70,14 @@
           <text id="/data/netsCurrent:label">
             <value>How many bed nets of any type does the household currently have?</value>
           </text>
-          <text id="/data/netsCurrentInstance:label">
-            <value>Preexisting Nets</value>
+          <text id="/data/ITNsCurrent:label">
+            <value>How many blue Permanet 3.0 nets does the household currently have?</value>
           </text>
-          <text id="/data/netsCurrentInstance/type:label">
-            <value>Type</value>
-          </text>
-          <text id="/data/netsCurrentInstance/type:option0">
-            <value>Permanet 3.0</value>
-          </text>
-          <text id="/data/netsCurrentInstance/type:option1">
-            <value>Other net</value>
-          </text>
-          <text id="/data/netsCurrentInstance/condition:label">
-            <value>Condition</value>
-          </text>
-          <text id="/data/netsCurrentInstance/condition:option0">
-            <value>Never Verified</value>
-          </text>
-          <text id="/data/netsCurrentInstance/condition:option1">
-            <value>Never Used</value>
-          </text>
-          <text id="/data/netsCurrentInstance/condition:option2">
-            <value>Good (only thumb-sized holes or no holes)</value>
-          </text>
-          <text id="/data/netsCurrentInstance/condition:option3">
-            <value>Poor (fist-sized or head-sized holes)</value>
-          </text>
+          <text id="/data/ITNGoodN:label">
+            <value>How many of these blue Permanet 3.0 nets are in good condition (only thumb-sized holes or no holes)?</value>
+          </text>         
           <text id="/data/netsNeeded:label">
-            <value>How many bed nets were distributed?</value>
+            <value>Number of bed nets to distribute</value>
           </text>
           <text id="/data/netsSupplied:label">
             <value>Bed Net Distributed</value>
@@ -377,9 +354,9 @@
 
       <bind nodeset="/data/beds" type="int" required="true()"/>
       <bind nodeset="/data/netsCurrent" type="int" required="true()"/>
-      <bind nodeset="/data/netsCurrentInstance/type" type="select1" required="true()"/>
-      <bind nodeset="/data/netsCurrentInstance/condition" type="select1" required="true()"/>
-      <bind nodeset="/data/netsNeeded" type="int" required="true()"/>
+      <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent > 0"/>
+      <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0"/>
+      <bind nodeset="/data/netsNeeded" type="int" required="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
       <bind nodeset="/data/netsSupplied/netCode" type="string" required="true()"/>
       <bind nodeset="/data/netsSupplied/netHung" type="select1" required="true()"/>
       <bind nodeset="/data/walls" type="select1" required="true()" />
@@ -431,47 +408,15 @@
 	    <input ref="/data/netsCurrent">
 	      <label ref="jr:itext('/data/netsCurrent:label')"/>
 	    </input>
-
-    <group>
-      <label ref="jr:itext('/data/netsCurrentInstance:label')"/>
-      <repeat nodeset="/data/netsCurrentInstance" jr:count="/data/netsCurrent">
-        <select1 ref="/data/netsCurrentInstance/type">
-          <label ref="jr:itext('/data/netsCurrentInstance/type:label')"/>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/type:option0')"/>
-            <value>1</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/type:option1')"/>
-            <value>0</value>
-          </item>
-        </select1>
-        <select1 ref="/data/netsCurrentInstance/condition">
-          <label ref="jr:itext('/data/netsCurrentInstance/condition:label')"/>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/condition:option0')"/>
-            <value>0</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/condition:option1')"/>
-            <value>1</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/condition:option2')"/>
-            <value>2</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/netsCurrentInstance/condition:option3')"/>
-            <value>3</value>
-          </item>
-        </select1>
-      </repeat>
-    </group>
-
-			<input ref="/data/netsNeeded">
-				<label ref="jr:itext('/data/netsNeeded:label')" />				
-			</input>
-
+	    <input ref="/data/ITNsCurrent">
+	      <label ref="jr:itext('/data/ITNsCurrent:label')"/>
+	    </input>
+	    <input ref="/data/ITNGoodN">
+	      <label ref="jr:itext('/data/ITNGoodN:label')"/>
+	    </input>
+	    <input ref="/data/netsNeeded">
+	      <label ref="jr:itext('/data/netsNeeded:label')"/>
+	    </input>
 
     <group>
       <label ref="jr:itext('/data/netsSupplied:label')"/>
