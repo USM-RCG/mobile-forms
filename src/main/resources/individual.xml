@@ -82,7 +82,7 @@
 					</text>
 
 					<text id="/data/individualOtherNames:label">
-						<value>Otros Nombres</value>
+						<value>Nombre de Casa</value>
 					</text>
 					<text id="/data/individualOtherNames:hint">
 						<value />
@@ -297,7 +297,7 @@
 					</text>
 
 					<text id="/data/individualOtherNames:label">
-						<value>Other Names</value>
+						<value>House Name</value>
 					</text>
 					<text id="/data/individualOtherNames:hint">
 						<value />
@@ -486,10 +486,10 @@
 			<bind nodeset="/data/individualFirstName" type="string"
 				required="true()" />
 
-			<bind nodeset="/data/individualLastName" type="string" required="true()" />
+			<bind nodeset="/data/individualLastName" type="string" required="false()" />
 
 			<bind nodeset="/data/individualOtherNames" type="string"
-				required="false()" />
+				required="boolean-from-string(/data/headPrefilledFlag)" />
 
 			<bind nodeset="/data/individualAge" type="int" required="true()"
 				constraint="not(. &lt; 0) and (. &lt; 120)" />
