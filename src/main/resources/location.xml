@@ -60,7 +60,7 @@
                         <value />
                     </text>
                     <text id="/data/hierarchyExtId:label">
-                        <value>jerarquía ID Externa</value>
+                        <value>Jerarquía ID Externa</value>
                     </text>
                     <text id="/data/hierarchyExtId:hint">
                         <value />
@@ -78,7 +78,7 @@
                         <value>Urbano</value>
                     </text>
                     <text id="/data/communityName:label">
-                        <value>Nombre de Communidad</value>
+                        <value>Nombre de Comunidad</value>
                     </text>
                     <text id="/data/communityName:hint">
                         <value />
