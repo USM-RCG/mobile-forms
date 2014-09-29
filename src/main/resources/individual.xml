@@ -152,7 +152,7 @@
 						<value>Cabeza</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option1">
-						<value>Cónyuge</value>
+						<value>Esposa/Esposo</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option2">
 						<value>Hijo/Hija</value>
@@ -174,6 +174,12 @@
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option8">
 						<value>No Sé</value>
+					</text>
+					<text id="/data/individualRelationshipToHeadOfHousehold:option9">
+						<value>Primo</value>
+					</text>
+					<text id="/data/individualRelationshipToHeadOfHousehold:option10">
+						<value>Sobrino/Sobrina</value>
 					</text>
 					<text id="/data/individualPhoneNumber:label">
 						<value>Número de Teléfono Personal</value>
@@ -386,6 +392,12 @@
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option8">
 						<value>Don't Know</value>
+					</text>
+					<text id="/data/individualRelationshipToHeadOfHousehold:option9">
+						<value>Cousin</value>
+					</text>
+					<text id="/data/individualRelationshipToHeadOfHousehold:option10">
+						<value>Nephew/Niece</value>
 					</text>
 					<text id="/data/individualPhoneNumber:label">
 						<value>Personal Phone Number</value>
@@ -655,6 +667,17 @@
 				<label
 					ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option3')" />
 				<value>4</value>
+			</item>
+			<item>
+				<label
+
+					ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option9')" />
+				<value>10</value>
+			</item>
+			<item>
+				<label
+					ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option10')" />
+				<value>11</value>
 			</item>
 			<item>
 				<label
