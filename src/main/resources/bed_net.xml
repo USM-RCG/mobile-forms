@@ -14,8 +14,8 @@
 		  <ITNsCurrent />
 		  <ITNGoodN />
 		  <netsNeeded />
+		  <netCode />
 		  <netsSupplied jr:template="">
-			<netCode />
 			<netHung />
 		  </netsSupplied>
 		<walls/>
@@ -79,11 +79,11 @@
           <text id="/data/netsNeeded:label">
             <value>Number of bed nets to distribute</value>
           </text>
+          <text id="/data/netCode:label">
+            <value>Bed Net Code</value>
+          </text>
           <text id="/data/netsSupplied:label">
             <value>Bed Net Distributed</value>
-          </text>
-          <text id="/data/netsSupplied/netCode:label">
-            <value>Net Code</value>
           </text>
           <text id="/data/netsSupplied/netHung:label">
             <value>Hung</value>
@@ -355,8 +355,10 @@
       <bind nodeset="/data/beds" type="int" required="true()"/>
       <bind nodeset="/data/netsCurrent" type="int" required="true()"/>
       <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent > 0"/>
-      <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0"/>
+      <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0" constraint="not(. > (/data/ITNsCurrent))"
+			jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
       <bind nodeset="/data/netsNeeded" type="int" required="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
+      <bind nodeset="/data/netCode" type="string" required="true()"/>
       <bind nodeset="/data/netsSupplied/netCode" type="string" required="true()"/>
       <bind nodeset="/data/netsSupplied/netHung" type="select1" required="true()"/>
       <bind nodeset="/data/walls" type="select1" required="true()" />
@@ -417,13 +419,13 @@
 	    <input ref="/data/netsNeeded">
 	      <label ref="jr:itext('/data/netsNeeded:label')"/>
 	    </input>
+	    <input ref="/data/netCode">
+	      <label ref="jr:itext('/data/netCode:label')"/>
+	    </input>
 
     <group>
       <label ref="jr:itext('/data/netsSupplied:label')"/>
-      <repeat nodeset="/data/netsSupplied" jr:count="/data/netsNeeded">
-        <input ref="/data/netsSupplied/netCode">
-      		<label ref="jr:itext('/data/netsSupplied/netCode:label')"/>
-    	</input>	
+      <repeat nodeset="/data/netsSupplied" jr:count="/data/netsNeeded">	
         <select1 ref="/data/netsSupplied/netHung">
           <label ref="jr:itext('/data/netsSupplied/netHung:label')"/>
           <item>
