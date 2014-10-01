@@ -51,7 +51,7 @@
 					</text>
 					<text id="/data/collectionDateTime:hint">
 						<value />
-					</text>getContentResolver
+					</text>
 
 					<text id="/data/householdExtId:label">
 						<value>Domicilio ID Externa</value>
@@ -108,7 +108,7 @@
 						<value>Meses</value>
 					</text>
 					<text id="/data/individualAgeUncertaintyRange:label">
-						<value>Incertidumbre Edad</value>
+						<value>Incertidumbre de Edad (+ o -)</value>
 					</text>
 					<text id="/data/individualAgeUncertaintyRange:hint">
 						<value />
@@ -227,7 +227,7 @@
 						<value>Frances</value>
 					</text>
 					<text id="/data/individualLanguagePreference:option5">
-						<value>Otros</value>
+						<value>Otro</value>
 					</text>
 					<text id="/data/individualDip:label">
 						<value>DIP</value>
