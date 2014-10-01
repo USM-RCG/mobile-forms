@@ -30,18 +30,7 @@
 		<electricity />
 		<houseSprayed />
 		<reasonWhyNotSprayed />
-		<whyNotSprayed01 />
-		<whyNotSprayed02 />
-		<whyNotSprayed03 />
-		<whyNotSprayed04 />
-		<whyNotSprayed05 />
-		<whyNotSprayed06 />
-		<whyNotSprayed07 />
-		<whyNotSprayed08 />
-		<whyNotSprayed09 />
-		<whyNotSprayed10 />
-		<whyNotSprayed11 />
-		<whyNotSprayed12 />
+		<whyNotSprayed/>
         </data>
       </instance>
       <itext>
@@ -371,18 +360,7 @@
       <bind nodeset="/data/electricity" type="select1" required="true()" />
       <bind nodeset="/data/houseSprayed" type="select1" required="true()" />
       <bind nodeset="/data/reasonWhyNotSprayed" type="select1" required="selected(/data/houseSprayed, '0')" relevant="selected(/data/houseSprayed, '0')" />
-      <bind nodeset="/data/whyNotSprayed01" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed02" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed03" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed04" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed05" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed06" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed07" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed08" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed09" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed10" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed11" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
-      <bind nodeset="/data/whyNotSprayed12" type="select1" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+      <bind nodeset="/data/whyNotSprayed" type="select" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
 
     </model>
   </h:head>
@@ -701,143 +679,60 @@
             <value>4</value>
           </item>     
         </select1>
-
-	<group appearance="field-list">
-		<label>Why didn't you want your house sprayed? </label>	
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed01">
-                	<label ref="jr:itext('/data/whyNotSprayed01:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed02">
-                	<label ref="jr:itext('/data/whyNotSprayed02:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed03">
+	
+	<select ref="/data/whyNotSprayed">
+	<label>Why didn't you want your house sprayed? </label>	
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed01:label')"/>
+			<value>1</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed02:label')"/>
+			<value>2</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed03:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed04">
+			<value>3</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed04:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed05">
+			<value>4</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed05:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed06">
+			<value>5</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed06:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed07" >
+			<value>6</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed07:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed08" >
+			<value>7</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed08:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed09" >
+			<value>8</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed09:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed10" >
+			<value>9</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed10:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed11" >
+			<value>10</value>
+		</item>
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed11:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>
-		<select1 appearance="compact-2" ref="/data/whyNotSprayed12" >
+			<value>11</value>
+		</item>	
+		<item>
 			<label ref="jr:itext('/data/whyNotSprayed12:label')"/>
-			<item>
-				<label>Yes</label>
-				<value>1</value>
-			</item>
-			<item>
-				<label>No</label>
-				<value>0</value>
-			</item>
-		</select1>	
-	</group>
+			<value>12</value>
+		</item>	
+	</select>
 
+		
 
 
   </h:body>
