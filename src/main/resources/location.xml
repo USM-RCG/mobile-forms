@@ -15,6 +15,7 @@
                     <locationName />
                     <locationType />
                     <communityName />
+                    <communityCode />
                     <mapAreaName />
                     <localityName />
                     <sectorName />
@@ -81,6 +82,12 @@
                         <value>Nombre de Comunidad</value>
                     </text>
                     <text id="/data/communityName:hint">
+                        <value />
+                    </text>
+                    <text id="/data/communityCode:label">
+                        <value>Codigo de Comunidad</value>
+                    </text>
+                    <text id="/data/communityCode:hint">
                         <value />
                     </text>
                     <text id="/data/mapAreaName:label">
@@ -163,6 +170,12 @@
                     <text id="/data/communityName:hint">
                         <value />
                     </text>
+                    <text id="/data/communityCode:label">
+                        <value>Community Code</value>
+                    </text>
+                    <text id="/data/communityCode:hint">
+                        <value />
+                    </text>
                     <text id="/data/mapAreaName:label">
                         <value>Map Area Name</value>
                     </text>
@@ -210,6 +223,8 @@
             <bind nodeset="/data/locationType" type="select1" required="true()"/>
 
             <bind nodeset="/data/communityName" type="string" required="true()"/>
+
+            <bind nodeset="/data/communityCode" type="string" required="true()"/>
 
         </model>
     </h:head>
@@ -273,9 +288,15 @@
                 <value>URB</value>
             </item>
         </select1>
+	<group appearance="field-list">
 		<input ref="/data/communityName">
 			<label ref="jr:itext('/data/communityName:label')" />
 			<hint ref="jr:itext('/data/communityName:hint')" />
 		</input>
+		<input ref="/data/communityCode">
+			<label ref="jr:itext('/data/communityCode:label')" />
+			<hint ref="jr:itext('/data/communityCode:hint')" />
+		</input>
+	</group>
     </h:body>
 </h:html>
