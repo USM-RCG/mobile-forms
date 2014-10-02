@@ -20,6 +20,66 @@
                 </data>
             </instance>
             <itext>
+
+
+	<translation lang="Spanish">
+                    <text id="/data/individualExtId:label">
+                        <value>Individuo ID Externa</value>
+                    </text>
+                    <text id="/data/individualExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Investigador de Campo ID Externa</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/visitExtId:label">
+                        <value>Visita ID Externa</value>
+                    </text>
+                    <text id="/data/visitExtId:hint">
+                        <value />
+                    </text>
+		<text id="/data/collectionDateTime:label">
+			<value>Fecha de Recogida</value>
+		</text>
+		<text id="/data/collectionDateTime:hint">
+			<value />
+		</text>
+                    <text id="/data/locationExtId:label">
+                        <value>Locación ID Externa</value>
+                    </text>
+                    <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/migrationType:label">
+                        <value>Tipo de Migración</value>
+                    </text>
+                    <text id="/data/migrationType:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/migrationDate:label">
+                        <value>Fecha de Migración</value>
+                    </text>
+                    <text id="/data/migrationDate:hint">
+                        <value />
+                    </text>
+                    <text id="/data/migrationOrigin:label">
+                        <value>Origen de Migración</value>
+                    </text>
+                    <text id="/data/migrationOrigin:hint">
+                        <value />
+                    </text>
+                    <text id="/data/migrationReason:label">
+                        <value>Razón de Migración</value>
+                    </text>
+                    <text id="/data/migrationReason:hint">
+                        <value />
+                    </text>
+
+                </translation>
                 <translation lang="eng">
 		    <text id="/data/collectionDateTime:label">
 			<value>Collection Date</value>
