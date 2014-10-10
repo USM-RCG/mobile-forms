@@ -401,6 +401,147 @@
 	      <label ref="jr:itext('/data/netCode:label')"/>
 	    </input>
 
+	<select1 ref="/data/electricity">
+          <label ref="jr:itext('/data/electricity:label')"/>
+          <item>
+            <label ref="jr:itext('/data/electricity:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option2')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/electricity:option3')"/>
+            <value>3</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option4')"/>
+            <value>4</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option5')"/>
+            <value>5</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option6')"/>
+            <value>6</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option7')"/>
+            <value>7</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option8')"/>
+            <value>8</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option9')"/>
+            <value>9</value>
+          </item>    
+          <item>
+            <label ref="jr:itext('/data/electricity:option10')"/>
+            <value>10</value>
+          </item>              
+          <item>
+            <label ref="jr:itext('/data/electricity:option11')"/>
+            <value>99</value>
+          </item>    
+        </select1>
+
+	<select1 ref="/data/houseSprayed">
+          <label ref="jr:itext('/data/houseSprayed:label')"/>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option0')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option1')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/houseSprayed:option2')"/>
+            <value>3</value>
+          </item>          
+        </select1>
+
+	<select1 ref="/data/reasonWhyNotSprayed">
+          <label ref="jr:itext('/data/reasonWhyNotSprayed:label')"/>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option0')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option1')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option2')"/>
+            <value>3</value>
+          </item>     
+          <item>
+            <label ref="jr:itext('/data/reasonWhyNotSprayed:option3')"/>
+            <value>4</value>
+          </item>     
+        </select1>
+	
+	<select ref="/data/whyNotSprayed">
+	<label>Why didn't you want your house sprayed? </label>	
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed01:label')"/>
+			<value>1</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed02:label')"/>
+			<value>2</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed03:label')"/>
+			<value>3</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed04:label')"/>
+			<value>4</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed05:label')"/>
+			<value>5</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed06:label')"/>
+			<value>6</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed07:label')"/>
+			<value>7</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed08:label')"/>
+			<value>8</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed09:label')"/>
+			<value>9</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed10:label')"/>
+			<value>10</value>
+		</item>
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed11:label')"/>
+			<value>11</value>
+		</item>	
+		<item>
+			<label ref="jr:itext('/data/whyNotSprayed12:label')"/>
+			<value>12</value>
+		</item>	
+	</select>
+
+
     <group>
       <label ref="jr:itext('/data/netsSupplied:label')"/>
       <repeat nodeset="/data/netsSupplied" jr:count="/data/netsNeeded">	
@@ -593,149 +734,6 @@
             <value>2</value>
           </item>          
         </select1>
-
-	<select1 ref="/data/electricity">
-          <label ref="jr:itext('/data/electricity:label')"/>
-          <item>
-            <label ref="jr:itext('/data/electricity:option0')"/>
-            <value>0</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/electricity:option1')"/>
-            <value>1</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/electricity:option2')"/>
-            <value>2</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/electricity:option3')"/>
-            <value>3</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option4')"/>
-            <value>4</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option5')"/>
-            <value>5</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option6')"/>
-            <value>6</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option7')"/>
-            <value>7</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option8')"/>
-            <value>8</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option9')"/>
-            <value>9</value>
-          </item>    
-          <item>
-            <label ref="jr:itext('/data/electricity:option10')"/>
-            <value>10</value>
-          </item>              
-          <item>
-            <label ref="jr:itext('/data/electricity:option11')"/>
-            <value>99</value>
-          </item>    
-        </select1>
-
-	<select1 ref="/data/houseSprayed">
-          <label ref="jr:itext('/data/houseSprayed:label')"/>
-          <item>
-            <label ref="jr:itext('/data/houseSprayed:option0')"/>
-            <value>0</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/houseSprayed:option1')"/>
-            <value>1</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/houseSprayed:option2')"/>
-            <value>3</value>
-          </item>          
-        </select1>
-
-	<select1 ref="/data/reasonWhyNotSprayed">
-          <label ref="jr:itext('/data/reasonWhyNotSprayed:label')"/>
-          <item>
-            <label ref="jr:itext('/data/reasonWhyNotSprayed:option0')"/>
-            <value>1</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/reasonWhyNotSprayed:option1')"/>
-            <value>2</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/reasonWhyNotSprayed:option2')"/>
-            <value>3</value>
-          </item>     
-          <item>
-            <label ref="jr:itext('/data/reasonWhyNotSprayed:option3')"/>
-            <value>4</value>
-          </item>     
-        </select1>
-	
-	<select ref="/data/whyNotSprayed">
-	<label>Why didn't you want your house sprayed? </label>	
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed01:label')"/>
-			<value>1</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed02:label')"/>
-			<value>2</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed03:label')"/>
-			<value>3</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed04:label')"/>
-			<value>4</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed05:label')"/>
-			<value>5</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed06:label')"/>
-			<value>6</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed07:label')"/>
-			<value>7</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed08:label')"/>
-			<value>8</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed09:label')"/>
-			<value>9</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed10:label')"/>
-			<value>10</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed11:label')"/>
-			<value>11</value>
-		</item>	
-		<item>
-			<label ref="jr:itext('/data/whyNotSprayed12:label')"/>
-			<value>12</value>
-		</item>	
-	</select>
-
-		
-
 
   </h:body>
 </h:html>
