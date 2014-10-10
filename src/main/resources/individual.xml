@@ -25,6 +25,7 @@
 					<individualRelationshipToHeadOfHousehold />
 					<individualPhoneNumber />
 					<individualOtherPhoneNumber />
+					<individualNationality />
 					<individualLanguagePreference />
 					<individualPointOfContactName />
 					<individualPointOfContactPhoneNumber />
@@ -204,6 +205,27 @@
 					</text>
 					<text id="/data/individualPointOfContactPhoneNumber:hint">
 						<value />
+					</text>
+					<text id="/data/individualNationality:label">
+						<value>Nacionalidad</value>
+					</text>
+					<text id="/data/individualNationality:hint">
+						<value />
+					</text>
+					<text id="/data/individualNationality:option0">
+						<value>Ecuatoguineano</value>
+					</text>
+					<text id="/data/individualNationality:option1">
+						<value>Otro pais Africano</value>
+					</text>
+					<text id="/data/individualNationality:option2">
+						<value>Asiatico</value>
+					</text>
+					<text id="/data/individualNationality:option3">
+						<value>Otro pais No-Africano</value>
+					</text>
+					<text id="/data/individualNationality:option4">
+						<value>Otro</value>
 					</text>
 					<text id="/data/individualLanguagePreference:label">
 						<value>Preferencia de Idioma</value>
@@ -423,6 +445,27 @@
 					<text id="/data/individualPointOfContactPhoneNumber:hint">
 						<value />
 					</text>
+					<text id="/data/individualNationality:label">
+						<value>Nationality</value>
+					</text>
+					<text id="/data/individualNationality:hint">
+						<value />
+					</text>
+					<text id="/data/individualNationality:option0">
+						<value>Equato Guinean</value>
+					</text>
+					<text id="/data/individualNationality:option1">
+						<value>Other African Country</value>
+					</text>
+					<text id="/data/individualNationality:option2">
+						<value>Asian</value>
+					</text>
+					<text id="/data/individualNationality:option3">
+						<value>Other Non-African Country</value>
+					</text>
+					<text id="/data/individualNationality:option4">
+						<value>Other</value>
+					</text>
 					<text id="/data/individualLanguagePreference:label">
 						<value>Language Preference</value>
 					</text>
@@ -552,6 +595,9 @@
 				constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits." />
 
 			<bind nodeset="/data/individualLanguagePreference" type="select1"
+				required="true()" />
+
+			<bind nodeset="/data/individualNationality" type="select1"
 				required="true()" />
 
 			<bind nodeset="/data/individualDip" type="int" required="false()"
@@ -727,6 +773,31 @@
 				<hint ref="jr:itext('/data/individualPointOfContactPhoneNumber:hint')" />
 			</input>
 		</group>
+
+		<select1 ref="/data/individualNationality">
+			<label ref="jr:itext('/data/individualNationality:label')" />
+			<hint ref="jr:itext('/data/individualNationality:hint')" />
+			<item>
+				<label ref="jr:itext('/data/individualNationality:option0')" />
+				<value>Equato Guinean</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualNationality:option1')" />
+				<value>Other African Country</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualNationality:option2')" />
+				<value>Asian</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualNationality:option3')" />
+				<value>Other Non-African Country</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/individualNationality:option4')" />
+				<value>Other</value>
+			</item>
+		</select1>
 
 		<select1 ref="/data/individualLanguagePreference">
 			<label ref="jr:itext('/data/individualLanguagePreference:label')" />
