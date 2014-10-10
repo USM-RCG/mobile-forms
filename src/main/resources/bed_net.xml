@@ -6,6 +6,7 @@
         <data id="bed_net">
                     <processedByMirth />
 		    <needsReview />
+		    <householdSize />
 		    <fieldWorkerExtId />
 		    <locationExtId />
 		    <distributionDateTime />
@@ -67,6 +68,9 @@
           </text>         
           <text id="/data/netsNeeded:label">
             <value>Number of bed nets to distribute</value>
+          </text>
+          <text id="/data/errorExceedsHouseholdSize:label">
+            <value>Number of nets distributed must be less than the number of recorded residents of this household</value>
           </text>
           <text id="/data/netCode:label">
             <value>Bed Net Code</value>
@@ -337,6 +341,7 @@
 
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+	    <bind nodeset="/data/householdSize" type="string" readonly="true()" />
 	    <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
 	    <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/locationExtId" type="string" readonly="true()"/>
@@ -346,7 +351,8 @@
       <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent > 0"/>
       <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0" constraint="not(. > (/data/ITNsCurrent))"
 			jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
-      <bind nodeset="/data/netsNeeded" type="int" required="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
+      <bind nodeset="/data/netsNeeded" type="int" required="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"
+			constraint="not(. > int(/data/householdSize))" jr:constraintMsg="jr:itext('/data/errorExceedsHouseholdSize:label')"/>
       <bind nodeset="/data/netCode" type="string" required="true()"/>
       <bind nodeset="/data/netsSupplied/netCode" type="string" required="true()"/>
       <bind nodeset="/data/netsSupplied/netHung" type="select1" required="true()"/>
