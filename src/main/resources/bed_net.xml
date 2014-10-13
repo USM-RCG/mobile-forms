@@ -35,6 +35,304 @@
         </data>
       </instance>
       <itext>
+
+        <translation lang="Spanish">
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>ID Externo del Encuestador</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text> 
+                    <text id="/data/distributionDateTime:label">
+                        <value>Fecha de Distribucion</value>
+                    </text>
+                    <text id="/data/distributionDateTime:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationExtId:label">
+                        <value>ID Externo de la Locación</value>
+                    </text>
+                    <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+          <text id="/data/beds:label">
+            <value>¿Cuantas camas o lugares para dormir hay en el hogar?</value>
+          </text>
+          <text id="/data/netsCurrent:label">
+            <value>¿Actualmente, Cuantas telas mosquiteras de cualquier tipo hay en el hogar?</value>
+          </text>
+          <text id="/data/ITNsCurrent:label">
+            <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP (Permanet 3.0)?</value>
+          </text>
+          <text id="/data/ITNGoodN:label">
+            <value>¿Cuantas telas del PNLP (Permanet 3.0) estan en buen estado (sin huecos o huecos del tamano del dedo pulgar)?</value>
+          </text>         
+          <text id="/data/netsNeeded:label">
+            <value>Número de telas a distribuir</value>
+          </text>
+          <text id="/data/errorExceedsHouseholdSize:label">
+            <value>El número de telas mosquiteras distribuidas debe ser menor que el número de residentes registrados de este hogar</value>
+          </text>
+          <text id="/data/netCode:label">
+            <value>Codigo de la Tela Mosquitera (Marcar en la Tela)</value>
+          </text>
+          <text id="/data/netsSupplied:label">
+            <value>Tela Mosquitera Distribuida</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:label">
+            <value>¿La tela fue colgada?</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/netsSupplied/netHung:option1">
+            <value>Sí</value>
+          </text>
+
+          <text id="/data/walls:label">
+            <value>Ingrese el tipo de material de construccion de la pared</value>
+          </text>
+          <text id="/data/walls:option0">
+            <value>Bloques</value>
+          </text>
+          <text id="/data/walls:option1">
+            <value>Madera</value>
+          </text>
+          <text id="/data/walls:option2">
+            <value>Cemento revocado</value>
+          </text>
+          <text id="/data/walls:option3">
+            <value>Tierra</value>
+          </text>
+          <text id="/data/walls:option4">
+            <value>Chapas</value>
+          </text>
+          <text id="/data/walls:option5">
+            <value>Otro</value>
+          </text>
+
+          <text id="/data/wallGaps:label">
+            <value>¿Hay espacio en la pared donde pueden entrar los mosquitos?</value>
+          </text>
+          <text id="/data/wallGaps:option0">
+            <value>No hay</value>
+          </text>
+          <text id="/data/wallGaps:option1">
+            <value>Sí (algunos)</value>
+          </text>
+          <text id="/data/wallGaps:option2">
+            <value>Sí (muchos)</value>
+          </text>
+
+          <text id="/data/roof:label">
+            <value>Ingrese el material de construccion del techo</value>
+          </text>
+          <text id="/data/roof:option0">
+            <value>Chapas</value>
+          </text>
+          <text id="/data/roof:option1">
+            <value>Cemento</value>
+          </text>
+          <text id="/data/roof:option2">
+            <value>Baldosas</value>
+          </text>
+          <text id="/data/roof:option3">
+            <value>Madera</value>
+          </text>
+          <text id="/data/roof:option4">
+            <value>Ñipas</value>
+          </text>
+          <text id="/data/roof:option5">
+            <value>Staff</value>
+          </text>
+          <text id="/data/roof:option6">
+            <value>Otro</value>
+          </text>
+
+          <text id="/data/roofGaps:label">
+            <value>¿Hay espacio en el techo (donde pueden entrar mosquitos)?</value>
+          </text>
+          <text id="/data/roofGaps:option0">
+            <value>No hay</value>
+          </text>
+          <text id="/data/roofGaps:option1">
+            <value>Sí (algunos)</value>
+          </text>
+          <text id="/data/roofGaps:option2">
+            <value>Sí (muchos)</value>
+          </text>
+
+          <text id="/data/eaves:label">
+            <value>Ingresa la condicion de los aleros</value>
+          </text>
+          <text id="/data/eaves:option0">
+            <value>Abierto</value>
+          </text>
+          <text id="/data/eaves:option1">
+            <value>Abierto con tela milimetrica</value>
+          </text>
+          <text id="/data/eaves:option2">
+            <value>Cerrado</value>
+          </text>
+
+          <text id="/data/patio:label">
+            <value>Ingrese si hay una terraza y su condicion</value>
+          </text>
+          <text id="/data/patio:option0">
+            <value>No hay terraza</value>
+          </text>
+          <text id="/data/patio:option1">
+            <value>La terraza NO tiene tela milimetrica</value>
+          </text>
+          <text id="/data/patio:option2">
+            <value>La terraza tiene tela milimetrica</value>
+          </text>
+
+          <text id="/data/doors:label">
+            <value>Ingrese si las puertas tienen tela milimetrica</value>
+          </text>
+          <text id="/data/doors:option0">
+            <value>Ninguna puerta</value>
+          </text>
+          <text id="/data/doors:option1">
+            <value>Algunas puertas</value>
+          </text>
+          <text id="/data/doors:option2">
+            <value>Todas las puertas</value>
+          </text>
+
+          <text id="/data/windows:label">
+            <value>Ingrese si las ventanas tienen tela milimetrica</value>
+          </text>
+          <text id="/data/windows:option0">
+            <value>Ninguna</value>
+          </text>
+          <text id="/data/windows:option1">
+            <value>Algunas ventanas</value>
+          </text>
+          <text id="/data/windows:option2">
+            <value>Todas las ventanas</value>
+          </text>
+
+          <text id="/data/aircondition:label">
+            <value>Ingrese si la casa tiene aire acondicionado</value>
+          </text>
+          <text id="/data/aircondition:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/aircondition:option1">
+            <value>Algunos cuartos</value>
+          </text>
+          <text id="/data/aircondition:option2">
+            <value>Todos los cuartos</value>
+          </text>
+
+          <text id="/data/electricity:label">
+            <value>¿Que fuente de electricidad tiene el hogar?</value>
+          </text>
+          <text id="/data/electricity:option0">
+            <value>No tiene luz</value>
+          </text>
+          <text id="/data/electricity:option1">
+            <value>L1</value>
+          </text>
+          <text id="/data/electricity:option2">
+            <value>L2</value>
+          </text>
+          <text id="/data/electricity:option3">
+            <value>Pagan al vecino por su luz (L1 o L2)</value>
+          </text>
+          <text id="/data/electricity:option4">
+            <value>Otro tipo de conexion pero gratuita</value>
+          </text>
+          <text id="/data/electricity:option5">
+            <value>Generador</value>
+          </text>
+          <text id="/data/electricity:option6">
+            <value>Paneles Solares</value>
+          </text>
+          <text id="/data/electricity:option7">
+            <value>Lampara de gas o querosene</value>
+          </text>
+          <text id="/data/electricity:option8">
+            <value>Velas</value>
+          </text>
+          <text id="/data/electricity:option9">
+            <value>Leña</value>
+          </text>
+          <text id="/data/electricity:option10">
+            <value>No sabe</value>
+          </text>
+          <text id="/data/electricity:option11">
+            <value>Otro</value>
+          </text>
+
+          <text id="/data/houseSprayed:label">
+            <value>¿Su casa fue rociada en los ultimos 12 meses?</value>
+          </text>
+          <text id="/data/houseSprayed:option0">
+            <value>No</value>
+          </text>
+          <text id="/data/houseSprayed:option1">
+            <value>Sí</value>
+          </text>
+          <text id="/data/houseSprayed:option2">
+            <value>No sabe / no esta seguro</value>
+          </text>
+
+          <text id="/data/reasonWhyNotSprayed:label">
+            <value>¿Por que no se rocio su casa en los ultimos 12 meses?</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option0">
+            <value>No me contactaron para rociar mi casa</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option1">
+            <value>Nadie regreso para rociar mi casa</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option2">
+            <value>No sabe / no esta seguro</value>
+          </text>
+          <text id="/data/reasonWhyNotSprayed:option3">
+            <value>No quiero que rocien mi casa</value>
+          </text>
+
+          <text id="/data/whyNotSprayed01:label">
+            <value>Causa efectos secundarios contra la salud</value>
+          </text>
+	  <text id="/data/whyNotSprayed02:label">
+            <value>Peligroso para los animales</value>
+          </text>
+          <text id="/data/whyNotSprayed03:label">
+            <value>Perjudica, molesta o no estoy de acuerdo</value>
+          </text>
+          <text id="/data/whyNotSprayed04:label">
+            <value>El Comportamiento de los rociadores</value>
+          </text>
+          <text id="/data/whyNotSprayed05:label">
+            <value>Daña los muebles y/o paredes</value>
+          </text>
+          <text id="/data/whyNotSprayed06:label">
+            <value>No es efectivo</value>
+          </text>
+          <text id="/data/whyNotSprayed07:label">
+            <value>No sirve para nosotros</value>
+          </text>
+          <text id="/data/whyNotSprayed08:label">
+            <value>Usamos telas mosquiteras</value>
+          </text>
+          <text id="/data/whyNotSprayed09:label">
+            <value>No tenemos tiempo</value>
+          </text>
+          <text id="/data/whyNotSprayed10:label">
+            <value>La hora del rociamiento es inconveniente</value>
+          </text>
+          <text id="/data/whyNotSprayed11:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/whyNotSprayed12:label">
+            <value>No sabe / no esta seguro</value>
+          </text>
+        </translation>
         <translation lang="eng">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext ID</value>
@@ -142,7 +440,7 @@
             <value>Palm or thatch</value>
           </text>
           <text id="/data/roof:option5">
-            <value>Asphalt tiles</value>
+            <value>Cast/Cement</value>
           </text>
           <text id="/data/roof:option6">
             <value>Pitch</value>
@@ -334,8 +632,6 @@
           <text id="/data/whyNotSprayed12:label">
             <value>Don't know / not sure</value>
           </text>
-  
-
         </translation>
       </itext>
 
@@ -637,10 +933,6 @@
           </item>
           <item>
             <label ref="jr:itext('/data/roof:option6')"/>
-            <value>7</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/roof:option7')"/>
             <value>9</value>
           </item>
         </select1>
