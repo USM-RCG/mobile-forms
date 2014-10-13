@@ -25,31 +25,31 @@
             <itext>
                 <translation lang="Spanish">
                     <text id="/data/fieldWorkerExtId:label">
-                        <value>Investigador de Campo ID Externa</value>
+                        <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text> 
                     <text id="/data/collectionDateTime:label">
-                        <value>Fecha de Recogida</value>
+                        <value>Fecha de Colección</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
                         <value />
                     </text>
                     <text id="/data/locationExtId:label">
-                        <value>Locación ID Externa</value>
+                        <value>ID Externo de Locación</value>
                     </text>
                     <text id="/data/locationExtId:hint">
                         <value />
                     </text>
                     <text id="/data/locationBuildingNumber:label">
-                        <value>Edificio #</value>
+                        <value># de Edificio</value>
                     </text>
                     <text id="/data/locationBuildingNumber:hint">
                         <value />
                     </text>
                     <text id="/data/locationFloorNumber:label">
-                        <value>Piso #</value>
+                        <value># de Piso</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
                         <value />
@@ -61,7 +61,7 @@
                         <value />
                     </text>
                     <text id="/data/hierarchyExtId:label">
-                        <value>Jerarquía ID Externa</value>
+                        <value>ID Externo de Jerarquía</value>
                     </text>
                     <text id="/data/hierarchyExtId:hint">
                         <value />
@@ -79,13 +79,13 @@
                         <value>Urbano</value>
                     </text>
                     <text id="/data/communityName:label">
-                        <value>Nombre de Comunidad</value>
+                        <value>Nombre de la Comunidad</value>
                     </text>
                     <text id="/data/communityName:hint">
                         <value />
                     </text>
                     <text id="/data/communityCode:label">
-                        <value>Codigo de Comunidad</value>
+                        <value>Codigo de la Comunidad</value>
                     </text>
                     <text id="/data/communityCode:hint">
                         <value />
@@ -97,7 +97,7 @@
                         <value />
                     </text> 
                     <text id="/data/localityName:label">
-                        <value>Nombre de Localidad</value>
+                        <value>Nombre de la Localidad</value>
                     </text>
                     <text id="/data/localityName:hint">
                         <value />
