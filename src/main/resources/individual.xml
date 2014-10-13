@@ -40,7 +40,7 @@
 
 				<translation lang="Spanish">
 					<text id="/data/fieldWorkerExtId:label">
-						<value>Investigador de Campo ID Externa</value>
+						<value>ID Externo del Encuestador</value>
 					</text>
 					<text id="/data/fieldWorkerExtId:hint">
 						<value />
@@ -48,21 +48,21 @@
 
 
 					<text id="/data/collectionDateTime:label">
-						<value>Fecha de Recogida</value>
+						<value>Fecha de colección</value>
 					</text>
 					<text id="/data/collectionDateTime:hint">
 						<value />
 					</text>
 
 					<text id="/data/householdExtId:label">
-						<value>Domicilio ID Externa</value>
+						<value>ID Externo del Hogar</value>
 					</text>
 					<text id="/data/householdExtId:hint">
 						<value />
 					</text>
 
 					<text id="/data/individualExtId:label">
-						<value>Individuo ID Externa</value>
+						<value>ID Externo del Individuo</value>
 					</text>
 					<text id="/data/individualExtId:hint">
 						<value />
@@ -83,7 +83,7 @@
 					</text>
 
 					<text id="/data/individualOtherNames:label">
-						<value>Nombre de Casa</value>
+						<value>Nombre de Casa (sobrenombre)</value>
 					</text>
 					<text id="/data/individualOtherNames:hint">
 						<value />
@@ -144,13 +144,13 @@
 					</text>
 
 					<text id="/data/individualRelationshipToHeadOfHousehold:label">
-						<value>Relación con la Cabeza de Familia</value>
+						<value>Relación con el Jefe del Hogar</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:hint">
 						<value />
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option0">
-						<value>Cabeza</value>
+						<value>Jefe del Hogar</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option1">
 						<value>Esposa/Esposo</value>
@@ -162,22 +162,22 @@
 						<value>Hermano/Hermana</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option4">
-						<value>Padre</value>
+						<value>Padre/Madre</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option5">
-						<value>Nieto</value>
+						<value>Nieto/Nieta</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option6">
-						<value>No Relacionada</value>
+						<value>Sin relación familiar</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option7">
 						<value>Otro Pariente</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option8">
-						<value>No Sé</value>
+						<value>No sabe</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option9">
-						<value>Primo</value>
+						<value>Primo/Prima</value>
 					</text>
 					<text id="/data/individualRelationshipToHeadOfHousehold:option10">
 						<value>Sobrino/Sobrina</value>
@@ -189,19 +189,19 @@
 						<value />
 					</text>
 					<text id="/data/individualOtherPhoneNumber:label">
-						<value>Otro Número de Teléfono</value>
+						<value>Tiene otro número de telefono?</value>
 					</text>
 					<text id="/data/individualOtherPhoneNumber:hint">
 						<value />
 					</text>
 					<text id="/data/individualPointOfContactName:label">
-						<value>Punto de Contacto Nombre</value>
+						<value>Nombre del Punto de Contacto</value>
 					</text>
 					<text id="/data/individualPointOfContactName:hint">
 						<value />
 					</text>
 					<text id="/data/individualPointOfContactPhoneNumber:label">
-						<value>Punto de Contacto Número de Teléfono</value>
+						<value>Número de Teléfono del Punto de Contacto</value>
 					</text>
 					<text id="/data/individualPointOfContactPhoneNumber:hint">
 						<value />
@@ -228,7 +228,7 @@
 						<value>Otro</value>
 					</text>
 					<text id="/data/individualLanguagePreference:label">
-						<value>Preferencia de Idioma</value>
+						<value>Idioma de Preferencia</value>
 					</text>
 					<text id="/data/individualLanguagePreference:hint">
 						<value />
@@ -252,7 +252,7 @@
 						<value>Otro</value>
 					</text>
 					<text id="/data/individualDip:label">
-						<value>DIP</value>
+						<value>Número de DIP</value>
 					</text>
 					<text id="/data/individualDip:hint">
 						<value />
