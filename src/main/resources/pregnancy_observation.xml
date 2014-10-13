@@ -17,31 +17,31 @@
             <itext>
                 <translation lang="Spanish">
                     <text id="/data/individualExtId:label">
-                        <value>Madre ID Externa</value>
+                        <value>ID Externo de la Madre</value>
                     </text>
                     <text id="/data/individualExtId:hint">
                         <value />
                     </text>
                     <text id="/data/fieldWorkerExtId:label">
-                        <value>Investigador de Campo ID Externa</value>
+                        <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
                         <value />
                     </text>
                     <text id="/data/visitExtId:label">
-                        <value>Visit ID Externa</value>
+                        <value>ID Externo de la Visita</value>
                     </text>
                     <text id="/data/visitExtId:hint">
                         <value />
                     </text>
                     <text id="/data/expectedDeliveryDate:label">
-                        <value>Fecha Tentativa</value>
+                        <value>Fecha tentativa del parto</value>
                     </text>
                     <text id="/data/expectedDeliveryDate:hint">
                         <value />
                     </text>
                     <text id="/data/recordedDate:label">
-                        <value>Fecha de la Observación</value>
+                        <value>Fecha de registro de observación de embarazo</value>
                     </text>
                     <text id="/data/recordedDate:hint">
                         <value />
