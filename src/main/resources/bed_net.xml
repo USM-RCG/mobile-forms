@@ -4,6 +4,7 @@
     <model>
       <instance>
         <data id="bed_net">
+		    <versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
 		    <householdSize />
@@ -333,7 +334,7 @@
             <value>No sabe / no esta seguro</value>
           </text>
         </translation>
-        <translation lang="eng">
+        <translation lang="English">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext ID</value>
                     </text>
@@ -443,9 +444,6 @@
             <value>Cast/Cement</value>
           </text>
           <text id="/data/roof:option6">
-            <value>Pitch</value>
-          </text>
-          <text id="/data/roof:option7">
             <value>Other</value>
           </text>
 
@@ -635,6 +633,7 @@
         </translation>
       </itext>
 
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 	    <bind nodeset="/data/householdSize" type="string" readonly="true()" />
