@@ -4,7 +4,7 @@
     <model>
       <instance>
         <data id="bed_net">
-
+		    <versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
 		    <householdSize />
@@ -633,7 +633,7 @@
         </translation>
       </itext>
 
-
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 	    <bind nodeset="/data/householdSize" type="string" readonly="true()" />
