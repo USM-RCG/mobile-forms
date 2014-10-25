@@ -5,6 +5,7 @@
         <model>
             <instance>
                 <data id="location">
+			<versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
 		    <fieldWorkerExtId />
@@ -196,6 +197,7 @@
                     </text>            
                 </translation>
             </itext>
+	    <bind nodeset="/data/versionId" type="string" readonly="true()" />
 	    <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 

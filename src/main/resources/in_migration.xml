@@ -5,6 +5,7 @@
         <model>
             <instance>
                 <data id="in_migration">
+			<versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
 		    <collectionDateTime />
@@ -139,6 +140,7 @@
                 </translation>
             </itext>
 
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />

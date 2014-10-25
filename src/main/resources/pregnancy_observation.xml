@@ -5,6 +5,7 @@
         <model>
             <instance>
                 <data id="pregnancy_observation">
+			<versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
                     <individualExtId />
@@ -80,6 +81,7 @@
                     </text>
                 </translation>
             </itext>
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />

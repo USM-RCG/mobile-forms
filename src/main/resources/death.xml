@@ -6,6 +6,7 @@
         <model>
             <instance>
                 <data id="death">
+			<versionId>1</versionId>
                     <processedByMirth />
 		    <needsReview />
 		    <collectionDateTime />
@@ -108,6 +109,7 @@
                     </text>
                 </translation>
             </itext>
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
 	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
 	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
