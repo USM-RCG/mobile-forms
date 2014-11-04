@@ -21,6 +21,7 @@
                     <localityName />
                     <sectorName />
                     <locationExtId />
+                    <description />
                 </data>
             </instance>
             <itext>
@@ -108,7 +109,13 @@
                     </text>
                     <text id="/data/sectorName:hint">
                         <value />
-                    </text>            
+                    </text>
+                    <text id="/data/description:label">
+                        <value>Descripción</value>
+                    </text>
+                    <text id="/data/description:hint">
+                        <value />
+                    </text>              
                 </translation>
                 <translation lang="English">
                     <text id="/data/fieldWorkerExtId:label">
@@ -194,7 +201,13 @@
                     </text>
                     <text id="/data/sectorName:hint">
                         <value />
-                    </text>            
+                    </text>
+                    <text id="/data/description:label">
+                        <value>Description</value>
+                    </text>
+                    <text id="/data/description:hint">
+                        <value />
+                    </text>
                 </translation>
             </itext>
 	    <bind nodeset="/data/versionId" type="string" readonly="true()" />
@@ -227,6 +240,8 @@
             <bind nodeset="/data/communityName" type="string" required="true()"/>
 
             <bind nodeset="/data/communityCode" type="string" required="true()"/>
+
+            <bind nodeset="/data/description" type="string" />
 
         </model>
     </h:head>
@@ -300,5 +315,9 @@
 			<hint ref="jr:itext('/data/communityCode:hint')" />
 		</input>
 	</group>
+			<input ref="/data/description">
+				<label ref="jr:itext('/data/description:label')" />
+				<hint ref="jr:itext('/data/description:hint')" />
+			</input>
     </h:body>
 </h:html>
