@@ -1,10 +1,15 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Household</h:title>
         <model>
             <instance>
-                <data id="household">
+                <data id="household" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
                     <householdName />
                     <householdId>12345</householdId>
@@ -30,7 +35,7 @@
                         <value>Household Id</value>
                     </text>
                     <text id="/data/locationId:hint">
-                        <value></value>
+                        <value/>
                     </text>
                     <text id="/data/headOfHouseholdId:label">
                         <value>Gender</value>

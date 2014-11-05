@@ -1,14 +1,18 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>In Migration</h:title>
         <model>
             <instance>
-                <data id="in_migration">
-			<versionId>1</versionId>
+                <data id="in_migration" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
-		    <needsReview />
-		    <collectionDateTime />
+                    <needsReview />
+                    <collectionDateTime />
                     <fieldWorkerExtId />
                     <visitExtId />
                     <locationExtId />
@@ -21,9 +25,7 @@
                 </data>
             </instance>
             <itext>
-
-
-	<translation lang="Spanish">
+                <translation lang="Spanish">
                     <text id="/data/individualExtId:label">
                         <value>ID Externo del Individuo</value>
                     </text>
@@ -42,12 +44,12 @@
                     <text id="/data/visitExtId:hint">
                         <value />
                     </text>
-		<text id="/data/collectionDateTime:label">
-			<value>Fecha de colección</value>
-		</text>
-		<text id="/data/collectionDateTime:hint">
-			<value />
-		</text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Fecha de colección</value>
+                    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
                     <text id="/data/locationExtId:label">
                         <value>ID Externo de Locación</value>
                     </text>
@@ -82,9 +84,9 @@
 
                 </translation>
                 <translation lang="eng">
-		    <text id="/data/collectionDateTime:label">
-			<value>Collection Date</value>
-		    </text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Collection Date</value>
+                    </text>
                     <text id="/data/collectionDateTime:hint">
                         <value />
                     </text>
@@ -142,8 +144,8 @@
 
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()" />
@@ -161,14 +163,14 @@
             <hint ref="jr:itext('/data/migrationDate:hint')" />
         </input>
         <group appearance="field-list">
-             <input ref="/data/migrationOrigin">
-                 <label ref="jr:itext('/data/migrationOrigin:label')" />
-                 <hint ref="jr:itext('/data/migrationOrigin:hint')" />
-             </input>
-             <input ref="/data/migrationReason">
-                 <label ref="jr:itext('/data/migrationReason:label')" />
-                 <hint ref="jr:itext('/data/migrationReason:hint')" />
-             </input>
-	</group>
+            <input ref="/data/migrationOrigin">
+                <label ref="jr:itext('/data/migrationOrigin:label')" />
+                <hint ref="jr:itext('/data/migrationOrigin:hint')" />
+            </input>
+            <input ref="/data/migrationReason">
+                <label ref="jr:itext('/data/migrationReason:label')" />
+                <hint ref="jr:itext('/data/migrationReason:hint')" />
+            </input>
+        </group>
     </h:body>
 </h:html>

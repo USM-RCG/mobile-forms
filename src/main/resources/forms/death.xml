@@ -1,15 +1,18 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml"
-    xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Death</h:title>
         <model>
             <instance>
-                <data id="death">
-			<versionId>1</versionId>
+                <data id="death" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
-		    <needsReview />
-		    <collectionDateTime />
+                    <needsReview />
+                    <collectionDateTime />
                     <individualExtId />
                     <fieldWorkerExtId />
                     <visitExtId />
@@ -20,9 +23,9 @@
             </instance>
             <itext>
                 <translation lang="Spanish">
-		    <text id="/data/collectionDateTime:label">
-			<value>Fecha de Colección</value>
-		    </text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Fecha de Colección</value>
+                    </text>
                     <text id="/data/collectionDateTime:hint">
                         <value />
                     </text>
@@ -65,9 +68,9 @@
                 </translation>
 
                 <translation lang="eng">
-		    <text id="/data/collectionDateTime:label">
-			<value>Collection Date</value>
-		    </text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Collection Date</value>
+                    </text>
                     <text id="/data/collectionDateTime:hint">
                         <value />
                     </text>
@@ -111,8 +114,8 @@
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-	    <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
@@ -122,37 +125,37 @@
         </model>
     </h:head>
     <h:body>
-	<group appearance="field-list">
-		<input ref="/data/collectionDateTime">
-			<label ref="jr:itext('/data/collectionDateTime:label')" />
-			<hint ref="jr:itext('/data/collectionDateTime:hint')" />
-		</input>
-		<input ref="/data/individualExtId">
-		    <label ref="jr:itext('/data/individualExtId:label')" />
-		    <hint ref="jr:itext('/data/individualExtId:hint')" />
-		</input>
-		<input ref="/data/fieldWorkerExtId">
-		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
-		</input>
-		<input ref="/data/visitExtId">
-		    <label ref="jr:itext('/data/visitExtId:label')" />
-		    <hint ref="jr:itext('/data/visitExtId:hint')" />
-		</input>
-	</group>
+        <group appearance="field-list">
+            <input ref="/data/collectionDateTime">
+                <label ref="jr:itext('/data/collectionDateTime:label')" />
+                <hint ref="jr:itext('/data/collectionDateTime:hint')" />
+            </input>
+            <input ref="/data/individualExtId">
+                <label ref="jr:itext('/data/individualExtId:label')" />
+                <hint ref="jr:itext('/data/individualExtId:hint')" />
+            </input>
+            <input ref="/data/fieldWorkerExtId">
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+            </input>
+            <input ref="/data/visitExtId">
+                <label ref="jr:itext('/data/visitExtId:label')" />
+                <hint ref="jr:itext('/data/visitExtId:hint')" />
+            </input>
+        </group>
         <input ref="/data/dateOfDeath">
             <label ref="jr:itext('/data/dateOfDeath:label')" />
             <hint ref="jr:itext('/data/dateOfDeath:hint')" />
         </input>
-	<group appearance="field-list">
-		<input ref="/data/placeOfDeath">
-		    <label ref="jr:itext('/data/placeOfDeath:label')" />
-		    <hint ref="jr:itext('/data/placeOfDeath:hint')" />
-		</input>
-		<input ref="/data/causeOfDeath">
-		    <label ref="jr:itext('/data/causeOfDeath:label')" />
-		    <hint ref="jr:itext('/data/causeOfDeath:hint')" />
-		</input>
-	</group>
+        <group appearance="field-list">
+            <input ref="/data/placeOfDeath">
+                <label ref="jr:itext('/data/placeOfDeath:label')" />
+                <hint ref="jr:itext('/data/placeOfDeath:hint')" />
+            </input>
+            <input ref="/data/causeOfDeath">
+                <label ref="jr:itext('/data/causeOfDeath:label')" />
+                <hint ref="jr:itext('/data/causeOfDeath:hint')" />
+            </input>
+        </group>
     </h:body>
 </h:html>
