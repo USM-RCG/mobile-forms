@@ -1,13 +1,17 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Visit</h:title>
         <model>
             <instance>
-                <data id="visit">
-<versionId>1</versionId>
+                <data id="visit" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
-		    <needsReview />
+                    <needsReview />
                     <visitExtId />
                     <fieldWorkerExtId />
                     <locationExtId />
@@ -70,7 +74,7 @@
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true" />
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true" />
-	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true" />
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true" />
@@ -78,23 +82,23 @@
         </model>
     </h:head>
     <h:body>
-	<group appearance="field-list">
-		<input ref="/data/visitExtId">
-		    <label ref="jr:itext('/data/visitExtId:label')" />
-		    <hint ref="jr:itext('/data/visitExtId:hint')" />
-		</input>
-		<input ref="/data/fieldWorkerExtId">
-		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
-		</input>
-		<input ref="/data/locationExtId">
-		    <label ref="jr:itext('/data/locationExtId:label')" />
-		    <hint ref="jr:itext('/data/locationExtId:hint')" />
-		</input>
-		<input ref="/data/visitDate">
-		    <label ref="jr:itext('/data/visitDate:label')" />
-		    <hint ref="jr:itext('/data/visitDate:hint')" />
-		</input>
-	</group>
+        <group appearance="field-list">
+            <input ref="/data/visitExtId">
+                <label ref="jr:itext('/data/visitExtId:label')" />
+                <hint ref="jr:itext('/data/visitExtId:hint')" />
+            </input>
+            <input ref="/data/fieldWorkerExtId">
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+            </input>
+            <input ref="/data/locationExtId">
+                <label ref="jr:itext('/data/locationExtId:label')" />
+                <hint ref="jr:itext('/data/locationExtId:hint')" />
+            </input>
+            <input ref="/data/visitDate">
+                <label ref="jr:itext('/data/visitDate:label')" />
+                <hint ref="jr:itext('/data/visitDate:hint')" />
+            </input>
+        </group>
     </h:body>
 </h:html>

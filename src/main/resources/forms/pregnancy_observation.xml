@@ -1,13 +1,17 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Pregnancy Observation</h:title>
         <model>
             <instance>
-                <data id="pregnancy_observation">
-			<versionId>1</versionId>
+                <data id="pregnancy_observation"> version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
-		    <needsReview />
+                    <needsReview />
                     <individualExtId />
                     <fieldWorkerExtId />
                     <visitExtId />
@@ -83,7 +87,7 @@
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
@@ -92,24 +96,24 @@
         </model>
     </h:head>
     <h:body>
-	<group appearance="field-list">
-		<input ref="/data/individualExtId">
-		    <label ref="jr:itext('/data/individualExtId:label')" />
-		    <hint ref="jr:itext('/data/individualExtId:hint')" />
-		</input>
-		<input ref="/data/fieldWorkerExtId">
-		    <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-		    <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
-		</input>
-		<input ref="/data/visitExtId">
-		    <label ref="jr:itext('/data/visitExtId:label')" />
-		    <hint ref="jr:itext('/data/visitExtId:hint')" />
-		</input>
-		<input ref="/data/recordedDate">
-		    <label ref="jr:itext('/data/recordedDate:label')" />
-		    <hint ref="jr:itext('/data/recordedDate:hint')" />
-		</input>
-	</group>
+        <group appearance="field-list">
+            <input ref="/data/individualExtId">
+                <label ref="jr:itext('/data/individualExtId:label')" />
+                <hint ref="jr:itext('/data/individualExtId:hint')" />
+            </input>
+            <input ref="/data/fieldWorkerExtId">
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+            </input>
+            <input ref="/data/visitExtId">
+                <label ref="jr:itext('/data/visitExtId:label')" />
+                <hint ref="jr:itext('/data/visitExtId:hint')" />
+            </input>
+            <input ref="/data/recordedDate">
+                <label ref="jr:itext('/data/recordedDate:label')" />
+                <hint ref="jr:itext('/data/recordedDate:hint')" />
+            </input>
+        </group>
         <input ref="/data/expectedDeliveryDate">
             <label ref="jr:itext('/data/expectedDeliveryDate:label')" />
             <hint ref="jr:itext('/data/expectedDeliveryDate:hint')" />

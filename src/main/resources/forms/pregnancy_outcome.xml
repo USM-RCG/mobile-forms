@@ -1,10 +1,15 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Pregnancy Outcome</h:title>
         <model>
             <instance>
-                <data id="pregnancy_outcome">
+                <data id="pregnancy_outcome" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
                     <motherId />
                     <fatherId />
@@ -167,19 +172,19 @@
             <bind nodeset="/data/recordedDate" type="date" required="true()" />
             <bind nodeset="/data/outcomes/outcomeType" type="select1" required="true()" />
             <bind nodeset="/data/outcomes/childId" relevant="/data/outcomes/outcomeType = 'LBR'" type="string"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/firstName" relevant="/data/outcomes/outcomeType = 'LBR'" type="string"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/lastName" relevant="/data/outcomes/outcomeType = 'LBR'" type="string"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/gender" relevant="/data/outcomes/outcomeType = 'LBR'" type="select1"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/partialDate" relevant="/data/outcomes/outcomeType = 'LBR'" type="select1"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/socialGroupId" relevant="/data/outcomes/outcomeType = 'LBR'" type="string"
-                required="true()" />
+                  required="true()" />
             <bind nodeset="/data/outcomes/relationshipToGroupHead" relevant="/data/outcomes/outcomeType = 'LBR'"
-                type="select1" />
+                  type="select1" />
         </model>
     </h:head>
     <h:body>

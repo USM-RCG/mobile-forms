@@ -1,23 +1,27 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Out Migration</h:title>
         <model>
             <instance>
-                <data id="out_migration">
-			<versionId>1</versionId>
+                <data id="out_migration" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
                     <processedByMirth />
-		    <needsReview />
+                    <needsReview />
                     <fieldWorkerExtId />
                     <visitExtId />
-		    <outMigrationIndividualExtId />
+                    <outMigrationIndividualExtId />
                     <outMigrationDate />
                     <outMigrationNameOfDestination />
                     <outMigrationReason />
                 </data>
             </instance>
             <itext>
-		<translation lang="Spanish">
+                <translation lang="Spanish">
                     <text id="/data/outMigrationIndividualExtId:label">
                         <value>ID Externo del Individuo</value>
                     </text>
@@ -97,7 +101,7 @@
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
-	    <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/outMigrationIndividualExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
