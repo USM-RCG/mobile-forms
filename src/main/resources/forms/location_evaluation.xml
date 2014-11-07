@@ -1,0 +1,151 @@
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:ev="http://www.w3.org/2001/xml-events"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Location Evaluation</h:title>
+        <model>
+            <instance>
+                <data id="location_evaluation" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                    <processedByMirth />
+                    <needsReview />
+                    <fieldWorkerExtId />
+                    <collectionDateTime />
+                    <locationExtId />
+                    <uninhabited />
+                    <rejectedIntervention />
+                    <neverAvailable />
+                </data>
+            </instance>
+            <itext>
+                <translation lang="Spanish">
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>ID Externo del Encuestador</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Fecha de Colección</value>
+                    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationExtId:label">
+                        <value>ID Externo de Locación</value>
+                    </text>
+                    <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/uninhabited:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/uninhabited:option0">
+                        <value>The location is uninhabited</value>
+                    </text>
+                    <text id="/data/rejectedIntervention:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/rejectedIntervention:option0">
+                        <value>The household rejected intervention</value>
+                    </text>
+                    <text id="/data/neverAvailable:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/neverAvailable:option0">
+                        <value>Member(s) of the household are never available</value>
+                    </text>                 
+                </translation>
+                <translation lang="English">
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Field Worker Ext Id</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/collectionDateTime:label">
+                        <value>Collected Date Time</value>
+                    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
+                    <text id="/data/locationExtId:label">
+                        <value>Location Ext Id</value>
+                    </text>
+                    <text id="/data/locationExtId:hint">
+                        <value />
+                    </text>
+                    <text id="/data/uninhabited:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/uninhabited:option0">
+                        <value>The location is uninhabited</value>
+                    </text>
+                    <text id="/data/rejectedIntervention:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/rejectedIntervention:option0">
+                        <value>The household rejected intervention</value>
+                    </text>
+                    <text id="/data/neverAvailable:label">
+                        <value> </value>
+                    </text>
+                    <text id="/data/neverAvailable:option0">
+                        <value>Member(s) of the household are never available</value>
+                    </text>        
+                </translation>
+            </itext>
+            <bind nodeset="/data/versionId" type="string" readonly="true()" />
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
+            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />           
+            <bind nodeset="/data/locationExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/uninhabited" type="select" />
+            <bind nodeset="/data/rejectedIntervention" type="select" />
+            <bind nodeset="/data/neverAvailable" type="select" />
+        </model>
+    </h:head>
+    <h:body>
+        <group appearance="field-list">
+            <input ref="/data/fieldWorkerExtId">
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+            </input>
+            <input ref="/data/collectionDateTime">
+                <label ref="jr:itext('/data/collectionDateTime:label')" />
+                <hint ref="jr:itext('/data/collectionDateTime:hint')" />
+            </input>
+            <input ref="/data/locationExtId">
+            	<label ref="jr:itext('/data/locationExtId:label')" />
+            	<hint ref="jr:itext('/data/locationExtId:hint')" />
+            </input>
+        </group>
+        <group appearance="field-list">
+		<label>Location Evaluation:</label>
+		<select ref="/data/uninhabited">
+		    <label ref="jr:itext('/data/uninhabited:label')"/>
+		    <item>
+		        <label ref="jr:itext('/data/uninhabited:option0')"/>
+		        <value>1</value>
+		    </item>
+		</select>
+		<select ref="/data/rejectedIntervention">
+		    <label ref="jr:itext('/data/rejectedIntervention:label')"/>
+		    <item>
+		        <label ref="jr:itext('/data/rejectedIntervention:option0')"/>
+		        <value>1</value>
+		    </item>
+		</select>
+		<select ref="/data/neverAvailable">
+		    <label ref="jr:itext('/data/neverAvailable:label')"/>
+		    <item>
+		        <label ref="jr:itext('/data/neverAvailable:option0')"/>
+		        <value>1</value>
+		    </item>
+		</select>
+        </group>       
+    </h:body>
+</h:html>
