@@ -35,6 +35,7 @@
                     <individualDip />
                     <individualMemberStatus />
 
+		    <individualIsPregnantFlag />
                     <headPrefilledFlag />
                 </data>
             </instance>
@@ -143,6 +144,19 @@
                     </text>
                     <text id="/data/individualGender:option1">
                         <value>Femenino</value>
+                    </text>
+
+                    <text id="/data/individualIsPregnantFlag:label">
+                        <value>Pregnant</value>
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:option0">
+                        <value>Yes</value>
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:option1">
+                        <value>No</value>
                     </text>
 
                     <text id="/data/individualRelationshipToHeadOfHousehold:label">
@@ -382,6 +396,19 @@
                         <value>Female</value>
                     </text>
 
+                    <text id="/data/individualIsPregnantFlag:label">
+                        <value>Pregnant</value>
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:hint">
+                        <value />
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:option0">
+                        <value>Yes</value>
+                    </text>
+                    <text id="/data/individualIsPregnantFlag:option1">
+                        <value>No</value>
+                    </text>
+
                     <text id="/data/individualRelationshipToHeadOfHousehold:label">
                         <value>Relationship to Head of Household</value>
                     </text>
@@ -514,6 +541,7 @@
                 </translation>
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
+
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
 
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
@@ -571,6 +599,8 @@
 
 
             <bind nodeset="/data/individualGender" type="select1" required="true()" />
+
+            <bind nodeset="/data/individualIsPregnantFlag" type="select1" relevant="selected(/data/individualGender, 'Female')" required="true()"/>
 
             <bind nodeset="/data/headPrefilledFlag" type="string" />
 
@@ -651,6 +681,19 @@
                 </item>
             </select1>
         </group>
+
+        <select1 ref="/data/individualIsPregnantFlag">
+            <label ref="jr:itext('/data/individualIsPregnantFlag:label')" />
+            <hint ref="jr:itext('/data/individualIsPregnantFlag:hint')" />
+            <item>
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option0')" />
+                <value>Yes</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option1')" />
+                <value>No</value>
+            </item>
+        </select1>
 
         <input ref="/data/individualAge">
             <label ref="jr:itext('/data/individualAge:label')" />
