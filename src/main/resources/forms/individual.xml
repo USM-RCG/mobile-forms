@@ -35,6 +35,8 @@
                     <individualDip />
                     <individualMemberStatus />
 
+		    <ageRangeHelper/>
+
 		    <individualIsPregnantFlag />
                     <headPrefilledFlag />
                 </data>
@@ -126,12 +128,21 @@
                     <text id="/data/individualAgeUncertaintyRange:option2">
                         <value>10</value>
                     </text>
+
+                    <text id="/data/ageRangeHelper:label">
+                        <value>Birthdate must be within this range.</value>
+                    </text>
+                    <text id="/data/ageRangeHelper:hint">
+                        <value />
+                    </text>
+
                     <text id="/data/individualDateOfBirth:label">
                         <value>Fecha de Nacimiento</value>
                     </text>
                     <text id="/data/individualDateOfBirth:hint">
                         <value />
                     </text>
+
 
                     <text id="/data/individualGender:label">
                         <value>Genero</value>
@@ -376,6 +387,13 @@
                         <value>Months</value>
                     </text>
 
+                    <text id="/data/ageRangeHelper:label">
+                        <value>Birthdate must be within this range.</value>
+                    </text>
+                    <text id="/data/ageRangeHelper:hint">
+                        <value />
+                    </text>
+
                     <text id="/data/individualDateOfBirth:label">
                         <value>Date of Birth</value>
                     </text>
@@ -524,8 +542,6 @@
                         <value />
                     </text>
 
-
-
                     <text id="/data/individualMemberStatus:label">
                         <value>Member Status</value>
                     </text>
@@ -576,18 +592,13 @@
             <bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()" relevant="selected(/data/individualAgeUnits,'Years')" />
 
 
-
-
+	    <bind nodeset="/data/ageRangeHelper" type="string" relevant="selected(/data/individualAgeUnits, 'Years')" readonly="true()" calculate="concat(
+concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'),
+' to ',
+concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/data/individualAgeUncertaintyRange)),'-01-01')
+)"/>	
 
             <bind nodeset="/data/individualDateOfBirth" type="date" required="true()"
-
-                  calculate="if(  (string(/data/individualAge) != ''),
-					if(selected(/data/individualAgeUnits, 'Years'),
-						date(concat(string(int(substr(string(today()),0,4))-(/data/individualAge)), substr(string(today()),4,10))),
-						today()), 
-					today() )"
-
-
 
                   constraint="not(. > today())
 				    and if(selected(/data/individualAgeUnits, 'Years'), 
@@ -600,7 +611,24 @@
 
             <bind nodeset="/data/individualGender" type="select1" required="true()" />
 
-            <bind nodeset="/data/individualIsPregnantFlag" type="select1" relevant="selected(/data/individualGender, 'Female')" required="true()"/>
+
+
+
+
+
+
+
+            <bind nodeset="/data/individualIsPregnantFlag" type="select1" relevant="selected(/data/individualGender, 'Female') and not(selected(/data/individualAgeUnits,'Months')) and (/data/individualAge > 11) and (/data/individualAge &lt; 46)" required="true()"/>
+
+
+
+
+
+
+
+
+
+
 
             <bind nodeset="/data/headPrefilledFlag" type="string" />
 
@@ -682,19 +710,6 @@
             </select1>
         </group>
 
-        <select1 ref="/data/individualIsPregnantFlag">
-            <label ref="jr:itext('/data/individualIsPregnantFlag:label')" />
-            <hint ref="jr:itext('/data/individualIsPregnantFlag:hint')" />
-            <item>
-                <label ref="jr:itext('/data/individualIsPregnantFlag:option0')" />
-                <value>Yes</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/individualIsPregnantFlag:option1')" />
-                <value>No</value>
-            </item>
-        </select1>
-
         <input ref="/data/individualAge">
             <label ref="jr:itext('/data/individualAge:label')" />
             <hint ref="jr:itext('/data/individualAge:hint')" />
@@ -728,10 +743,30 @@
                 <value>10</value>
             </item>
         </select1>
-        <input ref="/data/individualDateOfBirth">
-            <label ref="jr:itext('/data/individualDateOfBirth:label')" />
-            <hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
-        </input>
+	
+        <group appearance="field-list">
+		<input ref="/data/ageRangeHelper">
+		    <label ref="jr:itext('/data/ageRangeHelper:label')" />
+		    <hint ref="jr:itext('/data/ageRangeHelper:hint')" />
+		</input>
+		<input ref="/data/individualDateOfBirth" appearance="no-calendar" >
+		    <label ref="jr:itext('/data/individualDateOfBirth:label')" />
+		    <hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
+		</input>
+	</group>
+
+	<select1 ref="/data/individualIsPregnantFlag">
+            <label ref="jr:itext('/data/individualIsPregnantFlag:label')" />
+            <hint ref="jr:itext('/data/individualIsPregnantFlag:hint')" />
+            <item>
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option0')" />
+                <value>Yes</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option1')" />
+                <value>No</value>
+            </item>
+        </select1>
 
         <select1 ref="/data/individualRelationshipToHeadOfHousehold">
             <label
