@@ -251,9 +251,6 @@
                     <text id="/data/individualNationality:option3">
                         <value>Otro pais No-Africano</value>
                     </text>
-                    <text id="/data/individualNationality:option4">
-                        <value>Otro</value>
-                    </text>
                     <text id="/data/individualLanguagePreference:label">
                         <value>Idioma de Preferencia</value>
                     </text>
@@ -507,9 +504,6 @@
                     </text>
                     <text id="/data/individualNationality:option3">
                         <value>Other Non-African Country</value>
-                    </text>
-                    <text id="/data/individualNationality:option4">
-                        <value>Other</value>
                     </text>
                     <text id="/data/individualLanguagePreference:label">
                         <value>Language Preference</value>
@@ -871,10 +865,6 @@ concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/da
             <item>
                 <label ref="jr:itext('/data/individualNationality:option3')" />
                 <value>Other Non-African Country</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/individualNationality:option4')" />
-                <value>Other</value>
             </item>
         </select1>
 
