@@ -1,7 +1,5 @@
 <h:html xmlns="http://www.w3.org/2002/xforms"
         xmlns:h="http://www.w3.org/1999/xhtml"
-        xmlns:ev="http://www.w3.org/2001/xml-events"
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Death</h:title>
@@ -10,11 +8,14 @@
                 <data id="death" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
+                    <collectionDateTime />
                     <processedByMirth />
                     <needsReview />
-                    <collectionDateTime />
-                    <individualExtId />
+                    <entityUuid />
+                    <entityExtId />
+                    <fieldWorkerUuid />
                     <fieldWorkerExtId />
+
                     <visitExtId />
                     <dateOfDeath />
                     <placeOfDeath />
