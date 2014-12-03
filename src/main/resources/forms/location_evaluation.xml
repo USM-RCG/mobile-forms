@@ -38,16 +38,16 @@
                         <value />
                     </text>
                     <text id="/data/evaluation:label">
-                        <value>Location Evaluation:</value>
+                        <value>Locación Evaluación:</value>
                     </text>
                     <text id="/data/evaluation:option0">
-                        <value>The location is uninhabited</value>
+                        <value>La locación está deshabitada</value>
                     </text>
                     <text id="/data/evaluation:option1">
-                        <value>The household rejected intervention</value>
+                        <value>El domicilio rechazó la intervención</value>
                     </text>
                     <text id="/data/evaluation:option2">
-                        <value>Member(s) of the household are never available</value>
+                        <value>Los miembros del domicilio no están disponibles</value>
                     </text>                 
                 </translation>
                 <translation lang="English">

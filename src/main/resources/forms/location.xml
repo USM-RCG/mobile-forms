@@ -75,7 +75,7 @@
                         <value />
                     </text>
                     <text id="/data/locationType:label">
-                        <value>Tipo de Locación</value>
+                        <value>Tipo de Localidad</value>
                     </text>
                     <text id="/data/locationType:hint">
                         <value />

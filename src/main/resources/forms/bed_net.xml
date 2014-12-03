@@ -140,18 +140,24 @@
                         <value>Cemento</value>
                     </text>
                     <text id="/data/roof:option2">
-                        <value>Baldosas</value>
-                    </text>
-                    <text id="/data/roof:option3">
                         <value>Madera</value>
                     </text>
-                    <text id="/data/roof:option4">
+                    <text id="/data/roof:option3">
                         <value>Ñipas</value>
                     </text>
-                    <text id="/data/roof:option5">
+                    <text id="/data/roof:option4">
                         <value>Staff</value>
                     </text>
+                    <text id="/data/roof:option5">
+                        <value>Contre Plaque</value>
+                    </text>
                     <text id="/data/roof:option6">
+                        <value>Tapiz</value>
+                    </text>
+                    <text id="/data/roof:option7">
+                        <value>Sacos/Telas viejas</value>
+                    </text>
+                    <text id="/data/roof:option8">
                         <value>Otro</value>
                     </text>
 
@@ -437,18 +443,24 @@
                         <value>Cement</value>
                     </text>
                     <text id="/data/roof:option2">
-                        <value>Tiles</value>
-                    </text>
-                    <text id="/data/roof:option3">
                         <value>Wood</value>
                     </text>
-                    <text id="/data/roof:option4">
+                    <text id="/data/roof:option3">
                         <value>Palm or thatch</value>
                     </text>
-                    <text id="/data/roof:option5">
+                    <text id="/data/roof:option4">
                         <value>Cast/Cement</value>
                     </text>
+                    <text id="/data/roof:option5">
+                        <value>Clay Mold</value>
+                    </text>
                     <text id="/data/roof:option6">
+                        <value>Tapestry</value>
+                    </text>
+                    <text id="/data/roof:option7">
+                        <value>Cloth</value>
+                    </text>
+                    <text id="/data/roof:option8">
                         <value>Other</value>
                     </text>
 
@@ -889,7 +901,7 @@
             </item>
             <item>
                 <label ref="jr:itext('/data/walls:option5')"/>
-                <value>9</value>
+                <value>99</value>
             </item>
         </select1>
 
@@ -937,7 +949,15 @@
             </item>
             <item>
                 <label ref="jr:itext('/data/roof:option6')"/>
-                <value>9</value>
+                <value>7</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/roof:option7')"/>
+                <value>8</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/roof:option8')"/>
+                <value>99</value>
             </item>
         </select1>
 
