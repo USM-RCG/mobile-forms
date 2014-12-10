@@ -7,8 +7,13 @@
         <h:title>Call Scheduler</h:title>
         <model>
             <instance>
-                <data id="call_scheduler">
+                <data id="call_scheduler" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
                     <processedByMirth />
+                    <needsReview />
+                    <entityUuid />
+                    <entityExtId />
+                    <fieldWorkerUuid />
                     <fieldWorkerExtId />
                     <collectionDateTime />
                     <localityName />
