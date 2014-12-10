@@ -17,6 +17,7 @@
                     <fieldWorkerExtId />
 
                     <householdExtId />
+                    <householdUuid />
                     <individualExtId />
                     <individualFirstName />
                     <individualLastName />
