@@ -91,7 +91,7 @@
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/expectedDeliveryDate" type="date" required="true()" />

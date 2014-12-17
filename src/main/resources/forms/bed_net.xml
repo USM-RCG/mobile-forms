@@ -659,7 +659,7 @@
             <bind nodeset="/data/householdSize" type="string" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
             <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()" />
-            <bind nodeset="/data/locationExtId" type="string" readonly="true()"/>
+            <bind nodeset="/data/locationExtId" type="string" required="true()"/>
 
             <bind nodeset="/data/beds" type="int" required="true()"/>
             <bind nodeset="/data/netsCurrent" type="int" required="true()"/>

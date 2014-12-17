@@ -553,108 +553,57 @@
                 </translation>
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
-
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
-
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
-
             <bind nodeset="/data/collectionDateTime" type="datetime"
                   readonly="true()" />
-
-            <bind nodeset="/data/householdExtId" type="string" readonly="true()" />
-
-            <bind nodeset="/data/individualExtId" type="string" readonly="true()" />
-
+            <bind nodeset="/data/householdExtId" type="string" required="true()" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()" />
             <bind nodeset="/data/individualFirstName" type="string"
                   required="true()" />
-
             <bind nodeset="/data/individualLastName" type="string" required="false()" />
-
             <bind nodeset="/data/individualOtherNames" type="string"
                   required="boolean-from-string(/data/headPrefilledFlag)" />
-
             <bind nodeset="/data/individualAge" type="int" required="true()"
                   constraint="not(. &lt; 0) and (. &lt; 120)" />
-
-
-
             <bind nodeset="/data/individualAgeUnits" type="select1"
                   required="true()" constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag)) and if(/data/individualAge > 12,not(selected(.,'Months')), true())"
                   jr:constraintMsg="Head of Household's age can't be in months and age in Months should be less than 12 (use years if it's greater than 12)."/>
-
-
-            <bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()" relevant="selected(/data/individualAgeUnits,'Years')" />
-
-
+	<bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()" relevant="selected(/data/individualAgeUnits,'Years')" />
 	    <bind nodeset="/data/ageRangeHelper" type="string" relevant="selected(/data/individualAgeUnits, 'Years')" readonly="true()" calculate="concat(
 concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'),
 ' to ',
 concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/data/individualAgeUncertaintyRange)),'-01-01')
 )"/>	
-
             <bind nodeset="/data/individualDateOfBirth" type="date" required="true()"
-
                   constraint="not(. > today())
 				    and if(selected(/data/individualAgeUnits, 'Years'), 
 				    not(. > date(concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/data/individualAgeUncertaintyRange)),'-01-01'))) 
 	    			    and not(. &lt; date(concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'))), 
 				    true())"
-
                   jr:constraintMsg="Date of birth must be within the range of uncertainty and not in the future."/>
-
-
             <bind nodeset="/data/individualGender" type="select1" required="true()" />
-
-
-
-
-
-
-
-
             <bind nodeset="/data/individualIsPregnantFlag" type="select1" relevant="selected(/data/individualGender, 'Female') and not(selected(/data/individualAgeUnits,'Months')) and (/data/individualAge > 11) and (/data/individualAge &lt; 46)" required="true()"/>
-
-
-
-
-
-
-
-
-
-
-
             <bind nodeset="/data/headPrefilledFlag" type="string" />
-
-
             <bind nodeset="/data/individualRelationshipToHeadOfHousehold"
                   type="select1" required="true()" relevant="not(boolean-from-string(/data/headPrefilledFlag))"
                   constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
                   jr:constraintMsg="Individual is too young." />
-
-
             <bind nodeset="/data/individualPhoneNumber" type="int" required="false()"
                   constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits."/>
-
             <bind nodeset="/data/individualOtherPhoneNumber" type="int"
                   required="false()" constraint="(regex(., '^[0-9]{9}$'))"
                   jr:constraintMsg="Phone Number must be 9 digits."/>
-
             <bind nodeset="/data/individualPointOfContactName" type="string"
                   required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0" />
-
             <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int"
                   required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0"
                   constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits." />
-
             <bind nodeset="/data/individualLanguagePreference" type="select1"
                   required="true()" />
-
             <bind nodeset="/data/individualNationality" type="select1"
                   required="true()" />
-
             <bind nodeset="/data/individualDip" type="int" required="false()"
                   constraint="not(. &lt; 0)" />
         </model>
