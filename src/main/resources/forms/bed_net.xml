@@ -23,6 +23,7 @@
                     <netsCurrent/>
                     <ITNsCurrent />
                     <ITNGoodN />
+		    <netsRecommended />
                     <netsNeeded />
                     <netCode />
                     <netsSupplied jr:template="">
@@ -76,11 +77,11 @@
                     <text id="/data/ITNGoodN:label">
                         <value>¿Cuantas telas del PNLP (Permanet 3.0) estan en buen estado (sin huecos o huecos del tamano del dedo pulgar)?</value>
                     </text>
+                    <text id="/data/netsRecommended:label">
+                        <value>Número recomendado de telas a distribuir</value>
+                    </text>
                     <text id="/data/netsNeeded:label">
                         <value>Número de telas a distribuir</value>
-                    </text>
-                    <text id="/data/errorExceedsHouseholdSize:label">
-                        <value>El número de telas mosquiteras distribuidas debe ser menor que el número de residentes registrados de este hogar</value>
                     </text>
                     <text id="/data/netCode:label">
                         <value>Codigo de la Tela Mosquitera (Marcar en la Tela)</value>
@@ -379,11 +380,11 @@
                     <text id="/data/ITNGoodN:label">
                         <value>How many of these blue Permanet 3.0 nets are in good condition (only thumb-sized holes or no holes)?</value>
                     </text>
+                    <text id="/data/netsRecommended:label">
+                        <value>Recommended number of nets to distribute</value>
+                    </text>
                     <text id="/data/netsNeeded:label">
                         <value>Number of bed nets to distribute</value>
-                    </text>
-                    <text id="/data/errorExceedsHouseholdSize:label">
-                        <value>Number of nets distributed must be less than the number of recorded residents of this household</value>
                     </text>
                     <text id="/data/netCode:label">
                         <value>Bed Net Code</value>
@@ -666,8 +667,8 @@
             <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent > 0"/>
             <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0" constraint="not(. > (/data/ITNsCurrent))"
                   jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
-            <bind nodeset="/data/netsNeeded" type="int" required="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"
-                  constraint="not(. > int(/data/householdSize))" jr:constraintMsg="jr:itext('/data/errorExceedsHouseholdSize:label')"/>
+            <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
+            <bind nodeset="/data/netsNeeded" type="int" required="true()" />
             <bind nodeset="/data/netCode" type="string" required="true()"/>
             <bind nodeset="/data/netsSupplied/netCode" type="string" required="true()"/>
             <bind nodeset="/data/netsSupplied/netHung" type="select1" required="true()"/>
@@ -715,9 +716,15 @@
         <input ref="/data/ITNGoodN">
             <label ref="jr:itext('/data/ITNGoodN:label')"/>
         </input>
-        <input ref="/data/netsNeeded">
-            <label ref="jr:itext('/data/netsNeeded:label')"/>
-        </input>
+	<group appearance="field-list">
+		<input ref="/data/netsRecommended">
+		    <label ref="jr:itext('/data/netsRecommended:label')"/>
+		</input>
+		<input ref="/data/netsNeeded">
+		    <label ref="jr:itext('/data/netsNeeded:label')"/>
+		</input>
+	</group>
+
         <input ref="/data/netCode">
             <label ref="jr:itext('/data/netCode:label')"/>
         </input>
