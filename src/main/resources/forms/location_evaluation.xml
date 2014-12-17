@@ -91,7 +91,7 @@
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />           
-            <bind nodeset="/data/locationExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/locationExtId" type="string" required="true()" />
             <bind nodeset="/data/evaluation" type="select" />
         </model>
     </h:head>
