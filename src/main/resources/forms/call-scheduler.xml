@@ -17,10 +17,8 @@
                     <fieldWorkerExtId />
                     <collectionDateTime />
                     <localityName />
-                    <callDate />
-  		     <widgets xmlns="widgets">
-   			 <callTime/>
- 		     </widgets>
+		    <callDateTime />
+
                 </data>
             </instance>
             <itext>
@@ -43,16 +41,10 @@
                     <text id="/data/localityName:hint">
                         <value />
                     </text>
-                    <text id="/data/callDate:label">
-                        <value>Call Date</value>
+                    <text id="/data/callDateTime:label">
+                        <value>Call Date and Time</value>
                     </text>
-                    <text id="/data/callDate:hint">
-                        <value />
-                    </text>
-                    <text id="/data/widgets/callTime:label">
-                        <value>Call Time</value>
-                    </text>
-                    <text id="/data/widgets/callTime:hint">
+                    <text id="/data/callDateTime:hint">
                         <value />
                     </text>
                 </translation>
@@ -61,8 +53,8 @@
             <bind nodeset="/data/fieldWorkerExtId" type="string" />
             <bind nodeset="/data/collectionDateTime" type="datetime" />
             <bind nodeset="/data/localityName" type="string" />
-            <bind nodeset="/data/callDate" type="date"/>
-            <bind nodeset="/data/widgets/callTime" type="time"/>
+            <bind nodeset="/data/callDateTime" type="datetime"/>
+
         </model>
     </h:head>
     <h:body>
@@ -81,11 +73,8 @@
             </input>
         </group>
         <group appearance="field-list">
-        	<input ref="/data/callDate">
-            		<label ref="jr:itext('/data/callDate:label')" />
-        	</input>
-        	<input ref="/data/widgets/callTime">
-            		<label>Time</label>
+        	<input ref="/data/callDateTime">
+            		<label ref="jr:itext('/data/callDateTime:label')" />
         	</input>
         </group>
     </h:body>
