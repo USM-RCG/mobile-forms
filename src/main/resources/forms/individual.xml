@@ -16,8 +16,13 @@
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
 
-                    <householdExtId />
                     <householdUuid />
+                    <membershipUuid />
+                    <relationshipUuid />
+                    <socialgroupUuid />
+
+
+                    <householdExtId />
                     <individualExtId />
                     <individualFirstName />
                     <individualLastName />
