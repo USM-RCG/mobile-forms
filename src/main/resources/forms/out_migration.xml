@@ -17,7 +17,9 @@
                     <fieldWorkerExtId />
 
                     <visitExtId />
-                    <outMigrationIndividualExtId />
+                    <visitUuid />
+                    <individualExtId />
+                    <individualUuid />
                     <outMigrationDate />
                     <outMigrationNameOfDestination />
                     <outMigrationReason />
@@ -25,10 +27,10 @@
             </instance>
             <itext>
                 <translation lang="Spanish">
-                    <text id="/data/outMigrationIndividualExtId:label">
+                    <text id="/data/individualExtId:label">
                         <value>ID Externo del Individuo</value>
                     </text>
-                    <text id="/data/outMigrationIndividualExtId:hint">
+                    <text id="/data/individualExtId:hint">
                         <value />
                     </text>
                     <text id="/data/fieldWorkerExtId:label">
@@ -64,10 +66,10 @@
                 </translation>
 
                 <translation lang="English">
-                    <text id="/data/outMigrationIndividualExtId:label">
+                    <text id="/data/individualExtId:label">
                         <value>Individual Id</value>
                     </text>
-                    <text id="/data/outMigrationIndividualExtId:hint">
+                    <text id="/data/individualExtId:hint">
                         <value />
                     </text>
                     <text id="/data/fieldWorkerExtId:label">
@@ -105,7 +107,7 @@
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/outMigrationIndividualExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()" />
             <bind nodeset="/data/outMigrationDate" type="date" />
@@ -114,9 +116,9 @@
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/outMigrationIndividualExtId">
-            <label ref="jr:itext('/data/outMigrationIndividualExtId:label')" />
-            <hint ref="jr:itext('/data/outMigrationIndividualExtId:hint')" />
+        <input ref="/data/individualExtId">
+            <label ref="jr:itext('/data/individualExtId:label')" />
+            <hint ref="jr:itext('/data/individualExtId:hint')" />
         </input>
         <input ref="/data/fieldWorkerExtId">
             <label ref="jr:itext('/data/fieldWorkerExtId:label')" />

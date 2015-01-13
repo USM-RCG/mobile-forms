@@ -18,12 +18,13 @@
 
                     <householdSize />
                     <locationExtId />
+                    <locationUuid />
                     <distributionDateTime />
                     <beds/>
                     <netsCurrent/>
                     <ITNsCurrent />
                     <ITNGoodN />
-		    <netsRecommended />
+		                <netsRecommended />
                     <netsNeeded />
                     <netCode />
                     <netsSupplied jr:template="">

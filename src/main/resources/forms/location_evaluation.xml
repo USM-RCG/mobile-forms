@@ -17,6 +17,7 @@
                     <fieldWorkerExtId />
 
                     <locationExtId />
+                    <locationUuid />
                     <evaluation />
                 </data>
             </instance>
@@ -51,7 +52,7 @@
                     </text>
                     <text id="/data/evaluation:option2">
                         <value>Los miembros del domicilio no están disponibles</value>
-                    </text>                 
+                    </text>
                 </translation>
                 <translation lang="English">
                     <text id="/data/fieldWorkerExtId:label">
@@ -83,14 +84,14 @@
                     </text>
                     <text id="/data/evaluation:option2">
                         <value>Member(s) of the household are never available</value>
-                    </text>               
+                    </text>
                 </translation>
             </itext>
             <bind nodeset="/data/versionId" type="string" readonly="true()" />
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
-            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />           
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
             <bind nodeset="/data/locationExtId" type="string" required="true()" />
             <bind nodeset="/data/evaluation" type="select" />
         </model>

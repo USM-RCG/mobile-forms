@@ -17,7 +17,9 @@
                     <fieldWorkerExtId />
 
                     <individualExtId />
+                    <individualUuid />
                     <visitExtId />
+                    <visitUuid />
                     <expectedDeliveryDate />
                     <recordedDate />
                 </data>

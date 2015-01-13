@@ -16,6 +16,7 @@
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
 
+                    <hierarchyParentUuid />
                     <hierarchyExtId />
                     <hierarchyUuid />
                     <locationBuildingNumber />

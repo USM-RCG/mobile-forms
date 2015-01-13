@@ -16,7 +16,10 @@
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
 
+                    <individualExtId />
+                    <individualUuid />
                     <visitExtId />
+                    <visitUuid />
                     <dateOfDeath />
                     <placeOfDeath />
                     <causeOfDeath />

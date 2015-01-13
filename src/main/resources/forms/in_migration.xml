@@ -17,8 +17,11 @@
                     <fieldWorkerExtId />
 
                     <visitExtId />
+                    <visitUuid />
                     <locationExtId />
+                    <locationUuid />
                     <individualExtId />
+                    <individualUuid />
                     <migrationType />
                     <migrationDate />
                     <migrationOrigin />

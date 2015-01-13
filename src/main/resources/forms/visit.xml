@@ -17,7 +17,9 @@
                     <fieldWorkerExtId />
 
                     <visitExtId />
+                    <visitUuid />
                     <locationExtId />
+                    <locationUuid />
                     <visitDate />
                 </data>
             </instance>
