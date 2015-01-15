@@ -19,6 +19,7 @@
                     <hierarchyParentUuid />
                     <hierarchyExtId />
                     <hierarchyUuid />
+
                     <locationBuildingNumber />
                     <locationFloorNumber />
                     <locationName />
@@ -258,7 +259,7 @@
 
             <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
 
-            <bind nodeset="/data/sectorName" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/sectorName" type="string" required="true()"/>
 
             <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"/>
 
