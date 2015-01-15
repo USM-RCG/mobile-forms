@@ -16,8 +16,13 @@
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
 
-                    <householdExtId />
                     <householdUuid />
+                    <membershipUuid />
+                    <relationshipUuid />
+                    <socialgroupUuid />
+
+
+                    <householdExtId />
                     <individualExtId />
                     <individualFirstName />
                     <individualLastName />
@@ -160,13 +165,13 @@
                     </text>
 
                     <text id="/data/individualIsPregnantFlag:label">
-                        <value>Pregnant</value>
+                        <value>¿Esta embarazada?</value>
                     </text>
                     <text id="/data/individualIsPregnantFlag:hint">
                         <value />
                     </text>
                     <text id="/data/individualIsPregnantFlag:option0">
-                        <value>Yes</value>
+                        <value>Sí</value>
                     </text>
                     <text id="/data/individualIsPregnantFlag:option1">
                         <value>No</value>
