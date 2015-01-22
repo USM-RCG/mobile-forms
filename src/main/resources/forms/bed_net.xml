@@ -313,6 +313,9 @@
                         <value>No quiero que rocien mi casa</value>
                     </text>
 
+                    <text id="/data/whyNotSprayed:label">
+                        <value>¿Por qué no quieren que rocien su casa?</value>
+                    </text>
                     <text id="/data/whyNotSprayed01:label">
                         <value>Causa efectos secundarios contra la salud</value>
                     </text>
@@ -616,6 +619,9 @@
                         <value>Didn't want house sprayed</value>
                     </text>
 
+                    <text id="/data/whyNotSprayed:label">
+                        <value>Why didn't you want your house sprayed?</value>
+                    </text>
                     <text id="/data/whyNotSprayed01:label">
                         <value>Causes ill health effects</value>
                     </text>
@@ -819,7 +825,7 @@
         </select1>
 
         <select ref="/data/whyNotSprayed">
-            <label>Why didn't you want your house sprayed? </label>
+            <label ref="jr:itext('/data/whyNotSprayed:label')"/>
             <item>
                 <label ref="jr:itext('/data/whyNotSprayed01:label')"/>
                 <value>1</value>
