@@ -15,7 +15,6 @@
                     <entityExtId />
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
-
                     <householdSize />
                     <locationExtId />
                     <locationUuid />
@@ -25,11 +24,9 @@
                     <ITNsCurrent />
                     <ITNGoodN />
 		                <netsRecommended />
-                    <netsNeeded />
+                    <netsSupplied />
                     <netCode />
-                    <netsSupplied jr:template="">
-                        <netHung />
-                    </netsSupplied>
+                    <netsHung />
                     <walls/>
                     <wallGaps />
                     <roof />
@@ -46,7 +43,6 @@
                 </data>
             </instance>
             <itext>
-
                 <translation lang="Spanish">
                     <text id="/data/fieldWorkerExtId:label">
                         <value>ID Externo del Encuestador</value>
@@ -81,23 +77,14 @@
                     <text id="/data/netsRecommended:label">
                         <value>Número recomendado de telas a distribuir</value>
                     </text>
-                    <text id="/data/netsNeeded:label">
+                    <text id="/data/netsSupplied:label">
                         <value>Número de telas a distribuir</value>
                     </text>
                     <text id="/data/netCode:label">
                         <value>Codigo de la Tela Mosquitera (Marcar en la Tela)</value>
                     </text>
-                    <text id="/data/netsSupplied:label">
-                        <value>Tela Mosquitera Distribuida</value>
-                    </text>
-                    <text id="/data/netsSupplied/netHung:label">
+                    <text id="/data/netsHung:label">
                         <value>¿La tela fue colgada?</value>
-                    </text>
-                    <text id="/data/netsSupplied/netHung:option0">
-                        <value>No</value>
-                    </text>
-                    <text id="/data/netsSupplied/netHung:option1">
-                        <value>Sí</value>
                     </text>
 
                     <text id="/data/walls:label">
@@ -387,25 +374,15 @@
                     <text id="/data/netsRecommended:label">
                         <value>Recommended number of nets to distribute</value>
                     </text>
-                    <text id="/data/netsNeeded:label">
+                    <text id="/data/netsSupplied:label">
                         <value>Number of bed nets to distribute</value>
                     </text>
                     <text id="/data/netCode:label">
                         <value>Bed Net Code</value>
                     </text>
-                    <text id="/data/netsSupplied:label">
-                        <value>Bed Net Distributed</value>
-                    </text>
-                    <text id="/data/netsSupplied/netHung:label">
+                    <text id="/data/netsHung:label">
                         <value>Hung</value>
                     </text>
-                    <text id="/data/netsSupplied/netHung:option0">
-                        <value>No</value>
-                    </text>
-                    <text id="/data/netsSupplied/netHung:option1">
-                        <value>Yes</value>
-                    </text>
-
                     <text id="/data/walls:label">
                         <value>Enter the primary (most common) wall material</value>
                     </text>
@@ -675,10 +652,9 @@
             <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0" constraint="not(. > (/data/ITNsCurrent))"
                   jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
             <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
-            <bind nodeset="/data/netsNeeded" type="int" required="true()" />
+            <bind nodeset="/data/netsSupplied" type="int" required="true()" />
             <bind nodeset="/data/netCode" type="string" required="true()"/>
-            <bind nodeset="/data/netsSupplied/netCode" type="string" required="true()"/>
-            <bind nodeset="/data/netsSupplied/netHung" type="select1" required="true()"/>
+            <bind nodeset="/data/netsHung" type="int" required="true()"/>
             <bind nodeset="/data/walls" type="select1" required="true()" />
             <bind nodeset="/data/wallGaps" type="select1" required="true()" />
             <bind nodeset="/data/roof" type="select1" required="true()" />
@@ -723,18 +699,24 @@
         <input ref="/data/ITNGoodN">
             <label ref="jr:itext('/data/ITNGoodN:label')"/>
         </input>
+
 	<group appearance="field-list">
 		<input ref="/data/netsRecommended">
 		    <label ref="jr:itext('/data/netsRecommended:label')"/>
 		</input>
-		<input ref="/data/netsNeeded">
-		    <label ref="jr:itext('/data/netsNeeded:label')"/>
+		<input ref="/data/netsSupplied">
+		    <label ref="jr:itext('/data/netsSupplied:label')"/>
 		</input>
 	</group>
 
-        <input ref="/data/netCode">
-            <label ref="jr:itext('/data/netCode:label')"/>
-        </input>
+  <group appearance="field-list">
+    <input ref="/data/netCode">
+      <label ref="jr:itext('/data/netCode:label')"/>
+    </input>
+    <input ref="/data/netsHung">
+      <label ref="jr:itext('/data/netsHung:label')"/>
+    </input>
+  </group>
 
         <select1 ref="/data/electricity">
             <label ref="jr:itext('/data/electricity:label')"/>
@@ -875,24 +857,6 @@
                 <value>12</value>
             </item>
         </select>
-
-
-        <group>
-            <label ref="jr:itext('/data/netsSupplied:label')"/>
-            <repeat nodeset="/data/netsSupplied" jr:count="/data/netsNeeded">
-                <select1 ref="/data/netsSupplied/netHung">
-                    <label ref="jr:itext('/data/netsSupplied/netHung:label')"/>
-                    <item>
-                        <label ref="jr:itext('/data/netsSupplied/netHung:option0')"/>
-                        <value>0</value>
-                    </item>
-                    <item>
-                        <label ref="jr:itext('/data/netsSupplied/netHung:option1')"/>
-                        <value>1</value>
-                    </item>
-                </select1>
-            </repeat>
-        </group>
 
         <select1 ref="/data/walls">
             <label ref="jr:itext('/data/walls:label')"/>
