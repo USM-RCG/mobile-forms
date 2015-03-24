@@ -8,6 +8,10 @@
                 <data id="in_migration" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
+		    <jr:meta>
+			<jr:instanceID/>
+		    </jr:meta>
+
                     <collectionDateTime />
                     <processedByMirth />
                     <needsReview />
@@ -145,7 +149,7 @@
                     </text>
                 </translation>
             </itext>
-
+	    <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
             <bind nodeset="/data/processedByMirth" type="boolean" />
             <bind nodeset="/data/needsReview" type="string" readonly="true()" />
