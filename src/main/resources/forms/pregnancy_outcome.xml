@@ -1,6 +1,6 @@
 <h:html xmlns="http://www.w3.org/2002/xforms"
-        xmlns:h="http://www.w3.org/1999/xhtml"
-        xmlns:jr="http://openrosa.org/javarosa">
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Pregnancy Outcome</h:title>
         <model>
@@ -21,7 +21,7 @@
                     <fieldWorkerExtId />
 
                     <visitUuid />
-                    <socialGroupUuid />
+                    <socialgroupUuid />
                     <motherUuid />
                     <fatherUuid />
 
@@ -32,7 +32,7 @@
 		        <collectionDateTime />
 		        <processedByMirth />
                         <outcomeType />
-			<childUuidPlaceholder />
+                        <childUuidPlaceholder />
                         <childUuid />
                         <childFirstName />
                         <childMiddleName />
