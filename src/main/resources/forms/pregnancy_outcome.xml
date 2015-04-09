@@ -1,0 +1,362 @@
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Pregnancy Outcome</h:title>
+        <model>
+            <instance>
+                <data id="pregnancy_outcome" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
+                    <jr:meta>
+                        <jr:instanceID/>
+                    </jr:meta>
+
+                    <collectionDateTime />
+                    <processedByMirth />
+                    <needsReview />
+                    <entityUuid />
+                    <entityExtId />
+                    <fieldWorkerUuid />
+                    <fieldWorkerExtId />
+
+                    <visitUuid />
+                    <socialGroupUuid />
+                    <motherUuid />
+                    <fatherUuid />
+
+                    <deliveryDate />
+                    <numberOfOutcomes />
+
+                    <outcomes jr:template="">
+                        <outcomeType />
+                        <childUuid />
+                        <childFirstName />
+                        <childMiddleName />
+                        <childLastName />
+                        <childGender />
+                        <childRelationshipToGroupHead />
+                        <childNationality />
+                    </outcomes>
+
+                </data>
+            </instance>
+            <itext>
+                <translation lang="eng">
+                    <text id="/data/collectionDateTime:label">
+                        <value>Collection Date</value>
+                    </text>
+                    <text id="/data/collectionDateTime:hint">
+                        <value />
+                    </text>
+                    <text id="/data/fieldWorkerExtId:label">
+                        <value>Field Worker Ext Id</value>
+                    </text>
+                    <text id="/data/fieldWorkerExtId:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/deliveryDate:label">
+                        <value>Delivery Date</value>
+                    </text>
+                    <text id="/data/deliveryDate:hint">
+                        <value />
+                    </text>
+                    <text id="/data/numberOfOutcomes:label">
+                        <value>Number of Outcomes</value>
+                    </text>
+                    <text id="/data/numberOfOutcomes:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/outcomes/outcomeType:label">
+                        <value>Outcome Type</value>
+                    </text>
+                    <text id="/data/outcomes/outcomeType:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/outcomeType:option0">
+                        <value>Live Birth</value>
+                    </text>
+                    <text id="/data/outcomes/outcomeType:option1">
+                        <value>Still Birth</value>
+                    </text>
+                    <text id="/data/outcomes/outcomeType:option2">
+                        <value>Miscarriage</value>
+                    </text>
+                    <text id="/data/outcomes/outcomeType:option3">
+                        <value>Abortion</value>
+                    </text>
+
+                    <text id="/data/outcomes/childFirstName:label">
+                        <value>First Name</value>
+                    </text>
+                    <text id="/data/outcomes/childFirstName:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/childMiddleName:label">
+                        <value>Household Name</value>
+                    </text>
+                    <text id="/data/outcomes/childMiddleName:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/childLastName:label">
+                        <value>Last Name</value>
+                    </text>
+                    <text id="/data/outcomes/childLastName:hint">
+                        <value />
+                    </text>
+
+                    <text id="/data/outcomes/childGender:label">
+                        <value>Gender</value>
+                    </text>
+                    <text id="/data/outcomes/childGender:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/childGender:option0">
+                        <value>Male</value>
+                    </text>
+                    <text id="/data/outcomes/childGender:option1">
+                        <value>Female</value>
+                    </text>
+
+                    <text id="/data/outcomes/childRelationshipToGroupHead:label">
+                        <value>Relationship to Head of Household</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option0">
+                        <value>Head</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option1">
+                        <value>Spouse</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option2">
+                        <value>Son/Daughter</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option3">
+                        <value>Brother/Sister</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option4">
+                        <value>Parent</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option5">
+                        <value>Grandchild</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option6">
+                        <value>Not Related</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option7">
+                        <value>Other Relative</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option8">
+                        <value>Don't Know</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option9">
+                        <value>Cousin</value>
+                    </text>
+                    <text id="/data/outcomes/childRelationshipToGroupHead:option10">
+                        <value>Nephew/Niece</value>
+                    </text>
+
+                    <text id="/data/outcomes/childNationality:label">
+                        <value>Nationality</value>
+                    </text>
+                    <text id="/data/outcomes/childNationality:hint">
+                        <value />
+                    </text>
+                    <text id="/data/outcomes/childNationality:option0">
+                        <value>Equato Guinean</value>
+                    </text>
+                    <text id="/data/outcomes/childNationality:option1">
+                        <value>Other African Country</value>
+                    </text>
+                    <text id="/data/outcomes/childNationality:option2">
+                        <value>Asian</value>
+                    </text>
+                    <text id="/data/outcomes/childNationality:option3">
+                        <value>Other Non-African Country</value>
+                    </text>
+
+                </translation>
+            </itext>
+
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/deliveryDate" type="date" required="true()"/>
+            <bind nodeset="/data/numberOfOutcomes" type="int" required="true()" constraint="not(. &lt; 0)"/>
+
+            <bind nodeset="/data/outcomes/outcomeType" type="select1" required="true()" />
+            <bind nodeset="/data/outcomes/childUuid" type="string" readonly="true()" calculate="uuid()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childFirstName" type="string" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childMiddleName" type="string" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childLastName" type="string" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childGender" type="select1" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childRelationshipToGroupHead" type="select1" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+            <bind nodeset="/data/outcomes/childNationality" type="select1" required="true()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
+
+        </model>
+    </h:head>
+
+    <h:body>
+        <group appearance="field-list">
+            <input ref="/data/deliveryDate">
+                <label ref="jr:itext('/data/deliveryDate:label')" />
+                <hint ref="jr:itext('/data/deliveryDate:hint')" />
+            </input>
+            <input ref="/data/numberOfOutcomes">
+                <label ref="jr:itext('/data/numberOfOutcomes:label')" />
+                <hint ref="jr:itext('/data/numberOfOutcomes:hint')" />
+            </input>
+        </group>
+
+        <group>
+
+            <repeat nodeset="/data/outcomes" jr:count="/data/numberOfOutcomes" jr:noAddRemove="true()">
+                <group appearance="field-list">
+
+                    <label>
+                        <output value="concat(position(.), ' / ', /data/numberOfOutcomes)"/>
+                    </label>
+
+                    <select1 ref="/data/outcomes/outcomeType">
+                        <label ref="jr:itext('/data/outcomes/outcomeType:label')" />
+                        <hint ref="jr:itext('/data/outcomes/outcomeType:hint')" />
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/outcomeType:option0')" />
+                            <value>LBR</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/outcomeType:option1')" />
+                            <value>SBR</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/outcomeType:option2')" />
+                            <value>MIS</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/outcomeType:option3')" />
+                            <value>ABT</value>
+                        </item>
+                    </select1>
+                </group>
+                <group appearance="field-list">
+
+                    <label>
+                        <output value="concat(position(.), ' / ', /data/numberOfOutcomes)"/>
+                    </label>
+
+                    <input ref="/data/outcomes/childFirstName">
+                        <label ref="jr:itext('/data/outcomes/childFirstName:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childFirstName:hint')" />
+                    </input>
+                    <input ref="/data/outcomes/childMiddleName">
+                        <label ref="jr:itext('/data/outcomes/childMiddleName:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childMiddleName:hint')" />
+                    </input>
+                    <input ref="/data/outcomes/childLastName">
+                        <label ref="jr:itext('/data/outcomes/childLastName:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childLastName:hint')" />
+                    </input>
+                </group>
+                <group appearance="field-list">
+
+                    <label>
+                        <output value="concat(position(.), ' / ', /data/numberOfOutcomes)"/>
+                    </label>
+
+                    <select1 ref="/data/outcomes/childGender">
+                        <label ref="jr:itext('/data/outcomes/childGender:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childGender:hint')" />
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childGender:option0')" />
+                            <value>Male</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childGender:option1')" />
+                            <value>Female</value>
+                        </item>
+                    </select1>
+                    <select1 ref="/data/outcomes/childNationality">
+                        <label ref="jr:itext('/data/outcomes/childNationality:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childNationality:hint')" />
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childNationality:option0')" />
+                            <value>Equato Guinean</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childNationality:option1')" />
+                            <value>Other African Country</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childNationality:option2')" />
+                            <value>Asian</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childNationality:option3')" />
+                            <value>Other Non-African Country</value>
+                        </item>
+                    </select1>
+                </group>
+
+                <group appearance="field-list">
+
+                    <label>
+                        <output value="concat(position(.), ' / ', /data/numberOfOutcomes)"/>
+                    </label>
+
+                    <select1 ref="/data/outcomes/childRelationshipToGroupHead">
+                        <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:label')" />
+                        <hint ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:hint')" />
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option0')" />
+                            <value>1</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option1')" />
+                            <value>2</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option2')" />
+                            <value>3</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option3')" />
+                            <value>4</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option9')" />
+                            <value>10</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option10')" />
+                            <value>11</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option4')" />
+                            <value>5</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option5')" />
+                            <value>6</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option6')" />
+                            <value>7</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option7')" />
+                            <value>8</value>
+                        </item>
+                        <item>
+                            <label ref="jr:itext('/data/outcomes/childRelationshipToGroupHead:option8')" />
+                            <value>9</value>
+                        </item>
+                    </select1>
+                </group>
+            </repeat>
+        </group>
+    </h:body>
+</h:html>
