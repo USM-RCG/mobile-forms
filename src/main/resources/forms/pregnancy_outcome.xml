@@ -1,6 +1,6 @@
 <h:html xmlns="http://www.w3.org/2002/xforms"
-    xmlns:h="http://www.w3.org/1999/xhtml"
-    xmlns:jr="http://openrosa.org/javarosa">
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Pregnancy Outcome</h:title>
         <model>
@@ -20,6 +20,8 @@
                     <fieldWorkerUuid />
                     <fieldWorkerExtId />
 
+                    <pregnancyOutcomeUuidPlaceholder />
+                    <pregnancyOutcomeUuid />
                     <visitUuid />
                     <socialgroupUuid />
                     <motherUuid />
@@ -29,6 +31,7 @@
                     <numberOfOutcomes />
 
                     <outcomes jr:template="">
+                        <pregnancyOutcomeUuid />
                         <outcomeType />
                         <childUuidPlaceholder />
                         <childUuid />
@@ -188,7 +191,10 @@
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
             <bind nodeset="/data/deliveryDate" type="date" required="true()"/>
             <bind nodeset="/data/numberOfOutcomes" type="int" required="true()" constraint="not(. &lt; 0)"/>
+            <bind nodeset="/data/pregnancyOutcomeUuidPlaceholder" type="string" calculate="uuid()"/>
+            <bind nodeset="/data/pregnancyOutcomeUuid" type="string" calculate="concat(substr(/data/pregnancyOutcomeUuidPlaceholder, 0, 8), substr(/data/pregnancyOutcomeUuidPlaceholder, 9, 13), substr(/data/pregnancyOutcomeUuidPlaceholder, 14, 18), substr(/data/pregnancyOutcomeUuidPlaceholder, 19, 23), substr(/data/pregnancyOutcomeUuidPlaceholder, 24))"/>
 
+            <bind nodeset="/data/outcomes/pregnancyOutcomeUuid" calculate="/data/pregnancyOutcomeUuid" />
             <bind nodeset="/data/outcomes/outcomeType" type="select1" required="true()" />
             <bind nodeset="/data/outcomes/childUuidPlaceholder" type="string" calculate="uuid()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
             <bind nodeset="/data/outcomes/childUuid" type="string" calculate="concat(substr(/data/outcomes/childUuidPlaceholder, 0, 8), substr(/data/outcomes/childUuidPlaceholder, 9, 13), substr(/data/outcomes/childUuidPlaceholder, 14, 18), substr(/data/outcomes/childUuidPlaceholder, 19, 23), substr(/data/outcomes/childUuidPlaceholder, 24))" relevant="/data/outcomes/outcomeType = 'LBR'"/>
