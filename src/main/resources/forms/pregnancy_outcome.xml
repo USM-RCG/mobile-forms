@@ -32,6 +32,8 @@
 
                     <outcomes jr:template="">
                         <pregnancyOutcomeUuid />
+                        <collectionDateTime />
+                        <processedByMirth />
                         <outcomeType />
                         <childUuidPlaceholder />
                         <childUuid />
@@ -195,6 +197,8 @@
             <bind nodeset="/data/pregnancyOutcomeUuid" type="string" calculate="concat(substr(/data/pregnancyOutcomeUuidPlaceholder, 0, 8), substr(/data/pregnancyOutcomeUuidPlaceholder, 9, 13), substr(/data/pregnancyOutcomeUuidPlaceholder, 14, 18), substr(/data/pregnancyOutcomeUuidPlaceholder, 19, 23), substr(/data/pregnancyOutcomeUuidPlaceholder, 24))"/>
 
             <bind nodeset="/data/outcomes/pregnancyOutcomeUuid" calculate="/data/pregnancyOutcomeUuid" />
+            <bind nodeset="/data/outcomes/collectionDateTime" required="true()" calculate="/data/collectionDateTime"/>
+            <bind nodeset="/data/outcomes/processedByMirth" required="true()" calculate="/data/processedByMirth"/>
             <bind nodeset="/data/outcomes/outcomeType" type="select1" required="true()" />
             <bind nodeset="/data/outcomes/childUuidPlaceholder" type="string" calculate="uuid()" relevant="/data/outcomes/outcomeType = 'LBR'"/>
             <bind nodeset="/data/outcomes/childUuid" type="string" calculate="concat(substr(/data/outcomes/childUuidPlaceholder, 0, 8), substr(/data/outcomes/childUuidPlaceholder, 9, 13), substr(/data/outcomes/childUuidPlaceholder, 14, 18), substr(/data/outcomes/childUuidPlaceholder, 19, 23), substr(/data/outcomes/childUuidPlaceholder, 24))" relevant="/data/outcomes/outcomeType = 'LBR'"/>
