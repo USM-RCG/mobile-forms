@@ -189,6 +189,8 @@
             </itext>
 
             <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
             <bind nodeset="/data/deliveryDate" type="date" required="true()"/>
@@ -199,7 +201,6 @@
 
             <bind nodeset="/data/outcomes/pregnancyOutcomeUuid" calculate="/data/pregnancyOutcomeUuid"/>
             <bind nodeset="/data/outcomes/collectionDateTime" required="true()" calculate="/data/collectionDateTime"/>
-            <bind nodeset="/data/outcomes/processedByMirth" required="true()" calculate="/data/processedByMirth"/>
             <bind nodeset="/data/outcomes/outcomeType" type="select1" required="true()"/>
             <bind nodeset="/data/outcomes/childUuidPlaceholder" type="string" calculate="uuid()"
                   relevant="/data/outcomes/outcomeType = 'LBR'"/>
