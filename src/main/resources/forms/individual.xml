@@ -12,44 +12,44 @@
                         <jr:instanceID/>
                     </jr:meta>
 
-                    <collectionDateTime />
-                    <processedByMirth />
-                    <needsReview />
-                    <entityUuid />
-                    <entityExtId />
-                    <fieldWorkerUuid />
-                    <fieldWorkerExtId />
+                    <collectionDateTime/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
 
-                    <householdUuid />
-                    <membershipUuid />
-                    <relationshipUuid />
-                    <socialgroupUuid />
+                    <householdUuid/>
+                    <membershipUuid/>
+                    <relationshipUuid/>
+                    <socialgroupUuid/>
 
 
-                    <householdExtId />
-                    <individualExtId />
-                    <individualFirstName />
-                    <individualLastName />
-                    <individualOtherNames />
-                    <individualAge />
+                    <householdExtId/>
+                    <individualExtId/>
+                    <individualFirstName/>
+                    <individualLastName/>
+                    <individualOtherNames/>
+                    <individualAge/>
                     <individualAgeUnits>Years</individualAgeUnits>
-                    <individualAgeUncertaintyRange />
-                    <individualDateOfBirth />
-                    <individualGender />
-                    <individualRelationshipToHeadOfHousehold />
-                    <individualPhoneNumber />
-                    <individualOtherPhoneNumber />
-                    <individualNationality />
-                    <individualLanguagePreference />
-                    <individualPointOfContactName />
-                    <individualPointOfContactPhoneNumber />
-                    <individualDip />
-                    <individualMemberStatus />
+                    <individualAgeUncertaintyRange/>
+                    <individualDateOfBirth/>
+                    <individualGender/>
+                    <individualRelationshipToHeadOfHousehold/>
+                    <individualPhoneNumber/>
+                    <individualOtherPhoneNumber/>
+                    <individualNationality/>
+                    <individualLanguagePreference/>
+                    <individualPointOfContactName/>
+                    <individualPointOfContactPhoneNumber/>
+                    <individualDip/>
+                    <individualMemberStatus/>
 
                     <ageRangeHelper/>
 
-                    <individualIsPregnantFlag />
-                    <headPrefilledFlag />
+                    <individualIsPregnantFlag/>
+                    <headPrefilledFlag/>
                 </data>
             </instance>
 
@@ -60,63 +60,63 @@
                         <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/collectionDateTime:label">
                         <value>Fecha de colección</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/householdExtId:label">
                         <value>ID Externo del Hogar</value>
                     </text>
                     <text id="/data/householdExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualExtId:label">
                         <value>ID Externo del Individuo</value>
                     </text>
                     <text id="/data/individualExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualFirstName:label">
                         <value>Nombre</value>
                     </text>
                     <text id="/data/individualFirstName:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualLastName:label">
                         <value>Apellido</value>
                     </text>
                     <text id="/data/individualLastName:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualOtherNames:label">
                         <value>Nombre de Casa (sobrenombre)</value>
                     </text>
                     <text id="/data/individualOtherNames:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualAge:label">
                         <value>Edad</value>
                     </text>
                     <text id="/data/individualAge:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualAgeUnits:label">
                         <value>Unidades de Edad</value>
                     </text>
                     <text id="/data/individualAgeUnits:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualAgeUnits:option0">
                         <value>Años</value>
@@ -128,7 +128,7 @@
                         <value>Incertidumbre de Edad (+ o -)</value>
                     </text>
                     <text id="/data/individualAgeUncertaintyRange:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualAgeUncertaintyRange:option0">
                         <value>1</value>
@@ -144,14 +144,14 @@
                         <value>Birthdate must be within this range.</value>
                     </text>
                     <text id="/data/ageRangeHelper:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualDateOfBirth:label">
                         <value>Fecha de Nacimiento</value>
                     </text>
                     <text id="/data/individualDateOfBirth:hint">
-                        <value />
+                        <value/>
                     </text>
 
 
@@ -159,7 +159,7 @@
                         <value>Genero</value>
                     </text>
                     <text id="/data/individualGender:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualGender:option0">
                         <value>Masculino</value>
@@ -172,7 +172,7 @@
                         <value>¿Esta embarazada?</value>
                     </text>
                     <text id="/data/individualIsPregnantFlag:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualIsPregnantFlag:option0">
                         <value>Sí</value>
@@ -185,7 +185,7 @@
                         <value>Relación con el Jefe del Hogar</value>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option0">
                         <value>Jefe del Hogar</value>
@@ -224,31 +224,31 @@
                         <value>Número de Teléfono Personal</value>
                     </text>
                     <text id="/data/individualPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualOtherPhoneNumber:label">
                         <value>Tiene otro número de telefono?</value>
                     </text>
                     <text id="/data/individualOtherPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualPointOfContactName:label">
                         <value>Nombre del Punto de Contacto</value>
                     </text>
                     <text id="/data/individualPointOfContactName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualPointOfContactPhoneNumber:label">
                         <value>Número de Teléfono del Punto de Contacto</value>
                     </text>
                     <text id="/data/individualPointOfContactPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualNationality:label">
                         <value>Nacionalidad</value>
                     </text>
                     <text id="/data/individualNationality:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualNationality:option0">
                         <value>Ecuatoguineano</value>
@@ -266,7 +266,7 @@
                         <value>Idioma de Preferencia</value>
                     </text>
                     <text id="/data/individualLanguagePreference:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualLanguagePreference:option0">
                         <value>Español</value>
@@ -290,14 +290,14 @@
                         <value>Número de DIP</value>
                     </text>
                     <text id="/data/individualDip:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualMemberStatus:label">
-                        <value>Estado del Miembro </value>
+                        <value>Estado del Miembro</value>
                     </text>
                     <text id="/data/individualMemberStatus:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualMemberStatus:option0">
                         <value>Permanente</value>
@@ -312,7 +312,7 @@
                         <value>Field Worker Ext Id</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
 
@@ -320,63 +320,63 @@
                         <value>Collection Date</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/householdExtId:label">
                         <value>Household Ext Id</value>
                     </text>
                     <text id="/data/householdExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualExtId:label">
                         <value>Individual Ext Id</value>
                     </text>
                     <text id="/data/individualExtId:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualFirstName:label">
                         <value>First Name</value>
                     </text>
                     <text id="/data/individualFirstName:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualLastName:label">
                         <value>Last Name</value>
                     </text>
                     <text id="/data/individualLastName:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualOtherNames:label">
                         <value>House Name</value>
                     </text>
                     <text id="/data/individualOtherNames:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualAge:label">
                         <value>Age</value>
                     </text>
                     <text id="/data/individualAge:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualAgeUnits:label">
                         <value>Age Units</value>
                     </text>
                     <text id="/data/individualAgeUnits:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualAgeUncertaintyRange:label">
                         <value>Age Uncertainty (+ or -)</value>
                     </text>
                     <text id="/data/individualAgeUncertaintyRange:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualAgeUncertaintyRange:option0">
                         <value>1</value>
@@ -399,21 +399,21 @@
                         <value>Birthdate must be within this range.</value>
                     </text>
                     <text id="/data/ageRangeHelper:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualDateOfBirth:label">
                         <value>Date of Birth</value>
                     </text>
                     <text id="/data/individualDateOfBirth:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualGender:label">
                         <value>Gender</value>
                     </text>
                     <text id="/data/individualGender:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualGender:option0">
                         <value>Male</value>
@@ -426,7 +426,7 @@
                         <value>Pregnant</value>
                     </text>
                     <text id="/data/individualIsPregnantFlag:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualIsPregnantFlag:option0">
                         <value>Yes</value>
@@ -439,7 +439,7 @@
                         <value>Relationship to Head of Household</value>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualRelationshipToHeadOfHousehold:option0">
                         <value>Head</value>
@@ -478,31 +478,31 @@
                         <value>Personal Phone Number</value>
                     </text>
                     <text id="/data/individualPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualOtherPhoneNumber:label">
                         <value>Other Phone Number</value>
                     </text>
                     <text id="/data/individualOtherPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualPointOfContactName:label">
                         <value>Point of Contact Name</value>
                     </text>
                     <text id="/data/individualPointOfContactName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualPointOfContactPhoneNumber:label">
                         <value>Point of Contact Phone Number</value>
                     </text>
                     <text id="/data/individualPointOfContactPhoneNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualNationality:label">
                         <value>Nationality</value>
                     </text>
                     <text id="/data/individualNationality:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualNationality:option0">
                         <value>Equato Guinean</value>
@@ -520,7 +520,7 @@
                         <value>Language Preference</value>
                     </text>
                     <text id="/data/individualLanguagePreference:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualLanguagePreference:option0">
                         <value>Spanish</value>
@@ -544,14 +544,14 @@
                         <value>DIP</value>
                     </text>
                     <text id="/data/individualDip:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/individualMemberStatus:label">
                         <value>Member Status</value>
                     </text>
                     <text id="/data/individualMemberStatus:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualMemberStatus:option0">
                         <value>Permanent</value>
@@ -564,24 +564,27 @@
 
             <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
-            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
-            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
-            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
-            <bind nodeset="/data/householdExtId" type="string" required="true()" />
-            <bind nodeset="/data/individualExtId" type="string" required="true()" />
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/householdExtId" type="string" required="true()"/>
+            <bind nodeset="/data/individualExtId" type="string" required="true()"/>
             <bind nodeset="/data/individualFirstName" type="string"
-                  required="true()" />
-            <bind nodeset="/data/individualLastName" type="string" required="false()" />
+                  required="true()"/>
+            <bind nodeset="/data/individualLastName" type="string" required="false()"/>
             <bind nodeset="/data/individualOtherNames" type="string"
-                  required="boolean-from-string(/data/headPrefilledFlag)" />
+                  required="boolean-from-string(/data/headPrefilledFlag)"/>
             <bind nodeset="/data/individualAge" type="int" required="true()"
-                  constraint="not(. &lt; 0) and (. &lt; 120)" />
+                  constraint="not(. &lt; 0) and (. &lt; 120)"/>
             <bind nodeset="/data/individualAgeUnits" type="select1"
-                  required="true()" constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag)) and if(/data/individualAge > 12,not(selected(.,'Months')), true())"
+                  required="true()"
+                  constraint="not(selected(., 'Months') and boolean-from-string(/data/headPrefilledFlag)) and if(/data/individualAge > 12,not(selected(.,'Months')), true())"
                   jr:constraintMsg="Head of Household's age can't be in months and age in Months should be less than 12 (use years if it's greater than 12)."/>
-            <bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()" relevant="selected(/data/individualAgeUnits,'Years')" />
-            <bind nodeset="/data/ageRangeHelper" type="string" relevant="selected(/data/individualAgeUnits, 'Years')" readonly="true()" calculate="concat(
+            <bind nodeset="/data/individualAgeUncertaintyRange" type="select1" required="true()"
+                  relevant="selected(/data/individualAgeUnits,'Years')"/>
+            <bind nodeset="/data/ageRangeHelper" type="string" relevant="selected(/data/individualAgeUnits, 'Years')"
+                  readonly="true()" calculate="concat(
 concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'),
 ' to ',
 concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/data/individualAgeUncertaintyRange)),'-01-01')
@@ -593,283 +596,287 @@ concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) + int(/da
 	    			    and not(. &lt; date(concat(string((int(substr(string(today()),0,4))-(/data/individualAge)) - int(/data/individualAgeUncertaintyRange)),'-01-01'))), 
 				    true())"
                   jr:constraintMsg="Date of birth must be within the range of uncertainty and not in the future."/>
-            <bind nodeset="/data/individualGender" type="select1" required="true()" />
-            <bind nodeset="/data/individualIsPregnantFlag" type="select1" relevant="selected(/data/individualGender, 'Female') and not(selected(/data/individualAgeUnits,'Months')) and (/data/individualAge > 11) and (/data/individualAge &lt; 46)" required="true()"/>
-            <bind nodeset="/data/headPrefilledFlag" type="string" />
+            <bind nodeset="/data/individualGender" type="select1" required="true()"/>
+            <bind nodeset="/data/individualIsPregnantFlag" type="select1"
+                  relevant="selected(/data/individualGender, 'Female') and not(selected(/data/individualAgeUnits,'Months')) and (/data/individualAge > 11) and (/data/individualAge &lt; 46)"
+                  required="true()"/>
+            <bind nodeset="/data/headPrefilledFlag" type="string"/>
             <bind nodeset="/data/individualRelationshipToHeadOfHousehold"
                   type="select1" required="true()" relevant="not(boolean-from-string(/data/headPrefilledFlag))"
                   constraint="not((selected(., '1') or selected(., '2') or selected(., '5')) and selected(/data/individualAgeUnits, 'Months'))"
-                  jr:constraintMsg="Individual is too young." />
+                  jr:constraintMsg="Individual is too young."/>
             <bind nodeset="/data/individualPhoneNumber" type="int" required="false()"
                   constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits."/>
             <bind nodeset="/data/individualOtherPhoneNumber" type="int"
                   required="false()" constraint="(regex(., '^[0-9]{9}$'))"
                   jr:constraintMsg="Phone Number must be 9 digits."/>
             <bind nodeset="/data/individualPointOfContactName" type="string"
-                  required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0" />
+                  required="string-length(string(/data/individualPhoneNumber)) = 0"
+                  relevant="string-length(string(/data/individualPhoneNumber)) = 0"/>
             <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int"
-                  required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0"
-                  constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits." />
+                  required="string-length(string(/data/individualPhoneNumber)) = 0"
+                  relevant="string-length(string(/data/individualPhoneNumber)) = 0"
+                  constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="Phone Number must be 9 digits."/>
             <bind nodeset="/data/individualLanguagePreference" type="select1"
-                  required="true()" />
+                  required="true()"/>
             <bind nodeset="/data/individualNationality" type="select1"
-                  required="true()" />
+                  required="true()"/>
             <bind nodeset="/data/individualDip" type="int" required="false()"
-                  constraint="not(. &lt; 0)" />
+                  constraint="not(. &lt; 0)"/>
         </model>
     </h:head>
     <h:body>
 
         <group appearance="field-list">
             <input ref="/data/fieldWorkerExtId">
-                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
             </input>
             <input ref="/data/collectionDateTime">
-                <label ref="jr:itext('/data/collectionDateTime:label')" />
-                <hint ref="jr:itext('/data/collectionDateTime:hint')" />
+                <label ref="jr:itext('/data/collectionDateTime:label')"/>
+                <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
             </input>
             <input ref="/data/householdExtId">
-                <label ref="jr:itext('/data/householdExtId:label')" />
-                <hint ref="jr:itext('/data/householdExtId:hint')" />
+                <label ref="jr:itext('/data/householdExtId:label')"/>
+                <hint ref="jr:itext('/data/householdExtId:hint')"/>
             </input>
             <input ref="/data/individualExtId">
-                <label ref="jr:itext('/data/individualExtId:label')" />
-                <hint ref="jr:itext('/data/individualExtId:hint')" />
+                <label ref="jr:itext('/data/individualExtId:label')"/>
+                <hint ref="jr:itext('/data/individualExtId:hint')"/>
             </input>
         </group>
         <group appearance="field-list">
             <input ref="/data/individualFirstName">
-                <label ref="jr:itext('/data/individualFirstName:label')" />
-                <hint ref="jr:itext('/data/individualFirstName:hint')" />
+                <label ref="jr:itext('/data/individualFirstName:label')"/>
+                <hint ref="jr:itext('/data/individualFirstName:hint')"/>
             </input>
             <input ref="/data/individualLastName">
-                <label ref="jr:itext('/data/individualLastName:label')" />
-                <hint ref="jr:itext('/data/individualLastName:hint')" />
+                <label ref="jr:itext('/data/individualLastName:label')"/>
+                <hint ref="jr:itext('/data/individualLastName:hint')"/>
             </input>
             <input ref="/data/individualOtherNames">
-                <label ref="jr:itext('/data/individualOtherNames:label')" />
-                <hint ref="jr:itext('/data/individualOtherNames:hint')" />
+                <label ref="jr:itext('/data/individualOtherNames:label')"/>
+                <hint ref="jr:itext('/data/individualOtherNames:hint')"/>
             </input>
             <select1 ref="/data/individualGender">
-                <label ref="jr:itext('/data/individualGender:label')" />
-                <hint ref="jr:itext('/data/individualGender:hint')" />
+                <label ref="jr:itext('/data/individualGender:label')"/>
+                <hint ref="jr:itext('/data/individualGender:hint')"/>
                 <item>
-                    <label ref="jr:itext('/data/individualGender:option0')" />
+                    <label ref="jr:itext('/data/individualGender:option0')"/>
                     <value>Male</value>
                 </item>
                 <item>
-                    <label ref="jr:itext('/data/individualGender:option1')" />
+                    <label ref="jr:itext('/data/individualGender:option1')"/>
                     <value>Female</value>
                 </item>
             </select1>
         </group>
 
         <input ref="/data/individualAge">
-            <label ref="jr:itext('/data/individualAge:label')" />
-            <hint ref="jr:itext('/data/individualAge:hint')" />
+            <label ref="jr:itext('/data/individualAge:label')"/>
+            <hint ref="jr:itext('/data/individualAge:hint')"/>
         </input>
         <select1 ref="/data/individualAgeUnits">
-            <label ref="jr:itext('/data/individualAgeUnits:label')" />
-            <hint ref="jr:itext('/data/individualAgeUnits:hint')" />
+            <label ref="jr:itext('/data/individualAgeUnits:label')"/>
+            <hint ref="jr:itext('/data/individualAgeUnits:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualAgeUnits:option0')" />
+                <label ref="jr:itext('/data/individualAgeUnits:option0')"/>
                 <value>Years</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualAgeUnits:option1')" />
+                <label ref="jr:itext('/data/individualAgeUnits:option1')"/>
                 <value>Months</value>
             </item>
         </select1>
 
         <select1 ref="/data/individualAgeUncertaintyRange">
-            <label ref="jr:itext('/data/individualAgeUncertaintyRange:label')" />
-            <hint ref="jr:itext('/data/individualAgeUncertaintyRange:hint')" />
+            <label ref="jr:itext('/data/individualAgeUncertaintyRange:label')"/>
+            <hint ref="jr:itext('/data/individualAgeUncertaintyRange:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option0')" />
+                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option0')"/>
                 <value>1</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option1')" />
+                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option1')"/>
                 <value>5</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option2')" />
+                <label ref="jr:itext('/data/individualAgeUncertaintyRange:option2')"/>
                 <value>10</value>
             </item>
         </select1>
 
         <group appearance="field-list">
             <input ref="/data/ageRangeHelper">
-                <label ref="jr:itext('/data/ageRangeHelper:label')" />
-                <hint ref="jr:itext('/data/ageRangeHelper:hint')" />
+                <label ref="jr:itext('/data/ageRangeHelper:label')"/>
+                <hint ref="jr:itext('/data/ageRangeHelper:hint')"/>
             </input>
-            <input ref="/data/individualDateOfBirth" appearance="no-calendar" >
-                <label ref="jr:itext('/data/individualDateOfBirth:label')" />
-                <hint ref="jr:itext('/data/individualDateOfBirth:hint')" />
+            <input ref="/data/individualDateOfBirth" appearance="no-calendar">
+                <label ref="jr:itext('/data/individualDateOfBirth:label')"/>
+                <hint ref="jr:itext('/data/individualDateOfBirth:hint')"/>
             </input>
         </group>
 
         <select1 ref="/data/individualIsPregnantFlag">
-            <label ref="jr:itext('/data/individualIsPregnantFlag:label')" />
-            <hint ref="jr:itext('/data/individualIsPregnantFlag:hint')" />
+            <label ref="jr:itext('/data/individualIsPregnantFlag:label')"/>
+            <hint ref="jr:itext('/data/individualIsPregnantFlag:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualIsPregnantFlag:option0')" />
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option0')"/>
                 <value>Yes</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualIsPregnantFlag:option1')" />
+                <label ref="jr:itext('/data/individualIsPregnantFlag:option1')"/>
                 <value>No</value>
             </item>
         </select1>
 
         <select1 ref="/data/individualRelationshipToHeadOfHousehold">
             <label
-                    ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:label')" />
+                    ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:label')"/>
             <hint
-                    ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:hint')" />
+                    ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:hint')"/>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option0')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option0')"/>
                 <value>1</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option1')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option1')"/>
                 <value>2</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option2')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option2')"/>
                 <value>3</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option3')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option3')"/>
                 <value>4</value>
             </item>
             <item>
                 <label
 
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option9')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option9')"/>
                 <value>10</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option10')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option10')"/>
                 <value>11</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option4')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option4')"/>
                 <value>5</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option5')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option5')"/>
                 <value>6</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option6')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option6')"/>
                 <value>7</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option7')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option7')"/>
                 <value>8</value>
             </item>
             <item>
                 <label
-                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option8')" />
+                        ref="jr:itext('/data/individualRelationshipToHeadOfHousehold:option8')"/>
                 <value>9</value>
             </item>
         </select1>
 
         <group appearance="field-list">
             <input ref="/data/individualPhoneNumber">
-                <label ref="jr:itext('/data/individualPhoneNumber:label')" />
-                <hint ref="jr:itext('/data/individualPhoneNumber:hint')" />
+                <label ref="jr:itext('/data/individualPhoneNumber:label')"/>
+                <hint ref="jr:itext('/data/individualPhoneNumber:hint')"/>
             </input>
             <input ref="/data/individualOtherPhoneNumber">
-                <label ref="jr:itext('/data/individualOtherPhoneNumber:label')" />
-                <hint ref="jr:itext('/data/individualOtherPhoneNumber:hint')" />
+                <label ref="jr:itext('/data/individualOtherPhoneNumber:label')"/>
+                <hint ref="jr:itext('/data/individualOtherPhoneNumber:hint')"/>
             </input>
         </group>
 
         <group appearance="field-list">
             <input ref="/data/individualPointOfContactName">
-                <label ref="jr:itext('/data/individualPointOfContactName:label')" />
-                <hint ref="jr:itext('/data/individualPointOfContactName:hint')" />
+                <label ref="jr:itext('/data/individualPointOfContactName:label')"/>
+                <hint ref="jr:itext('/data/individualPointOfContactName:hint')"/>
             </input>
             <input ref="/data/individualPointOfContactPhoneNumber">
-                <label ref="jr:itext('/data/individualPointOfContactPhoneNumber:label')" />
-                <hint ref="jr:itext('/data/individualPointOfContactPhoneNumber:hint')" />
+                <label ref="jr:itext('/data/individualPointOfContactPhoneNumber:label')"/>
+                <hint ref="jr:itext('/data/individualPointOfContactPhoneNumber:hint')"/>
             </input>
         </group>
 
         <select1 ref="/data/individualNationality">
-            <label ref="jr:itext('/data/individualNationality:label')" />
-            <hint ref="jr:itext('/data/individualNationality:hint')" />
+            <label ref="jr:itext('/data/individualNationality:label')"/>
+            <hint ref="jr:itext('/data/individualNationality:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualNationality:option0')" />
+                <label ref="jr:itext('/data/individualNationality:option0')"/>
                 <value>Equato Guinean</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualNationality:option1')" />
+                <label ref="jr:itext('/data/individualNationality:option1')"/>
                 <value>Other African Country</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualNationality:option2')" />
+                <label ref="jr:itext('/data/individualNationality:option2')"/>
                 <value>Asian</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualNationality:option3')" />
+                <label ref="jr:itext('/data/individualNationality:option3')"/>
                 <value>Other Non-African Country</value>
             </item>
         </select1>
 
         <select1 ref="/data/individualLanguagePreference">
-            <label ref="jr:itext('/data/individualLanguagePreference:label')" />
-            <hint ref="jr:itext('/data/individualLanguagePreference:hint')" />
+            <label ref="jr:itext('/data/individualLanguagePreference:label')"/>
+            <hint ref="jr:itext('/data/individualLanguagePreference:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option0')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option0')"/>
                 <value>Spanish</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option1')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option1')"/>
                 <value>Fang</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option2')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option2')"/>
                 <value>Bubi</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option3')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option3')"/>
                 <value>English</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option4')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option4')"/>
                 <value>French</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualLanguagePreference:option5')" />
+                <label ref="jr:itext('/data/individualLanguagePreference:option5')"/>
                 <value>Other</value>
             </item>
         </select1>
         <input ref="/data/individualDip">
-            <label ref="jr:itext('/data/individualDip:label')" />
-            <hint ref="jr:itext('/data/individualDip:hint')" />
+            <label ref="jr:itext('/data/individualDip:label')"/>
+            <hint ref="jr:itext('/data/individualDip:hint')"/>
         </input>
         <select1 ref="/data/individualMemberStatus">
-            <label ref="jr:itext('/data/individualMemberStatus:label')" />
-            <hint ref="jr:itext('/data/individualMemberStatus:hint')" />
+            <label ref="jr:itext('/data/individualMemberStatus:label')"/>
+            <hint ref="jr:itext('/data/individualMemberStatus:hint')"/>
             <item>
-                <label ref="jr:itext('/data/individualMemberStatus:option0')" />
+                <label ref="jr:itext('/data/individualMemberStatus:option0')"/>
                 <value>Permanent</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/individualMemberStatus:option1')" />
+                <label ref="jr:itext('/data/individualMemberStatus:option1')"/>
                 <value>Visitor</value>
             </item>
         </select1>

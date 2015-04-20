@@ -8,28 +8,28 @@
                 <data id="in_migration" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
-		    <jr:meta>
-			<jr:instanceID/>
-		    </jr:meta>
+                    <jr:meta>
+                        <jr:instanceID/>
+                    </jr:meta>
 
-                    <collectionDateTime />
-                    <processedByMirth />
-                    <needsReview />
-                    <entityUuid />
-                    <entityExtId />
-                    <fieldWorkerUuid />
-                    <fieldWorkerExtId />
+                    <collectionDateTime/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
 
-                    <visitExtId />
-                    <visitUuid />
-                    <locationExtId />
-                    <locationUuid />
-                    <individualExtId />
-                    <individualUuid />
-                    <migrationType />
-                    <migrationDate />
-                    <migrationOrigin />
-                    <migrationReason />
+                    <visitExtId/>
+                    <visitUuid/>
+                    <locationExtId/>
+                    <locationUuid/>
+                    <individualExtId/>
+                    <individualUuid/>
+                    <migrationType/>
+                    <migrationDate/>
+                    <migrationOrigin/>
+                    <migrationReason/>
                 </data>
             </instance>
             <itext>
@@ -38,56 +38,56 @@
                         <value>ID Externo del Individuo</value>
                     </text>
                     <text id="/data/individualExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/fieldWorkerExtId:label">
                         <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/visitExtId:label">
                         <value>ID Externo de la Visit</value>
                     </text>
                     <text id="/data/visitExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/collectionDateTime:label">
                         <value>Fecha de colección</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>ID Externo de Locación</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationType:label">
                         <value>Tipo de Migración</value>
                     </text>
                     <text id="/data/migrationType:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/migrationDate:label">
                         <value>Fecha de Migración</value>
                     </text>
                     <text id="/data/migrationDate:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationOrigin:label">
                         <value>Origen de Migración</value>
                     </text>
                     <text id="/data/migrationOrigin:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationReason:label">
                         <value>Razón de Migración</value>
                     </text>
                     <text id="/data/migrationReason:hint">
-                        <value />
+                        <value/>
                     </text>
 
                 </translation>
@@ -96,88 +96,88 @@
                         <value>Collection Date</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/fieldWorkerExtId:label">
                         <value>Field Worker Ext Id</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/visitExtId:label">
                         <value>Visit Ext Id</value>
                     </text>
                     <text id="/data/visitExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>Location Ext Id</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/individualExtId:label">
                         <value>Individual Ext Id</value>
                     </text>
                     <text id="/data/individualExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationType:label">
                         <value>Migration Type</value>
                     </text>
                     <text id="/data/migrationType:hint">
-                        <value />
+                        <value/>
                     </text>
 
                     <text id="/data/migrationDate:label">
                         <value>Migration Date</value>
                     </text>
                     <text id="/data/migrationDate:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationOrigin:label">
                         <value>Migration Origin</value>
                     </text>
                     <text id="/data/migrationOrigin:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/migrationReason:label">
                         <value>Migration Reason</value>
                     </text>
                     <text id="/data/migrationReason:hint">
-                        <value />
+                        <value/>
                     </text>
                 </translation>
             </itext>
-	    <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
             <bind nodeset="/data/versionId" type="string" readonly="true()"/>
-            <bind nodeset="/data/processedByMirth" type="boolean" />
-            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()" />
-            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/processedByMirth" type="boolean"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()" />
-            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()" />
-            <bind nodeset="/data/migrationType" type="string" required="true()" readonly="true()" />
+            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/migrationType" type="string" required="true()" readonly="true()"/>
 
             <bind nodeset="/data/migrationDate" type="date" required="true()" constraint="not(. > today())"/>
-            <bind nodeset="/data/migrationOrigin" type="string" required="true()" />
-            <bind nodeset="/data/migrationReason" type="string" required="true()" />
+            <bind nodeset="/data/migrationOrigin" type="string" required="true()"/>
+            <bind nodeset="/data/migrationReason" type="string" required="true()"/>
         </model>
     </h:head>
     <h:body>
         <input ref="/data/migrationDate">
-            <label ref="jr:itext('/data/migrationDate:label')" />
-            <hint ref="jr:itext('/data/migrationDate:hint')" />
+            <label ref="jr:itext('/data/migrationDate:label')"/>
+            <hint ref="jr:itext('/data/migrationDate:hint')"/>
         </input>
         <group appearance="field-list">
             <input ref="/data/migrationOrigin">
-                <label ref="jr:itext('/data/migrationOrigin:label')" />
-                <hint ref="jr:itext('/data/migrationOrigin:hint')" />
+                <label ref="jr:itext('/data/migrationOrigin:label')"/>
+                <hint ref="jr:itext('/data/migrationOrigin:hint')"/>
             </input>
             <input ref="/data/migrationReason">
-                <label ref="jr:itext('/data/migrationReason:label')" />
-                <hint ref="jr:itext('/data/migrationReason:hint')" />
+                <label ref="jr:itext('/data/migrationReason:label')"/>
+                <hint ref="jr:itext('/data/migrationReason:hint')"/>
             </input>
         </group>
     </h:body>

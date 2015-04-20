@@ -8,35 +8,35 @@
                 <data id="location" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
-		    <jr:meta>
-			<jr:instanceID/>
-		    </jr:meta>
+                    <jr:meta>
+                        <jr:instanceID/>
+                    </jr:meta>
 
-                    <collectionDateTime />
-                    <processedByMirth />
-                    <needsReview />
-                    <entityUuid />
-                    <entityExtId />
-                    <fieldWorkerUuid />
-                    <fieldWorkerExtId />
+                    <collectionDateTime/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
 
-                    <hierarchyParentUuid />
-                    <hierarchyExtId />
-                    <hierarchyUuid />
+                    <hierarchyParentUuid/>
+                    <hierarchyExtId/>
+                    <hierarchyUuid/>
 
-                    <locationBuildingNumber />
-                    <locationFloorNumber />
-                    <locationName />
-                    <locationType />
-                    <communityName />
-                    <communityCode />
-                    <mapAreaName />
-                    <localityName />
-                    <sectorName />
-                    <locationExtId />
-                    <description />
-                    <longitude />
-                    <latitude />
+                    <locationBuildingNumber/>
+                    <locationFloorNumber/>
+                    <locationName/>
+                    <locationType/>
+                    <communityName/>
+                    <communityCode/>
+                    <mapAreaName/>
+                    <localityName/>
+                    <sectorName/>
+                    <locationExtId/>
+                    <description/>
+                    <longitude/>
+                    <latitude/>
                 </data>
             </instance>
             <itext>
@@ -45,49 +45,49 @@
                         <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/collectionDateTime:label">
                         <value>Fecha de Colección</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>ID Externo de Locación</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationBuildingNumber:label">
                         <value># de Edificio</value>
                     </text>
                     <text id="/data/locationBuildingNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationFloorNumber:label">
                         <value># de Piso</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationName:label">
                         <value>Nombre de Locación</value>
                     </text>
                     <text id="/data/locationName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/hierarchyExtId:label">
                         <value>ID Externo de Jerarquía</value>
                     </text>
                     <text id="/data/hierarchyExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationType:label">
                         <value>Tipo de Localidad</value>
                     </text>
                     <text id="/data/locationType:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationType:option0">
                         <value>Rural</value>
@@ -99,49 +99,49 @@
                         <value>Nombre de la Comunidad</value>
                     </text>
                     <text id="/data/communityName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/communityCode:label">
                         <value>Codigo de la Comunidad</value>
                     </text>
                     <text id="/data/communityCode:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/mapAreaName:label">
                         <value>Nombre de Area de Mapa</value>
                     </text>
                     <text id="/data/mapAreaName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/localityName:label">
                         <value>Nombre de la Localidad</value>
                     </text>
                     <text id="/data/localityName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/sectorName:label">
                         <value>Nombre del Sector</value>
                     </text>
                     <text id="/data/sectorName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/description:label">
                         <value>Descripción</value>
                     </text>
                     <text id="/data/description:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/longitude:label">
                         <value>Longitud</value>
                     </text>
                     <text id="/data/longitude:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/latitude:label">
                         <value>Latitud</value>
                     </text>
                     <text id="/data/latitude:hint">
-                        <value />
+                        <value/>
                     </text>
                 </translation>
                 <translation lang="English">
@@ -149,49 +149,49 @@
                         <value>Field Worker Ext Id</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/collectionDateTime:label">
                         <value>Collected Date Time</value>
                     </text>
                     <text id="/data/collectionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>Location Ext Id</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationBuildingNumber:label">
                         <value>Building #</value>
                     </text>
                     <text id="/data/locationBuildingNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationFloorNumber:label">
                         <value>Floor #</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationName:label">
                         <value>Location Name</value>
                     </text>
                     <text id="/data/locationName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/hierarchyExtId:label">
                         <value>Hierarchy Ext Id</value>
                     </text>
                     <text id="/data/hierarchyExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationType:label">
                         <value>Location Type</value>
                     </text>
                     <text id="/data/locationType:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationType:option0">
                         <value>Rural</value>
@@ -203,61 +203,61 @@
                         <value>Community Name</value>
                     </text>
                     <text id="/data/communityName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/communityCode:label">
                         <value>Community Code</value>
                     </text>
                     <text id="/data/communityCode:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/mapAreaName:label">
                         <value>Map Area Name</value>
                     </text>
                     <text id="/data/mapAreaName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/localityName:label">
                         <value>Locality Name</value>
                     </text>
                     <text id="/data/localityName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/sectorName:label">
                         <value>Sector Name</value>
                     </text>
                     <text id="/data/sectorName:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/description:label">
                         <value>Description</value>
                     </text>
                     <text id="/data/description:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/longitude:label">
                         <value>Longitude</value>
                     </text>
                     <text id="/data/longitude:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/latitude:label">
                         <value>Latitude</value>
                     </text>
                     <text id="/data/latitude:hint">
-                        <value />
+                        <value/>
                     </text>
                 </translation>
             </itext>
 
-	    <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-            <bind nodeset="/data/versionId" type="string" readonly="true()" />
-            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
-            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
 
-            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
             <bind nodeset="/data/collectionDateTime" type="datetime"
-                  readonly="true()" />
+                  readonly="true()"/>
 
             <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
 
@@ -282,95 +282,95 @@
 
             <bind nodeset="/data/communityCode" type="string" required="true()"/>
 
-            <bind nodeset="/data/description" type="string" />
-            <bind nodeset="/data/longitude" type="string" />
-            <bind nodeset="/data/latitude" type="string" />
+            <bind nodeset="/data/description" type="string"/>
+            <bind nodeset="/data/longitude" type="string"/>
+            <bind nodeset="/data/latitude" type="string"/>
 
         </model>
     </h:head>
     <h:body>
         <group appearance="field-list">
             <input ref="/data/fieldWorkerExtId">
-                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
             </input>
             <input ref="/data/collectionDateTime">
-                <label ref="jr:itext('/data/collectionDateTime:label')" />
-                <hint ref="jr:itext('/data/collectionDateTime:hint')" />
+                <label ref="jr:itext('/data/collectionDateTime:label')"/>
+                <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
             </input>
         </group>
         <group appearance="field-list">
             <input ref="/data/hierarchyExtId">
-                <label ref="jr:itext('/data/hierarchyExtId:label')" />
-                <hint ref="jr:itext('/data/hierarchyExtId:hint')" />
+                <label ref="jr:itext('/data/hierarchyExtId:label')"/>
+                <hint ref="jr:itext('/data/hierarchyExtId:hint')"/>
             </input>
             <input ref="/data/localityName">
-                <label ref="jr:itext('/data/localityName:label')" />
-                <hint ref="jr:itext('/data/localityName:hint')" />
+                <label ref="jr:itext('/data/localityName:label')"/>
+                <hint ref="jr:itext('/data/localityName:hint')"/>
             </input>
             <input ref="/data/mapAreaName">
-                <label ref="jr:itext('/data/mapAreaName:label')" />
-                <hint ref="jr:itext('/data/mapAreaName:hint')" />
+                <label ref="jr:itext('/data/mapAreaName:label')"/>
+                <hint ref="jr:itext('/data/mapAreaName:hint')"/>
             </input>
             <input ref="/data/sectorName">
-                <label ref="jr:itext('/data/sectorName:label')" />
-                <hint ref="jr:itext('/data/sectorName:hint')" />
+                <label ref="jr:itext('/data/sectorName:label')"/>
+                <hint ref="jr:itext('/data/sectorName:hint')"/>
             </input>
 
         </group>
         <group>
             <input ref="/data/locationBuildingNumber">
-                <label ref="jr:itext('/data/locationBuildingNumber:label')" />
-                <hint ref="jr:itext('/data/locationBuildingNumber:hint')" />
+                <label ref="jr:itext('/data/locationBuildingNumber:label')"/>
+                <hint ref="jr:itext('/data/locationBuildingNumber:hint')"/>
             </input>
             <input ref="/data/locationFloorNumber">
-                <label ref="jr:itext('/data/locationFloorNumber:label')" />
-                <hint ref="jr:itext('/data/locationFloorNumber:hint')" />
+                <label ref="jr:itext('/data/locationFloorNumber:label')"/>
+                <hint ref="jr:itext('/data/locationFloorNumber:hint')"/>
             </input>
         </group>
         <input ref="/data/locationExtId">
-            <label ref="jr:itext('/data/locationExtId:label')" />
-            <hint ref="jr:itext('/data/locationExtId:hint')" />
+            <label ref="jr:itext('/data/locationExtId:label')"/>
+            <hint ref="jr:itext('/data/locationExtId:hint')"/>
         </input>
         <group appearance="field-list">
             <input ref="/data/longitude">
-                <label ref="jr:itext('/data/longitude:label')" />
-                <hint ref="jr:itext('/data/longitude:hint')" />
+                <label ref="jr:itext('/data/longitude:label')"/>
+                <hint ref="jr:itext('/data/longitude:hint')"/>
             </input>
             <input ref="/data/latitude">
-                <label ref="jr:itext('/data/latitude:label')" />
-                <hint ref="jr:itext('/data/latitude:hint')" />
+                <label ref="jr:itext('/data/latitude:label')"/>
+                <hint ref="jr:itext('/data/latitude:hint')"/>
             </input>
         </group>
         <input ref="/data/locationName">
-            <label ref="jr:itext('/data/locationName:label')" />
-            <hint ref="jr:itext('/data/locationName:hint')" />
+            <label ref="jr:itext('/data/locationName:label')"/>
+            <hint ref="jr:itext('/data/locationName:hint')"/>
         </input>
         <select1 ref="/data/locationType">
-            <label ref="jr:itext('/data/locationType:label')" />
-            <hint ref="jr:itext('/data/locationType:hint')" />
+            <label ref="jr:itext('/data/locationType:label')"/>
+            <hint ref="jr:itext('/data/locationType:hint')"/>
             <item>
-                <label ref="jr:itext('/data/locationType:option0')" />
+                <label ref="jr:itext('/data/locationType:option0')"/>
                 <value>RUR</value>
             </item>
             <item>
-                <label ref="jr:itext('/data/locationType:option1')" />
+                <label ref="jr:itext('/data/locationType:option1')"/>
                 <value>URB</value>
             </item>
         </select1>
         <group appearance="field-list">
             <input ref="/data/communityName">
-                <label ref="jr:itext('/data/communityName:label')" />
-                <hint ref="jr:itext('/data/communityName:hint')" />
+                <label ref="jr:itext('/data/communityName:label')"/>
+                <hint ref="jr:itext('/data/communityName:hint')"/>
             </input>
             <input ref="/data/communityCode">
-                <label ref="jr:itext('/data/communityCode:label')" />
-                <hint ref="jr:itext('/data/communityCode:hint')" />
+                <label ref="jr:itext('/data/communityCode:label')"/>
+                <hint ref="jr:itext('/data/communityCode:hint')"/>
             </input>
         </group>
         <input ref="/data/description">
-            <label ref="jr:itext('/data/description:label')" />
-            <hint ref="jr:itext('/data/description:hint')" />
+            <label ref="jr:itext('/data/description:label')"/>
+            <hint ref="jr:itext('/data/description:hint')"/>
         </input>
     </h:body>
 </h:html>
