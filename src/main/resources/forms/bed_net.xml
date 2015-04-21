@@ -8,41 +8,41 @@
                 <data id="bed_net" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
-		    <jr:meta>
-			<jr:instanceID/>
-		    </jr:meta>
+                    <jr:meta>
+                        <jr:instanceID/>
+                    </jr:meta>
 
-                    <collectionDateTime />
-                    <processedByMirth />
-                    <needsReview />
-                    <entityUuid />
-                    <entityExtId />
-                    <fieldWorkerUuid />
-                    <fieldWorkerExtId />
-                    <householdSize />
-                    <locationExtId />
-                    <locationUuid />
-                    <distributionDateTime />
+                    <collectionDateTime/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
+                    <householdSize/>
+                    <locationExtId/>
+                    <locationUuid/>
+                    <distributionDateTime/>
                     <beds/>
                     <netsCurrent/>
-                    <ITNsCurrent />
-                    <ITNGoodN />
-		                <netsRecommended />
-                    <netsSupplied />
-                    <netCode />
-                    <netsHung />
+                    <ITNsCurrent/>
+                    <ITNGoodN/>
+                    <netsRecommended/>
+                    <netsSupplied/>
+                    <netCode/>
+                    <netsHung/>
                     <walls/>
-                    <wallGaps />
-                    <roof />
-                    <roofGaps />
-                    <eaves />
-                    <patio />
-                    <doors />
-                    <windows />
-                    <aircondition />
-                    <electricity />
-                    <houseSprayed />
-                    <reasonWhyNotSprayed />
+                    <wallGaps/>
+                    <roof/>
+                    <roofGaps/>
+                    <eaves/>
+                    <patio/>
+                    <doors/>
+                    <windows/>
+                    <aircondition/>
+                    <electricity/>
+                    <houseSprayed/>
+                    <reasonWhyNotSprayed/>
                     <whyNotSprayed/>
                 </data>
             </instance>
@@ -52,19 +52,19 @@
                         <value>ID Externo del Encuestador</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/distributionDateTime:label">
                         <value>Fecha de Distribucion</value>
                     </text>
                     <text id="/data/distributionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>ID Externo de la Locación</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/beds:label">
                         <value>¿Cuantas camas o lugares para dormir hay en el hogar?</value>
@@ -73,10 +73,14 @@
                         <value>¿Actualmente, Cuantas telas mosquiteras de cualquier tipo hay en el hogar?</value>
                     </text>
                     <text id="/data/ITNsCurrent:label">
-                        <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP (Permanet 3.0)?</value>
+                        <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP
+                            (Permanet 3.0)?
+                        </value>
                     </text>
                     <text id="/data/ITNGoodN:label">
-                        <value>¿Cuantas telas del PNLP (Permanet 3.0) estan en buen estado (sin huecos o huecos del tamano del dedo pulgar)?</value>
+                        <value>¿Cuantas telas del PNLP (Permanet 3.0) estan en buen estado (sin huecos o huecos del
+                            tamano del dedo pulgar)?
+                        </value>
                     </text>
                     <text id="/data/netsRecommended:label">
                         <value>Número recomendado de telas a distribuir</value>
@@ -349,19 +353,19 @@
                         <value>Field Worker Ext ID</value>
                     </text>
                     <text id="/data/fieldWorkerExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/distributionDateTime:label">
                         <value>Date of Distribution</value>
                     </text>
                     <text id="/data/distributionDateTime:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/locationExtId:label">
                         <value>Location Ext ID</value>
                     </text>
                     <text id="/data/locationExtId:hint">
-                        <value />
+                        <value/>
                     </text>
                     <text id="/data/beds:label">
                         <value>How many beds or other sleeping areas does this household have?</value>
@@ -373,7 +377,9 @@
                         <value>How many blue Permanet 3.0 nets does the household currently have?</value>
                     </text>
                     <text id="/data/ITNGoodN:label">
-                        <value>How many of these blue Permanet 3.0 nets are in good condition (only thumb-sized holes or no holes)?</value>
+                        <value>How many of these blue Permanet 3.0 nets are in good condition (only thumb-sized holes or
+                            no holes)?
+                        </value>
                     </text>
                     <text id="/data/netsRecommended:label">
                         <value>Recommended number of nets to distribute</value>
@@ -642,53 +648,56 @@
                 </translation>
             </itext>
 
-	    <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-            <bind nodeset="/data/versionId" type="string" readonly="true()"/>
-            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
-            <bind nodeset="/data/needsReview" type="string" readonly="true()" />
-            <bind nodeset="/data/householdSize" type="string" readonly="true()" />
-            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()" />
-            <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()" />
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/data/householdSize" type="string" readonly="true()"/>
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+            <bind nodeset="/data/distributionDateTime" type="datetime" readonly="true()"/>
             <bind nodeset="/data/locationExtId" type="string" required="true()"/>
 
             <bind nodeset="/data/beds" type="int" required="true()"/>
             <bind nodeset="/data/netsCurrent" type="int" required="true()"/>
             <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent > 0"/>
-            <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0" constraint="not(. > (/data/ITNsCurrent))"
+            <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent > 0"
+                  constraint="not(. > (/data/ITNsCurrent))"
                   jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
-            <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
-            <bind nodeset="/data/netsSupplied" type="int" required="true()" />
+            <bind nodeset="/data/netsRecommended" type="int" readonly="true()"
+                  calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
+            <bind nodeset="/data/netsSupplied" type="int" required="true()"/>
             <bind nodeset="/data/netCode" type="string" required="true()"/>
             <bind nodeset="/data/netsHung" type="int" required="true()"/>
-            <bind nodeset="/data/walls" type="select1" required="true()" />
-            <bind nodeset="/data/wallGaps" type="select1" required="true()" />
-            <bind nodeset="/data/roof" type="select1" required="true()" />
-            <bind nodeset="/data/roofGaps" type="select1" required="true()" />
-            <bind nodeset="/data/eaves" type="select1" required="true()" />
-            <bind nodeset="/data/patio" type="select1" required="true()" />
-            <bind nodeset="/data/doors" type="select1" required="true()" />
-            <bind nodeset="/data/windows" type="select1" required="true()" />
-            <bind nodeset="/data/aircondition" type="select1" required="true()" />
-            <bind nodeset="/data/electricity" type="select1" required="true()" />
-            <bind nodeset="/data/houseSprayed" type="select1" required="true()" />
-            <bind nodeset="/data/reasonWhyNotSprayed" type="select1" required="selected(/data/houseSprayed, '0')" relevant="selected(/data/houseSprayed, '0')" />
-            <bind nodeset="/data/whyNotSprayed" type="select" required="selected(/data/reasonWhyNotSprayed, '4')" relevant="selected(/data/reasonWhyNotSprayed, '4')" />
+            <bind nodeset="/data/walls" type="select1" required="true()"/>
+            <bind nodeset="/data/wallGaps" type="select1" required="true()"/>
+            <bind nodeset="/data/roof" type="select1" required="true()"/>
+            <bind nodeset="/data/roofGaps" type="select1" required="true()"/>
+            <bind nodeset="/data/eaves" type="select1" required="true()"/>
+            <bind nodeset="/data/patio" type="select1" required="true()"/>
+            <bind nodeset="/data/doors" type="select1" required="true()"/>
+            <bind nodeset="/data/windows" type="select1" required="true()"/>
+            <bind nodeset="/data/aircondition" type="select1" required="true()"/>
+            <bind nodeset="/data/electricity" type="select1" required="true()"/>
+            <bind nodeset="/data/houseSprayed" type="select1" required="true()"/>
+            <bind nodeset="/data/reasonWhyNotSprayed" type="select1" required="selected(/data/houseSprayed, '0')"
+                  relevant="selected(/data/houseSprayed, '0')"/>
+            <bind nodeset="/data/whyNotSprayed" type="select" required="selected(/data/reasonWhyNotSprayed, '4')"
+                  relevant="selected(/data/reasonWhyNotSprayed, '4')"/>
 
         </model>
     </h:head>
     <h:body>
         <group appearance="field-list">
             <input ref="/data/fieldWorkerExtId">
-                <label ref="jr:itext('/data/fieldWorkerExtId:label')" />
-                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')" />
+                <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
+                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
             </input>
             <input ref="/data/locationExtId">
-                <label ref="jr:itext('/data/locationExtId:label')" />
-                <hint ref="jr:itext('/data/locationExtId:hint')" />
+                <label ref="jr:itext('/data/locationExtId:label')"/>
+                <hint ref="jr:itext('/data/locationExtId:hint')"/>
             </input>
             <input ref="/data/distributionDateTime">
-                <label ref="jr:itext('/data/distributionDateTime:label')" />
-                <hint ref="jr:itext('/data/distributionDateTime:hint')" />
+                <label ref="jr:itext('/data/distributionDateTime:label')"/>
+                <hint ref="jr:itext('/data/distributionDateTime:hint')"/>
             </input>
         </group>
 
@@ -705,23 +714,23 @@
             <label ref="jr:itext('/data/ITNGoodN:label')"/>
         </input>
 
-	<group appearance="field-list">
-		<input ref="/data/netsRecommended">
-		    <label ref="jr:itext('/data/netsRecommended:label')"/>
-		</input>
-		<input ref="/data/netsSupplied">
-		    <label ref="jr:itext('/data/netsSupplied:label')"/>
-		</input>
-	</group>
+        <group appearance="field-list">
+            <input ref="/data/netsRecommended">
+                <label ref="jr:itext('/data/netsRecommended:label')"/>
+            </input>
+            <input ref="/data/netsSupplied">
+                <label ref="jr:itext('/data/netsSupplied:label')"/>
+            </input>
+        </group>
 
-  <group appearance="field-list">
-    <input ref="/data/netCode">
-      <label ref="jr:itext('/data/netCode:label')"/>
-    </input>
-    <input ref="/data/netsHung">
-      <label ref="jr:itext('/data/netsHung:label')"/>
-    </input>
-  </group>
+        <group appearance="field-list">
+            <input ref="/data/netCode">
+                <label ref="jr:itext('/data/netCode:label')"/>
+            </input>
+            <input ref="/data/netsHung">
+                <label ref="jr:itext('/data/netsHung:label')"/>
+            </input>
+        </group>
 
         <select1 ref="/data/electricity">
             <label ref="jr:itext('/data/electricity:label')"/>
