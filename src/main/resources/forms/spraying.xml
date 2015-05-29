@@ -20,7 +20,37 @@
                     <fieldWorkerUuid/>
                     <fieldWorkerExtId/>
 
+                    <locationExtId/>
+                    <locationUuid/>
                     <supervisorExtId/>
+                    <sprayOperatorExtId/>
+                    <sprayRound/>
+                    <insecticideType/>
+                    <iecResult/>
+                    <buildingType/>
+
+                    <roomsSprayed/>
+                    <kitchensSprayed/>
+                    <bathroomsSprayed/>
+                    <terracesSprayed/>
+                    <passageWaysSprayed/>
+                    <totalSprayed/>
+
+                    <roomsNotSprayed/>
+                    <kitchensNotSprayed/>
+                    <bathroomsNotSprayed/>
+                    <terracesNotSprayed/>
+                    <passageWaysNotSprayed/>
+                    <totalNotSprayed/>
+
+                    <wastedInsecticideLoads/>
+
+                    <peopleProtectedUnderAge5/>
+                    <peopleProtectedPregnant/>
+                    <peopleProtectedOther/>
+                    <totalPeopleProtected/>
+
+                    <additionalNotes/>
 
                 </data>
             </instance>
@@ -54,28 +84,64 @@
                     </text>
                 </translation>
             </itext>
+
             <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
             <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/supervisorExtId" type="string" required="true()" readonly="true()"/>
+
+            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" />
+            <bind nodeset="/data/sprayRound" type="select1" required="true()" />
+            <bind nodeset="/data/insecticideType" type="select1" required="true()" />
+            <bind nodeset="/data/buildingType" type="select1" required="true()" />
+            <bind nodeset="/data/iecResult" type="select1" required="true()" />
+
+            <bind nodeset="/data/roomsSprayed" type="integer" required="true()"/>
+            <bind nodeset="/data/kitchensSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/bathroomsSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/terracesSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/passageWaysSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/totalSprayed" type="integer" required="true()" readonly="true()"/>
+
+            <bind nodeset="/data/wastedInsecticideLoads" type="integer" required="true()" />
+
+			<bind nodeset="/data/roomsNotSprayed" type="integer" required="true()"/>
+            <bind nodeset="/data/kitchensNotSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/bathroomsNotSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/terracesNotSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/passageWaysNotSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/totalNotSprayed" type="integer" required="true()" readonly="true()" />
+
+            <bind nodeset="/data/peopleProtectedUnderAge5" type="integer" required="true()" />
+            <bind nodeset="/data/peopleProtectedPregnant" type="integer" required="true()" />
+            <bind nodeset="/data/peopleProtectedOther" type="integer" required="true()" />
+            <bind nodeset="/data/totalPeopleProtected" type="integer" required="true()" readonly="true()" />
+
+            <bind nodeset="/data/additionalNotes" type="string" />
+
+
+
+
         </model>
     </h:head>
     <h:body>
-        <input ref="/data/migrationDate">
-            <label ref="jr:itext('/data/migrationDate:label')"/>
-            <hint ref="jr:itext('/data/migrationDate:hint')"/>
-        </input>
         <group appearance="field-list">
-
-            <input ref="/data/migrationOrigin">
-                <label ref="jr:itext('/data/migrationOrigin:label')"/>
-                <hint ref="jr:itext('/data/migrationOrigin:hint')"/>
+            <input ref="/data/supervisorExtId">
+                <label ref="jr:itext('/data/supervisorExtId:label')"/>
+                <hint ref="jr:itext('/data/supervisorExtId:hint')"/>
             </input>
-            <input ref="/data/migrationReason">
-                <label ref="jr:itext('/data/migrationReason:label')"/>
-                <hint ref="jr:itext('/data/migrationReason:hint')"/>
+            <input ref="/data/locationExtId">
+                <label ref="jr:itext('/data/locationExtId:label')"/>
+                <hint ref="jr:itext('/data/locationExtId:hint')"/>
             </input>
-        </group>
+            <input ref="/data/collectionDateTime">
+                <label ref="jr:itext('/data/collectionDateTime:label')"/>
+                <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
+            </input>
+        </group> 
     </h:body>
+
 </h:html>
