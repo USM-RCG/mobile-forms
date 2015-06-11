@@ -13,6 +13,7 @@
                     </jr:meta> 
 
                     <collectionDateTime/>
+                    <surveyDate/>
                     <processedByMirth/>
                     <needsReview/>
                     <entityUuid/>
@@ -25,13 +26,13 @@
                     <supervisorExtId/>
                     <sprayOperatorExtId/>
                     <sprayRound/>
-                    <insecticideType/>
                     <iecResult/>
                     <buildingType/>
 
                     <roomsSprayed/>
                     <kitchensSprayed/>
                     <bathroomsSprayed/>
+                    <diningRoomsSprayed/>
                     <terracesSprayed/>
                     <passageWaysSprayed/>
                     <totalSprayed/>
@@ -39,6 +40,7 @@
                     <roomsNotSprayed/>
                     <kitchensNotSprayed/>
                     <bathroomsNotSprayed/>
+                    <diningRoomsNotSprayed/>
                     <terracesNotSprayed/>
                     <passageWaysNotSprayed/>
                     <totalNotSprayed/>
@@ -55,93 +57,402 @@
                 </data>
             </instance>
             <itext>
+
                 <translation lang="Spanish">
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>ID Externo del Encuestador</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
+                    <text id="/data/supervisorExtId:label">
+                        <value>Codigo de Supervisor</value>
                     </text>
                     <text id="/data/collectionDateTime:label">
                         <value>Fecha de colección</value>
                     </text>
-                    <text id="/data/collectionDateTime:hint">
-                        <value/>
+                    <text id="/data/locationExtId:label">
+                        <value>ID Externo de Locación</value>
                     </text>
+                    <text id="/data/sprayOperatorExtId:label">
+                        <value>Codigo de Rociador</value>
+                    </text>
+                    <text id="/data/sprayRound:label">
+                        <value>Es la visita principal o secundaria?</value>
+                    </text>
+                    <text id="/data/sprayRound:option0">
+                        <value>Principal</value>
+                    </text>
+                    <text id="/data/sprayRound:option1">
+                        <value>Secundaria</value>
+                    </text>
+
+                    <text id="/data/buildingType:label">
+                        <value>Tipo de Edificio?</value>
+                    </text>
+                    <text id="/data/buildingType:option0">
+                        <value>Casa</value>
+                    </text>
+                    <text id="/data/buildingType:option1">
+                        <value>Iglesia</value>
+                    </text>
+                    <text id="/data/buildingType:option2">
+                        <value>Escuela</value>
+                    </text>
+                    <text id="/data/buildingType:option3">
+                        <value>Hotel</value>
+                    </text>
+                    <text id="/data/buildingType:option4">
+                        <value>Puesto de Salud</value>
+                    </text>
+                    <text id="/data/buildingType:option5">
+                        <value>Centro de Salud</value>
+                    </text>
+
+                    <text id="/data/iecResult:label">
+                        <value>Resultado de IEC?</value>
+                    </text>
+                    <text id="/data/iecResult:option0">
+                        <value>Aceptado</value>
+                    </text>
+                    <text id="/data/iecResult:option1">
+                        <value>Cerrado</value>
+                    </text>
+                    <text id="/data/iecResult:option2">
+                        <value>Rechazado</value>
+                    </text>
+
+                    <text id="structuresSprayedLabel:label">
+                        <value>Estructuras Rociadas</value>
+                    </text>
+                    <text id="structuresNotSprayedLabel:label">
+                        <value>Estructuras No Rociadas</value>
+                    </text>
+
+                    <text id="/data/roomsSprayed:label">
+                        <value>Habitaciones?</value>
+                    </text>
+                    <text id="/data/roomsSprayed:hint">
+                        <value>H</value>
+                    </text>
+                    <text id="/data/roomsNotSprayed:label">
+                        <value>Habitaciones?</value>
+                    </text>
+                    <text id="/data/roomsNotSprayed:hint">
+                        <value>H</value>
+                    </text>
+
+                    <text id="/data/kitchensSprayed:label">
+                        <value>Habitaciones?</value>
+                    </text>
+                    <text id="/data/kitchensSprayed:hint">
+                        <value>CN</value>
+                    </text>
+                    <text id="/data/kitchensNotSprayed:label">
+                        <value>Habitaciones?</value>
+                    </text>
+                    <text id="/data/kitchensNotSprayed:hint">
+                        <value>CN</value>
+                    </text>
+
+                    <text id="/data/bathroomsSprayed:label">
+                        <value>Baños?</value>
+                    </text>
+                    <text id="/data/bathroomsSprayed:hint">
+                        <value>B</value>
+                    </text>
+                    <text id="/data/bathroomsNotSprayed:label">
+                        <value>Baños?</value>
+                    </text>
+                    <text id="/data/bathroomsNotSprayed:hint">
+                        <value>B</value>
+                    </text>
+
+                    <text id="/data/diningRoomsSprayed:label">
+                        <value>Comedor?</value>
+                    </text>
+                    <text id="/data/diningRoomsSprayed:hint">
+                        <value>CM</value>
+                    </text>
+                    <text id="/data/diningRoomsNotSprayed:label">
+                        <value>Comedor?</value>
+                    </text>
+                    <text id="/data/diningRoomsNotSprayed:hint">
+                        <value>CM</value>
+                    </text>
+
+                    <text id="/data/terracesSprayed:label">
+                        <value>Terraza?</value>
+                    </text>
+                    <text id="/data/terracesSprayed:hint">
+                        <value>T</value>
+                    </text>
+                    <text id="/data/terracesNotSprayed:label">
+                        <value>Terraza?</value>
+                    </text>
+                    <text id="/data/terracesNotSprayed:hint">
+                        <value>T</value>
+                    </text>
+
+                    <text id="/data/passageWaysSprayed:label">
+                        <value>Passillos?</value>
+                    </text>
+                    <text id="/data/passageWaysSprayed:hint">
+                        <value>P</value>
+                    </text>
+                    <text id="/data/passageWaysNotSprayed:label">
+                        <value>Passillos?</value>
+                    </text>
+                    <text id="/data/passageWaysNotSprayed:hint">
+                        <value>P</value>
+                    </text>
+
+                    <text id="/data/totalSprayed:label">
+                        <value>Total</value>
+                    </text>
+                    <text id="/data/totalNotSprayed:label">
+                        <value>Total</value>
+                    </text>
+
+                    <text id="/data/wastedInsecticideLoads:label">
+                        <value>Cargas Gastadas?</value>
+                    </text>
+
+                    <text id="populationProtectedLabel:label">
+                        <value>Poblacion protegidas?</value>
+                    </text>
+                    <text id="/data/peopleProtectedUnderAge5:label">
+                        <value> &lt; 5 años</value>
+                    </text>
+                    <text id="/data/peopleProtectedPregnant:label">
+                        <value>Embarazadas</value>
+                    </text>
+                    <text id="/data/peopleProtectedOther:label">
+                        <value>Otros?</value>
+                    </text>
+                    <text id="/data/totalPeopleProtected:label">
+                        <value>Total</value>
+                    </text>
+
+                    <text id="/data/additionalNotes:label">
+                        <value>Hay algunas notas adicionales sobre esta casa?</value>
+                    </text>
+
                 </translation>
-                <translation lang="eng">
-                    <text id="/data/collectionDateTime:label">
-                        <value>Collection Date</value>
-                    </text>
-                    <text id="/data/collectionDateTime:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>Field Worker Ext Id</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
-                    </text>
-                </translation>
+
+
+
             </itext>
 
             <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
             <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/surveyDate" type="datetime" readonly="true()"/>
+
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/supervisorExtId" type="string" required="true()" readonly="true()"/>
 
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" />
             <bind nodeset="/data/sprayRound" type="select1" required="true()" />
-            <bind nodeset="/data/insecticideType" type="select1" required="true()" />
             <bind nodeset="/data/buildingType" type="select1" required="true()" />
             <bind nodeset="/data/iecResult" type="select1" required="true()" />
 
             <bind nodeset="/data/roomsSprayed" type="integer" required="true()"/>
             <bind nodeset="/data/kitchensSprayed" type="integer" required="true()" />
             <bind nodeset="/data/bathroomsSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/diningRoomsSprayed" type="integer" required="true()" />
             <bind nodeset="/data/terracesSprayed" type="integer" required="true()" />
             <bind nodeset="/data/passageWaysSprayed" type="integer" required="true()" />
-            <bind nodeset="/data/totalSprayed" type="integer" required="true()" readonly="true()"/>
-
-            <bind nodeset="/data/wastedInsecticideLoads" type="integer" required="true()" />
+            <bind nodeset="/data/totalSprayed" type="integer" required="true()" readonly="true()"
+                calculate="/data/kitchensSprayed + /data/bathroomsSprayed + /data/diningRoomsSprayed + /data/terracesSprayed + /data/passageWaysSprayed"/>
 
 			<bind nodeset="/data/roomsNotSprayed" type="integer" required="true()"/>
             <bind nodeset="/data/kitchensNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/bathroomsNotSprayed" type="integer" required="true()" />
+            <bind nodeset="/data/diningRoomsNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/terracesNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/passageWaysNotSprayed" type="integer" required="true()" />
-            <bind nodeset="/data/totalNotSprayed" type="integer" required="true()" readonly="true()" />
+            <bind nodeset="/data/totalNotSprayed" type="integer" required="true()" readonly="true()"
+                calculate="/data/kitchensNotSprayed + /data/bathroomsNotSprayed + /data/diningRoomsNotSprayed + /data/terracesNotSprayed + /data/passageWaysNotSprayed"/>
+
+            <bind nodeset="/data/wastedInsecticideLoads" type="integer" required="true()" />
 
             <bind nodeset="/data/peopleProtectedUnderAge5" type="integer" required="true()" />
             <bind nodeset="/data/peopleProtectedPregnant" type="integer" required="true()" />
             <bind nodeset="/data/peopleProtectedOther" type="integer" required="true()" />
-            <bind nodeset="/data/totalPeopleProtected" type="integer" required="true()" readonly="true()" />
+            <bind nodeset="/data/totalPeopleProtected" type="integer" required="true()" readonly="true()"
+                calculate="/data/peopleProtectedUnderAge5 + /data/peopleProtectedPregnant + /data/peopleProtectedOther" />
 
             <bind nodeset="/data/additionalNotes" type="string" />
 
-
-
-
         </model>
     </h:head>
+
     <h:body>
+
         <group appearance="field-list">
             <input ref="/data/supervisorExtId">
                 <label ref="jr:itext('/data/supervisorExtId:label')"/>
-                <hint ref="jr:itext('/data/supervisorExtId:hint')"/>
             </input>
             <input ref="/data/locationExtId">
                 <label ref="jr:itext('/data/locationExtId:label')"/>
-                <hint ref="jr:itext('/data/locationExtId:hint')"/>
             </input>
             <input ref="/data/collectionDateTime">
                 <label ref="jr:itext('/data/collectionDateTime:label')"/>
-                <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
             </input>
-        </group> 
-    </h:body>
+        </group>
 
+        <input ref="/data/sprayOperatorExtId">
+            <label ref="jr:itext('/data/sprayOperatorExtId:label')"/>
+        </input>
+
+        <group appearance="field-list">
+
+            <select1 ref="/data/sprayRound">
+            <label ref="jr:itext('/data/sprayRound:label')"/>
+                <item>
+                    <label ref="jr:itext('/data/sprayRound:option0')"/>
+                    <value>1</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/sprayRound:option1')"/>
+                    <value>2</value>
+                </item>
+            </select1>
+
+            <select1 ref="/data/iecResult">
+            <label ref="jr:itext('/data/iecResult:label')"/>
+                <item>
+                    <label ref="jr:itext('/data/iecResult:option0')"/>
+                    <value>A</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/iecResult:option1')"/>
+                    <value>C</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/iecResult:option2')"/>
+                    <value>X</value>
+                </item>
+            </select1>
+
+            <select1 ref="/data/buildingType">
+            <label ref="jr:itext('/data/buildingType:label')"/>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option0')"/>
+                    <value>C</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option1')"/>
+                    <value>I</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option2')"/>
+                    <value>E</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option3')"/>
+                    <value>H</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option4')"/>
+                    <value>PS</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/buildingType:option5')"/>
+                    <value>CS</value>
+                </item>
+            </select1>
+        </group>
+
+        <group appearance="field-list">
+            <label ref="jr:itext('structuresSprayedLabel:label')"/>
+            <input ref="/data/roomsSprayed">
+                <label ref="jr:itext('/data/roomsSprayed:label')"/>
+                <hint ref="jr:itext('/data/roomsSprayed:hint')"/>
+            </input>
+            <input ref="/data/kitchensSprayed">
+                <label ref="jr:itext('/data/kitchensSprayed:label')"/>
+                <hint ref="jr:itext('/data/kitchensSprayed:hint')"/>
+            </input>
+            <input ref="/data/bathroomsSprayed">
+                <label ref="jr:itext('/data/bathroomsSprayed:label')"/>
+                <hint ref="jr:itext('/data/bathroomsSprayed:hint')"/>
+            </input>
+            <input ref="/data/diningRoomsSprayed">
+                <label ref="jr:itext('/data/diningRoomsSprayed:label')"/>
+                <hint ref="jr:itext('/data/diningRoomsSprayed:hint')"/>
+            </input>
+            <input ref="/data/terracesSprayed">
+                <label ref="jr:itext('/data/terracesSprayed:label')"/>
+                <hint ref="jr:itext('/data/terracesSprayed:hint')"/>
+            </input>
+            <input ref="/data/passageWaysSprayed">
+                <label ref="jr:itext('/data/passageWaysSprayed:label')"/>
+                <hint ref="jr:itext('/data/passageWaysSprayed:hint')"/>
+            </input>
+        </group>
+
+        <input ref="/data/totalSprayed">
+            <label ref="jr:itext('/data/totalSprayed:label')"/>
+        </input>
+
+        <group appearance="field-list">
+            <label ref="jr:itext('structuresNotSprayedLabel:label')"/>
+            <input ref="/data/roomsNotSprayed">
+                <label ref="jr:itext('/data/roomsNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/roomsNotSprayed:hint')"/>
+            </input>
+            <input ref="/data/kitchensNotSprayed">
+                <label ref="jr:itext('/data/kitchensNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/kitchensNotSprayed:hint')"/>
+            </input>
+            <input ref="/data/bathroomsNotSprayed">
+                <label ref="jr:itext('/data/bathroomsNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/bathroomsNotSprayed:hint')"/>
+            </input>
+            <input ref="/data/diningRoomsNotSprayed">
+                <label ref="jr:itext('/data/diningRoomsNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/diningRoomsNotSprayed:hint')"/>
+            </input>
+            <input ref="/data/terracesNotSprayed">
+                <label ref="jr:itext('/data/terracesNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/terracesNotSprayed:hint')"/>
+            </input>
+            <input ref="/data/passageWaysNotSprayed">
+                <label ref="jr:itext('/data/passageWaysNotSprayed:label')"/>
+                <hint ref="jr:itext('/data/passageWaysNotSprayed:hint')"/>
+            </input>
+        </group>
+
+         <input ref="/data/totalNotSprayed">
+            <label ref="jr:itext('/data/totalNotSprayed:label')"/>
+        </input>
+
+        <input ref="/data/wastedInsecticideLoads">
+            <label ref="jr:itext('/data/wastedInsecticideLoads:label')"/>
+        </input>
+
+        <group appearance="field-list"> 
+            <label ref="jr:itext('populationProtectedLabel:label')"/>
+            <input ref="/data/peopleProtectedUnderAge5">
+                <label ref="jr:itext('/data/peopleProtectedUnderAge5:label')"/>
+            </input>
+            <input ref="/data/peopleProtectedPregnant">
+                <label ref="jr:itext('/data/peopleProtectedPregnant:label')"/>
+            </input>
+            <input ref="/data/peopleProtectedOther">
+                <label ref="jr:itext('/data/peopleProtectedOther:label')"/>
+            </input>
+        </group>
+
+                <input ref="/data/totalPeopleProtected">
+            <label ref="jr:itext('/data/totalPeopleProtected:label')"/>
+        </input>
+
+        <input ref="/data/additionalNotes">
+            <label ref="jr:itext('/data/additionalNotes:label')"/>
+        </input>
+
+
+
+
+
+    </h:body>
 </h:html>
