@@ -137,13 +137,13 @@
                     </text>
 
                     <text id="/data/kitchensSprayed:label">
-                        <value>Habitaciones?</value>
+                        <value>Cocinas?</value>
                     </text>
                     <text id="/data/kitchensSprayed:hint">
                         <value>CN</value>
                     </text>
                     <text id="/data/kitchensNotSprayed:label">
-                        <value>Habitaciones?</value>
+                        <value>Cocinas?</value>
                     </text>
                     <text id="/data/kitchensNotSprayed:hint">
                         <value>CN</value>
@@ -259,8 +259,8 @@
             <bind nodeset="/data/diningRoomsSprayed" type="integer" required="true()" />
             <bind nodeset="/data/terracesSprayed" type="integer" required="true()" />
             <bind nodeset="/data/passageWaysSprayed" type="integer" required="true()" />
-            <bind nodeset="/data/totalSprayed" type="integer" required="true()" readonly="true()"
-                calculate="/data/kitchensSprayed + /data/bathroomsSprayed + /data/diningRoomsSprayed + /data/terracesSprayed + /data/passageWaysSprayed"/>
+            <bind nodeset="/data/totalSprayed" type="int" readonly="true()"
+                calculate="if( true(), (/data/roomsSprayed + /data/kitchensSprayed + /data/bathroomsSprayed + /data/diningRoomsSprayed + /data/terracesSprayed + /data/passageWaysSprayed), 0)"/>
 
 			<bind nodeset="/data/roomsNotSprayed" type="integer" required="true()"/>
             <bind nodeset="/data/kitchensNotSprayed" type="integer" required="true()" />
@@ -268,16 +268,16 @@
             <bind nodeset="/data/diningRoomsNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/terracesNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/passageWaysNotSprayed" type="integer" required="true()" />
-            <bind nodeset="/data/totalNotSprayed" type="integer" required="true()" readonly="true()"
-                calculate="/data/kitchensNotSprayed + /data/bathroomsNotSprayed + /data/diningRoomsNotSprayed + /data/terracesNotSprayed + /data/passageWaysNotSprayed"/>
+            <bind nodeset="/data/totalNotSprayed" type="int" readonly="true()"
+                calculate="if( true(), (/data/roomsNotSprayed + /data/kitchensNotSprayed + /data/bathroomsNotSprayed + /data/diningRoomsNotSprayed + /data/terracesNotSprayed + /data/passageWaysNotSprayed), 0)"/>
 
             <bind nodeset="/data/wastedInsecticideLoads" type="integer" required="true()" />
 
             <bind nodeset="/data/peopleProtectedUnderAge5" type="integer" required="true()" />
             <bind nodeset="/data/peopleProtectedPregnant" type="integer" required="true()" />
             <bind nodeset="/data/peopleProtectedOther" type="integer" required="true()" />
-            <bind nodeset="/data/totalPeopleProtected" type="integer" required="true()" readonly="true()"
-                calculate="/data/peopleProtectedUnderAge5 + /data/peopleProtectedPregnant + /data/peopleProtectedOther" />
+            <bind nodeset="/data/totalPeopleProtected" type="int" readonly="true()"
+                calculate="if( true(), (/data/peopleProtectedUnderAge5 + /data/peopleProtectedPregnant + /data/peopleProtectedOther), 0)" />
 
             <bind nodeset="/data/additionalNotes" type="string" />
 
