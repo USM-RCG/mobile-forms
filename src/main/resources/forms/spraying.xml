@@ -36,6 +36,7 @@
                     <terracesSprayed/>
                     <passageWaysSprayed/>
                     <totalSprayed/>
+                    <totalSprayedPrompt/>
 
                     <roomsNotSprayed/>
                     <kitchensNotSprayed/>
@@ -53,8 +54,11 @@
                     <totalPeopleProtected/>
 
                     <additionalNotes/>
-
+                    <widgets xmlns="widgets">
+                        <prompt_trigger/>
+                    </widgets>
                 </data>
+
             </instance>
             <itext>
 
@@ -262,6 +266,14 @@
             <bind nodeset="/data/totalSprayed" type="int" readonly="true()"
                 calculate="if( true(), (/data/roomsSprayed + /data/kitchensSprayed + /data/bathroomsSprayed + /data/diningRoomsSprayed + /data/terracesSprayed + /data/passageWaysSprayed), 0)"/>
 
+            <bind nodeset="/data/widgets/prompt_trigger" required="true()"/>
+
+            <bind nodeset="/data/totalSprayedPrompt" type="string" readonly="true()"
+                calculate="concat('Ha ingresado un total de ', /data/totalSprayed, ' estructuras rociadas (',
+                /data/roomsSprayed, ' habitaciones + ', /data/kitchensSprayed, ' cocinas + ', /data/bathroomsSprayed,
+                ' banos + ', /data/diningRoomsSprayed, ' comedores + ', /data/terracesSprayed, ' terrazas + ',
+                /data/passageWaysSprayed, ' passillos). Si este numero NO ES CORECTO, volver atras y corregir sus respuestas.')" />
+
 			<bind nodeset="/data/roomsNotSprayed" type="integer" required="true()"/>
             <bind nodeset="/data/kitchensNotSprayed" type="integer" required="true()" />
             <bind nodeset="/data/bathroomsNotSprayed" type="integer" required="true()" />
@@ -389,9 +401,12 @@
             </input>
         </group>
 
-        <input ref="/data/totalSprayed">
-            <label ref="jr:itext('/data/totalSprayed:label')"/>
-        </input>
+        <group appearance="field-list">
+            <input ref="/data/totalSprayedPrompt" />
+            <trigger ref="/data/widgets/prompt_trigger">
+                <label>Quiere continuar?</label>
+            </trigger>
+        </group>
 
         <group appearance="field-list">
             <label ref="jr:itext('structuresNotSprayedLabel:label')"/>
