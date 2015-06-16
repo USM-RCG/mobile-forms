@@ -76,6 +76,9 @@
                     <text id="/data/sprayOperatorExtId:label">
                         <value>Codigo de Rociador</value>
                     </text>
+                    <text id="/data/sprayOperatorExtId:hint">
+                        <value>p.ej. BO123</value>
+                    </text>
                     <text id="/data/sprayRound:label">
                         <value>Es la visita principal o secundaria?</value>
                     </text>
@@ -311,6 +314,7 @@
 
         <input ref="/data/sprayOperatorExtId">
             <label ref="jr:itext('/data/sprayOperatorExtId:label')"/>
+            <hint ref="jr:itext('/data/sprayOperatorExtId:hint')"/>
         </input>
 
         <group appearance="field-list">
