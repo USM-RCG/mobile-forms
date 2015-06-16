@@ -1,0 +1,92 @@
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>IRS</h:title>
+        <model>
+            <instance>
+                <data id="superojo" version="${openhds.tag.number}">
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
+                    <jr:meta>
+                        <jr:instanceID/>
+                    </jr:meta> 
+
+                    <collectionDateTime/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
+
+                    <locationExtId/>
+                    <locationUuid/>
+
+                    <supervisorExtId/>
+                    <sprayOperatorExtId>BO</sprayOperatorExtId>
+                    <ojoDate/>
+
+                    <woreCap/>
+                    <woreCapMC/>
+                    <woreMask/>
+                    <woreMaskMC/>
+                    <woreHelmet/>
+                    <woreHelmetMC/>
+                    <woreUniform/>
+                    <woreUniformMC/>
+                    <woreGloves/>
+                    <woreGlovesMC/>
+                    <woreBoots/>
+                    <woreBootsMC/>
+                    <usedSabanas/>
+                    <usedSabanasMC/>
+                    <informedSafetyMeasures/>
+                    <informedSafetyMeasuresMC/>
+
+                    <pumpPressure/>
+                    <pumpPressureMC/>
+                    <mouthpiecePosition/>
+                    <mouthpiecePositionMC/>
+
+                </data>
+
+            </instance>
+            <itext>
+
+                <translation lang="Spanish">
+                    <text id="/data/collectionDateTime:label">
+                        <value>Fecha de colección</value>
+                    </text>
+                    <text id="/data/locationExtId:label">
+                        <value>ID Externo de Locación</value>
+                    </text>
+                    <text id="/data/sprayOperatorExtId:label">
+                        <value>Codigo de Rociador</value>
+                    </text>
+                    <text id="/data/supervisorExtId:label">
+                        <value>Codigo de Supervisor</value>
+                    </text>
+
+                </translation>
+
+            </itext>
+
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/ojoDate" type="datetime" readonly="true()"/>
+
+            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/supervisorExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
+
+        </model>
+    </h:head>
+
+    <h:body>
+
+
+    </h:body>
+</h:html>
