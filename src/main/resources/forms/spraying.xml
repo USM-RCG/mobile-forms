@@ -24,7 +24,7 @@
                     <locationExtId/>
                     <locationUuid/>
                     <supervisorExtId/>
-                    <sprayOperatorExtId/>
+                    <sprayOperatorExtId>BO</sprayOperatorExtId>
                     <sprayRound/>
                     <iecResult/>
                     <buildingType/>
@@ -36,7 +36,6 @@
                     <terracesSprayed/>
                     <passageWaysSprayed/>
                     <totalSprayed/>
-                    <totalSprayedPrompt/>
 
                     <roomsNotSprayed/>
                     <kitchensNotSprayed/>
@@ -55,7 +54,9 @@
 
                     <additionalNotes/>
                     <widgets xmlns="widgets">
-                        <prompt_trigger/>
+                        <prompt_trigger_1/>
+                        <prompt_trigger_2/>
+                        <prompt_trigger_3/>
                     </widgets>
                 </data>
 
@@ -250,9 +251,11 @@
 
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/supervisorExtId" type="string" required="true()" readonly="true()"/>
-
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" />
+
+            <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" 
+                constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="el ID debe ser del formato BO---" />
+
             <bind nodeset="/data/sprayRound" type="select1" required="true()" />
             <bind nodeset="/data/buildingType" type="select1" required="true()" />
             <bind nodeset="/data/iecResult" type="select1" required="true()" />
@@ -266,13 +269,9 @@
             <bind nodeset="/data/totalSprayed" type="int" readonly="true()"
                 calculate="if( true(), (/data/roomsSprayed + /data/kitchensSprayed + /data/bathroomsSprayed + /data/diningRoomsSprayed + /data/terracesSprayed + /data/passageWaysSprayed), 0)"/>
 
-            <bind nodeset="/data/widgets/prompt_trigger" required="true()"/>
-
-            <bind nodeset="/data/totalSprayedPrompt" type="string" readonly="true()"
-                calculate="concat('Ha ingresado un total de ', /data/totalSprayed, ' estructuras rociadas (',
-                /data/roomsSprayed, ' habitaciones + ', /data/kitchensSprayed, ' cocinas + ', /data/bathroomsSprayed,
-                ' banos + ', /data/diningRoomsSprayed, ' comedores + ', /data/terracesSprayed, ' terrazas + ',
-                /data/passageWaysSprayed, ' passillos). Si este numero NO ES CORECTO, volver atras y corregir sus respuestas.')" />
+            <bind nodeset="/data/widgets/prompt_trigger_1" required="true()"/>
+            <bind nodeset="/data/widgets/prompt_trigger_2" required="true()"/>
+            <bind nodeset="/data/widgets/prompt_trigger_3" required="true()"/>
 
 			<bind nodeset="/data/roomsNotSprayed" type="integer" required="true()"/>
             <bind nodeset="/data/kitchensNotSprayed" type="integer" required="true()" />
@@ -402,8 +401,8 @@
         </group>
 
         <group appearance="field-list">
-            <input ref="/data/totalSprayedPrompt" />
-            <trigger ref="/data/widgets/prompt_trigger">
+            <label>Ha ingresado un total de <output value="/data/totalSprayed"/> estructuras rociadas (<output value="/data/roomsSprayed"/> habitaciones + <output value="/data/kitchensSprayed"/> cocinas + <output value="/data/bathroomsSprayed"/> baños + <output value="/data/diningRoomsSprayed"/> comedores + <output value="/data/terracesSprayed"/> terrazas + <output value="/data/passageWaysSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+            <trigger ref="/data/widgets/prompt_trigger_1">
                 <label>Quiere continuar?</label>
             </trigger>
         </group>
@@ -436,9 +435,12 @@
             </input>
         </group>
 
-         <input ref="/data/totalNotSprayed">
-            <label ref="jr:itext('/data/totalNotSprayed:label')"/>
-        </input>
+        <group appearance="field-list">
+            <label>Ha ingresado un total de <output value="/data/totalNotSprayed"/> estructuras NO rociadas (<output value="/data/roomsNotSprayed"/> habitaciones + <output value="/data/kitchensNotSprayed"/> cocinas + <output value="/data/bathroomsNotSprayed"/> baños + <output value="/data/diningRoomsNotSprayed"/> comedores + <output value="/data/terracesNotSprayed"/> terrazas + <output value="/data/passageWaysNotSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+            <trigger ref="/data/widgets/prompt_trigger_2">
+                <label>Quiere continuar?</label>
+            </trigger>
+        </group>
 
         <input ref="/data/wastedInsecticideLoads">
             <label ref="jr:itext('/data/wastedInsecticideLoads:label')"/>
@@ -457,16 +459,16 @@
             </input>
         </group>
 
-                <input ref="/data/totalPeopleProtected">
-            <label ref="jr:itext('/data/totalPeopleProtected:label')"/>
-        </input>
+        <group appearance="field-list">
+            <label>Ha ingresado un total de <output value="/data/totalNotSprayed"/> personas protegidas (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> embarazadas + <output value="/data/peopleProtectedOther"/> otros). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+            <trigger ref="/data/widgets/prompt_trigger_3">
+                <label>Quiere continuar?</label>
+            </trigger>
+        </group>
 
         <input ref="/data/additionalNotes">
             <label ref="jr:itext('/data/additionalNotes:label')"/>
         </input>
-
-
-
 
 
     </h:body>
