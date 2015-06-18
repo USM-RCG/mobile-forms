@@ -257,7 +257,7 @@
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
 
             <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" 
-                constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="el ID debe ser del formato BO---" />
+                constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="el ID debe ser del formato BO _ _ _" />
 
             <bind nodeset="/data/sprayRound" type="select1" required="true()" />
             <bind nodeset="/data/buildingType" type="select1" required="true()" />
