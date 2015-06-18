@@ -1,0 +1,942 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ODK_Super_Ojo_v2</h:title>
+    <model>
+      <instance>
+        <ODK_Super_Ojo_v2 id="ODK_Super_Ojo_v2">
+
+                    <collectionDateTime/>
+                    <surveyDate/>
+                    <processedByMirth/>
+                    <needsReview/>
+                    <entityUuid/>
+                    <entityExtId/>
+                    <fieldWorkerUuid/>
+                    <fieldWorkerExtId/>
+
+                    <locationExtId/>
+                    <locationUuid/>
+                    <supervisorExtId/>
+
+          <ojo_date/>
+                    <spray_operator>BO</spray_operator>
+
+          <medidas_preventativas>
+            <gorra/>
+            <mc_gorra/>
+            <mc_gorra_other/>
+            <mascarilla/>
+            <mc_mascarilla/>
+            <mc_mascarilla_other/>
+            <casco/>
+            <mc_casco/>
+            <mc_casco_other/>
+            <uniforme/>
+            <mc_uniforme/>
+            <mc_uniforme_other/>
+            <guantes/>
+            <mc_guantes/>
+            <mc_guantes_other/>
+            <botas/>
+            <mc_botas/>
+            <mc_botas_other/>
+            <sabanas/>
+            <mc_sabanas/>
+            <mc_sabanas_other/>
+            <med_de_seguridad/>
+            <mc_med_de_seguridad/>
+            <mc_med_de_seguridad_other/>
+          </medidas_preventativas>
+          <tecnica>
+            <bomba_presion/>
+            <mc_bomba_presion/>
+            <mc_bomba_presion_other/>
+            <boquilla/>
+            <mc_boquilla/>
+            <mc_boquilla_other/>
+            <distancia/>
+            <mc_distancia/>
+            <mc_distancia_other/>
+            <bordes/>
+            <mc_bordes/>
+            <mc_bordes_other/>
+            <puertas_vent/>
+            <mc_puertas_vent/>
+            <mc_puertas_vent_other/>
+            <agitacion/>
+            <mc_agitacion/>
+            <mc_agitacion_other/>
+            <muebles/>
+            <mc_muebles/>
+            <mc_muebles_other/>
+            <bandas/>
+            <mc_bandas/>
+            <mc_bandas_other/>
+            <inferiores/>
+            <mc_inferiores/>
+            <mc_inferiores_other/>
+            <cielo_raso/>
+            <mc_cielo_raso/>
+            <mc_cielo_raso_other/>
+            <aleros/>
+            <mc_aleros/>
+            <mc_aleros_other/>
+            <fugas/>
+            <mc_fugas/>
+            <mc_fugas_other/>
+          </tecnica>
+          <meta>
+            <instanceID/>
+          </meta>
+        </ODK_Super_Ojo_v2>
+      </instance>
+
+            <bind nodeset="/ODK_Super_Ojo_v2/processedByMirth" type="boolean" readonly="true"/>
+            <bind nodeset="/ODK_Super_Ojo_v2/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/ODK_Super_Ojo_v2/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/ODK_Super_Ojo_v2/surveyDate" type="datetime" readonly="true()"/>
+
+            <bind nodeset="/ODK_Super_Ojo_v2/fieldWorkerExtId" type="string" readonly="true()"/>
+            <bind nodeset="/ODK_Super_Ojo_v2/supervisorExtId" type="string" readonly="true()"/>
+            <bind nodeset="/ODK_Super_Ojo_v2/locationExtId" type="string" readonly="true()"/>
+
+      <bind nodeset="/ODK_Super_Ojo_v2/ojo_date" readonly="true()" type="datetime"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/spray_operator" required="true()" type="string" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))"
+            jr:constraintMsg="el ID debe ser del formato BO _ _ _" />
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/gorra" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_gorra" required="true()" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/gorra ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_gorra_other" required="true()" relevant="selected(../mc_gorra, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mascarilla" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_mascarilla" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/mascarilla ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_mascarilla_other" relevant="selected(../mc_mascarilla, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/casco" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_casco" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/casco ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_casco_other" relevant="selected(../mc_casco, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/uniforme" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_uniforme" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/uniforme ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_uniforme_other" relevant="selected(../mc_uniforme, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/guantes" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_guantes" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/guantes ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_guantes_other" relevant="selected(../mc_guantes, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/botas" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_botas" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/botas ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_botas_other" relevant="selected(../mc_botas, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/sabanas" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_sabanas" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/sabanas ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_sabanas_other" relevant="selected(../mc_sabanas, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/med_de_seguridad" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_med_de_seguridad" relevant=" /ODK_Super_Ojo_v2/medidas_preventativas/med_de_seguridad ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/medidas_preventativas/mc_med_de_seguridad_other" relevant="selected(../mc_med_de_seguridad, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/bomba_presion" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bomba_presion" relevant=" /ODK_Super_Ojo_v2/tecnica/bomba_presion ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bomba_presion_other" relevant="selected(../mc_bomba_presion, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/boquilla" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_boquilla" relevant=" /ODK_Super_Ojo_v2/tecnica/boquilla ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_boquilla_other" relevant="selected(../mc_boquilla, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/distancia" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_distancia" relevant=" /ODK_Super_Ojo_v2/tecnica/distancia ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_distancia_other" relevant="selected(../mc_distancia, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/bordes" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bordes" relevant=" /ODK_Super_Ojo_v2/tecnica/bordes ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bordes_other" relevant="selected(../mc_bordes, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/puertas_vent" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_puertas_vent" relevant=" /ODK_Super_Ojo_v2/tecnica/puertas_vent ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_puertas_vent_other" relevant="selected(../mc_puertas_vent, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/agitacion" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_agitacion" relevant=" /ODK_Super_Ojo_v2/tecnica/agitacion ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_agitacion_other" relevant="selected(../mc_agitacion, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/muebles" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_muebles" relevant=" /ODK_Super_Ojo_v2/tecnica/muebles ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_muebles_other" relevant="selected(../mc_muebles, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/bandas" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bandas" relevant=" /ODK_Super_Ojo_v2/tecnica/bandas ='1'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_bandas_other" relevant="selected(../mc_bandas, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/inferiores" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_inferiores" relevant=" /ODK_Super_Ojo_v2/tecnica/inferiores ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_inferiores_other" relevant="selected(../mc_inferiores, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/cielo_raso" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_cielo_raso" relevant=" /ODK_Super_Ojo_v2/tecnica/cielo_raso ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_cielo_raso_other" relevant="selected(../mc_cielo_raso, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/aleros" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_aleros" relevant=" /ODK_Super_Ojo_v2/tecnica/aleros ='0'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_aleros_other" relevant="selected(../mc_aleros, 'other')" type="string"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/fugas" required="true()" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_fugas" relevant=" /ODK_Super_Ojo_v2/tecnica/fugas ='1'" type="select1"/>
+      <bind nodeset="/ODK_Super_Ojo_v2/tecnica/mc_fugas_other" relevant="selected(../mc_fugas, 'other')" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ODK_Super_Ojo_v2/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/ODK_Super_Ojo_v2/spray_operator">
+      <label>Codigo de Rociador</label>
+      <hint>p.ej. BO123</hint>
+    </input>
+    <group ref="/ODK_Super_Ojo_v2/medidas_preventativas">
+      <label>Medidas Preventativas</label>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/gorra">
+        <label>ha usado gorra al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_gorra">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_gorra_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mascarilla">
+        <label>Ha usado mascarilla al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_mascarilla">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_mascarilla_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/casco">
+        <label>Ha usado casco al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_casco">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_casco_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/uniforme">
+        <label>Ha usado uniforme</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_uniforme">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_uniforme_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/guantes">
+        <label>Uso guantes durante el rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_guantes">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_guantes_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/botas">
+        <label>uso botas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_botas">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_botas_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/sabanas">
+        <label>ha protegido los muebles con sabanas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_sabanas">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>no tiene muebles</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_sabanas_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/med_de_seguridad">
+        <label>Ha informado sobre medidas de seguridad</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_med_de_seguridad">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/medidas_preventativas/mc_med_de_seguridad_other">
+        <label>Especifique otro</label>
+      </input>
+    </group>
+    <group ref="/ODK_Super_Ojo_v2/tecnica">
+      <label>Tecnias</label>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/bomba_presion">
+        <label>La presion de la bomba esta entre 30 a 55 PSI</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_bomba_presion">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_bomba_presion_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/boquilla">
+        <label>La posicion de la boquilla es correcta</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_boquilla">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_boquilla_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/distancia">
+        <label>La distancia entre la boquilla y la pared es de 45 cm</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_distancia">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>tiene muchas cosas</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_distancia_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/bordes">
+        <label>Ha rociado bien los bordes de la pared</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_bordes">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>tiene muchas cosas</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_bordes_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/puertas_vent">
+        <label>Ha rociado las puertas y ventanas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_puertas_vent">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>son de cristal</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_puertas_vent_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/agitacion">
+        <label>Agito bien la bomba 3 veces</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_agitacion">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_agitacion_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/muebles">
+        <label>Fueron removidos todos los muebles para el rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_muebles">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>hay muebles grandes</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>no tiene muebles</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>removido lo que podia</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_muebles_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/bandas">
+        <label>Quedaron areas sin insecticida entre bandas de rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_bandas">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>correjirle y volver a rociar</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>rociar los que podia</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_bandas_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/inferiores">
+        <label>Partes inferiores de todos los muebles fueron rociados</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_inferiores">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>correjirle y volver a rociar</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>hay muebles grandes</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>no tenia muebles</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_inferiores_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/cielo_raso">
+        <label>Ha rociado el cielo raso</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_cielo_raso">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>esta muy alto</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>no tiene cielo razo</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_cielo_raso_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/aleros">
+        <label>Ha rociado los aleros</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_aleros">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>tiene cielo razo</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>estan muy altos</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_aleros_other">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/fugas">
+        <label>Hay fugas en las mangas, disparador o boquillas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/ODK_Super_Ojo_v2/tecnica/mc_fugas">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>la fuga fue reparada</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>todo funcionaba bien</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/ODK_Super_Ojo_v2/tecnica/mc_fugas_other">
+        <label>Especifique otro</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>
