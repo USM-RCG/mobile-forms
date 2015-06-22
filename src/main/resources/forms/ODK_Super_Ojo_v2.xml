@@ -4,8 +4,8 @@
     <h:title>Super Ojo</h:title>
     <model>
       <instance>
-        <data id="data">
-
+        <data id="super_ojo" version="${openhds.tag.number}">
+          <openhdsTagName>${openhds.tag.name}</openhdsTagName>
           <collectionDateTime/>
           <processedByMirth/>
           <needsReview/>
