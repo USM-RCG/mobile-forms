@@ -13,7 +13,6 @@
           <entityExtId/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
-
           <locationExtId/>
           <locationUuid/>
           <supervisorExtId/>
@@ -22,72 +21,96 @@
           <medidas_preventativas>
             <gorra/>
             <mc_gorra/>
-            <mc_gorra_other/>
+            <mc_gorra_otro/>
             <mascarilla/>
             <mc_mascarilla/>
-            <mc_mascarilla_other/>
+            <mc_mascarilla_otro/>
             <casco/>
             <mc_casco/>
-            <mc_casco_other/>
+            <mc_casco_otro/>
             <uniforme/>
             <mc_uniforme/>
-            <mc_uniforme_other/>
+            <mc_uniforme_otro/>
             <guantes/>
             <mc_guantes/>
-            <mc_guantes_other/>
+            <mc_guantes_otro/>
             <botas/>
             <mc_botas/>
-            <mc_botas_other/>
+            <mc_botas_otro/>
             <sabanas/>
             <mc_sabanas/>
-            <mc_sabanas_other/>
+            <mc_sabanas_otro/>
             <med_de_seguridad/>
             <mc_med_de_seguridad/>
-            <mc_med_de_seguridad_other/>
+            <mc_med_de_seguridad_otro/>
           </medidas_preventativas>
           <tecnica>
             <bomba_presion/>
             <mc_bomba_presion/>
-            <mc_bomba_presion_other/>
+            <mc_bomba_presion_otro/>
             <boquilla/>
             <mc_boquilla/>
-            <mc_boquilla_other/>
+            <mc_boquilla_otro/>
             <distancia/>
             <mc_distancia/>
-            <mc_distancia_other/>
+            <mc_distancia_otro/>
             <bordes/>
             <mc_bordes/>
-            <mc_bordes_other/>
+            <mc_bordes_otro/>
             <puertas_vent/>
             <mc_puertas_vent/>
-            <mc_puertas_vent_other/>
+            <mc_puertas_vent_otro/>
             <agitacion/>
             <mc_agitacion/>
-            <mc_agitacion_other/>
+            <mc_agitacion_otro/>
             <muebles/>
             <mc_muebles/>
-            <mc_muebles_other/>
+            <mc_muebles_otro/>
             <bandas/>
             <mc_bandas/>
-            <mc_bandas_other/>
+            <mc_bandas_otro/>
             <inferiores/>
             <mc_inferiores/>
-            <mc_inferiores_other/>
+            <mc_inferiores_otro/>
             <cielo_raso/>
             <mc_cielo_raso/>
-            <mc_cielo_raso_other/>
+            <mc_cielo_raso_otro/>
             <aleros/>
             <mc_aleros/>
-            <mc_aleros_other/>
+            <mc_aleros_otro/>
             <fugas/>
             <mc_fugas/>
-            <mc_fugas_other/>
+            <mc_fugas_otro/>
           </tecnica>
           <meta>
             <instanceID/>
           </meta>
         </data>
       </instance>
+      <itext>
+
+        <translation lang="Spanish">
+          <text id="/data/supervisorExtId:label">
+            <value>Codigo de Supervisor</value>
+          </text>
+          <text id="/data/collectionDateTime:label">
+            <value>Fecha de colección</value>
+          </text>
+          <text id="/data/locationExtId:label">
+            <value>ID Externo de Locación</value>
+          </text>
+          <text id="/data/sprayOperatorExtId:label">
+            <value>Codigo de Rociador</value>
+          </text>
+          <text id="/data/sprayOperatorExtId:hint">
+            <value>p.ej. BO123</value>
+          </text>
+
+        </translation>
+
+
+
+      </itext>
 
       <bind nodeset="/data/processedByMirth" type="boolean" />
       <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
@@ -98,65 +121,65 @@
       <bind nodeset="/data/spray_operator" required="true()" type="string" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))"
         jr:constraintMsg="el ID debe ser del formato BO _ _ _" />
         <bind nodeset="/data/medidas_preventativas/gorra" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_gorra" required="true()" relevant=" /data/medidas_preventativas/gorra ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_gorra_other" required="true()" relevant="selected(../mc_gorra, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_gorra" relevant=" /data/medidas_preventativas/gorra ='0'" type="select1"/>
+        <bind nodeset="/data/medidas_preventativas/mc_gorra_otro" relevant="selected(../mc_gorra, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/mascarilla" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_mascarilla" relevant=" /data/medidas_preventativas/mascarilla ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_mascarilla_other" relevant="selected(../mc_mascarilla, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_mascarilla_otro" relevant="selected(../mc_mascarilla, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/casco" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_casco" relevant=" /data/medidas_preventativas/casco ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_casco_other" relevant="selected(../mc_casco, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_casco_otro" relevant="selected(../mc_casco, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/uniforme" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_uniforme" relevant=" /data/medidas_preventativas/uniforme ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_uniforme_other" relevant="selected(../mc_uniforme, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_uniforme_otro" relevant="selected(../mc_uniforme, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/guantes" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_guantes" relevant=" /data/medidas_preventativas/guantes ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_guantes_other" relevant="selected(../mc_guantes, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_guantes_otro" relevant="selected(../mc_guantes, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/botas" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_botas" relevant=" /data/medidas_preventativas/botas ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_botas_other" relevant="selected(../mc_botas, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_botas_otro" relevant="selected(../mc_botas, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/sabanas" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_sabanas" relevant=" /data/medidas_preventativas/sabanas ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_sabanas_other" relevant="selected(../mc_sabanas, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_sabanas_otro" relevant="selected(../mc_sabanas, 'otro')" type="string"/>
         <bind nodeset="/data/medidas_preventativas/med_de_seguridad" required="true()" type="select1"/>
         <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad" relevant=" /data/medidas_preventativas/med_de_seguridad ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad_other" relevant="selected(../mc_med_de_seguridad, 'other')" type="string"/>
+        <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad_otro" relevant="selected(../mc_med_de_seguridad, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/bomba_presion" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_bomba_presion" relevant=" /data/tecnica/bomba_presion ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bomba_presion_other" relevant="selected(../mc_bomba_presion, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_bomba_presion_otro" relevant="selected(../mc_bomba_presion, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/boquilla" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_boquilla" relevant=" /data/tecnica/boquilla ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_boquilla_other" relevant="selected(../mc_boquilla, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_boquilla_otro" relevant="selected(../mc_boquilla, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/distancia" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_distancia" relevant=" /data/tecnica/distancia ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_distancia_other" relevant="selected(../mc_distancia, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_distancia_otro" relevant="selected(../mc_distancia, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/bordes" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_bordes" relevant=" /data/tecnica/bordes ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bordes_other" relevant="selected(../mc_bordes, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_bordes_otro" relevant="selected(../mc_bordes, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/puertas_vent" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_puertas_vent" relevant=" /data/tecnica/puertas_vent ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_puertas_vent_other" relevant="selected(../mc_puertas_vent, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_puertas_vent_otro" relevant="selected(../mc_puertas_vent, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/agitacion" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_agitacion" relevant=" /data/tecnica/agitacion ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_agitacion_other" relevant="selected(../mc_agitacion, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_agitacion_otro" relevant="selected(../mc_agitacion, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/muebles" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_muebles" relevant=" /data/tecnica/muebles ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_muebles_other" relevant="selected(../mc_muebles, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_muebles_otro" relevant="selected(../mc_muebles, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/bandas" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_bandas" relevant=" /data/tecnica/bandas ='1'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bandas_other" relevant="selected(../mc_bandas, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_bandas_otro" relevant="selected(../mc_bandas, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/inferiores" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_inferiores" relevant=" /data/tecnica/inferiores ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_inferiores_other" relevant="selected(../mc_inferiores, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_inferiores_otro" relevant="selected(../mc_inferiores, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/cielo_raso" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_cielo_raso" relevant=" /data/tecnica/cielo_raso ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_cielo_raso_other" relevant="selected(../mc_cielo_raso, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_cielo_raso_otro" relevant="selected(../mc_cielo_raso, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/aleros" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_aleros" relevant=" /data/tecnica/aleros ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_aleros_other" relevant="selected(../mc_aleros, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_aleros_otro" relevant="selected(../mc_aleros, 'otro')" type="string"/>
         <bind nodeset="/data/tecnica/fugas" required="true()" type="select1"/>
         <bind nodeset="/data/tecnica/mc_fugas" relevant=" /data/tecnica/fugas ='1'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_fugas_other" relevant="selected(../mc_fugas, 'other')" type="string"/>
+        <bind nodeset="/data/tecnica/mc_fugas_otro" relevant="selected(../mc_fugas, 'otro')" type="string"/>
         <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
       </model>
     </h:head>
@@ -210,7 +233,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_gorra_other">
+        <input ref="/data/medidas_preventativas/mc_gorra_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/mascarilla">
@@ -243,7 +266,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_mascarilla_other">
+        <input ref="/data/medidas_preventativas/mc_mascarilla_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/casco">
@@ -276,7 +299,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_casco_other">
+        <input ref="/data/medidas_preventativas/mc_casco_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/uniforme">
@@ -309,7 +332,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_uniforme_other">
+        <input ref="/data/medidas_preventativas/mc_uniforme_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/guantes">
@@ -342,7 +365,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_guantes_other">
+        <input ref="/data/medidas_preventativas/mc_guantes_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/botas">
@@ -375,7 +398,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_botas_other">
+        <input ref="/data/medidas_preventativas/mc_botas_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/sabanas">
@@ -412,7 +435,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_sabanas_other">
+        <input ref="/data/medidas_preventativas/mc_sabanas_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/medidas_preventativas/med_de_seguridad">
@@ -445,7 +468,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/medidas_preventativas/mc_med_de_seguridad_other">
+        <input ref="/data/medidas_preventativas/mc_med_de_seguridad_otro">
           <label>Especifique otro</label>
         </input>
       </group>
@@ -485,7 +508,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_bomba_presion_other">
+        <input ref="/data/tecnica/mc_bomba_presion_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/boquilla">
@@ -522,7 +545,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_boquilla_other">
+        <input ref="/data/tecnica/mc_boquilla_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/distancia">
@@ -567,7 +590,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_distancia_other">
+        <input ref="/data/tecnica/mc_distancia_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/bordes">
@@ -612,7 +635,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_bordes_other">
+        <input ref="/data/tecnica/mc_bordes_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/puertas_vent">
@@ -649,7 +672,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_puertas_vent_other">
+        <input ref="/data/tecnica/mc_puertas_vent_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/agitacion">
@@ -682,7 +705,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_agitacion_other">
+        <input ref="/data/tecnica/mc_agitacion_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/muebles">
@@ -731,7 +754,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_muebles_other">
+        <input ref="/data/tecnica/mc_muebles_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/bandas">
@@ -772,7 +795,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_bandas_other">
+        <input ref="/data/tecnica/mc_bandas_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/inferiores">
@@ -821,7 +844,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_inferiores_other">
+        <input ref="/data/tecnica/mc_inferiores_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/cielo_raso">
@@ -862,7 +885,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_cielo_raso_other">
+        <input ref="/data/tecnica/mc_cielo_raso_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/aleros">
@@ -907,7 +930,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_aleros_other">
+        <input ref="/data/tecnica/mc_aleros_otro">
           <label>Especifique otro</label>
         </input>
         <select1 ref="/data/tecnica/fugas">
@@ -940,7 +963,7 @@
             <value>otro</value>
           </item>
         </select1>
-        <input ref="/data/tecnica/mc_fugas_other">
+        <input ref="/data/tecnica/mc_fugas_otro">
           <label>Especifique otro</label>
         </input>
       </group>
