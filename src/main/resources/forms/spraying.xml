@@ -314,7 +314,7 @@
 
         <input ref="/data/sprayOperatorExtId">
             <label ref="jr:itext('/data/sprayOperatorExtId:label')"/>
-            <hint ref="jr:itext('/data/sprayOperatorExtId:hint')"/>
+            <hint>p.ej. BO123</hint>
         </input>
 
         <group appearance="field-list">
