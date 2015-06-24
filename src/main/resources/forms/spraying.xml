@@ -464,7 +464,7 @@
         </group>
 
         <group appearance="field-list">
-            <label>Ha ingresado un total de <output value="/data/totalNotSprayed"/> personas protegidas (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> embarazadas + <output value="/data/peopleProtectedOther"/> otros). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+            <label>Ha ingresado un total de <output value="/data/totalPeopleProtected"/> personas protegidas (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> embarazadas + <output value="/data/peopleProtectedOther"/> otros). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
             <trigger ref="/data/widgets/prompt_trigger_3">
                 <label>Quiere continuar?</label>
             </trigger>
