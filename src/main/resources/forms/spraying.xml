@@ -72,6 +72,9 @@
                         <text id="/data/collectionDateTime:label">
                             <value>Fecha de colección</value>
                         </text>
+                        <text id="/data/surveyDate:label">
+                            <value>Fecha de ingreso de datos</value>
+                        </text>
                         <text id="/data/evaluation:label">
                             <value>Fue rociada la casa?</value>
                         </text>
@@ -330,6 +333,9 @@
                                 </input>
                                 <input ref="/data/collectionDateTime">
                                     <label ref="jr:itext('/data/collectionDateTime:label')"/>
+                                </input>
+                                <input ref="/data/surveyDate">
+                                    <label ref="jr:itext('/data/surveyDate:label')"/>
                                 </input>
                             </group>
 
