@@ -492,7 +492,7 @@
           </item>
         </select1>
         <select1 ref="/data/tecnica/mc_bomba_presion">
-          <label>Medida correctiva o Explanacion?</label>
+          <label>Medida correctiva o Explicacion?</label>
           <item>
             <label>ninguna</label>
             <value>0</value>
@@ -504,10 +504,6 @@
           <item>
             <label>recordarle hacerlo</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>3</value>
           </item>
           <item>
             <label>otro</label>
@@ -541,10 +537,6 @@
           <item>
             <label>recordarle hacerlo</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>3</value>
           </item>
           <item>
             <label>otro</label>
