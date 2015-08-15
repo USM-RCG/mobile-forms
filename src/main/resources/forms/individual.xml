@@ -1,6 +1,6 @@
 <h:html xmlns="http://www.w3.org/2002/xforms"
         xmlns:h="http://www.w3.org/1999/xhtml"
-        xmlns:jr="http://openrosa.org/xforms">
+        xmlns:jr="http://openrosa.org/javarosa">
     <h:head>
         <h:title>Individual</h:title>
         <model>
@@ -8,9 +8,9 @@
                 <data id="individual" version="${openhds.tag.number}">
                     <openhdsTagName>${openhds.tag.name}</openhdsTagName>
 
-                    <jr:meta>
-                        <jr:instanceID/>
-                    </jr:meta>
+                    <meta>
+                        <instanceID/>
+                    </meta>
 
                     <collectionDateTime/>
                     <processedByMirth/>
