@@ -36,8 +36,7 @@
                     <sectorName/>
                     <locationExtId/>
                     <description/>
-                    <longitude/>
-                    <latitude/>
+                    <location/>
                 </data>
             </instance>
             <itext>
@@ -132,16 +131,10 @@
                     <text id="/data/description:hint">
                         <value/>
                     </text>
-                    <text id="/data/longitude:label">
-                        <value>Longitud</value>
+                    <text id="/data/location:label">
+                        <value>Ubicación GPS</value>
                     </text>
-                    <text id="/data/longitude:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/latitude:label">
-                        <value>Latitud</value>
-                    </text>
-                    <text id="/data/latitude:hint">
+                    <text id="/data/location:hint">
                         <value/>
                     </text>
                 </translation>
@@ -236,16 +229,10 @@
                     <text id="/data/description:hint">
                         <value/>
                     </text>
-                    <text id="/data/longitude:label">
-                        <value>Longitude</value>
+                    <text id="/data/location:label">
+                        <value>GPS Location</value>
                     </text>
-                    <text id="/data/longitude:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/latitude:label">
-                        <value>Latitude</value>
-                    </text>
-                    <text id="/data/latitude:hint">
+                    <text id="/data/location:hint">
                         <value/>
                     </text>
                 </translation>
@@ -282,8 +269,8 @@
             <bind nodeset="/data/communityCode" type="string" required="true()"/>
 
             <bind nodeset="/data/description" type="string"/>
-            <bind nodeset="/data/longitude" type="string"/>
-            <bind nodeset="/data/latitude" type="string"/>
+
+            <bind nodeset="/data/location" type="geopoint" required="true()"/>
 
         </model>
     </h:head>
@@ -331,16 +318,10 @@
             <label ref="jr:itext('/data/locationExtId:label')"/>
             <hint ref="jr:itext('/data/locationExtId:hint')"/>
         </input>
-        <group appearance="field-list">
-            <input ref="/data/longitude">
-                <label ref="jr:itext('/data/longitude:label')"/>
-                <hint ref="jr:itext('/data/longitude:hint')"/>
-            </input>
-            <input ref="/data/latitude">
-                <label ref="jr:itext('/data/latitude:label')"/>
-                <hint ref="jr:itext('/data/latitude:hint')"/>
-            </input>
-        </group>
+        <input ref="/data/location">
+            <label ref="jr:itext('/data/location:label')"/>
+            <hint ref="jr:itext('/data/location:hint')"/>
+        </input>
         <input ref="/data/locationName">
             <label ref="jr:itext('/data/locationName:label')"/>
             <hint ref="jr:itext('/data/locationName:hint')"/>
