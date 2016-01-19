@@ -1,0 +1,223 @@
+<h:html xmlns="http://www.w3.org/2002/xforms"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:jr="http://openrosa.org/javarosa">
+    <h:head>
+        <h:title>Duplicate Location</h:title>
+        <model>
+            <instance>
+                <data id="duplicate_location" version="${openhds.tag.number}">
+
+                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+
+                    <meta>
+                        <instanceID />
+                    </meta>
+
+                    <collectionDateTime />
+                    <processedByMirth />
+                    <needsReview />
+                    <entityUuid />
+                    <entityExtId />
+                    <fieldWorkerUuid />
+                    <fieldWorkerExtId />
+
+                    <action />
+                    <mapAreaName />
+                    <sectorName />
+                    <locationBuildingNumber />
+                    <locationFloorNumber />
+                    <newExtId />
+                    <mergeToExtId />
+                    <globalPosition />
+                    <instructions />
+
+                </data>
+            </instance>
+
+            <itext>
+               <translation lang="English">
+                  <text id="action:label">
+                     <value>Action</value>
+                  </text>
+                  <text id="action:hint">
+                     <value>How to handle the duplicate location</value>
+                  </text>
+                  <text id="action:renumber">
+                     <value>Re-number</value>
+                  </text>
+                  <text id="action:merge">
+                     <value>Merge</value>
+                  </text>
+                  <text id="action:remove">
+                     <value>Remove</value>
+                  </text>
+                  <text id="mapAreaName:label">
+                     <value>Map Area</value>
+                  </text>
+                  <text id="mapAreaName:hint">
+                     <value>Entered as 'M' and four digits</value>
+                  </text>
+                  <text id="mapAreaName:invalid_format">
+                     <value>Invalid area, must be 'M' and four digits</value>
+                  </text>
+                  <text id="sectorName:label">
+                     <value>Sector</value>
+                  </text>
+                  <text id="sectorName:hint">
+                     <value>Entered as 'S' and three digits</value>
+                  </text>
+                  <text id="sectorName:invalid_format">
+                     <value>Invalid sector, must be 'S' and 3 digits</value>
+                  </text>
+                  <text id="locationBuildingNumber:label">
+                     <value>Building</value>
+                  </text>
+                  <text id="locationBuildingNumber:hint">
+                     <value>Entered as 'E' and two digits</value>
+                  </text>
+                  <text id="locationBuildingNumber:invalid_format">
+                     <value>Invalid building, must be 'E' and 2 digits</value>
+                  </text>
+                  <text id="locationFloorNumber:label">
+                     <value>Floor</value>
+                  </text>
+                  <text id="locationFloorNumber:hint">
+                     <value>Entered as 'P' and 1 digit</value>
+                  </text>
+                  <text id="locationFloorNumber:invalid_format">
+                     <value>Invalid floor, must be 'P' and 1 digit</value>
+                  </text>
+                  <text id="newExtId:label">
+                     <value>New ID Number</value>
+                  </text>
+                  <text id="newExtId:hint">
+                     <value>The new id to assign to the duplicate location</value>
+                  </text>
+                  <text id="mergeToExtId:label">
+                     <value>Merge With Location</value>
+                  </text>
+                  <text id="mergeToExtId:hint">
+                     <value>The id of the existing location to merge the duplicate with</value>
+                  </text>
+                  <text id="locationId:invalid_format">
+                     <value>Invalid location, must be format M####S###E##P# and not match the original</value>
+                  </text>
+                  <text id="globalPosition:label">
+                     <value>Global Position</value>
+                  </text>
+                  <text id="globalPosition:hint">
+                     <value>The GPS coordinates of the location</value>
+                  </text>
+                  <text id="instructions:label">
+                     <value>Instructions</value>
+                  </text>
+                  <text id="instructions:hint">
+                     <value>Additional information or handling instructions for the duplicate location</value>
+                  </text>
+               </translation> 
+            </itext>
+
+            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()"/>
+            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+            <bind nodeset="/data/action" type="string" required="true()"/>
+            <bind nodeset="/data/mapAreaName" type="string" required="true()" relevant="/data/action != 'remove'"
+                  constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
+            <bind nodeset="/data/sectorName" type="string" required="true()" relevant="/data/action != 'remove'"
+                  constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
+            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" relevant="/data/action != 'remove'"
+                  constraint="regex(.,'E[0-9]{2}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
+            <bind nodeset="/data/locationFloorNumber" type="string" required="true()" relevant="/data/action != 'remove'"
+                  constraint="regex(.,'P[0-9]')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
+            <bind nodeset="/data/newExtId" type="string" required="true()" readonly="true()" relevant="/data/action = 'renumber'"
+                  calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
+                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{2}P[0-9]')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
+            <bind nodeset="/data/mergeToExtId" type="string" required="true()" readonly="true" relevant="/data/action = 'merge'"
+                  calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
+                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{2}P[0-9]')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
+            <bind nodeset="/data/globalPosition" type="geopoint" relevant="/data/action != 'remove'" />
+            <bind nodeset="/data/instructions" type="string" />
+
+        </model>
+    </h:head>
+    <h:body>
+      <group appearance="field-list" ref="/data">
+         <label>
+            <output value="entityExtId"/>
+         </label>
+         <select1 ref="action">
+            <label ref="jr:itext('action:label')"/>
+            <hint ref="jr:itext('action:hint')"/>
+            <item>
+               <label ref="jr:itext('action:renumber')"/>
+               <value>renumber</value>
+            </item>
+            <item>
+               <label ref="jr:itext('action:merge')"/>
+               <value>merge</value>
+            </item>
+            <item>
+               <label ref="jr:itext('action:remove')"/>
+               <value>remove</value>
+            </item>
+         </select1>
+      </group>
+      <group ref="/data" appearance="field-list">
+         <label>
+            <output value="entityExtId"/>
+         </label>
+         <input ref="mapAreaName">
+            <label ref="jr:itext('mapAreaName:label')"/>
+            <hint ref="jr:itext('mapAreaName:hint')"/>
+         </input>
+         <input ref="sectorName">
+            <label ref="jr:itext('sectorName:label')"/>
+            <hint ref="jr:itext('sectorName:hint')"/>
+         </input>
+         <input ref="locationBuildingNumber">
+            <label ref="jr:itext('locationBuildingNumber:label')"/>
+            <hint ref="jr:itext('locationBuildingNumber:hint')"/>
+         </input>
+         <input ref="locationFloorNumber">
+            <label ref="jr:itext('locationFloorNumber:label')"/>
+            <hint ref="jr:itext('locationFloorNumber:hint')"/>
+         </input>
+      </group>
+      <group ref="/data">
+         <label>
+            <output value="entityExtId"/>
+            <output value="concat(if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),'')),'?')"/>
+         </label>
+         <input ref="newExtId">
+            <label ref="jr:itext('newExtId:label')"/>
+            <hint ref="jr:itext('newExtId:hint')"/>
+         </input>
+         <input ref="mergeToExtId">
+            <label ref="jr:itext('mergeToExtId:label')"/>
+            <hint ref="jr:itext('mergeToExtId:hint')"/>
+         </input>
+      </group>
+      <group ref="/data">
+         <label>
+            <output value="entityExtId"/>
+            <output value="if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),''))"/>
+         </label>
+         <input ref="globalPosition" appearance="maps">
+            <label ref="jr:itext('globalPosition:label')"/>
+            <hint ref="jr:itext('globalPosition:hint')"/>
+         </input>
+      </group>
+      <group ref="/data">
+         <label>
+            <output value="entityExtId"/>
+            <output value="if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),''))"/>
+         </label>
+         <input ref="instructions" rows="8">
+            <label ref="jr:itext('instructions:label')"/>
+            <hint ref="jr:itext('instructions:hint')"/>
+         </input>
+      </group>
+    </h:body>
+</h:html>
