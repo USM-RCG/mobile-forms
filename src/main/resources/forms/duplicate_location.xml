@@ -204,7 +204,7 @@
             <output value="entityExtId"/>
             <output value="if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),''))"/>
          </label>
-         <input ref="globalPosition" appearance="maps">
+         <input ref="globalPosition">
             <label ref="jr:itext('globalPosition:label')"/>
             <hint ref="jr:itext('globalPosition:hint')"/>
          </input>
