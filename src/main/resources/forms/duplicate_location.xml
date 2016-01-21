@@ -73,19 +73,19 @@
                      <value>Building</value>
                   </text>
                   <text id="locationBuildingNumber:hint">
-                     <value>Entered as 'E' and two to three digits</value>
+                     <value>Entered as 'E' and three digits</value>
                   </text>
                   <text id="locationBuildingNumber:invalid_format">
-                     <value>Invalid building, must be 'E' and 2-3 digits</value>
+                     <value>Invalid building, must be 'E' and 3 digits</value>
                   </text>
                   <text id="locationFloorNumber:label">
                      <value>Floor</value>
                   </text>
                   <text id="locationFloorNumber:hint">
-                     <value>Entered as 'P' and 1 digit</value>
+                     <value>Entered as 'P' and 2 digits</value>
                   </text>
                   <text id="locationFloorNumber:invalid_format">
-                     <value>Invalid floor, must be 'P' and 1 digit</value>
+                     <value>Invalid floor, must be 'P' and 2 digits</value>
                   </text>
                   <text id="newExtId:label">
                      <value>New ID Number</value>
@@ -100,7 +100,7 @@
                      <value>The id of the existing location to merge the duplicate with</value>
                   </text>
                   <text id="locationId:invalid_format">
-                     <value>Invalid location, must be format M####S###E##P# and not match the original</value>
+                     <value>Invalid location, must be format M####S###E###P## and not match the original</value>
                   </text>
                   <text id="globalPosition:label">
                      <value>Global Position</value>
@@ -128,15 +128,15 @@
             <bind nodeset="/data/sectorName" type="string" required="true()" relevant="/data/action != 'remove'"
                   constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
             <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" relevant="/data/action != 'remove'"
-                  constraint="regex(.,'E[1-9]?[0-9]{2}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
+                  constraint="regex(.,'E[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
             <bind nodeset="/data/locationFloorNumber" type="string" required="true()" relevant="/data/action != 'remove'"
-                  constraint="regex(.,'P[0-9]')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
+                  constraint="regex(.,'P[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
             <bind nodeset="/data/newExtId" type="string" required="true()" readonly="true()" relevant="/data/action = 'renumber'"
                   calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
-                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[1-9]?[0-9]{2}P[0-9]')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
+                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
             <bind nodeset="/data/mergeToExtId" type="string" required="true()" readonly="true" relevant="/data/action = 'merge'"
                   calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
-                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[1-9]?[0-9]{2}P[0-9]')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
+                  constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
             <bind nodeset="/data/globalPosition" type="geopoint" relevant="/data/action != 'remove'" />
             <bind nodeset="/data/instructions" type="string" />
 
