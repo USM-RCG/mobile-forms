@@ -114,7 +114,87 @@
                   <text id="instructions:hint">
                      <value>Additional information or handling instructions for the duplicate location</value>
                   </text>
-               </translation> 
+               </translation>
+               <translation lang="Spanish">
+                  <text id="action:label">
+                     <value>Proceso</value>
+                  </text>
+                  <text id="action:hint">
+                     <value>Cómo gestionar la casa duplicada</value>
+                  </text>
+                  <text id="action:renumber">
+                     <value>Reasignar un código único nuevo</value>
+                  </text>
+                  <text id="action:merge">
+                     <value>Unir</value>
+                  </text>
+                  <text id="action:remove">
+                     <value>Eliminar</value>
+                  </text>
+                  <text id="mapAreaName:label">
+                     <value>Mapa de Área</value>
+                  </text>
+                  <text id="mapAreaName:hint">
+                     <value>Ingresar 'M' y cuatro dígitos</value>
+                  </text>
+                  <text id="mapAreaName:invalid_format">
+                     <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
+                  </text>
+                  <text id="sectorName:label">
+                     <value>Sector</value>
+                  </text>
+                  <text id="sectorName:hint">
+                     <value>Ingresar 'S' y tres dígitos</value>
+                  </text>
+                  <text id="sectorName:invalid_format">
+                     <value>Sector no válido. Debe ser 'S' y 3 dígitos</value>
+                  </text>
+                  <text id="locationBuildingNumber:label">
+                     <value>Edificio</value>
+                  </text>
+                  <text id="locationBuildingNumber:hint">
+                     <value>Ingresar 'E' y tres dígitos</value>
+                  </text>
+                  <text id="locationBuildingNumber:invalid_format">
+                     <value>Edificio no válido. Debe ser 'E' y 3 dígitos</value>
+                  </text>
+                  <text id="locationFloorNumber:label">
+                     <value>Piso</value>
+                  </text>
+                  <text id="locationFloorNumber:hint">
+                     <value>Ingresar 'P' y dos dígitos</value>
+                  </text>
+                  <text id="locationFloorNumber:invalid_format">
+                     <value>Piso no válido. Debe ser 'P' y 2 dígitos</value>
+                  </text>
+                  <text id="newExtId:label">
+                     <value>Código único nuevo</value>
+                  </text>
+                  <text id="newExtId:hint">
+                     <value>Código único nuevo para asignar a la casa duplicada</value>
+                  </text>
+                  <text id="mergeToExtId:label">
+                     <value>Unir con la casa</value>
+                  </text>
+                  <text id="mergeToExtId:hint">
+                     <value>El código único de la casa existente para unir con el duplicado</value>
+                  </text>
+                  <text id="locationId:invalid_format">
+                     <value>Casa no válido. El formato debe ser M####S###E###P## y no coincide con el original</value>
+                  </text>
+                  <text id="globalPosition:label">
+                     <value>Posición Global</value>
+                  </text>
+                  <text id="globalPosition:hint">
+                     <value>Las coordenadas GPS para la casa</value>
+                  </text>
+                  <text id="instructions:label">
+                     <value>Intrucciónes</value>
+                  </text>
+                  <text id="instructions:hint">
+                     <value>Información adicional o instrucciones para gestionar la casa duplicada</value>
+                  </text>
+               </translation>
             </itext>
 
             <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
