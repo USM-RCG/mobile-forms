@@ -73,7 +73,7 @@
                      <value>Building</value>
                   </text>
                   <text id="locationBuildingNumber:hint">
-                     <value>Entered as 'E' and two digits</value>
+                     <value>Entered as 'E' and two to three digits</value>
                   </text>
                   <text id="locationBuildingNumber:invalid_format">
                      <value>Invalid building, must be 'E' and 2-3 digits</value>
