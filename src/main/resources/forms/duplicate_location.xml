@@ -35,86 +35,6 @@
             </instance>
 
             <itext>
-               <translation lang="English">
-                  <text id="action:label">
-                     <value>Action</value>
-                  </text>
-                  <text id="action:hint">
-                     <value>How to handle the duplicate location</value>
-                  </text>
-                  <text id="action:renumber">
-                     <value>Re-number</value>
-                  </text>
-                  <text id="action:merge">
-                     <value>Merge</value>
-                  </text>
-                  <text id="action:remove">
-                     <value>Remove</value>
-                  </text>
-                  <text id="mapAreaName:label">
-                     <value>Map Area</value>
-                  </text>
-                  <text id="mapAreaName:hint">
-                     <value>Entered as 'M' and four digits</value>
-                  </text>
-                  <text id="mapAreaName:invalid_format">
-                     <value>Invalid area, must be 'M' and four digits</value>
-                  </text>
-                  <text id="sectorName:label">
-                     <value>Sector</value>
-                  </text>
-                  <text id="sectorName:hint">
-                     <value>Entered as 'S' and three digits</value>
-                  </text>
-                  <text id="sectorName:invalid_format">
-                     <value>Invalid sector, must be 'S' and 3 digits</value>
-                  </text>
-                  <text id="locationBuildingNumber:label">
-                     <value>Building</value>
-                  </text>
-                  <text id="locationBuildingNumber:hint">
-                     <value>Entered as 'E' and three digits</value>
-                  </text>
-                  <text id="locationBuildingNumber:invalid_format">
-                     <value>Invalid building, must be 'E' and 3 digits</value>
-                  </text>
-                  <text id="locationFloorNumber:label">
-                     <value>Floor</value>
-                  </text>
-                  <text id="locationFloorNumber:hint">
-                     <value>Entered as 'P' and 2 digits</value>
-                  </text>
-                  <text id="locationFloorNumber:invalid_format">
-                     <value>Invalid floor, must be 'P' and 2 digits</value>
-                  </text>
-                  <text id="newExtId:label">
-                     <value>New ID Number</value>
-                  </text>
-                  <text id="newExtId:hint">
-                     <value>The new id to assign to the duplicate location</value>
-                  </text>
-                  <text id="mergeToExtId:label">
-                     <value>Merge With Location</value>
-                  </text>
-                  <text id="mergeToExtId:hint">
-                     <value>The id of the existing location to merge the duplicate with</value>
-                  </text>
-                  <text id="locationId:invalid_format">
-                     <value>Invalid location, must be format M####S###E###P## and not match the original</value>
-                  </text>
-                  <text id="globalPosition:label">
-                     <value>Global Position</value>
-                  </text>
-                  <text id="globalPosition:hint">
-                     <value>The GPS coordinates of the location</value>
-                  </text>
-                  <text id="instructions:label">
-                     <value>Instructions</value>
-                  </text>
-                  <text id="instructions:hint">
-                     <value>Additional information or handling instructions for the duplicate location</value>
-                  </text>
-               </translation>
                <translation lang="Spanish">
                   <text id="action:label">
                      <value>Proceso</value>
@@ -193,6 +113,86 @@
                   </text>
                   <text id="instructions:hint">
                      <value>Información adicional o instrucciones para gestionar la casa duplicada</value>
+                  </text>
+               </translation>
+               <translation lang="English">
+                  <text id="action:label">
+                     <value>Action</value>
+                  </text>
+                  <text id="action:hint">
+                     <value>How to handle the duplicate location</value>
+                  </text>
+                  <text id="action:renumber">
+                     <value>Re-number</value>
+                  </text>
+                  <text id="action:merge">
+                     <value>Merge</value>
+                  </text>
+                  <text id="action:remove">
+                     <value>Remove</value>
+                  </text>
+                  <text id="mapAreaName:label">
+                     <value>Map Area</value>
+                  </text>
+                  <text id="mapAreaName:hint">
+                     <value>Entered as 'M' and four digits</value>
+                  </text>
+                  <text id="mapAreaName:invalid_format">
+                     <value>Invalid area, must be 'M' and four digits</value>
+                  </text>
+                  <text id="sectorName:label">
+                     <value>Sector</value>
+                  </text>
+                  <text id="sectorName:hint">
+                     <value>Entered as 'S' and three digits</value>
+                  </text>
+                  <text id="sectorName:invalid_format">
+                     <value>Invalid sector, must be 'S' and 3 digits</value>
+                  </text>
+                  <text id="locationBuildingNumber:label">
+                     <value>Building</value>
+                  </text>
+                  <text id="locationBuildingNumber:hint">
+                     <value>Entered as 'E' and three digits</value>
+                  </text>
+                  <text id="locationBuildingNumber:invalid_format">
+                     <value>Invalid building, must be 'E' and 3 digits</value>
+                  </text>
+                  <text id="locationFloorNumber:label">
+                     <value>Floor</value>
+                  </text>
+                  <text id="locationFloorNumber:hint">
+                     <value>Entered as 'P' and 2 digits</value>
+                  </text>
+                  <text id="locationFloorNumber:invalid_format">
+                     <value>Invalid floor, must be 'P' and 2 digits</value>
+                  </text>
+                  <text id="newExtId:label">
+                     <value>New ID Number</value>
+                  </text>
+                  <text id="newExtId:hint">
+                     <value>The new id to assign to the duplicate location</value>
+                  </text>
+                  <text id="mergeToExtId:label">
+                     <value>Merge With Location</value>
+                  </text>
+                  <text id="mergeToExtId:hint">
+                     <value>The id of the existing location to merge the duplicate with</value>
+                  </text>
+                  <text id="locationId:invalid_format">
+                     <value>Invalid location, must be format M####S###E###P## and not match the original</value>
+                  </text>
+                  <text id="globalPosition:label">
+                     <value>Global Position</value>
+                  </text>
+                  <text id="globalPosition:hint">
+                     <value>The GPS coordinates of the location</value>
+                  </text>
+                  <text id="instructions:label">
+                     <value>Instructions</value>
+                  </text>
+                  <text id="instructions:hint">
+                     <value>Additional information or handling instructions for the duplicate location</value>
                   </text>
                </translation>
             </itext>
