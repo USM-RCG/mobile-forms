@@ -5,8 +5,9 @@
         <h:title>Out Migration</h:title>
         <model>
             <instance>
-                <data id="out_migration" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="out_migration" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

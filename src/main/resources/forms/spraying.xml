@@ -5,8 +5,9 @@
         <h:title>IRS</h:title>
         <model>
             <instance>
-                <data id="spraying" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="spraying" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

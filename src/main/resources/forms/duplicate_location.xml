@@ -5,9 +5,9 @@
         <h:title>Duplicate Location</h:title>
         <model>
             <instance>
-                <data id="duplicate_location" version="${openhds.tag.number}">
+                <data id="duplicate_location" version="1">
 
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                    <openhdsTagName>cims-server-2.0</openhdsTagName>
 
                     <meta>
                         <instanceID />

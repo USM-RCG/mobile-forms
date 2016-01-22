@@ -5,8 +5,9 @@
         <h:title>Individual</h:title>
         <model>
             <instance>
-                <data id="individual" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="individual" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

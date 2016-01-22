@@ -5,8 +5,9 @@
         <h:title>Death</h:title>
         <model>
             <instance>
-                <data id="death" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="death" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

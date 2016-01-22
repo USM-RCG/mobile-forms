@@ -5,8 +5,9 @@
         <h:title>Bed Net</h:title>
         <model>
             <instance>
-                <data id="bed_net" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="bed_net" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

@@ -5,8 +5,9 @@
         <h:title>Pregnancy Outcome</h:title>
         <model>
             <instance>
-                <data id="pregnancy_outcome" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="pregnancy_outcome" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>

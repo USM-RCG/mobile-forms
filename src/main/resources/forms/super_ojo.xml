@@ -4,8 +4,10 @@
     <h:title>Super Ojo</h:title>
     <model>
       <instance>
-        <data id="super_ojo" version="${openhds.tag.number}">
-          <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+        <data id="super_ojo" version="12">
+
+          <openhdsTagName>giga-gegenschein</openhdsTagName>
+
           <collectionDateTime/>
           <processedByMirth/>
           <needsReview/>

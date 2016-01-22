@@ -5,8 +5,9 @@
         <h:title>Location Evaluation</h:title>
         <model>
             <instance>
-                <data id="location_evaluation" version="${openhds.tag.number}">
-                    <openhdsTagName>${openhds.tag.name}</openhdsTagName>
+                <data id="location_evaluation" version="12">
+
+                    <openhdsTagName>giga-gegenschein</openhdsTagName>
 
                     <meta>
                         <instanceID/>
