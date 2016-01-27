@@ -270,7 +270,7 @@
 
             <bind nodeset="/data/description" type="string"/>
 
-            <bind nodeset="/data/location" type="geopoint" required="true()"/>
+            <bind nodeset="/data/location" type="geopoint"/>
 
         </model>
     </h:head>
