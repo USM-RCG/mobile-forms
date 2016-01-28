@@ -304,14 +304,20 @@
             </input>
         </group>
         <group appearance="field-list">
-            <input ref="/data/hierarchyExtId">
-                <label ref="jr:itext('/data/hierarchyExtId:label')"/>
-                <hint ref="jr:itext('/data/hierarchyExtId:hint')"/>
+            <input ref="/data/communityCode">
+                <label ref="jr:itext('/data/communityCode:label')"/>
+                <hint ref="jr:itext('/data/communityCode:hint')"/>
+            </input>
+            <input ref="/data/communityName">
+                <label ref="jr:itext('/data/communityName:label')"/>
+                <hint ref="jr:itext('/data/communityName:hint')"/>
             </input>
             <input ref="/data/localityName">
                 <label ref="jr:itext('/data/localityName:label')"/>
                 <hint ref="jr:itext('/data/localityName:hint')"/>
             </input>
+        </group>
+        <group appearance="field-list">
             <input ref="/data/mapAreaName">
                 <label ref="jr:itext('/data/mapAreaName:label')"/>
                 <hint ref="jr:itext('/data/mapAreaName:hint')"/>
@@ -320,9 +326,6 @@
                 <label ref="jr:itext('/data/sectorName:label')"/>
                 <hint ref="jr:itext('/data/sectorName:hint')"/>
             </input>
-
-        </group>
-        <group>
             <input ref="/data/locationBuildingNumber">
                 <label ref="jr:itext('/data/locationBuildingNumber:label')"/>
                 <hint ref="jr:itext('/data/locationBuildingNumber:hint')"/>
@@ -332,43 +335,41 @@
                 <hint ref="jr:itext('/data/locationFloorNumber:hint')"/>
             </input>
         </group>
-        <input ref="/data/locationExtId">
-            <label ref="jr:itext('/data/locationExtId:label')"/>
-            <hint ref="jr:itext('/data/locationExtId:hint')"/>
-        </input>
+        <group appearance="field-list">
+            <input ref="/data/hierarchyExtId">
+                <label ref="jr:itext('/data/hierarchyExtId:label')"/>
+                <hint ref="jr:itext('/data/hierarchyExtId:hint')"/>
+            </input>
+            <input ref="/data/locationExtId">
+                <label ref="jr:itext('/data/locationExtId:label')"/>
+                <hint ref="jr:itext('/data/locationExtId:hint')"/>
+            </input>
+        </group>
+        <group appearance="field-list">
+            <input ref="/data/locationName">
+                <label ref="jr:itext('/data/locationName:label')"/>
+                <hint ref="jr:itext('/data/locationName:hint')"/>
+            </input>
+            <input ref="/data/description">
+                <label ref="jr:itext('/data/description:label')"/>
+                <hint ref="jr:itext('/data/description:hint')"/>
+            </input>
+            <select1 ref="/data/locationType">
+                <label ref="jr:itext('/data/locationType:label')"/>
+                <hint ref="jr:itext('/data/locationType:hint')"/>
+                <item>
+                    <label ref="jr:itext('/data/locationType:option0')"/>
+                    <value>RUR</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/locationType:option1')"/>
+                    <value>URB</value>
+                </item>
+            </select1>
+        </group>
         <input ref="/data/location">
             <label ref="jr:itext('/data/location:label')"/>
             <hint ref="jr:itext('/data/location:hint')"/>
-        </input>
-        <input ref="/data/locationName">
-            <label ref="jr:itext('/data/locationName:label')"/>
-            <hint ref="jr:itext('/data/locationName:hint')"/>
-        </input>
-        <select1 ref="/data/locationType">
-            <label ref="jr:itext('/data/locationType:label')"/>
-            <hint ref="jr:itext('/data/locationType:hint')"/>
-            <item>
-                <label ref="jr:itext('/data/locationType:option0')"/>
-                <value>RUR</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/locationType:option1')"/>
-                <value>URB</value>
-            </item>
-        </select1>
-        <group appearance="field-list">
-            <input ref="/data/communityName">
-                <label ref="jr:itext('/data/communityName:label')"/>
-                <hint ref="jr:itext('/data/communityName:hint')"/>
-            </input>
-            <input ref="/data/communityCode">
-                <label ref="jr:itext('/data/communityCode:label')"/>
-                <hint ref="jr:itext('/data/communityCode:hint')"/>
-            </input>
-        </group>
-        <input ref="/data/description">
-            <label ref="jr:itext('/data/description:label')"/>
-            <hint ref="jr:itext('/data/description:hint')"/>
         </input>
     </h:body>
 </h:html>
