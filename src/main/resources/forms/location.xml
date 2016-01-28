@@ -274,7 +274,7 @@
             <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()"
                   constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
             <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/sectorName" type="string" required="true()" readonly="true()"
+            <bind nodeset="/data/sectorName" type="string" required="true()"
                   constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
             <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"
                   constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
