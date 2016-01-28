@@ -5,9 +5,9 @@
         <h:title>Location</h:title>
         <model>
             <instance>
-                <data id="location" version="12">
+                <data id="location" version="13">
 
-                    <openhdsTagName>giga-gegenschein</openhdsTagName>
+                    <openhdsTagName>cims-server-2.0</openhdsTagName>
 
                     <meta>
                         <instanceID/>
