@@ -269,9 +269,7 @@
             <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
             <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
-            <bind nodeset="/data/collectionDateTime" type="datetime"
-                  readonly="true()"/>
-
+            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
             <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()"
                   constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
