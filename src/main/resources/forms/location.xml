@@ -59,17 +59,26 @@
                     <text id="/data/locationExtId:hint">
                         <value/>
                     </text>
+                    <text id="locationId:invalid_format">
+                        <value>Casa no válido. El formato debe ser M####S###E###P## y no coincide con el original</value>
+                    </text>
                     <text id="/data/locationBuildingNumber:label">
                         <value># de Edificio</value>
                     </text>
                     <text id="/data/locationBuildingNumber:hint">
                         <value/>
                     </text>
+                    <text id="locationBuildingNumber:invalid_format">
+                        <value>Edificio no válido. Debe ser 3 dígitos</value>
+                    </text>
                     <text id="/data/locationFloorNumber:label">
                         <value># de Piso</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
                         <value/>
+                    </text>
+                    <text id="locationFloorNumber:invalid_format">
+                        <value>Piso no válido. Debe ser 2 dígitos</value>
                     </text>
                     <text id="/data/locationName:label">
                         <value>Nombre de Locación</value>
@@ -113,6 +122,9 @@
                     <text id="/data/mapAreaName:hint">
                         <value/>
                     </text>
+                    <text id="mapAreaName:invalid_format">
+                        <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
+                    </text>
                     <text id="/data/localityName:label">
                         <value>Nombre de la Localidad</value>
                     </text>
@@ -124,6 +136,9 @@
                     </text>
                     <text id="/data/sectorName:hint">
                         <value/>
+                    </text>
+                    <text id="sectorName:invalid_format">
+                        <value>Sector no válido. Debe ser 'S' y 3 dígitos</value>
                     </text>
                     <text id="/data/description:label">
                         <value>Descripción</value>
@@ -163,11 +178,17 @@
                     <text id="/data/locationBuildingNumber:hint">
                         <value/>
                     </text>
+                    <text id="locationBuildingNumber:invalid_format">
+                        <value>Invalid building, must be 3 digits</value>
+                    </text>
                     <text id="/data/locationFloorNumber:label">
                         <value>Floor #</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
                         <value/>
+                    </text>
+                    <text id="locationFloorNumber:invalid_format">
+                       <value>Invalid floor, must be 2 digits</value>
                     </text>
                     <text id="/data/locationName:label">
                         <value>Location Name</value>
@@ -211,6 +232,9 @@
                     <text id="/data/mapAreaName:hint">
                         <value/>
                     </text>
+                    <text id="mapAreaName:invalid_format">
+                        <value>Invalid area, must be 'M' and four digits</value>
+                    </text>
                     <text id="/data/localityName:label">
                         <value>Locality Name</value>
                     </text>
@@ -222,6 +246,9 @@
                     </text>
                     <text id="/data/sectorName:hint">
                         <value/>
+                    </text>
+                    <text id="sectorName:invalid_format">
+                        <value>Invalid sector, must be 'S' and 3 digits</value>
                     </text>
                     <text id="/data/description:label">
                         <value>Description</value>
@@ -246,20 +273,18 @@
                   readonly="true()"/>
 
             <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
-
-            <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()"/>
-
+            <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()"
+                  constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
             <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
-
-            <bind nodeset="/data/sectorName" type="string" required="true()"/>
-
-            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"/>
-
-            <bind nodeset="/data/locationFloorNumber" type="string" required="true()"/>
-
+            <bind nodeset="/data/sectorName" type="string" required="true()" readonly="true()"
+                  constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
+            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"
+                  constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
+            <bind nodeset="/data/locationFloorNumber" type="string" required="true()"
+                  constraint="regex(.,'[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"
-                  calculate="concat(/data/mapAreaName,/data/sectorName,'E',/data/locationBuildingNumber,'P',/data/locationFloorNumber)"/>
-
+                  calculate="concat(/data/mapAreaName,/data/sectorName,'E',/data/locationBuildingNumber,'P',/data/locationFloorNumber)"
+                  constraint="regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
             <bind nodeset="/data/locationName" type="string" required="true()"/>
 
             <bind nodeset="/data/locationType" type="select1" required="true()"/>
