@@ -7,7 +7,7 @@
             <instance>
                 <data id="duplicate_location" version="1">
 
-                    <openhdsTagName>cims-server-2.0</openhdsTagName>
+                    <openhdsTagName>cims-server-2.2</openhdsTagName>
 
                     <meta>
                         <instanceID />
@@ -51,6 +51,9 @@
                   </text>
                   <text id="action:remove">
                      <value>Eliminar</value>
+                  </text>
+                  <text id="action:gps-only">
+                     <value>Sólo GPS</value>
                   </text>
                   <text id="mapAreaName:label">
                      <value>Mapa de Área</value>
@@ -138,6 +141,9 @@
                   <text id="action:remove">
                      <value>Remove</value>
                   </text>
+                  <text id="action:gps-only">
+                     <value>GPS Only</value>
+                  </text>
                   <text id="mapAreaName:label">
                      <value>Map Area</value>
                   </text>
@@ -216,13 +222,13 @@
             <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
             <bind nodeset="/data/action" type="string" required="true()"/>
-            <bind nodeset="/data/mapAreaName" type="string" required="true()" relevant="/data/action != 'remove'"
+            <bind nodeset="/data/mapAreaName" type="string" required="true()" relevant="/data/action = 'renumber' or /data/action = 'merge'"
                   constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
-            <bind nodeset="/data/sectorName" type="string" required="true()" relevant="/data/action != 'remove'"
+            <bind nodeset="/data/sectorName" type="string" required="true()" relevant="/data/action = 'renumber' or /data/action = 'merge'"
                   constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
-            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" relevant="/data/action != 'remove'"
+            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" relevant="/data/action = 'renumber' or /data/action = 'merge'"
                   constraint="regex(.,'E[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
-            <bind nodeset="/data/locationFloorNumber" type="string" required="true()" relevant="/data/action != 'remove'"
+            <bind nodeset="/data/locationFloorNumber" type="string" required="true()" relevant="/data/action = 'renumber' or /data/action = 'merge'"
                   constraint="regex(.,'P[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
             <bind nodeset="/data/newExtId" type="string" required="true()" readonly="true()" relevant="/data/action = 'renumber'"
                   calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
@@ -230,9 +236,9 @@
             <bind nodeset="/data/mergeToExtId" type="string" required="true()" readonly="true" relevant="/data/action = 'merge'"
                   calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
                   constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
-            <bind nodeset="/data/description" type="string" />
+            <bind nodeset="/data/description" type="string" relevant="/data/action = 'renumber' or /data/action = 'merge'"/>
             <bind nodeset="/data/globalPosition" type="geopoint" relevant="/data/action != 'remove'" />
-            <bind nodeset="/data/instructions" type="string" />
+            <bind nodeset="/data/instructions" type="string" relevant="/data/action = 'renumber' or /data/action = 'merge'"/>
 
         </model>
     </h:head>
@@ -251,6 +257,10 @@
             <item>
                <label ref="jr:itext('action:merge')"/>
                <value>merge</value>
+            </item>
+            <item>
+               <label ref="jr:itext('action:gps-only')"/>
+               <value>gps-only</value>
             </item>
             <item>
                <label ref="jr:itext('action:remove')"/>
