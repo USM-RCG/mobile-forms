@@ -5,7 +5,7 @@
         <h:title>Duplicate Location</h:title>
         <model>
             <instance>
-                <data id="duplicate_location" version="1">
+                <data id="duplicate_location" version="2">
 
                     <openhdsTagName>cims-server-2.2</openhdsTagName>
 
@@ -236,7 +236,7 @@
             <bind nodeset="/data/mergeToExtId" type="string" required="true()" readonly="true" relevant="/data/action = 'merge'"
                   calculate="concat(/data/mapAreaName,/data/sectorName,/data/locationBuildingNumber,/data/locationFloorNumber)"
                   constraint=".!=/data/entityExtId and regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
-            <bind nodeset="/data/description" type="string" relevant="/data/action = 'renumber' or /data/action = 'merge'"/>
+            <bind nodeset="/data/description" type="string" relevant="/data/action != 'remove'"/>
             <bind nodeset="/data/globalPosition" type="geopoint" relevant="/data/action != 'remove'" />
             <bind nodeset="/data/instructions" type="string" relevant="/data/action = 'renumber' or /data/action = 'merge'"/>
 
@@ -292,7 +292,7 @@
       <group ref="/data" appearance="field-list">
          <label>
             <output value="entityExtId"/>
-            <output value="concat(if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),'')),'?')"/>
+            <output value="if(action='renumber' or action='merge',concat(if(action='renumber',concat(' -&gt; ',newExtId),if(action='merge',concat(' -&gt; ',mergeToExtId),'')),'?'),'')"/>
          </label>
          <input ref="newExtId">
             <label ref="jr:itext('newExtId:label')"/>
