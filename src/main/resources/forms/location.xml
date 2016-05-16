@@ -63,7 +63,7 @@
                         <value>Casa no válido. El formato debe ser M####S###E###P## y no coincide con el original</value>
                     </text>
                     <text id="/data/locationBuildingNumber:label">
-                        <value># de Edificio</value>
+                        <value>Número de Edificio</value>
                     </text>
                     <text id="/data/locationBuildingNumber:hint">
                         <value/>
@@ -72,7 +72,7 @@
                         <value>Edificio no válido. Debe ser 3 dígitos</value>
                     </text>
                     <text id="/data/locationFloorNumber:label">
-                        <value># de Piso</value>
+                        <value>Número de Piso</value>
                     </text>
                     <text id="/data/locationFloorNumber:hint">
                         <value/>
