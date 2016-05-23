@@ -29,6 +29,8 @@
                     <locationFloorNumber/>
                     <locationName/>
                     <locationType/>
+                    <housingType/>
+                    <housingTypeOther/>
                     <communityName/>
                     <communityCode/>
                     <mapAreaName/>
@@ -103,6 +105,39 @@
                     </text>
                     <text id="/data/locationType:option1">
                         <value>Urbano</value>
+                    </text>
+                    <text id="/data/housingType:label">
+                        <value>Clasificación de la vivienda</value>
+                    </text>
+                    <text id="/data/housingType:hint">
+                        <value/>
+                    </text>
+                    <text id="/data/housingType:social">
+                        <value>Vivienda social</value>
+                    </text>
+                    <text id="/data/housingType:barracks">
+                        <value>Barracón</value>
+                    </text>
+                    <text id="/data/housingType:apartment">
+                        <value>Apartamento</value>
+                    </text>
+                    <text id="/data/housingType:private">
+                        <value>Casa particular</value>
+                    </text>
+                    <text id="/data/housingType:temporary">
+                        <value>Casa provisional</value>
+                    </text>
+                    <text id="/data/housingType:camp">
+                        <value>Campamento</value>
+                    </text>
+                    <text id="/data/housingType:other">
+                        <value>Otro</value>
+                    </text>
+                    <text id="/data/housingTypeOther:label">
+                        <value>Descripción clasificación de la vivienda</value>
+                    </text>
+                    <text id="/data/housingTypeOther:hint">
+                        <value>Describir la vivienda otra clasificación</value>
                     </text>
                     <text id="/data/communityName:label">
                         <value>Nombre de la Comunidad</value>
@@ -214,6 +249,39 @@
                     <text id="/data/locationType:option1">
                         <value>Urban</value>
                     </text>
+                    <text id="/data/housingType:label">
+                        <value>Housing Type</value>
+                    </text>
+                    <text id="/data/housingType:hint">
+                        <value/>
+                    </text>
+                    <text id="/data/housingType:social">
+                        <value>Social Housing</value>
+                    </text>
+                    <text id="/data/housingType:barracks">
+                        <value>Barracks</value>
+                    </text>
+                    <text id="/data/housingType:apartment">
+                        <value>Apartment</value>
+                    </text>
+                    <text id="/data/housingType:private">
+                        <value>Private Home</value>
+                    </text>
+                    <text id="/data/housingType:temporary">
+                        <value>Temporary Home</value>
+                    </text>
+                    <text id="/data/housingType:camp">
+                        <value>Camp</value>
+                    </text>
+                    <text id="/data/housingType:other">
+                        <value>Other</value>
+                    </text>
+                    <text id="/data/housingTypeOther:label">
+                        <value>Housing type description</value>
+                    </text>
+                    <text id="/data/housingTypeOther:hint">
+                        <value>Describe other housing type</value>
+                    </text>
                     <text id="/data/communityName:label">
                         <value>Community Name</value>
                     </text>
@@ -285,6 +353,8 @@
                   constraint="regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
             <bind nodeset="/data/locationName" type="string" required="true()"/>
             <bind nodeset="/data/locationType" type="select1" required="true()"/>
+            <bind nodeset="/data/housingType" type="select1" required="true()" />
+            <bind nodeset="/data/housingTypeOther" type="string" required="true()" relevant="selected(/data/housingType, 'other')" />
             <bind nodeset="/data/communityName" type="string" readonly="true()"/>
             <bind nodeset="/data/communityCode" type="string" readonly="true()"/>
             <bind nodeset="/data/description" type="string"/>
@@ -366,7 +436,43 @@
                     <value>URB</value>
                 </item>
             </select1>
+            <select1 ref="/data/housingType">
+                <label ref="jr:itext('/data/housingType:label')"/>
+                <hint ref="jr:itext('/data/housingType:hint')"/>
+                <item>
+                    <label ref="jr:itext('/data/housingType:social')"/>
+                    <value>social</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:barracks')"/>
+                    <value>barracks</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:apartment')"/>
+                    <value>apartment</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:private')"/>
+                    <value>private</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:temporary')"/>
+                    <value>temporary</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:camp')"/>
+                    <value>camp</value>
+                </item>
+                <item>
+                    <label ref="jr:itext('/data/housingType:other')"/>
+                    <value>other</value>
+                </item>
+            </select1>
         </group>
+        <input ref="/data/housingTypeOther">
+            <label ref="jr:itext('/data/housingTypeOther:label')"/>
+            <hint ref="jr:itext('/data/housingTypeOther:hint')"/>
+        </input>
         <input ref="/data/location">
             <label ref="jr:itext('/data/location:label')"/>
             <hint ref="jr:itext('/data/location:hint')"/>
