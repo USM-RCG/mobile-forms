@@ -25,8 +25,10 @@
                     <visitUuid/>
                     <locationExtId/>
                     <locationUuid/>
-                    <individualExtId/>
-                    <individualUuid/>
+                    <individual>
+                      <uuid/>
+                      <extId/>
+                    </individual>
                     <migrationType/>
                     <migrationDate/>
                     <migrationOrigin/>
@@ -65,11 +67,22 @@
                     <text id="/data/locationExtId:hint">
                         <value/>
                     </text>
+                    <text id="/data/individual:label">
+                        <value>Por favor seleccione migrante</value>
+                        <value form="buttonText">Buscar Migrante</value>
+                        <value form="noAppErrorString">CIMS búsqueda individual no disponible</value>
+                    </text>
                     <text id="/data/migrationType:label">
                         <value>Tipo de Migración</value>
                     </text>
                     <text id="/data/migrationType:hint">
                         <value/>
+                    </text>
+                    <text id="/data/individual/uuid:label">
+                        <value>Identificación Migrante Interno</value>
+                    </text>
+                    <text id="/data/individual/extId:label">
+                        <value>Identificación Migrante</value>
                     </text>
 
                     <text id="/data/migrationDate:label">
@@ -117,11 +130,16 @@
                     <text id="/data/locationExtId:hint">
                         <value/>
                     </text>
-                    <text id="/data/individualExtId:label">
-                        <value>Individual Ext Id</value>
+                    <text id="/data/individual:label">
+                        <value>Please select migrant</value>
+                        <value form="buttonText">Migrant Search</value>
+                        <value form="noAppErrorString">CIMS individual search unavailable</value>
                     </text>
-                    <text id="/data/individualExtId:hint">
-                        <value/>
+                    <text id="/data/individual/uuid:label">
+                        <value>Internal Migrant ID</value>
+                    </text>
+                    <text id="/data/individual/extId:label">
+                        <value>Migrant ID</value>
                     </text>
                     <text id="/data/migrationType:label">
                         <value>Migration Type</value>
@@ -129,7 +147,6 @@
                     <text id="/data/migrationType:hint">
                         <value/>
                     </text>
-
                     <text id="/data/migrationDate:label">
                         <value>Migration Date</value>
                     </text>
@@ -157,15 +174,24 @@
             <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
             <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()"/>
+            <bind nodeset="/data/individual/uuid" type="string" required="true()"/>
+            <bind nodeset="/data/individual/extId" type="string" required="true()"/>
             <bind nodeset="/data/migrationType" type="string" required="true()" readonly="true()"/>
-
             <bind nodeset="/data/migrationDate" type="date" required="true()" constraint="not(. > today())"/>
             <bind nodeset="/data/migrationOrigin" type="string" required="true()"/>
             <bind nodeset="/data/migrationReason" type="string" required="true()"/>
         </model>
     </h:head>
     <h:body>
+        <group ref="/data/individual" appearance="field-list" intent="org.cims_bioko.ENTITY_SEARCH(entity='INDIVIDUAL')">
+            <label ref="jr:itext('/data/individual:label')"/>
+            <input ref="uuid">
+                <label ref="jr:itext('/data/individual/uuid:label')"/>
+            </input>
+            <input ref="extId">
+                <label ref="jr:itext('/data/individual/extId:label')"/>
+            </input>
+        </group>
         <input ref="/data/migrationDate">
             <label ref="jr:itext('/data/migrationDate:label')"/>
             <hint ref="jr:itext('/data/migrationDate:hint')"/>

@@ -26,7 +26,10 @@
                     <visitUuid/>
                     <socialgroupUuid/>
                     <motherUuid/>
-                    <fatherUuid/>
+                    <father>
+                        <uuid/>
+                        <extId/>
+                    </father>
 
                     <deliveryDate/>
                     <numberOfOutcomes/>
@@ -75,6 +78,17 @@
                     </text>
                     <text id="/data/numberOfOutcomes:hint">
                         <value/>
+                    </text>
+                    <text id="/data/father:label">
+                        <value>Please select father</value>
+                        <value form="buttonText">Paternity Search</value>
+                        <value form="noAppErrorString">CIMS individual search unavailable</value>
+                    </text>
+                    <text id="/data/father/uuid:label">
+                        <value>Internal Father ID</value>
+                    </text>
+                    <text id="/data/father/extId:label">
+                        <value>Father ID</value>
                     </text>
 
                     <text id="/data/outcomes/outcomeType:label">
@@ -195,6 +209,8 @@
             <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
             <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
             <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+            <bind nodeset="/data/father/uuid" type="string" required="true"/>
+            <bind nodeset="/data/father/extId" type="string" required="true"/>
             <bind nodeset="/data/deliveryDate" type="date" required="true()"/>
             <bind nodeset="/data/numberOfOutcomes" type="int" required="true()" constraint="not(. &lt; 0)"/>
             <bind nodeset="/data/pregnancyOutcomeUuidPlaceholder" type="string" calculate="uuid()"/>
@@ -226,6 +242,15 @@
     </h:head>
 
     <h:body>
+        <group ref="/data/father" appearance="field-list" intent="org.cims_bioko.ENTITY_SEARCH(entity='INDIVIDUAL')">
+            <label ref="jr:itext('/data/father:label')"/>
+            <input ref="uuid">
+                <label ref="jr:itext('/data/father/uuid:label')"/>
+            </input>
+            <input ref="extId">
+                <label ref="jr:itext('/data/father/extId:label')"/>
+            </input>
+        </group>
         <group appearance="field-list">
             <input ref="/data/deliveryDate">
                 <label ref="jr:itext('/data/deliveryDate:label')"/>
