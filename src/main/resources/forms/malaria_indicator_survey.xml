@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Malaria Indicator Survey</h:title>
@@ -8,13 +8,13 @@
           <text id="/data/WhatHappenedToNet/2:label">
             <value>La tela fue destrozada accidentalmente</value>
           </text>
-		  <text id="/data/individual/Travelled2Weeks/99:label">
+          <text id="/data/individual/Travelled2Weeks/99:label">
             <value>no sabe</value>
           </text>
-		  <text id="/data/individual/Travelled2Weeks/0:label">
+          <text id="/data/individual/Travelled2Weeks/0:label">
             <value>no</value>
           </text>
-		  <text id="/data/individual/Travelled2Weeks/1:label">
+          <text id="/data/individual/Travelled2Weeks/1:label">
             <value>si</value>
           </text>
           <text id="/data/individual/WhereTravelled2Weeks/1:label">
@@ -26,13 +26,13 @@
           <text id="/data/individual/WhereTravelled2Weeks/3:label">
             <value>a otra pais fuera de Africa</value>
           </text>
-		  <text id="/data/individual/TravelledIsland2Weeks/99:label">
+          <text id="/data/individual/TravelledIsland2Weeks/99:label">
             <value>no sabe</value>
           </text>
-		  <text id="/data/individual/TravelledIsland2Weeks/0:label">
+          <text id="/data/individual/TravelledIsland2Weeks/0:label">
             <value>no</value>
           </text>
-		  <text id="/data/individual/TravelledIsland2Weeks/1:label">
+          <text id="/data/individual/TravelledIsland2Weeks/1:label">
             <value>si</value>
           </text>
           <text id="/data/individual/WhereTravelledIsland2Weeks/1:label">
@@ -252,7 +252,7 @@
             <value>Las embarazadas deberían tomar Tratamiento preventivo intermitente y dormir bajo tela mosquitera</value>
           </text>
           <text id="/data/individual/Available:label">
-            <value> <output value="/data/individual/Name"> </output> esta disponible para ser entrevistada en este momento</value>
+            <value><output value="/data/individual/Name"> </output> esta disponible para ser entrevistada en este momento</value>
           </text>
           <text id="/data/individual/GoIndoorsTime/9:label">
             <value>Entre 9PM y 9:59PM</value>
@@ -801,7 +801,7 @@
             <value>Los familiaries en la parte continental de GE necesitaban la mosquitera más que nosotros</value>
           </text>
           <text id="/data/nets/NetCode:label">
-            <value>Cual es el codigo en esta <output value="/data/nets/netid"> </output>a tela mosquitera? (Si no hay codigo, ingrese &quot;999&quot;)</value>
+            <value>Cual es el codigo en esta <output value="/data/nets/netid"> </output>a tela mosquitera? (Si no hay codigo, ingrese "999")</value>
           </text>
           <text id="/data/nets/NetCode:hint">
             <value>La estructura debe seguir el formato corecto: "YY/D-C" o "YY/C-C.C" o "YY/C-C" depende del area</value>
@@ -924,7 +924,7 @@
             <value>Algun miembro del hogar tiene una computadora/ordenador?</value>
           </text>
           <text id="/data/individual/DrugType:hint">
-            <value>[Encuestador: Mostrar las fotos de los ACT recomendados. Si no pueden reconocer cualquiera de los ACTs en las fotos, y están seguros de que <output value="/data/individual/name"> </output> tomó otro medicamento, entran &quot;Otros no-ACT&quot;, o otramented entra &quot;No sé / No estoy seguro&quot;]</value>
+            <value>[Encuestador: Mostrar las fotos de los ACT recomendados. Si no pueden reconocer cualquiera de los ACTs en las fotos, y están seguros de que <output value="/data/individual/name"> </output> tomó otro medicamento, entran "Otros no-ACT", o otramented entra "No sé / No estoy seguro"]</value>
           </text>
           <text id="/data/individual/WhynotIPT/3:label">
             <value>no se sentía bien;</value>
@@ -932,15 +932,15 @@
           <text id="/data/nets/NetCondition/3:label">
             <value>Al menos un agujero del tamaño de un puño o de la cabeza</value>
           </text>
-		  <text id="/data/individual/ResidentStatus:label">
-			<value> Es <output value="/data/individual/Name"> </output> residente permanente o visitante de largo plazo? </value>
-		  </text>
-		  <text id="/data/individual/ResidentStatus/1:label">
-			<value>Residente permanente</value>
-		  </text>
-		  <text id="/data/individual/ResidentStatus/2:label">
-			<value>Visitante de largo plazo</value>
-		  </text>
+          <text id="/data/individual/ResidentStatus:label">
+            <value> Es <output value="/data/individual/Name"> </output> residente permanente o visitante de largo plazo? </value>
+          </text>
+          <text id="/data/individual/ResidentStatus/1:label">
+            <value>Residente permanente</value>
+          </text>
+          <text id="/data/individual/ResidentStatus/2:label">
+            <value>Visitante de largo plazo</value>
+          </text>
           <text id="/data/WaterOther:label">
             <value>Especifique ''otra'' fuente de agua:</value>
           </text>
@@ -1062,7 +1062,7 @@
             <value>La tela no se necesitaba en esta estacion</value>
           </text>
           <text id="/data/TimesSprayed:hint">
-            <value>Si no sabe, ingresa &quot;99&quot;</value>
+            <value>Si no sabe, ingresa "99"</value>
           </text>
           <text id="/data/individual/TreatLoc1/0:label">
             <value>Ningún lugar</value>
@@ -1248,7 +1248,7 @@
             <value>Amodiaquina (Solo)</value>
           </text>
           <text id="/data/individual/Temperature:hint">
-            <value>Si hay problema con el termometro y no tiene una temperatura, ingresa &quot;99&quot;</value>
+            <value>Si hay problema con el termometro y no tiene una temperatura, ingresa "99"</value>
           </text>
           <text id="/data/individual/Symptom/13:label">
             <value>ARDOR AL ORINAR</value>
@@ -1599,7 +1599,7 @@
             <value>¿Cuales son los beneficios del tratamiento preventivo intermitente (Fansidar) en el embarazo?</value>
           </text>
           <text id="/data/individual/NFancidar:hint">
-            <value>Si na sabe, ingresa &quot;99&quot;</value>
+            <value>Si na sabe, ingresa "99"</value>
           </text>
           <text id="/data/Lighting/6:label">
             <value>Paneles solares</value>
@@ -2091,7 +2091,7 @@
             <value>sí</value>
           </text>
           <text id="/data/individual/Hemoglobin:hint">
-            <value>Si hay problema con la maquina y no tiene un valor de hemoglobina, ingresa &quot;99&quot;</value>
+            <value>Si hay problema con la maquina y no tiene un valor de hemoglobina, ingresa "99"</value>
           </text>
           <text id="/data/DangerSign/4:label">
             <value>Fiebre alta</value>
@@ -3068,7 +3068,7 @@
             <value>Radio Asonga</value>
           </text>
           <text id="/data/nets/NetGetDate:label">
-            <value>How long ago did your household obtain this <output value='/data/nets/netid'> </output> net (in months)?</value>
+            <value>How long ago did your household obtain this <output value="/data/nets/netid"> </output> net (in months)?</value>
           </text>
           <text id="/data/WhyNoSticker/4:label">
             <value>Was painted over</value>
@@ -4928,7 +4928,6 @@
       </itext>
       <instance>
         <data id="malaria_indicator_survey">
-
           <collectionDateTime/>
           <processedByMirth/>
           <needsReview/>
@@ -4936,12 +4935,11 @@
           <entityExtId/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
-
           <survey_date/>
           <geopoint/>
           <display5/>
           <Nationality/>
-		  <HHSchooling/>
+          <HHSchooling/>
           <HouseholdSize/>
           <Rooms/>
           <SleepingRooms/>
@@ -5027,28 +5025,28 @@
           <individual_count/>
           <individual jr:template="">
             <display1/>
-			<id/>
+            <id/>
             <Name/>
             <RosterNumber/>
             <RelationToHead/>
-			<ResidentStatus/>
+            <ResidentStatus/>
             <Gender/>
             <AgeCat/>
             <AgeYears/>
             <AgeMonths/>
-			<over9/>
+            <over9/>
             <AttendSchool/>
             <SchoolLevel/>
             <PrimarySchoolName/>
             <MeaslesVac/>
             <Travelled/>
             <WhereTravelled/>
-			<Travelled2Weeks/>
-			<WhereTravelled2Weeks/>
+            <Travelled2Weeks/>
+            <WhereTravelled2Weeks/>
             <TravelledCount/>
             <TravelledIsland/>
             <WhereTravelledIsland/>
-			<TravelledIsland2Weeks/>
+            <TravelledIsland2Weeks/>
             <WhereTravelledIsland2Weeks/>
             <SleptUnderNet/>
             <display2/>
@@ -5077,7 +5075,7 @@
             <Treat/>
             <TreatLoc1/>
             <Diagnosis/>
-			<Blood/>
+            <Blood/>
             <BloodResult/>
             <DrugsGot/>
             <DrugType/>
@@ -5106,8 +5104,8 @@
           <Nets/>
           <nets_count/>
           <nets jr:template="">
-			<netid/>
-			<NetsObserved/>
+            <netid/>
+            <NetsObserved/>
             <NetGetDate/>
             <NetType/>
             <NetSleepN/>
@@ -5188,14 +5186,14 @@
       <bind nodeset="/data/WhyNoSticker" relevant=" /data/StickerBefore ='1'" required="true()" type="select1"/>
       <bind constraint="(.!=0 and .&lt;=3) or .=99" nodeset="/data/TimesSprayed" relevant=" /data/HouseHoldSprayed ='1'" required="true()" type="int"/>
       <bind constraint=".&lt;=12" nodeset="/data/MonthsSinceLastSprayed" relevant=" /data/HouseHoldSprayed ='1'" required="true()" type="int"/>
-      <bind nodeset="/data/WhyNotSprayed" relevant=" /data/HouseHoldSprayed ='0'" required="true()" constraint="not(selected(.,'13') and count-selected(.)>=2)" type="select"/>
+      <bind nodeset="/data/WhyNotSprayed" relevant=" /data/HouseHoldSprayed ='0'" required="true()" constraint="not(selected(.,'13') and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/WantedHouseSprayed" relevant=" /data/HouseHoldSprayed !='1' and /data/WhyNotSprayed ='1'" required="true()" type="select1"/>
-      <bind nodeset="/data/WhyNotWantSpray" relevant=" /data/WantedHouseSprayed ='0'" constraint="not(selected(., '13') and count-selected(.)>=2)" required="true()" type="select"/>
+      <bind nodeset="/data/WhyNotWantSpray" relevant=" /data/WantedHouseSprayed ='0'" constraint="not(selected(., '13') and count-selected(.)&gt;=2)" required="true()" type="select"/>
       <bind nodeset="/data/WallsPainted" relevant=" /data/HouseHoldSprayed ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/WallsWashed" relevant=" /data/HouseHoldSprayed ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/WallsPlastered" relevant=" /data/HouseHoldSprayed ='1'" required="true()" type="select1"/>
-      <bind nodeset="/data/WantHouseSprayed" required="true()"  type="select1"/>
-      <bind nodeset="/data/WhyDontWantIRS" relevant=" /data/WantHouseSprayed ='0'" constraint="not(selected(., '13') and count-selected(.)>=2)" required="true()" type="select"/>
+      <bind nodeset="/data/WantHouseSprayed" required="true()" type="select1"/>
+      <bind nodeset="/data/WhyDontWantIRS" relevant=" /data/WantHouseSprayed ='0'" constraint="not(selected(., '13') and count-selected(.)&gt;=2)" required="true()" type="select"/>
       <bind nodeset="/data/ListenRadio" required="true()" type="select1"/>
       <bind nodeset="/data/FavoriteRadio" relevant=" /data/ListenRadio ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/WatchTV" required="true()" type="select1"/>
@@ -5208,15 +5206,15 @@
       <bind nodeset="/data/FreeIPT" required="true()" type="select1"/>
       <bind nodeset="/data/FreeLLIN" required="true()" type="select1"/>
       <bind nodeset="/data/ValueIPT" required="true()" type="select1"/>
-      <bind nodeset="/data/BenefitsIPT" relevant=" /data/ValueIPT ='1'" required="true()" constraint="not(selected(., '9') and count-selected(.)>=2)" type="select" />
+      <bind nodeset="/data/BenefitsIPT" relevant=" /data/ValueIPT ='1'" required="true()" constraint="not(selected(., '9') and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/DosesIPT" required="true()" type="select1"/>
       <bind nodeset="/data/MonthStartIPT" required="true()" type="select1"/>
-      <bind nodeset="/data/HowPrevented" required="true()" constraint="not((selected(., '6') or selected(.,'1')) and count-selected(.)>=2)" type="select"/>
+      <bind nodeset="/data/HowPrevented" required="true()" constraint="not((selected(., '6') or selected(.,'1')) and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/HowPreventedOther" relevant="selected( /data/HowPrevented , '99')" required="true()" type="string"/>
-      <bind nodeset="/data/HowTransmitted" required="true()" constraint="not(selected(., '99') and count-selected(.)>=2)" type="select"/>
+      <bind nodeset="/data/HowTransmitted" required="true()" constraint="not(selected(., '99') and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/HowTransmittedOther" relevant="selected( /data/HowTransmitted , '7')" required="true()" type="string"/>
-      <bind nodeset="/data/MalariaSymptom" required="true()" constraint="not(selected(., '14') and count-selected(.)>=2)" type="select"/>
-      <bind nodeset="/data/DangerSign" required="true()" constraint="not(selected(., '0') and count-selected(.)>=2)" type="select"/>
+      <bind nodeset="/data/MalariaSymptom" required="true()" constraint="not(selected(., '14') and count-selected(.)&gt;=2)" type="select"/>
+      <bind nodeset="/data/DangerSign" required="true()" constraint="not(selected(., '0') and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/BestAntimalarial1" required="true()" type="select1"/>
       <bind nodeset="/data/BestAntimalarial2" required="true()" type="select1"/>
       <bind calculate="/data/HouseholdSize " nodeset="/data/individual_count" readonly="true()" type="string"/>
@@ -5224,25 +5222,25 @@
       <bind nodeset="/data/individual/Name" required="true()" type="string"/>
       <bind nodeset="/data/individual/RosterNumber" required="true()" type="int"/>
       <bind nodeset="/data/individual/RelationToHead" required="true()" type="select1"/>
-	  <bind nodeset="/data/individual/ResidentStatus" required="true()" type="select1"/>
+      <bind nodeset="/data/individual/ResidentStatus" required="true()" type="select1"/>
       <bind nodeset="/data/individual/Gender" required="true()" type="select1"/>
       <bind nodeset="/data/individual/AgeCat" required="true()" type="select1"/>
       <bind constraint=".&lt;110 or .=999" nodeset="/data/individual/AgeYears" relevant=" /data/individual/AgeCat ='0'" required="true()" type="int"/>
       <bind constraint=".&lt;=11" nodeset="/data/individual/AgeMonths" relevant=" /data/individual/AgeCat ='1'" required="true()" type="int"/>
-	  <bind nodeset="/data/individual/over9" required="true()" type="boolean" calculate="../AgeYears &gt; 9" readonly="true()"/>
-	  <bind nodeset="/data/individual/id" required="true()" calculate="position(..)" readonly="true()" type="string"/>
+      <bind nodeset="/data/individual/over9" required="true()" type="boolean" calculate="../AgeYears &gt; 9" readonly="true()"/>
+      <bind nodeset="/data/individual/id" required="true()" calculate="position(..)" readonly="true()" type="string"/>
       <bind nodeset="/data/individual/AttendSchool" relevant=" /data/individual/AgeYears &gt;=5 and  /data/individual/AgeYears &lt;=14" required="true()" type="select1"/>
       <bind nodeset="/data/individual/SchoolLevel" relevant=" /data/individual/AttendSchool ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/PrimarySchoolName" relevant=" /data/individual/SchoolLevel ='1'" required="true()" type="string"/>
       <bind nodeset="/data/individual/MeaslesVac" relevant=" /data/individual/AgeYears &lt;5 or  /data/individual/AgeCat ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/Travelled2Weeks" relevant="/data/individual/Travelled ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/WhereTravelled2Weeks" relevant=" /data/individual/Travelled2Weeks ='1'" required="true()" type="select"/>
-	  <bind nodeset="/data/individual/Travelled" required="true()" type="select1"/>
+      <bind nodeset="/data/individual/Travelled" required="true()" type="select1"/>
       <bind nodeset="/data/individual/WhereTravelled" relevant=" /data/individual/Travelled ='1'" required="true()" type="select"/>
       <bind nodeset="/data/individual/TravelledCount" required="true()" type="select1"/>
       <bind nodeset="/data/individual/TravelledIsland2Weeks" relevant=" /data/individual/TravelledIsland='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/WhereTravelledIsland2Weeks" relevant=" /data/individual/TravelledIsland2Weeks ='1'" required="true()" type="select"/>
-	  <bind nodeset="/data/individual/TravelledIsland" required="true()" type="select1"/>
+      <bind nodeset="/data/individual/TravelledIsland" required="true()" type="select1"/>
       <bind nodeset="/data/individual/WhereTravelledIsland" relevant=" /data/individual/TravelledIsland ='1'" required="true()" type="select"/>
       <bind nodeset="/data/individual/SleptUnderNet" required="true()" type="select1"/>
       <bind nodeset="/data/individual/display2" readonly="true()" relevant=" /data/individual/Gender ='2' and  /data/individual/AgeYears &gt;=15 and  /data/individual/AgeYears &lt;=49" type="string"/>
@@ -5267,7 +5265,7 @@
       <bind nodeset="/data/individual/Sick" required="true()" type="select1"/>
       <bind constraint=".&lt;=14 or .=999" nodeset="/data/individual/DaysSick" relevant=" /data/individual/Sick ='1'" required="true()" type="int"/>
       <bind nodeset="/data/individual/Fever" relevant=" /data/individual/Sick ='1'" required="true()" type="select1"/>
-      <bind nodeset="/data/individual/Symptom" relevant=" /data/individual/Sick ='1'" constraint="not(selected(., '0') and count-selected(.)>=2)" required="true()" type="select"/>
+      <bind nodeset="/data/individual/Symptom" relevant=" /data/individual/Sick ='1'" constraint="not(selected(., '0') and count-selected(.)&gt;=2)" required="true()" type="select"/>
       <bind nodeset="/data/individual/Treat" relevant=" /data/individual/Sick ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/TreatLoc1" relevant=" /data/individual/Treat ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/Diagnosis" relevant=" /data/individual/Treat ='1'" required="true()" type="select1"/>
@@ -5284,12 +5282,12 @@
       <bind nodeset="/data/individual/GoBedTime" relevant=" /data/individual/ChildAgreed ='1' and /data/individual/GoIndoorsTime !='13'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/GetUpTime" relevant=" /data/individual/ChildAgreed ='1' and /data/individual/GoIndoorsTime !='13'" required="true()" type="select1"/>
       <bind nodeset="/data/individual/Parasitemia" relevant=" /data/individual/ChildAgreed ='1'" required="true()" type="select1"/>
-      <bind nodeset="/data/individual/HasFever" readonly="true()" relevant=" /data/individual/Temperature &gt; 37.5 and /data/individual/Temperature !=99"  type="string"/>
-      <bind nodeset="/data/individual/HasAnemia" readonly="true()" relevant="( /data/individual/Hemoglobin &lt;11 and (  /data/individual/AgeYears &lt;5 or  /data/individual/AgeCat ='1')) or ( /data/individual/Hemoglobin &lt;11.5 and (  /data/individual/AgeYears &gt;4 and /data/individual/AgeYears &lt;12)) or ( /data/individual/Hemoglobin &lt;12 and (  /data/individual/AgeYears &gt;=12 and /data/individual/AgeYears &lt;15)) or ( /data/individual/Hemoglobin &lt;12 and  /data/individual/AgeYears &gt;=15 and  /data/individual/Gender ='2' and /data/individual/PregStatus !='1') or ( /data/individual/Hemoglobin &lt;13 and  /data/individual/AgeYears &gt;=15 and  /data/individual/Gender ='1') or ( /data/individual/Hemoglobin &lt;11 and /data/individual/PregStatus = '1') "  type="string"/>
+      <bind nodeset="/data/individual/HasFever" readonly="true()" relevant=" /data/individual/Temperature &gt; 37.5 and /data/individual/Temperature !=99" type="string"/>
+      <bind nodeset="/data/individual/HasAnemia" readonly="true()" relevant="( /data/individual/Hemoglobin &lt;11 and (  /data/individual/AgeYears &lt;5 or  /data/individual/AgeCat ='1')) or ( /data/individual/Hemoglobin &lt;11.5 and (  /data/individual/AgeYears &gt;4 and /data/individual/AgeYears &lt;12)) or ( /data/individual/Hemoglobin &lt;12 and (  /data/individual/AgeYears &gt;=12 and /data/individual/AgeYears &lt;15)) or ( /data/individual/Hemoglobin &lt;12 and  /data/individual/AgeYears &gt;=15 and  /data/individual/Gender ='2' and /data/individual/PregStatus !='1') or ( /data/individual/Hemoglobin &lt;13 and  /data/individual/AgeYears &gt;=15 and  /data/individual/Gender ='1') or ( /data/individual/Hemoglobin &lt;11 and /data/individual/PregStatus = '1') " type="string"/>
       <bind nodeset="/data/individual/HasMalaria" readonly="true()" relevant=" /data/individual/Parasitemia ='1' or /data/individual/Parasitemia ='2' or /data/individual/Parasitemia ='3'" type="string"/>
       <bind nodeset="/data/display8" readonly="true()" type="string"/>
-      <bind nodeset="/data/HaveBedNets" required="true()" type="select1" relevant="count(/data/individual[SleptUnderNet='1']) &lt;= 0" />
-      <bind nodeset="/data/WhyNotUseNet" relevant=" /data/HaveBedNets ='1'" required="true()" constraint="not(selected(., '99') and count-selected(.)>=2)" type="select"/>
+      <bind nodeset="/data/HaveBedNets" required="true()" type="select1" relevant="count(/data/individual[SleptUnderNet='1']) &lt;= 0"/>
+      <bind nodeset="/data/WhyNotUseNet" relevant=" /data/HaveBedNets ='1'" required="true()" constraint="not(selected(., '99') and count-selected(.)&gt;=2)" type="select"/>
       <bind nodeset="/data/WhyNoNetsOther" relevant="selected( /data/WhyNotUseNet , '10')" required="true()" type="string"/>
       <bind nodeset="/data/DidHaveNet" relevant=" /data/HaveBedNets ='0'" required="true()" type="select1"/>
       <bind nodeset="/data/WhatHappenedToNet" relevant=" /data/DidHaveNet ='1'" required="true()" type="select1"/>
@@ -5297,20 +5295,20 @@
       <bind nodeset="/data/WhyNotKeepNetOther" relevant=" /data/WhyNotKeepNet ='6'" required="true()" type="string"/>
       <bind nodeset="/data/Beds" required="true()" type="int"/>
       <bind nodeset="/data/Nets" required="true()" type="int"/>
-	  <bind nodeset="/data/nets/netid" required="true()" readonly="true()" calculate="position(..)" type="string"/>
+      <bind nodeset="/data/nets/netid" required="true()" readonly="true()" calculate="position(..)" type="string"/>
       <bind nodeset="/data/nets/NetsObserved" required="true()" type="select1"/>
       <bind calculate=" /data/Nets " nodeset="/data/nets_count" readonly="true()" type="string"/>
       <bind constraint=".&lt;=36 or .=95 or .=99" nodeset="/data/nets/NetGetDate" required="true()" type="int"/>
       <bind nodeset="/data/nets/NetType" required="true()" type="select1"/>
-      <bind constraint=".&lt;= /data/HouseholdSize " nodeset="/data/nets/NetSleepN" required="true()" type="int" />
-      <bind constraint="count-selected(.)= /data/nets/NetSleepN" nodeset="/data/nets/NetPerson" required="true()" relevant= "/data/nets/NetSleepN >0" type="select"/>
+      <bind constraint=".&lt;= /data/HouseholdSize " nodeset="/data/nets/NetSleepN" required="true()" type="int"/>
+      <bind constraint="count-selected(.)= /data/nets/NetSleepN" nodeset="/data/nets/NetPerson" required="true()" relevant="/data/nets/NetSleepN &gt;0" type="select"/>
       <bind constraint=".&lt;=7 or .=99" nodeset="/data/nets/NightsNetUsed" required="true()" type="int"/>
       <bind nodeset="/data/nets/NetSource" required="true()" type="select1"/>
       <bind nodeset="/data/nets/NetSourceOther" relevant=" /data/nets/NetSource ='7'" required="true()" type="string"/>
       <bind nodeset="/data/nets/NetSourceBIMCP" relevant=" /data/nets/NetSource ='1'" required="true()" type="select1"/>
       <bind nodeset="/data/nets/NetPurchase" required="true()" type="select1"/>
       <bind nodeset="/data/nets/NetPrice" relevant=" /data/nets/NetPurchase ='1'" required="true()" type="int"/>
-      <bind nodeset="/data/nets/NetCondition" required="true()" type="select1" relevant="/data/nets/NetsObserved='1'" />
+      <bind nodeset="/data/nets/NetCondition" required="true()" type="select1" relevant="/data/nets/NetsObserved='1'"/>
       <bind constraint="regex(., '^(\d{2}[/]([BLMR]-\d{1,2}|\d-\d{1,2}([.]\d)?)|999)$')" nodeset="/data/nets/NetCode" type="string" relevant="/data/nets/NetsObserved='1'" required="true()"/>
       <bind nodeset="/data/Interviewee" required="true()" type="select1"/>
       <bind nodeset="/data/InterviewSteady" required="true()" type="select1"/>
@@ -5338,7 +5336,7 @@
         <label ref="jr:itext('/data/Nationality/3:label')"/>
         <value>3</value>
       </item>
-	</select1>
+    </select1>
     <select1 ref="/data/HHSchooling">
       <label ref="jr:itext('/data/HHSchooling:label')"/>
       <item>
@@ -5357,7 +5355,7 @@
         <label ref="jr:itext('/data/HHSchooling/3:label')"/>
         <value>3</value>
       </item>
-	  <item>
+      <item>
         <label ref="jr:itext('/data/HHSchooling/9:label')"/>
         <value>9</value>
       </item>
@@ -6071,7 +6069,7 @@
     </select1>
     <input ref="/data/StickerDate">
       <label ref="jr:itext('/data/StickerDate:label')"/>
-	  <label ref="jr:itext('/data/StickerDate:hint')"/>
+      <label ref="jr:itext('/data/StickerDate:hint')"/>
     </input>
     <select1 ref="/data/StickerBefore">
       <label ref="jr:itext('/data/StickerBefore:label')"/>
@@ -6132,7 +6130,7 @@
         <label ref="jr:itext('/data/WhyNotSprayed/1:label')"/>
         <value>1</value>
       </item>
-	  <item>
+      <item>
         <label ref="jr:itext('/data/WhyNotSprayed/2:label')"/>
         <value>2</value>
       </item>
@@ -6976,7 +6974,7 @@
       </item>
     </select1>
     <group ref="/data/individual">
-      <label></label>
+      <label/>
       <repeat jr:count=" /data/individual_count " nodeset="/data/individual">
         <input ref="/data/individual/display1">
           <label ref="jr:itext('/data/individual/display1:label')"/>
@@ -7026,7 +7024,7 @@
             <value>9</value>
           </item>
         </select1>
-		<select1 ref="/data/individual/ResidentStatus">
+        <select1 ref="/data/individual/ResidentStatus">
           <label ref="jr:itext('/data/individual/ResidentStatus:label')"/>
           <item>
             <label ref="jr:itext('/data/individual/ResidentStatus/1:label')"/>
@@ -7036,7 +7034,7 @@
             <label ref="jr:itext('/data/individual/ResidentStatus/2:label')"/>
             <value>2</value>
           </item>
-		</select1>
+        </select1>
         <select1 ref="/data/individual/Gender">
           <label ref="jr:itext('/data/individual/Gender:label')"/>
           <item>
@@ -7148,7 +7146,7 @@
             <value>4</value>
           </item>
         </select>
-		<select1 ref="/data/individual/Travelled2Weeks">
+        <select1 ref="/data/individual/Travelled2Weeks">
           <label ref="jr:itext('/data/individual/Travelled2Weeks:label')"/>
           <item>
             <label ref="jr:itext('/data/individual/Travelled2Weeks/0:label')"/>
@@ -7248,7 +7246,7 @@
             <value>6</value>
           </item>
         </select>
-		<select1 ref="/data/individual/TravelledIsland2Weeks">
+        <select1 ref="/data/individual/TravelledIsland2Weeks">
           <label ref="jr:itext('/data/individual/TravelledIsland2Weeks:label')"/>
           <item>
             <label ref="jr:itext('/data/individual/TravelledIsland2Weeks/0:label')"/>
@@ -7790,8 +7788,8 @@
             <label ref="jr:itext('/data/individual/Diagnosis/99:label')"/>
             <value>99</value>
           </item>
-        </select1>        
-		<select1 ref="/data/individual/Blood">
+        </select1>
+        <select1 ref="/data/individual/Blood">
           <label ref="jr:itext('/data/individual/Blood:label')"/>
           <item>
             <label ref="jr:itext('/data/individual/Blood/0:label')"/>
@@ -8304,19 +8302,19 @@
       <hint ref="jr:itext('/data/Nets:hint')"/>
     </input>
     <group ref="/data/nets">
-      <label></label>
+      <label/>
       <repeat jr:count=" /data/nets_count " nodeset="/data/nets">
-	  <select1 ref="/data/nets/NetsObserved">
-      <label ref="jr:itext('/data/nets/NetsObserved:label')"/>
-		<item>
-			<label ref="jr:itext('/data/nets/NetsObserved/0:label')"/>
-			<value>0</value>
-		</item>
-		<item>
-			<label ref="jr:itext('/data/nets/NetsObserved/1:label')"/>
-			<value>1</value>
-		</item>
-		</select1>
+        <select1 ref="/data/nets/NetsObserved">
+          <label ref="jr:itext('/data/nets/NetsObserved:label')"/>
+          <item>
+            <label ref="jr:itext('/data/nets/NetsObserved/0:label')"/>
+            <value>0</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/nets/NetsObserved/1:label')"/>
+            <value>1</value>
+          </item>
+        </select1>
         <input ref="/data/nets/NetGetDate">
           <label ref="jr:itext('/data/nets/NetGetDate:label')"/>
           <hint ref="jr:itext('/data/nets/NetGetDate:hint')"/>
@@ -8344,12 +8342,12 @@
           <label ref="jr:itext('/data/nets/NetSleepN:label')"/>
         </input>
         <select ref="/data/nets/NetPerson">
-              <label ref="jr:itext('/data/nets/NetPerson:label')"/>
-			  <itemset nodeset="/data/individual">
-				<label ref="./Name"/>
-				<value ref="./id"/>
-			  </itemset>
-            </select>
+          <label ref="jr:itext('/data/nets/NetPerson:label')"/>
+          <itemset nodeset="/data/individual">
+            <label ref="./Name"/>
+            <value ref="./id"/>
+          </itemset>
+        </select>
         <input ref="/data/nets/NightsNetUsed">
           <label ref="jr:itext('/data/nets/NightsNetUsed:label')"/>
         </input>
@@ -8457,17 +8455,17 @@
         </select1>
         <input ref="/data/nets/NetCode">
           <label ref="jr:itext('/data/nets/NetCode:label')"/>
-		  <hint ref="jr:itext('/data/nets/NetCode:hint')"/>
+          <hint ref="jr:itext('/data/nets/NetCode:hint')"/>
         </input>
       </repeat>
     </group>
     <select1 ref="/data/Interviewee">
       <label ref="jr:itext('/data/Interviewee:label')"/>
-	    <itemset nodeset="/data/individual[over9=true()]">
-             <label ref="./Name"/>
-             <value ref="./id"/>
-          </itemset>
-       </select1>
+      <itemset nodeset="/data/individual[over9=true()]">
+        <label ref="./Name"/>
+        <value ref="./id"/>
+      </itemset>
+    </select1>
     <select1 ref="/data/InterviewSteady">
       <label ref="jr:itext('/data/InterviewSteady:label')"/>
       <item>
