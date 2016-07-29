@@ -1,482 +1,467 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<h:html xmlns="http://www.w3.org/2002/xforms"
-        xmlns:h="http://www.w3.org/1999/xhtml"
-        xmlns:jr="http://openrosa.org/javarosa">
-    <h:head>
-        <h:title>Location</h:title>
-        <model>
-            <instance>
-                <data id="location" version="14">
-
-                    <openhdsTagName>cims-server-2.4</openhdsTagName>
-
-                    <meta>
-                        <instanceID/>
-                    </meta>
-
-                    <collectionDateTime/>
-                    <processedByMirth/>
-                    <needsReview/>
-                    <entityUuid/>
-                    <entityExtId/>
-                    <fieldWorkerUuid/>
-                    <fieldWorkerExtId/>
-
-                    <hierarchyParentUuid/>
-                    <hierarchyExtId/>
-                    <hierarchyUuid/>
-
-                    <locationBuildingNumber/>
-                    <locationFloorNumber/>
-                    <locationName/>
-                    <locationType/>
-                    <housingType/>
-                    <housingTypeOther/>
-                    <communityName/>
-                    <communityCode/>
-                    <mapAreaName/>
-                    <localityName/>
-                    <sectorName/>
-                    <locationExtId/>
-                    <description/>
-                    <location/>
-                </data>
-            </instance>
-            <itext>
-                <translation lang="Spanish">
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>ID Externo del Encuestador</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/collectionDateTime:label">
-                        <value>Fecha de Colección</value>
-                    </text>
-                    <text id="/data/collectionDateTime:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationExtId:label">
-                        <value>ID Externo de Locación</value>
-                    </text>
-                    <text id="/data/locationExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="locationId:invalid_format">
-                        <value>Casa no válido. El formato debe ser M####S###E###P## y no coincide con el original</value>
-                    </text>
-                    <text id="/data/locationBuildingNumber:label">
-                        <value>Número de Edificio</value>
-                    </text>
-                    <text id="/data/locationBuildingNumber:hint">
-                        <value/>
-                    </text>
-                    <text id="locationBuildingNumber:invalid_format">
-                        <value>Edificio no válido. Debe ser 3 dígitos</value>
-                    </text>
-                    <text id="/data/locationFloorNumber:label">
-                        <value>Número de Piso</value>
-                    </text>
-                    <text id="/data/locationFloorNumber:hint">
-                        <value/>
-                    </text>
-                    <text id="locationFloorNumber:invalid_format">
-                        <value>Piso no válido. Debe ser 2 dígitos</value>
-                    </text>
-                    <text id="/data/locationName:label">
-                        <value>Nombre de Locación</value>
-                    </text>
-                    <text id="/data/locationName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/hierarchyExtId:label">
-                        <value>ID Externo de Jerarquía</value>
-                    </text>
-                    <text id="/data/hierarchyExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationType:label">
-                        <value>Tipo de Localidad</value>
-                    </text>
-                    <text id="/data/locationType:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationType:option0">
-                        <value>Rural</value>
-                    </text>
-                    <text id="/data/locationType:option1">
-                        <value>Urbano</value>
-                    </text>
-                    <text id="/data/housingType:label">
-                        <value>Clasificación de la vivienda</value>
-                    </text>
-                    <text id="/data/housingType:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/housingType:social">
-                        <value>Vivienda social</value>
-                    </text>
-                    <text id="/data/housingType:barracks">
-                        <value>Barracón</value>
-                    </text>
-                    <text id="/data/housingType:apartment">
-                        <value>Apartamento</value>
-                    </text>
-                    <text id="/data/housingType:private">
-                        <value>Casa particular</value>
-                    </text>
-                    <text id="/data/housingType:temporary">
-                        <value>Casa provisional</value>
-                    </text>
-                    <text id="/data/housingType:camp">
-                        <value>Campamento</value>
-                    </text>
-                    <text id="/data/housingType:other">
-                        <value>Otro</value>
-                    </text>
-                    <text id="/data/housingTypeOther:label">
-                        <value>Descripción clasificación de la vivienda</value>
-                    </text>
-                    <text id="/data/housingTypeOther:hint">
-                        <value>Describir la vivienda otra clasificación</value>
-                    </text>
-                    <text id="/data/communityName:label">
-                        <value>Nombre de la Comunidad</value>
-                    </text>
-                    <text id="/data/communityName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/communityCode:label">
-                        <value>Codigo de la Comunidad</value>
-                    </text>
-                    <text id="/data/communityCode:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/mapAreaName:label">
-                        <value>Nombre de Area de Mapa</value>
-                    </text>
-                    <text id="/data/mapAreaName:hint">
-                        <value/>
-                    </text>
-                    <text id="mapAreaName:invalid_format">
-                        <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
-                    </text>
-                    <text id="/data/localityName:label">
-                        <value>Nombre de la Localidad</value>
-                    </text>
-                    <text id="/data/localityName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/sectorName:label">
-                        <value>Nombre del Sector</value>
-                    </text>
-                    <text id="/data/sectorName:hint">
-                        <value/>
-                    </text>
-                    <text id="sectorName:invalid_format">
-                        <value>Sector no válido. Debe ser 'S' y 3 dígitos</value>
-                    </text>
-                    <text id="/data/description:label">
-                        <value>Descripción</value>
-                    </text>
-                    <text id="/data/description:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/location:label">
-                        <value>Ubicación GPS</value>
-                    </text>
-                    <text id="/data/location:hint">
-                        <value/>
-                    </text>
-                </translation>
-                <translation lang="English">
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>Field Worker Ext Id</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/collectionDateTime:label">
-                        <value>Collected Date Time</value>
-                    </text>
-                    <text id="/data/collectionDateTime:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationExtId:label">
-                        <value>Location Ext Id</value>
-                    </text>
-                    <text id="/data/locationExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationBuildingNumber:label">
-                        <value>Building #</value>
-                    </text>
-                    <text id="/data/locationBuildingNumber:hint">
-                        <value/>
-                    </text>
-                    <text id="locationBuildingNumber:invalid_format">
-                        <value>Invalid building, must be 3 digits</value>
-                    </text>
-                    <text id="/data/locationFloorNumber:label">
-                        <value>Floor #</value>
-                    </text>
-                    <text id="/data/locationFloorNumber:hint">
-                        <value/>
-                    </text>
-                    <text id="locationFloorNumber:invalid_format">
-                       <value>Invalid floor, must be 2 digits</value>
-                    </text>
-                    <text id="/data/locationName:label">
-                        <value>Location Name</value>
-                    </text>
-                    <text id="/data/locationName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/hierarchyExtId:label">
-                        <value>Hierarchy Ext Id</value>
-                    </text>
-                    <text id="/data/hierarchyExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationType:label">
-                        <value>Location Type</value>
-                    </text>
-                    <text id="/data/locationType:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/locationType:option0">
-                        <value>Rural</value>
-                    </text>
-                    <text id="/data/locationType:option1">
-                        <value>Urban</value>
-                    </text>
-                    <text id="/data/housingType:label">
-                        <value>Housing Type</value>
-                    </text>
-                    <text id="/data/housingType:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/housingType:social">
-                        <value>Social Housing</value>
-                    </text>
-                    <text id="/data/housingType:barracks">
-                        <value>Barracks</value>
-                    </text>
-                    <text id="/data/housingType:apartment">
-                        <value>Apartment</value>
-                    </text>
-                    <text id="/data/housingType:private">
-                        <value>Private Home</value>
-                    </text>
-                    <text id="/data/housingType:temporary">
-                        <value>Temporary Home</value>
-                    </text>
-                    <text id="/data/housingType:camp">
-                        <value>Camp</value>
-                    </text>
-                    <text id="/data/housingType:other">
-                        <value>Other</value>
-                    </text>
-                    <text id="/data/housingTypeOther:label">
-                        <value>Housing type description</value>
-                    </text>
-                    <text id="/data/housingTypeOther:hint">
-                        <value>Describe other housing type</value>
-                    </text>
-                    <text id="/data/communityName:label">
-                        <value>Community Name</value>
-                    </text>
-                    <text id="/data/communityName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/communityCode:label">
-                        <value>Community Code</value>
-                    </text>
-                    <text id="/data/communityCode:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/mapAreaName:label">
-                        <value>Map Area Name</value>
-                    </text>
-                    <text id="/data/mapAreaName:hint">
-                        <value/>
-                    </text>
-                    <text id="mapAreaName:invalid_format">
-                        <value>Invalid area, must be 'M' and four digits</value>
-                    </text>
-                    <text id="/data/localityName:label">
-                        <value>Locality Name</value>
-                    </text>
-                    <text id="/data/localityName:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/sectorName:label">
-                        <value>Sector Name</value>
-                    </text>
-                    <text id="/data/sectorName:hint">
-                        <value/>
-                    </text>
-                    <text id="sectorName:invalid_format">
-                        <value>Invalid sector, must be 'S' and 3 digits</value>
-                    </text>
-                    <text id="/data/description:label">
-                        <value>Description</value>
-                    </text>
-                    <text id="/data/description:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/location:label">
-                        <value>GPS Location</value>
-                    </text>
-                    <text id="/data/location:hint">
-                        <value/>
-                    </text>
-                </translation>
-            </itext>
-
-            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
-            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
-            <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
-            <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
-            <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()"
-                  constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')" />
-            <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/sectorName" type="string" required="true()"
-                  constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')" />
-            <bind nodeset="/data/locationBuildingNumber" type="string" required="true()"
-                  constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')" />
-            <bind nodeset="/data/locationFloorNumber" type="string" required="true()"
-                  constraint="regex(.,'[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
-            <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"
-                  calculate="concat(/data/mapAreaName,/data/sectorName,'E',/data/locationBuildingNumber,'P',/data/locationFloorNumber)"
-                  constraint="regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
-            <bind nodeset="/data/locationName" type="string" required="true()"/>
-            <bind nodeset="/data/locationType" type="select1" required="true()"/>
-            <bind nodeset="/data/housingType" type="select1" required="true()" />
-            <bind nodeset="/data/housingTypeOther" type="string" required="true()" relevant="selected(/data/housingType, 'other')" />
-            <bind nodeset="/data/communityName" type="string" readonly="true()"/>
-            <bind nodeset="/data/communityCode" type="string" readonly="true()"/>
-            <bind nodeset="/data/description" type="string"/>
-            <bind nodeset="/data/location" type="geopoint"/>
-
-        </model>
-    </h:head>
-    <h:body>
-        <group appearance="field-list">
-            <input ref="/data/fieldWorkerExtId">
-                <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-                <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
-            </input>
-            <input ref="/data/collectionDateTime">
-                <label ref="jr:itext('/data/collectionDateTime:label')"/>
-                <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
-            </input>
-        </group>
-        <group appearance="field-list">
-            <input ref="/data/communityCode">
-                <label ref="jr:itext('/data/communityCode:label')"/>
-                <hint ref="jr:itext('/data/communityCode:hint')"/>
-            </input>
-            <input ref="/data/communityName">
-                <label ref="jr:itext('/data/communityName:label')"/>
-                <hint ref="jr:itext('/data/communityName:hint')"/>
-            </input>
-            <input ref="/data/localityName">
-                <label ref="jr:itext('/data/localityName:label')"/>
-                <hint ref="jr:itext('/data/localityName:hint')"/>
-            </input>
-        </group>
-        <group appearance="field-list">
-            <input ref="/data/mapAreaName">
-                <label ref="jr:itext('/data/mapAreaName:label')"/>
-                <hint ref="jr:itext('/data/mapAreaName:hint')"/>
-            </input>
-            <input ref="/data/sectorName">
-                <label ref="jr:itext('/data/sectorName:label')"/>
-                <hint ref="jr:itext('/data/sectorName:hint')"/>
-            </input>
-            <input ref="/data/locationBuildingNumber">
-                <label ref="jr:itext('/data/locationBuildingNumber:label')"/>
-                <hint ref="jr:itext('/data/locationBuildingNumber:hint')"/>
-            </input>
-            <input ref="/data/locationFloorNumber">
-                <label ref="jr:itext('/data/locationFloorNumber:label')"/>
-                <hint ref="jr:itext('/data/locationFloorNumber:hint')"/>
-            </input>
-        </group>
-        <group appearance="field-list">
-            <input ref="/data/hierarchyExtId">
-                <label ref="jr:itext('/data/hierarchyExtId:label')"/>
-                <hint ref="jr:itext('/data/hierarchyExtId:hint')"/>
-            </input>
-            <input ref="/data/locationExtId">
-                <label ref="jr:itext('/data/locationExtId:label')"/>
-                <hint ref="jr:itext('/data/locationExtId:hint')"/>
-            </input>
-        </group>
-        <group appearance="field-list">
-            <input ref="/data/locationName">
-                <label ref="jr:itext('/data/locationName:label')"/>
-                <hint ref="jr:itext('/data/locationName:hint')"/>
-            </input>
-            <input ref="/data/description">
-                <label ref="jr:itext('/data/description:label')"/>
-                <hint ref="jr:itext('/data/description:hint')"/>
-            </input>
-            <select1 ref="/data/locationType">
-                <label ref="jr:itext('/data/locationType:label')"/>
-                <hint ref="jr:itext('/data/locationType:hint')"/>
-                <item>
-                    <label ref="jr:itext('/data/locationType:option0')"/>
-                    <value>RUR</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/locationType:option1')"/>
-                    <value>URB</value>
-                </item>
-            </select1>
-            <select1 ref="/data/housingType">
-                <label ref="jr:itext('/data/housingType:label')"/>
-                <hint ref="jr:itext('/data/housingType:hint')"/>
-                <item>
-                    <label ref="jr:itext('/data/housingType:social')"/>
-                    <value>social</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:barracks')"/>
-                    <value>barracks</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:apartment')"/>
-                    <value>apartment</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:private')"/>
-                    <value>private</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:temporary')"/>
-                    <value>temporary</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:camp')"/>
-                    <value>camp</value>
-                </item>
-                <item>
-                    <label ref="jr:itext('/data/housingType:other')"/>
-                    <value>other</value>
-                </item>
-            </select1>
-        </group>
-        <input ref="/data/housingTypeOther">
-            <label ref="jr:itext('/data/housingTypeOther:label')"/>
-            <hint ref="jr:itext('/data/housingTypeOther:hint')"/>
-        </input>
-        <input ref="/data/location">
-            <label ref="jr:itext('/data/location:label')"/>
-            <hint ref="jr:itext('/data/location:hint')"/>
-        </input>
-    </h:body>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Location</h:title>
+    <model>
+      <instance>
+        <data id="location" version="14">
+          <openhdsTagName>cims-server-2.4</openhdsTagName>
+          <meta>
+            <instanceID/>
+          </meta>
+          <collectionDateTime/>
+          <processedByMirth/>
+          <needsReview/>
+          <entityUuid/>
+          <entityExtId/>
+          <fieldWorkerUuid/>
+          <fieldWorkerExtId/>
+          <hierarchyParentUuid/>
+          <hierarchyExtId/>
+          <hierarchyUuid/>
+          <locationBuildingNumber/>
+          <locationFloorNumber/>
+          <locationName/>
+          <locationType/>
+          <housingType/>
+          <housingTypeOther/>
+          <communityName/>
+          <communityCode/>
+          <mapAreaName/>
+          <localityName/>
+          <sectorName/>
+          <locationExtId/>
+          <description/>
+          <location/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="Spanish">
+          <text id="/data/fieldWorkerExtId:label">
+            <value>ID Externo del Encuestador</value>
+          </text>
+          <text id="/data/fieldWorkerExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/collectionDateTime:label">
+            <value>Fecha de Colección</value>
+          </text>
+          <text id="/data/collectionDateTime:hint">
+            <value/>
+          </text>
+          <text id="/data/locationExtId:label">
+            <value>ID Externo de Locación</value>
+          </text>
+          <text id="/data/locationExtId:hint">
+            <value/>
+          </text>
+          <text id="locationId:invalid_format">
+            <value>Casa no válido. El formato debe ser M####S###E###P## y no coincide con el original</value>
+          </text>
+          <text id="/data/locationBuildingNumber:label">
+            <value>Número de Edificio</value>
+          </text>
+          <text id="/data/locationBuildingNumber:hint">
+            <value/>
+          </text>
+          <text id="locationBuildingNumber:invalid_format">
+            <value>Edificio no válido. Debe ser 3 dígitos</value>
+          </text>
+          <text id="/data/locationFloorNumber:label">
+            <value>Número de Piso</value>
+          </text>
+          <text id="/data/locationFloorNumber:hint">
+            <value/>
+          </text>
+          <text id="locationFloorNumber:invalid_format">
+            <value>Piso no válido. Debe ser 2 dígitos</value>
+          </text>
+          <text id="/data/locationName:label">
+            <value>Nombre de Locación</value>
+          </text>
+          <text id="/data/locationName:hint">
+            <value/>
+          </text>
+          <text id="/data/hierarchyExtId:label">
+            <value>ID Externo de Jerarquía</value>
+          </text>
+          <text id="/data/hierarchyExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/locationType:label">
+            <value>Tipo de Localidad</value>
+          </text>
+          <text id="/data/locationType:hint">
+            <value/>
+          </text>
+          <text id="/data/locationType:option0">
+            <value>Rural</value>
+          </text>
+          <text id="/data/locationType:option1">
+            <value>Urbano</value>
+          </text>
+          <text id="/data/housingType:label">
+            <value>Clasificación de la vivienda</value>
+          </text>
+          <text id="/data/housingType:hint">
+            <value/>
+          </text>
+          <text id="/data/housingType:social">
+            <value>Vivienda social</value>
+          </text>
+          <text id="/data/housingType:barracks">
+            <value>Barracón</value>
+          </text>
+          <text id="/data/housingType:apartment">
+            <value>Apartamento</value>
+          </text>
+          <text id="/data/housingType:private">
+            <value>Casa particular</value>
+          </text>
+          <text id="/data/housingType:temporary">
+            <value>Casa provisional</value>
+          </text>
+          <text id="/data/housingType:camp">
+            <value>Campamento</value>
+          </text>
+          <text id="/data/housingType:other">
+            <value>Otro</value>
+          </text>
+          <text id="/data/housingTypeOther:label">
+            <value>Descripción clasificación de la vivienda</value>
+          </text>
+          <text id="/data/housingTypeOther:hint">
+            <value>Describir la vivienda otra clasificación</value>
+          </text>
+          <text id="/data/communityName:label">
+            <value>Nombre de la Comunidad</value>
+          </text>
+          <text id="/data/communityName:hint">
+            <value/>
+          </text>
+          <text id="/data/communityCode:label">
+            <value>Codigo de la Comunidad</value>
+          </text>
+          <text id="/data/communityCode:hint">
+            <value/>
+          </text>
+          <text id="/data/mapAreaName:label">
+            <value>Nombre de Area de Mapa</value>
+          </text>
+          <text id="/data/mapAreaName:hint">
+            <value/>
+          </text>
+          <text id="mapAreaName:invalid_format">
+            <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
+          </text>
+          <text id="/data/localityName:label">
+            <value>Nombre de la Localidad</value>
+          </text>
+          <text id="/data/localityName:hint">
+            <value/>
+          </text>
+          <text id="/data/sectorName:label">
+            <value>Nombre del Sector</value>
+          </text>
+          <text id="/data/sectorName:hint">
+            <value/>
+          </text>
+          <text id="sectorName:invalid_format">
+            <value>Sector no válido. Debe ser 'S' y 3 dígitos</value>
+          </text>
+          <text id="/data/description:label">
+            <value>Descripción</value>
+          </text>
+          <text id="/data/description:hint">
+            <value/>
+          </text>
+          <text id="/data/location:label">
+            <value>Ubicación GPS</value>
+          </text>
+          <text id="/data/location:hint">
+            <value/>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/fieldWorkerExtId:label">
+            <value>Field Worker Ext Id</value>
+          </text>
+          <text id="/data/fieldWorkerExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/collectionDateTime:label">
+            <value>Collected Date Time</value>
+          </text>
+          <text id="/data/collectionDateTime:hint">
+            <value/>
+          </text>
+          <text id="/data/locationExtId:label">
+            <value>Location Ext Id</value>
+          </text>
+          <text id="/data/locationExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/locationBuildingNumber:label">
+            <value>Building #</value>
+          </text>
+          <text id="/data/locationBuildingNumber:hint">
+            <value/>
+          </text>
+          <text id="locationBuildingNumber:invalid_format">
+            <value>Invalid building, must be 3 digits</value>
+          </text>
+          <text id="/data/locationFloorNumber:label">
+            <value>Floor #</value>
+          </text>
+          <text id="/data/locationFloorNumber:hint">
+            <value/>
+          </text>
+          <text id="locationFloorNumber:invalid_format">
+            <value>Invalid floor, must be 2 digits</value>
+          </text>
+          <text id="/data/locationName:label">
+            <value>Location Name</value>
+          </text>
+          <text id="/data/locationName:hint">
+            <value/>
+          </text>
+          <text id="/data/hierarchyExtId:label">
+            <value>Hierarchy Ext Id</value>
+          </text>
+          <text id="/data/hierarchyExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/locationType:label">
+            <value>Location Type</value>
+          </text>
+          <text id="/data/locationType:hint">
+            <value/>
+          </text>
+          <text id="/data/locationType:option0">
+            <value>Rural</value>
+          </text>
+          <text id="/data/locationType:option1">
+            <value>Urban</value>
+          </text>
+          <text id="/data/housingType:label">
+            <value>Housing Type</value>
+          </text>
+          <text id="/data/housingType:hint">
+            <value/>
+          </text>
+          <text id="/data/housingType:social">
+            <value>Social Housing</value>
+          </text>
+          <text id="/data/housingType:barracks">
+            <value>Barracks</value>
+          </text>
+          <text id="/data/housingType:apartment">
+            <value>Apartment</value>
+          </text>
+          <text id="/data/housingType:private">
+            <value>Private Home</value>
+          </text>
+          <text id="/data/housingType:temporary">
+            <value>Temporary Home</value>
+          </text>
+          <text id="/data/housingType:camp">
+            <value>Camp</value>
+          </text>
+          <text id="/data/housingType:other">
+            <value>Other</value>
+          </text>
+          <text id="/data/housingTypeOther:label">
+            <value>Housing type description</value>
+          </text>
+          <text id="/data/housingTypeOther:hint">
+            <value>Describe other housing type</value>
+          </text>
+          <text id="/data/communityName:label">
+            <value>Community Name</value>
+          </text>
+          <text id="/data/communityName:hint">
+            <value/>
+          </text>
+          <text id="/data/communityCode:label">
+            <value>Community Code</value>
+          </text>
+          <text id="/data/communityCode:hint">
+            <value/>
+          </text>
+          <text id="/data/mapAreaName:label">
+            <value>Map Area Name</value>
+          </text>
+          <text id="/data/mapAreaName:hint">
+            <value/>
+          </text>
+          <text id="mapAreaName:invalid_format">
+            <value>Invalid area, must be 'M' and four digits</value>
+          </text>
+          <text id="/data/localityName:label">
+            <value>Locality Name</value>
+          </text>
+          <text id="/data/localityName:hint">
+            <value/>
+          </text>
+          <text id="/data/sectorName:label">
+            <value>Sector Name</value>
+          </text>
+          <text id="/data/sectorName:hint">
+            <value/>
+          </text>
+          <text id="sectorName:invalid_format">
+            <value>Invalid sector, must be 'S' and 3 digits</value>
+          </text>
+          <text id="/data/description:label">
+            <value>Description</value>
+          </text>
+          <text id="/data/description:hint">
+            <value/>
+          </text>
+          <text id="/data/location:label">
+            <value>GPS Location</value>
+          </text>
+          <text id="/data/location:hint">
+            <value/>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
+      <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+      <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+      <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()" constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')"/>
+      <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/sectorName" type="string" required="true()" constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')"/>
+      <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')"/>
+      <bind nodeset="/data/locationFloorNumber" type="string" required="true()" constraint="regex(.,'[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
+      <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()" calculate="concat(/data/mapAreaName,/data/sectorName,'E',/data/locationBuildingNumber,'P',/data/locationFloorNumber)" constraint="regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
+      <bind nodeset="/data/locationName" type="string" required="true()"/>
+      <bind nodeset="/data/locationType" type="select1" required="true()"/>
+      <bind nodeset="/data/housingType" type="select1" required="true()"/>
+      <bind nodeset="/data/housingTypeOther" type="string" required="true()" relevant="selected(/data/housingType, 'other')"/>
+      <bind nodeset="/data/communityName" type="string" readonly="true()"/>
+      <bind nodeset="/data/communityCode" type="string" readonly="true()"/>
+      <bind nodeset="/data/description" type="string"/>
+      <bind nodeset="/data/location" type="geopoint"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list">
+      <input ref="/data/fieldWorkerExtId">
+        <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
+        <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
+      </input>
+      <input ref="/data/collectionDateTime">
+        <label ref="jr:itext('/data/collectionDateTime:label')"/>
+        <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
+      </input>
+    </group>
+    <group appearance="field-list">
+      <input ref="/data/communityCode">
+        <label ref="jr:itext('/data/communityCode:label')"/>
+        <hint ref="jr:itext('/data/communityCode:hint')"/>
+      </input>
+      <input ref="/data/communityName">
+        <label ref="jr:itext('/data/communityName:label')"/>
+        <hint ref="jr:itext('/data/communityName:hint')"/>
+      </input>
+      <input ref="/data/localityName">
+        <label ref="jr:itext('/data/localityName:label')"/>
+        <hint ref="jr:itext('/data/localityName:hint')"/>
+      </input>
+    </group>
+    <group appearance="field-list">
+      <input ref="/data/mapAreaName">
+        <label ref="jr:itext('/data/mapAreaName:label')"/>
+        <hint ref="jr:itext('/data/mapAreaName:hint')"/>
+      </input>
+      <input ref="/data/sectorName">
+        <label ref="jr:itext('/data/sectorName:label')"/>
+        <hint ref="jr:itext('/data/sectorName:hint')"/>
+      </input>
+      <input ref="/data/locationBuildingNumber">
+        <label ref="jr:itext('/data/locationBuildingNumber:label')"/>
+        <hint ref="jr:itext('/data/locationBuildingNumber:hint')"/>
+      </input>
+      <input ref="/data/locationFloorNumber">
+        <label ref="jr:itext('/data/locationFloorNumber:label')"/>
+        <hint ref="jr:itext('/data/locationFloorNumber:hint')"/>
+      </input>
+    </group>
+    <group appearance="field-list">
+      <input ref="/data/hierarchyExtId">
+        <label ref="jr:itext('/data/hierarchyExtId:label')"/>
+        <hint ref="jr:itext('/data/hierarchyExtId:hint')"/>
+      </input>
+      <input ref="/data/locationExtId">
+        <label ref="jr:itext('/data/locationExtId:label')"/>
+        <hint ref="jr:itext('/data/locationExtId:hint')"/>
+      </input>
+    </group>
+    <group appearance="field-list">
+      <input ref="/data/locationName">
+        <label ref="jr:itext('/data/locationName:label')"/>
+        <hint ref="jr:itext('/data/locationName:hint')"/>
+      </input>
+      <input ref="/data/description">
+        <label ref="jr:itext('/data/description:label')"/>
+        <hint ref="jr:itext('/data/description:hint')"/>
+      </input>
+      <select1 ref="/data/locationType">
+        <label ref="jr:itext('/data/locationType:label')"/>
+        <hint ref="jr:itext('/data/locationType:hint')"/>
+        <item>
+          <label ref="jr:itext('/data/locationType:option0')"/>
+          <value>RUR</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/locationType:option1')"/>
+          <value>URB</value>
+        </item>
+      </select1>
+      <select1 ref="/data/housingType">
+        <label ref="jr:itext('/data/housingType:label')"/>
+        <hint ref="jr:itext('/data/housingType:hint')"/>
+        <item>
+          <label ref="jr:itext('/data/housingType:social')"/>
+          <value>social</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:barracks')"/>
+          <value>barracks</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:apartment')"/>
+          <value>apartment</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:private')"/>
+          <value>private</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:temporary')"/>
+          <value>temporary</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:camp')"/>
+          <value>camp</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/housingType:other')"/>
+          <value>other</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/data/housingTypeOther">
+      <label ref="jr:itext('/data/housingTypeOther:label')"/>
+      <hint ref="jr:itext('/data/housingTypeOther:hint')"/>
+    </input>
+    <input ref="/data/location">
+      <label ref="jr:itext('/data/location:label')"/>
+      <hint ref="jr:itext('/data/location:hint')"/>
+    </input>
+  </h:body>
 </h:html>

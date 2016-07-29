@@ -1,150 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<h:html xmlns="http://www.w3.org/2002/xforms"
-        xmlns:h="http://www.w3.org/1999/xhtml"
-        xmlns:jr="http://openrosa.org/javarosa">
-    <h:head>
-        <h:title>Out Migration</h:title>
-        <model>
-            <instance>
-                <data id="out_migration" version="12">
-
-                    <openhdsTagName>giga-gegenschein</openhdsTagName>
-
-                    <meta>
-                        <instanceID/>
-                    </meta>
-
-                    <collectionDateTime/>
-                    <processedByMirth/>
-                    <needsReview/>
-                    <entityUuid/>
-                    <entityExtId/>
-                    <fieldWorkerUuid/>
-                    <fieldWorkerExtId/>
-
-                    <visitExtId/>
-                    <visitUuid/>
-                    <individualExtId/>
-                    <individualUuid/>
-                    <outMigrationDate/>
-                    <outMigrationNameOfDestination/>
-                    <outMigrationReason/>
-                </data>
-            </instance>
-            <itext>
-                <translation lang="Spanish">
-                    <text id="/data/individualExtId:label">
-                        <value>ID Externo del Individuo</value>
-                    </text>
-                    <text id="/data/individualExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>ID Externo del Encuestador</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/visitExtId:label">
-                        <value>ID Externo de la Visita</value>
-                    </text>
-                    <text id="/data/visitExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationDate:label">
-                        <value>Fecha de Migración</value>
-                    </text>
-                    <text id="/data/outMigrationDate:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationNameOfDestination:label">
-                        <value>Nombre del Destino</value>
-                    </text>
-                    <text id="/data/outMigrationNameOfDestination:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationReason:label">
-                        <value>Razón de Enmigración</value>
-                    </text>
-                    <text id="/data/outMigrationReason:hint">
-                        <value/>
-                    </text>
-                </translation>
-
-                <translation lang="English">
-                    <text id="/data/individualExtId:label">
-                        <value>Individual Id</value>
-                    </text>
-                    <text id="/data/individualExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:label">
-                        <value>Field Worker Id</value>
-                    </text>
-                    <text id="/data/fieldWorkerExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/visitExtId:label">
-                        <value>Visit Id</value>
-                    </text>
-                    <text id="/data/visitExtId:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationDate:label">
-                        <value>Date of Migration</value>
-                    </text>
-                    <text id="/data/outMigrationDate:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationNameOfDestination:label">
-                        <value>Name of Destination</value>
-                    </text>
-                    <text id="/data/outMigrationNameOfDestination:hint">
-                        <value/>
-                    </text>
-                    <text id="/data/outMigrationReason:label">
-                        <value>Reason for Out Migration</value>
-                    </text>
-                    <text id="/data/outMigrationReason:hint">
-                        <value/>
-                    </text>
-                </translation>
-            </itext>
-            <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-            <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
-            <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
-            <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
-            <bind nodeset="/data/outMigrationDate" type="date"/>
-            <bind nodeset="/data/outMigrationNameOfDestination" type="string" required="true()"/>
-            <bind nodeset="/data/outMigrationReason" type="string" required="true()"/>
-        </model>
-    </h:head>
-    <h:body>
-        <input ref="/data/individualExtId">
-            <label ref="jr:itext('/data/individualExtId:label')"/>
-            <hint ref="jr:itext('/data/individualExtId:hint')"/>
-        </input>
-        <input ref="/data/fieldWorkerExtId">
-            <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-            <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
-        </input>
-        <input ref="/data/visitExtId">
-            <label ref="jr:itext('/data/visitExtId:label')"/>
-            <hint ref="jr:itext('/data/visitExtId:hint')"/>
-        </input>
-        <input ref="/data/outMigrationDate">
-            <label ref="jr:itext('/data/outMigrationDate:label')"/>
-            <hint ref="jr:itext('/data/outMigrationDate:hint')"/>
-        </input>
-        <input ref="/data/outMigrationNameOfDestination">
-            <label ref="jr:itext('/data/outMigrationNameOfDestination:label')"/>
-            <hint ref="jr:itext('/data/outMigrationNameOfDestination:hint')"/>
-        </input>
-        <input ref="/data/outMigrationReason">
-            <label ref="jr:itext('/data/outMigrationReason:label')"/>
-            <hint ref="jr:itext('/data/outMigrationReason:hint')"/>
-        </input>
-    </h:body>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Out Migration</h:title>
+    <model>
+      <instance>
+        <data id="out_migration" version="12">
+          <openhdsTagName>giga-gegenschein</openhdsTagName>
+          <meta>
+            <instanceID/>
+          </meta>
+          <collectionDateTime/>
+          <processedByMirth/>
+          <needsReview/>
+          <entityUuid/>
+          <entityExtId/>
+          <fieldWorkerUuid/>
+          <fieldWorkerExtId/>
+          <visitExtId/>
+          <visitUuid/>
+          <individualExtId/>
+          <individualUuid/>
+          <outMigrationDate/>
+          <outMigrationNameOfDestination/>
+          <outMigrationReason/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="Spanish">
+          <text id="/data/individualExtId:label">
+            <value>ID Externo del Individuo</value>
+          </text>
+          <text id="/data/individualExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/fieldWorkerExtId:label">
+            <value>ID Externo del Encuestador</value>
+          </text>
+          <text id="/data/fieldWorkerExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/visitExtId:label">
+            <value>ID Externo de la Visita</value>
+          </text>
+          <text id="/data/visitExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationDate:label">
+            <value>Fecha de Migración</value>
+          </text>
+          <text id="/data/outMigrationDate:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationNameOfDestination:label">
+            <value>Nombre del Destino</value>
+          </text>
+          <text id="/data/outMigrationNameOfDestination:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationReason:label">
+            <value>Razón de Enmigración</value>
+          </text>
+          <text id="/data/outMigrationReason:hint">
+            <value/>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/individualExtId:label">
+            <value>Individual Id</value>
+          </text>
+          <text id="/data/individualExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/fieldWorkerExtId:label">
+            <value>Field Worker Id</value>
+          </text>
+          <text id="/data/fieldWorkerExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/visitExtId:label">
+            <value>Visit Id</value>
+          </text>
+          <text id="/data/visitExtId:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationDate:label">
+            <value>Date of Migration</value>
+          </text>
+          <text id="/data/outMigrationDate:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationNameOfDestination:label">
+            <value>Name of Destination</value>
+          </text>
+          <text id="/data/outMigrationNameOfDestination:hint">
+            <value/>
+          </text>
+          <text id="/data/outMigrationReason:label">
+            <value>Reason for Out Migration</value>
+          </text>
+          <text id="/data/outMigrationReason:hint">
+            <value/>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
+      <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
+      <bind nodeset="/data/individualExtId" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerExtId" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/visitExtId" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/outMigrationDate" type="date"/>
+      <bind nodeset="/data/outMigrationNameOfDestination" type="string" required="true()"/>
+      <bind nodeset="/data/outMigrationReason" type="string" required="true()"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/individualExtId">
+      <label ref="jr:itext('/data/individualExtId:label')"/>
+      <hint ref="jr:itext('/data/individualExtId:hint')"/>
+    </input>
+    <input ref="/data/fieldWorkerExtId">
+      <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
+      <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
+    </input>
+    <input ref="/data/visitExtId">
+      <label ref="jr:itext('/data/visitExtId:label')"/>
+      <hint ref="jr:itext('/data/visitExtId:hint')"/>
+    </input>
+    <input ref="/data/outMigrationDate">
+      <label ref="jr:itext('/data/outMigrationDate:label')"/>
+      <hint ref="jr:itext('/data/outMigrationDate:hint')"/>
+    </input>
+    <input ref="/data/outMigrationNameOfDestination">
+      <label ref="jr:itext('/data/outMigrationNameOfDestination:label')"/>
+      <hint ref="jr:itext('/data/outMigrationNameOfDestination:hint')"/>
+    </input>
+    <input ref="/data/outMigrationReason">
+      <label ref="jr:itext('/data/outMigrationReason:label')"/>
+      <hint ref="jr:itext('/data/outMigrationReason:hint')"/>
+    </input>
+  </h:body>
 </h:html>

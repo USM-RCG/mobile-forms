@@ -5,9 +5,7 @@
     <model>
       <instance>
         <data id="super_ojo" version="12">
-
           <openhdsTagName>giga-gegenschein</openhdsTagName>
-
           <collectionDateTime/>
           <processedByMirth/>
           <needsReview/>
@@ -91,7 +89,6 @@
         </data>
       </instance>
       <itext>
-
         <translation lang="Spanish">
           <text id="/data/supervisorExtId:label">
             <value>Codigo de Supervisor</value>
@@ -108,864 +105,855 @@
           <text id="/data/sprayOperatorExtId:hint">
             <value>p.ej. BO123</value>
           </text>
-
         </translation>
-
-
-
       </itext>
-
-      <bind nodeset="/data/processedByMirth" type="boolean" />
+      <bind nodeset="/data/processedByMirth" type="boolean"/>
       <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/supervisorExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/locationExtId" type="string" readonly="true()"/>
-      <bind nodeset="/data/ojo_date" readonly="true()" type="datetime"/>      
+      <bind nodeset="/data/ojo_date" readonly="true()" type="datetime"/>
       <bind nodeset="/data/supervision_date" type="date"/>
-      <bind nodeset="/data/spray_operator" required="true()" type="string" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))"
-        jr:constraintMsg="el ID debe ser del formato BO _ _ _" />
-        <bind nodeset="/data/medidas_preventativas/gorra" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_gorra" required=" /data/medidas_preventativas/gorra ='0'" relevant=" /data/medidas_preventativas/gorra ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_gorra_otro" required="selected(../mc_gorra, 'otro')" relevant="selected(../mc_gorra, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/mascarilla" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_mascarilla" required=" /data/medidas_preventativas/mascarilla ='0'"  relevant=" /data/medidas_preventativas/mascarilla ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_mascarilla_otro" required="selected(../mc_mascarilla, 'otro')" relevant="selected(../mc_mascarilla, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/casco" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_casco" required=" /data/medidas_preventativas/casco ='0'"  relevant=" /data/medidas_preventativas/casco ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_casco_otro" required="selected(../mc_casco, 'otro')" relevant="selected(../mc_casco, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/uniforme" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_uniforme" required=" /data/medidas_preventativas/uniforme ='0'" relevant=" /data/medidas_preventativas/uniforme ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_uniforme_otro" required="selected(../mc_uniforme, 'otro')"  relevant="selected(../mc_uniforme, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/guantes" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_guantes" required=" /data/medidas_preventativas/guantes ='0'" relevant=" /data/medidas_preventativas/guantes ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_guantes_otro" required="selected(../mc_guantes, 'otro')" relevant="selected(../mc_guantes, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/botas" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_botas" required=" /data/medidas_preventativas/botas ='0'" relevant=" /data/medidas_preventativas/botas ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_botas_otro" required="selected(../mc_botas, 'otro')" relevant="selected(../mc_botas, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/sabanas" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_sabanas" required=" /data/medidas_preventativas/sabanas ='0'" relevant=" /data/medidas_preventativas/sabanas ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_sabanas_otro" required="selected(../mc_sabanas, 'otro')" relevant="selected(../mc_sabanas, 'otro')" type="string"/>
-        <bind nodeset="/data/medidas_preventativas/med_de_seguridad" required="true()" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad" required=" /data/medidas_preventativas/med_de_seguridad ='0'" relevant=" /data/medidas_preventativas/med_de_seguridad ='0'" type="select1"/>
-        <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad_otro" required="selected(../mc_med_de_seguridad, 'otro')" relevant="selected(../mc_med_de_seguridad, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/bomba_presion" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bomba_presion" required=" /data/tecnica/bomba_presion ='0'" relevant=" /data/tecnica/bomba_presion ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bomba_presion_otro" required="selected(../mc_bomba_presion, 'otro')" relevant="selected(../mc_bomba_presion, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/boquilla" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_boquilla" required=" /data/tecnica/boquilla ='0'" relevant=" /data/tecnica/boquilla ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_boquilla_otro" required="selected(../mc_boquilla, 'otro')" relevant="selected(../mc_boquilla, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/distancia" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_distancia" required=" /data/tecnica/distancia ='0'" relevant=" /data/tecnica/distancia ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_distancia_otro" required="selected(../mc_distancia, 'otro')" relevant="selected(../mc_distancia, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/bordes" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bordes" required=" /data/tecnica/bordes ='0'" relevant=" /data/tecnica/bordes ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bordes_otro" required="selected(../mc_bordes, 'otro')" relevant="selected(../mc_bordes, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/puertas_vent" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_puertas_vent" required=" /data/tecnica/puertas_vent ='0'" relevant=" /data/tecnica/puertas_vent ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_puertas_vent_otro" required="selected(../mc_puertas_vent, 'otro')" relevant="selected(../mc_puertas_vent, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/agitacion" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_agitacion" required=" /data/tecnica/agitacion ='0'" relevant=" /data/tecnica/agitacion ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_agitacion_otro" required="selected(../mc_agitacion, 'otro')" relevant="selected(../mc_agitacion, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/muebles" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_muebles" required=" /data/tecnica/muebles ='0'" relevant=" /data/tecnica/muebles ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_muebles_otro" required="selected(../mc_muebles, 'otro')" relevant="selected(../mc_muebles, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/bandas" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bandas" required=" /data/tecnica/bandas ='1'" relevant=" /data/tecnica/bandas ='1'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_bandas_otro" required="selected(../mc_bandas, 'otro')" relevant="selected(../mc_bandas, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/inferiores" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_inferiores" required=" /data/tecnica/inferiores ='0'" relevant=" /data/tecnica/inferiores ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_inferiores_otro" required="selected(../mc_inferiores, 'otro')" relevant="selected(../mc_inferiores, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/cielo_raso" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_cielo_raso" required=" /data/tecnica/cielo_raso ='0'" relevant=" /data/tecnica/cielo_raso ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_cielo_raso_otro" required="selected(../mc_cielo_raso, 'otro')" relevant="selected(../mc_cielo_raso, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/aleros" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_aleros" required=" /data/tecnica/aleros ='0'" relevant=" /data/tecnica/aleros ='0'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_aleros_otro" required="selected(../mc_aleros, 'otro')" relevant="selected(../mc_aleros, 'otro')" type="string"/>
-        <bind nodeset="/data/tecnica/fugas" required="true()" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_fugas" required=" /data/tecnica/fugas ='1'" relevant=" /data/tecnica/fugas ='1'" type="select1"/>
-        <bind nodeset="/data/tecnica/mc_fugas_otro" required="selected(../mc_fugas, 'otro')" relevant="selected(../mc_fugas, 'otro')" type="string"/>
-        <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      </model>
-    </h:head>
-    <h:body>
-
-      <group appearance="field-list">
-        <input ref="/data/supervisorExtId">
-          <label ref="jr:itext('/data/supervisorExtId:label')"/>
-        </input>
-        <input ref="/data/locationExtId">
-          <label ref="jr:itext('/data/locationExtId:label')"/>
-        </input>
-        <input ref="/data/ojo_date">
-          <label>Fecha de ingreso de datos</label>
-        </input>
-      </group>
-
-      <input ref="/data/supervision_date">
-        <label>Fecha de supervision</label>
+      <bind nodeset="/data/spray_operator" required="true()" type="string" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="el ID debe ser del formato BO _ _ _"/>
+      <bind nodeset="/data/medidas_preventativas/gorra" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_gorra" required=" /data/medidas_preventativas/gorra ='0'" relevant=" /data/medidas_preventativas/gorra ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_gorra_otro" required="selected(../mc_gorra, 'otro')" relevant="selected(../mc_gorra, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/mascarilla" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_mascarilla" required=" /data/medidas_preventativas/mascarilla ='0'" relevant=" /data/medidas_preventativas/mascarilla ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_mascarilla_otro" required="selected(../mc_mascarilla, 'otro')" relevant="selected(../mc_mascarilla, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/casco" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_casco" required=" /data/medidas_preventativas/casco ='0'" relevant=" /data/medidas_preventativas/casco ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_casco_otro" required="selected(../mc_casco, 'otro')" relevant="selected(../mc_casco, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/uniforme" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_uniforme" required=" /data/medidas_preventativas/uniforme ='0'" relevant=" /data/medidas_preventativas/uniforme ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_uniforme_otro" required="selected(../mc_uniforme, 'otro')" relevant="selected(../mc_uniforme, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/guantes" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_guantes" required=" /data/medidas_preventativas/guantes ='0'" relevant=" /data/medidas_preventativas/guantes ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_guantes_otro" required="selected(../mc_guantes, 'otro')" relevant="selected(../mc_guantes, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/botas" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_botas" required=" /data/medidas_preventativas/botas ='0'" relevant=" /data/medidas_preventativas/botas ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_botas_otro" required="selected(../mc_botas, 'otro')" relevant="selected(../mc_botas, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/sabanas" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_sabanas" required=" /data/medidas_preventativas/sabanas ='0'" relevant=" /data/medidas_preventativas/sabanas ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_sabanas_otro" required="selected(../mc_sabanas, 'otro')" relevant="selected(../mc_sabanas, 'otro')" type="string"/>
+      <bind nodeset="/data/medidas_preventativas/med_de_seguridad" required="true()" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad" required=" /data/medidas_preventativas/med_de_seguridad ='0'" relevant=" /data/medidas_preventativas/med_de_seguridad ='0'" type="select1"/>
+      <bind nodeset="/data/medidas_preventativas/mc_med_de_seguridad_otro" required="selected(../mc_med_de_seguridad, 'otro')" relevant="selected(../mc_med_de_seguridad, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/bomba_presion" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bomba_presion" required=" /data/tecnica/bomba_presion ='0'" relevant=" /data/tecnica/bomba_presion ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bomba_presion_otro" required="selected(../mc_bomba_presion, 'otro')" relevant="selected(../mc_bomba_presion, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/boquilla" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_boquilla" required=" /data/tecnica/boquilla ='0'" relevant=" /data/tecnica/boquilla ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_boquilla_otro" required="selected(../mc_boquilla, 'otro')" relevant="selected(../mc_boquilla, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/distancia" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_distancia" required=" /data/tecnica/distancia ='0'" relevant=" /data/tecnica/distancia ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_distancia_otro" required="selected(../mc_distancia, 'otro')" relevant="selected(../mc_distancia, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/bordes" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bordes" required=" /data/tecnica/bordes ='0'" relevant=" /data/tecnica/bordes ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bordes_otro" required="selected(../mc_bordes, 'otro')" relevant="selected(../mc_bordes, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/puertas_vent" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_puertas_vent" required=" /data/tecnica/puertas_vent ='0'" relevant=" /data/tecnica/puertas_vent ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_puertas_vent_otro" required="selected(../mc_puertas_vent, 'otro')" relevant="selected(../mc_puertas_vent, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/agitacion" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_agitacion" required=" /data/tecnica/agitacion ='0'" relevant=" /data/tecnica/agitacion ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_agitacion_otro" required="selected(../mc_agitacion, 'otro')" relevant="selected(../mc_agitacion, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/muebles" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_muebles" required=" /data/tecnica/muebles ='0'" relevant=" /data/tecnica/muebles ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_muebles_otro" required="selected(../mc_muebles, 'otro')" relevant="selected(../mc_muebles, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/bandas" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bandas" required=" /data/tecnica/bandas ='1'" relevant=" /data/tecnica/bandas ='1'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_bandas_otro" required="selected(../mc_bandas, 'otro')" relevant="selected(../mc_bandas, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/inferiores" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_inferiores" required=" /data/tecnica/inferiores ='0'" relevant=" /data/tecnica/inferiores ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_inferiores_otro" required="selected(../mc_inferiores, 'otro')" relevant="selected(../mc_inferiores, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/cielo_raso" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_cielo_raso" required=" /data/tecnica/cielo_raso ='0'" relevant=" /data/tecnica/cielo_raso ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_cielo_raso_otro" required="selected(../mc_cielo_raso, 'otro')" relevant="selected(../mc_cielo_raso, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/aleros" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_aleros" required=" /data/tecnica/aleros ='0'" relevant=" /data/tecnica/aleros ='0'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_aleros_otro" required="selected(../mc_aleros, 'otro')" relevant="selected(../mc_aleros, 'otro')" type="string"/>
+      <bind nodeset="/data/tecnica/fugas" required="true()" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_fugas" required=" /data/tecnica/fugas ='1'" relevant=" /data/tecnica/fugas ='1'" type="select1"/>
+      <bind nodeset="/data/tecnica/mc_fugas_otro" required="selected(../mc_fugas, 'otro')" relevant="selected(../mc_fugas, 'otro')" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list">
+      <input ref="/data/supervisorExtId">
+        <label ref="jr:itext('/data/supervisorExtId:label')"/>
       </input>
-      
-      <input ref="/data/spray_operator">
-        <label>Codigo de Rociador</label>
-        <hint>p.ej. BO123</hint>
+      <input ref="/data/locationExtId">
+        <label ref="jr:itext('/data/locationExtId:label')"/>
       </input>
-      <group ref="/data/medidas_preventativas">
-        <label>Medidas Preventativas</label>
-        <select1 ref="/data/medidas_preventativas/gorra">
-          <label>ha usado gorra al rociar la casa</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_gorra">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_gorra_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/mascarilla">
-          <label>Ha usado mascarilla al rociar la casa</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_mascarilla">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_mascarilla_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/casco">
-          <label>Ha usado casco al rociar la casa</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_casco">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_casco_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/uniforme">
-          <label>Ha usado uniforme</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_uniforme">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_uniforme_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/guantes">
-          <label>Uso guantes durante el rociado</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_guantes">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_guantes_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/botas">
-          <label>uso botas</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_botas">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_botas_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/sabanas">
-          <label>ha protegido los muebles con sabanas</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_sabanas">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>no tiene muebles</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_sabanas_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/medidas_preventativas/med_de_seguridad">
-          <label>Ha informado sobre medidas de seguridad</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/medidas_preventativas/mc_med_de_seguridad">
-          <label>Medida correctiva?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/medidas_preventativas/mc_med_de_seguridad_otro">
-          <label>Especifique otro</label>
-        </input>
-      </group>
-      <group ref="/data/tecnica">
-        <label>Tecnias</label>
-        <select1 ref="/data/tecnica/bomba_presion">
-          <label>La presion de la bomba esta entre 30 a 55 PSI</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_bomba_presion">
-          <label>Medida correctiva o Explicacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_bomba_presion_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/boquilla">
-          <label>La posicion de la boquilla es correcta</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_boquilla">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_boquilla_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/distancia">
-          <label>La distancia entre la boquilla y la pared es de 45 cm</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_distancia">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>obstaculo de muebles</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>tiene muchas cosas</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_distancia_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/bordes">
-          <label>Ha rociado bien los bordes de la pared</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_bordes">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>obstaculo de muebles</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>tiene muchas cosas</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_bordes_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/puertas_vent">
-          <label>Ha rociado las puertas y ventanas</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_puertas_vent">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>son de cristal</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_puertas_vent_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/agitacion">
-          <label>Agito bien la bomba 3 veces</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_agitacion">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_agitacion_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/muebles">
-          <label>Fueron removidos todos los muebles para el rociado</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_muebles">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>hay muebles grandes</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>no tiene muebles</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>removido lo que podia</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_muebles_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/bandas">
-          <label>Quedaron areas sin insecticida entre bandas de rociado</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_bandas">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>correjirle y volver a rociar</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>rociar los que podia</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_bandas_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/inferiores">
-          <label>Partes inferiores de todos los muebles fueron rociados</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_inferiores">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>correjirle y volver a rociar</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>hay muebles grandes</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>poco espacio</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>no tenia muebles</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_inferiores_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/cielo_raso">
-          <label>Ha rociado el cielo raso</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_cielo_raso">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>esta muy alto</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>no tiene cielo razo</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_cielo_raso_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/aleros">
-          <label>Ha rociado los aleros</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_aleros">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>ha sido corregido</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>recordarle hacerlo</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>tiene cielo razo</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>obstaculo de muebles</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>estan muy altos</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_aleros_otro">
-          <label>Especifique otro</label>
-        </input>
-        <select1 ref="/data/tecnica/fugas">
-          <label>Hay fugas en las mangas, disparador o boquillas</label>
-          <item>
-            <label>no</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>si</label>
-            <value>1</value>
-          </item>
-        </select1>
-        <select1 ref="/data/tecnica/mc_fugas">
-          <label>Medida correctiva o Explanacion?</label>
-          <item>
-            <label>ninguna</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>la fuga fue reparada</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>todo funcionaba bien</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>otro</label>
-            <value>otro</value>
-          </item>
-        </select1>
-        <input ref="/data/tecnica/mc_fugas_otro">
-          <label>Especifique otro</label>
-        </input>
-      </group>
-    </h:body>
-  </h:html>
+      <input ref="/data/ojo_date">
+        <label>Fecha de ingreso de datos</label>
+      </input>
+    </group>
+    <input ref="/data/supervision_date">
+      <label>Fecha de supervision</label>
+    </input>
+    <input ref="/data/spray_operator">
+      <label>Codigo de Rociador</label>
+      <hint>p.ej. BO123</hint>
+    </input>
+    <group ref="/data/medidas_preventativas">
+      <label>Medidas Preventativas</label>
+      <select1 ref="/data/medidas_preventativas/gorra">
+        <label>ha usado gorra al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_gorra">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_gorra_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/mascarilla">
+        <label>Ha usado mascarilla al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_mascarilla">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_mascarilla_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/casco">
+        <label>Ha usado casco al rociar la casa</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_casco">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_casco_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/uniforme">
+        <label>Ha usado uniforme</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_uniforme">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_uniforme_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/guantes">
+        <label>Uso guantes durante el rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_guantes">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_guantes_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/botas">
+        <label>uso botas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_botas">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_botas_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/sabanas">
+        <label>ha protegido los muebles con sabanas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_sabanas">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>no tiene muebles</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_sabanas_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/medidas_preventativas/med_de_seguridad">
+        <label>Ha informado sobre medidas de seguridad</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/medidas_preventativas/mc_med_de_seguridad">
+        <label>Medida correctiva?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/medidas_preventativas/mc_med_de_seguridad_otro">
+        <label>Especifique otro</label>
+      </input>
+    </group>
+    <group ref="/data/tecnica">
+      <label>Tecnias</label>
+      <select1 ref="/data/tecnica/bomba_presion">
+        <label>La presion de la bomba esta entre 30 a 55 PSI</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_bomba_presion">
+        <label>Medida correctiva o Explicacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_bomba_presion_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/boquilla">
+        <label>La posicion de la boquilla es correcta</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_boquilla">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_boquilla_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/distancia">
+        <label>La distancia entre la boquilla y la pared es de 45 cm</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_distancia">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>tiene muchas cosas</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_distancia_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/bordes">
+        <label>Ha rociado bien los bordes de la pared</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_bordes">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>tiene muchas cosas</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_bordes_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/puertas_vent">
+        <label>Ha rociado las puertas y ventanas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_puertas_vent">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>son de cristal</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_puertas_vent_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/agitacion">
+        <label>Agito bien la bomba 3 veces</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_agitacion">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_agitacion_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/muebles">
+        <label>Fueron removidos todos los muebles para el rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_muebles">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>hay muebles grandes</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>no tiene muebles</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>removido lo que podia</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_muebles_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/bandas">
+        <label>Quedaron areas sin insecticida entre bandas de rociado</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_bandas">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>correjirle y volver a rociar</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>rociar los que podia</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_bandas_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/inferiores">
+        <label>Partes inferiores de todos los muebles fueron rociados</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_inferiores">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>correjirle y volver a rociar</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>hay muebles grandes</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>poco espacio</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>no tenia muebles</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_inferiores_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/cielo_raso">
+        <label>Ha rociado el cielo raso</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_cielo_raso">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>esta muy alto</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>no tiene cielo razo</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_cielo_raso_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/aleros">
+        <label>Ha rociado los aleros</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_aleros">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>ha sido corregido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>recordarle hacerlo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>tiene cielo razo</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>obstaculo de muebles</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>estan muy altos</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_aleros_otro">
+        <label>Especifique otro</label>
+      </input>
+      <select1 ref="/data/tecnica/fugas">
+        <label>Hay fugas en las mangas, disparador o boquillas</label>
+        <item>
+          <label>no</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>si</label>
+          <value>1</value>
+        </item>
+      </select1>
+      <select1 ref="/data/tecnica/mc_fugas">
+        <label>Medida correctiva o Explanacion?</label>
+        <item>
+          <label>ninguna</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>la fuga fue reparada</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>todo funcionaba bien</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>otro</label>
+          <value>otro</value>
+        </item>
+      </select1>
+      <input ref="/data/tecnica/mc_fugas_otro">
+        <label>Especifique otro</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>
