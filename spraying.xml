@@ -4,7 +4,7 @@
     <h:title>IRS</h:title>
     <model>
       <instance>
-        <data id="spraying" version="12">
+        <data id="spraying" version="13">
           <openhdsTagName>giga-gegenschein</openhdsTagName>
           <meta>
             <instanceID/>
@@ -40,6 +40,7 @@
           <terracesNotSprayed/>
           <passageWaysNotSprayed/>
           <totalNotSprayed/>
+          <bedNetsObserved/>
           <wastedInsecticideLoads/>
           <peopleProtectedUnderAge5/>
           <peopleProtectedPregnant/>
@@ -220,6 +221,12 @@
           <text id="/data/totalNotSprayed:label">
             <value>Total</value>
           </text>
+          <text id="/data/bedNetsObserved:label">
+            <value>Número de telas mosquiteras observadas</value>
+          </text>
+          <text id="bedNetsObserved:negative">
+            <value>El número no debe ser menor que cero</value>
+          </text>
           <text id="/data/wastedInsecticideLoads:label">
             <value>Cargas Gastadas?</value>
           </text>
@@ -274,6 +281,7 @@
       <bind nodeset="/data/terracesNotSprayed" type="integer" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/passageWaysNotSprayed" type="integer" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/totalNotSprayed" type="int" readonly="true()" relevant="selected(/data/evaluation, '1')" calculate="if( true(), (/data/roomsNotSprayed + /data/kitchensNotSprayed + /data/bathroomsNotSprayed + /data/diningRoomsNotSprayed + /data/terracesNotSprayed + /data/passageWaysNotSprayed), 0)"/>
+      <bind nodeset="/data/bedNetsObserved" type="integer" required="true()" relevant="selected(/data/evaluation, '1')" constraint=". &gt;= 0" jr:constraintMsg="jr:itext('bedNetsObserved:negative')" />
       <bind nodeset="/data/wastedInsecticideLoads" type="integer" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/peopleProtectedUnderAge5" type="integer" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/peopleProtectedPregnant" type="integer" required="true()" relevant="selected(/data/evaluation, '1')"/>
@@ -445,6 +453,9 @@
         <label>Quiere continuar?</label>
       </trigger>
     </group>
+    <input ref="/data/bedNetsObserved">
+      <label ref="jr:itext('/data/bedNetsObserved:label')"/>
+    </input>
     <input ref="/data/wastedInsecticideLoads">
       <label ref="jr:itext('/data/wastedInsecticideLoads:label')"/>
     </input>
