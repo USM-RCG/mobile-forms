@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Create Map</h:title>
+    <model>
+      <instance>
+        <data id="create_map" version="1">
+          <meta>
+            <instanceID/>
+          </meta>
+          <collectionDateTime/>
+          <fieldWorkerUuid/>
+          <fieldWorkerExtId/>
+          <localityUuid/>
+          <mapName/>
+        </data>
+      </instance>
+      <itext>
+        <translation default="true()" lang="Español">
+          <text id="mapName:label">
+            <value>Mapa de Área</value>
+          </text>
+          <text id="mapName:hint">
+            <value>Ingresar 'M' y cuatro dígitos</value>
+          </text>
+          <text id="mapName:invalid_format">
+            <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="mapName:label">
+            <value>Map Area</value>
+          </text>
+          <text id="mapName:hint">
+            <value>Entered as 'M' and four digits</value>
+          </text>
+          <text id="mapName:invalid_format">
+            <value>Invalid area, must be 'M' and four digits</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerUuid" type="string" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+      <bind nodeset="/data/localityUuid" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/mapName" type="string" required="true()" constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapName:invalid_format')"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/mapName">
+      <label ref="jr:itext('mapName:label')"/>
+      <hint ref="jr:itext('mapName:hint')"/>
+    </input>
+  </h:body>
+</h:html>
