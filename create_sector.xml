@@ -9,6 +9,7 @@
             <instanceID/>
           </meta>
           <collectionDateTime/>
+          <needsReview/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <mapUuid/>
@@ -41,6 +42,7 @@
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+      <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
       <bind nodeset="/data/fieldWorkerUuid" type="string" readonly="true()"/>
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/mapUuid" type="string" required="true()" readonly="true()"/>
