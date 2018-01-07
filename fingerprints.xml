@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Fingerprints</h:title>
+    <model>
+      <instance>
+        <data id="fingerprints" version="1">
+          <meta>
+            <instanceID/>
+          </meta>
+          <collectionDateTime/>
+          <fieldWorkerUuid/>
+          <fieldWorkerExtId/>
+          <individualUuid/>
+          <left_thumb/>
+          <left_index/>
+          <right_thumb/>
+          <right_index/>
+        </data>
+      </instance>
+      <itext>
+        <translation default="true()" lang="Español">
+          <text id="right_hand:label">
+            <value>Mano Derecha</value>
+          </text>
+          <text id="right_index:label">
+            <value>Índice Derecho</value>
+          </text>
+          <text id="right_thumb:label">
+            <value>Pulgar Derecho</value>
+          </text>
+          <text id="left_hand:label">
+            <value>Mano Izquierda</value>
+          </text>
+          <text id="left_index:label">
+            <value>Índice Izquierdo</value>
+          </text>
+          <text id="left_thumb:label">
+            <value>Pulgar Izquierdo</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="right_hand:label">
+            <value>Right Hand</value>
+          </text>
+          <text id="right_index:label">
+            <value>Right Index</value>
+          </text>
+          <text id="right_thumb:label">
+            <value>Right Thumb</value>
+          </text>
+          <text id="left_hand:label">
+            <value>Left Hand</value>
+          </text>
+          <text id="left_index:label">
+            <value>Left Index</value>
+          </text>
+          <text id="left_thumb:label">
+            <value>Left Thumb</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerUuid" type="string" readonly="true()"/>
+      <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+      <bind nodeset="/data/individualUuid" type="string" readonly="true()"/>
+      <bind nodeset="/data/left_thumb" type="string" />
+      <bind nodeset="/data/left_index" type="string" />
+      <bind nodeset="/data/right_thumb" type="string" />
+      <bind nodeset="/data/right_index" type="string" />
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(left_finger_assignment='left_thumb',right_finger_assignment='left_index',easy_skip='true')">
+      <label ref="jr:itext('left_hand:label')"/>
+      <input ref="left_thumb">
+         <label ref="jr:itext('left_thumb:label')"/>
+      </input>
+      <input ref="left_index">
+         <label ref="jr:itext('left_index:label')"/>
+      </input>
+    </group> 
+    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(left_finger_assignment='right_thumb',right_finger_assignment='right_index',easy_skip='true')">
+      <label ref="jr:itext('right_hand:label')"/>
+      <input ref="right_thumb">
+         <label ref="jr:itext('right_thumb:label')"/>
+      </input>
+      <input ref="right_index">
+         <label ref="jr:itext('right_index:label')"/>
+      </input>
+    </group> 
+  </h:body>
+</h:html>
