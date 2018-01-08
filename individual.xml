@@ -14,9 +14,6 @@
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <householdUuid/>
-          <membershipUuid/>
-          <relationshipUuid/>
-          <socialgroupUuid/>
           <householdExtId/>
           <individualExtId/>
           <individualFirstName/>
