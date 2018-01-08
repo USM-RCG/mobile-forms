@@ -261,6 +261,215 @@
             <value>Quiere continuar?</value>
           </text>
         </translation>
+        <translation lang="English">
+          <text id="/data/supervisorExtId:label">
+            <value>Supervisor code</value>
+          </text>
+          <text id="/data/collectionDateTime:label">
+            <value>Date/time collected</value>
+          </text>
+          <text id="/data/surveyDate:label">
+            <value>Date data was entered</value>
+          </text>
+          <text id="/data/sprayDate:label">
+            <value>Date of spraying</value>
+          </text>
+          <text id="/data/evaluation:label">
+            <value>Was the house sprayed?</value>
+          </text>
+          <text id="/data/evaluation:option0">
+            <value>Yes, it was sprayed</value>
+          </text>
+          <text id="/data/evaluation:option1">
+            <value>No, it was refused</value>
+          </text>
+          <text id="/data/evaluation:option2">
+            <value>No, it was closed each visit</value>
+          </text>
+          <text id="/data/evaluation:option3">
+            <value>No, it was uninhabitd</value>
+          </text>
+          <text id="/data/evaluation:option4">
+            <value>No, it was destroyed</value>
+          </text>
+          <text id="/data/locationExtId:label">
+            <value>External location id</value>
+          </text>
+          <text id="/data/sprayOperatorExtId:label">
+            <value>Sprayer code</value>
+          </text>
+          <text id="/data/sprayOperatorExtId:hint">
+            <value>For example: BO123</value>
+          </text>
+          <text id="/data/sprayOperatorExtId:jr:constraintMsg">
+            <value>The code must be in the format: BO _ _ _</value>
+          </text>
+          <text id="/data/sprayRound:label">
+            <value>Is this the first or second visit?</value>
+          </text>
+          <text id="/data/sprayRound:option0">
+            <value>First</value>
+          </text>
+          <text id="/data/sprayRound:option1">
+            <value>Second</value>
+          </text>
+          <text id="/data/buildingType:label">
+            <value>Building type?</value>
+          </text>
+          <text id="/data/buildingType:option0">
+            <value>House</value>
+          </text>
+          <text id="/data/buildingType:option1">
+            <value>Church</value>
+          </text>
+          <text id="/data/buildingType:option2">
+            <value>School</value>
+          </text>
+          <text id="/data/buildingType:option3">
+            <value>Hotel</value>
+          </text>
+          <text id="/data/buildingType:option4">
+            <value>Health post</value>
+          </text>
+          <text id="/data/buildingType:option5">
+            <value>Health center</value>
+          </text>
+          <text id="/data/iecResult:label">
+            <value>IEC Result?</value>
+          </text>
+          <text id="/data/iecResult:option0">
+            <value>Accepted</value>
+          </text>
+          <text id="/data/iecResult:option1">
+            <value>Closed</value>
+          </text>
+          <text id="/data/iecResult:option2">
+            <value>Refused</value>
+          </text>
+          <text id="structuresSprayedLabel:label">
+            <value>Structures sprayed</value>
+          </text>
+          <text id="structuresNotSprayedLabel:label">
+            <value>Structures not sprayed</value>
+          </text>
+          <text id="/data/roomsSprayed:label">
+            <value>Bedrooms sprayed?</value>
+          </text>
+          <text id="/data/roomsSprayed:hint">
+            <value>H</value>
+          </text>
+          <text id="/data/roomsNotSprayed:label">
+            <value>Bedrooms not sprayed?</value>
+          </text>
+          <text id="/data/roomsNotSprayed:hint">
+            <value>H</value>
+          </text>
+          <text id="/data/kitchensSprayed:label">
+            <value>Kitchens sprayed?</value>
+          </text>
+          <text id="/data/kitchensSprayed:hint">
+            <value>CN</value>
+          </text>
+          <text id="/data/kitchensNotSprayed:label">
+            <value>Kitchens not sprayed?</value>
+          </text>
+          <text id="/data/kitchensNotSprayed:hint">
+            <value>CN</value>
+          </text>
+          <text id="/data/bathroomsSprayed:label">
+            <value>Bathrooms sprayed?</value>
+          </text>
+          <text id="/data/bathroomsSprayed:hint">
+            <value>B</value>
+          </text>
+          <text id="/data/bathroomsNotSprayed:label">
+            <value>Bathrooms not sprayed?</value>
+          </text>
+          <text id="/data/bathroomsNotSprayed:hint">
+            <value>B</value>
+          </text>
+          <text id="/data/diningRoomsSprayed:label">
+            <value>Dining rooms sprayed?</value>
+          </text>
+          <text id="/data/diningRoomsSprayed:hint">
+            <value>CM</value>
+          </text>
+          <text id="/data/diningRoomsNotSprayed:label">
+            <value>Dining rooms not sprayed?</value>
+          </text>
+          <text id="/data/diningRoomsNotSprayed:hint">
+            <value>CM</value>
+          </text>
+          <text id="/data/terracesSprayed:label">
+            <value>Terraces sprayed?</value>
+          </text>
+          <text id="/data/terracesSprayed:hint">
+            <value>T</value>
+          </text>
+          <text id="/data/terracesNotSprayed:label">
+            <value>Terraces not sprayed?</value>
+          </text>
+          <text id="/data/terracesNotSprayed:hint">
+            <value>T</value>
+          </text>
+          <text id="/data/passageWaysSprayed:label">
+            <value>Hallways sprayed?</value>
+          </text>
+          <text id="/data/passageWaysSprayed:hint">
+            <value>P</value>
+          </text>
+          <text id="/data/passageWaysNotSprayed:label">
+            <value>Hallways not sprayed?</value>
+          </text>
+          <text id="/data/passageWaysNotSprayed:hint">
+            <value>P</value>
+          </text>
+          <text id="/data/totalSprayed:label">
+            <value>Total sprayed</value>
+          </text>
+          <text id="/data/totalNotSprayed:label">
+            <value>Total not sprayed</value>
+          </text>
+          <text id="/data/bedNetsObserved:label">
+            <value>Number of bednets observed</value>
+          </text>
+          <text id="bedNetsObserved:negative">
+            <value>Number of bed nets must not be less than zero</value>
+          </text>
+          <text id="/data/wastedInsecticideLoads:label">
+            <value>Number of insecticide loads used?</value>
+          </text>
+          <text id="populationProtectedLabel:label">
+            <value>Population protected?</value>
+          </text>
+          <text id="/data/peopleProtectedUnderAge5:label">
+            <value> &lt; 5 years</value>
+          </text>
+          <text id="/data/peopleProtectedPregnant:label">
+            <value>Pregnant</value>
+          </text>
+          <text id="/data/peopleProtectedOther:label">
+            <value>Others</value>
+          </text>
+          <text id="/data/totalPeopleProtected:label">
+            <value>Total people protected</value>
+          </text>
+          <text id="/data/additionalNotes:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="sprayedSummaryPrompt:label">
+            <value>You have entered a total of <output value="/data/totalSprayed"/> sprayed structures (<output value="/data/roomsSprayed"/> bedrooms + <output value="/data/kitchensSprayed"/> kitchens + <output value="/data/bathroomsSprayed"/> bathrooms + <output value="/data/diningRoomsSprayed"/> dining rooms + <output value="/data/terracesSprayed"/> terraces + <output value="/data/passageWaysSprayed"/> hallways). If this number is NOT CORRECT, go back and correct your answers.</value>
+          </text>
+          <text id="notSprayedSummaryPrompt:label">
+            <value>You have entered a total of <output value="/data/totalNotSprayed"/> unsprayed structures (<output value="/data/roomsNotSprayed"/> bedrooms + <output value="/data/kitchensNotSprayed"/> kitchens + <output value="/data/bathroomsNotSprayed"/> bathrooms + <output value="/data/diningRoomsNotSprayed"/> dining rooms + <output value="/data/terracesNotSprayed"/> terraces + <output value="/data/passageWaysNotSprayed"/> hallways). If this number is NOT CORRECT, go back and correct your answers.</value>
+          </text>
+          <text id="protectedSummaryPrompt:label">
+            <value>You have entered a total of <output value="/data/totalPeopleProtected"/> protected people (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> pregnant women + <output value="/data/peopleProtectedOther"/> others). If this number is NOT CORRECT, go back and correct your answers.</value>
+          </text>
+          <text id="continuePrompt:label">
+            <value>Do you want to continue?</value>
+          </text>
+        </translation>
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
