@@ -4,7 +4,7 @@
     <h:title>Create Sector</h:title>
     <model>
       <instance>
-        <data id="create_sector" version="1">
+        <data id="create_sector" version="201801">
           <meta>
             <instanceID/>
           </meta>

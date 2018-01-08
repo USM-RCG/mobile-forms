@@ -4,7 +4,7 @@
     <h:title>Super Ojo</h:title>
     <model>
       <instance>
-        <data id="super_ojo" version="12">
+        <data id="super_ojo" version="201801">
           <collectionDateTime/>
           <entityUuid/>
           <entityExtId/>

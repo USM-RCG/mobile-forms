@@ -4,7 +4,7 @@
     <h:title>Create Map</h:title>
     <model>
       <instance>
-        <data id="create_map" version="1">
+        <data id="create_map" version="201801">
           <meta>
             <instanceID/>
           </meta>

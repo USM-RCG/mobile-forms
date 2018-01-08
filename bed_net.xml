@@ -4,7 +4,7 @@
     <h:title>Bed Net</h:title>
     <model>
       <instance>
-        <data id="bed_net" version="12">
+        <data id="bed_net" version="201801">
           <meta>
             <instanceID/>
           </meta>

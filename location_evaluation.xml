@@ -4,7 +4,7 @@
     <h:title>Location Evaluation</h:title>
     <model>
       <instance>
-        <data id="location_evaluation" version="12">
+        <data id="location_evaluation" version="201801">
           <meta>
             <instanceID/>
           </meta>

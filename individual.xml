@@ -4,7 +4,7 @@
     <h:title>Individual</h:title>
     <model>
       <instance>
-        <data id="individual" version="12">
+        <data id="individual" version="201801">
           <meta>
             <instanceID/>
           </meta>

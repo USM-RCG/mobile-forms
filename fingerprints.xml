@@ -4,7 +4,7 @@
     <h:title>Fingerprints</h:title>
     <model>
       <instance>
-        <data id="fingerprints" version="1">
+        <data id="fingerprints" version="201801">
           <meta>
             <instanceID/>
           </meta>
