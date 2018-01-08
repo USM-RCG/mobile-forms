@@ -5,10 +5,7 @@
     <model>
       <instance>
         <data id="super_ojo" version="12">
-          <openhdsTagName>giga-gegenschein</openhdsTagName>
           <collectionDateTime/>
-          <processedByMirth/>
-          <needsReview/>
           <entityUuid/>
           <entityExtId/>
           <fieldWorkerUuid/>
@@ -107,8 +104,6 @@
           </text>
         </translation>
       </itext>
-      <bind nodeset="/data/processedByMirth" type="boolean"/>
-      <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/supervisorExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/locationExtId" type="string" readonly="true()"/>

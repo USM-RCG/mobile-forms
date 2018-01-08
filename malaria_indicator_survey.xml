@@ -5436,8 +5436,6 @@
       <instance>
         <data id="malaria_indicator_survey" version="201702">
           <collectionDateTime />
-          <processedByMirth />
-          <needsReview />
           <entityUuid />
           <entityExtId />
           <fieldWorkerUuid />
@@ -5647,8 +5645,6 @@
         </data>
       </instance>
       <bind nodeset="/data/collectionDateTime" type="dateTime" readonly="true()" />
-      <bind nodeset="/data/processedByMirth" type="boolean" readonly="true()" />
-      <bind nodeset="/data/needsReview" type="string" readonly="true()" />
       <bind nodeset="/data/entityUuid" type="string" readonly="true()" />
       <bind nodeset="/data/entityExtId" type="string" readonly="true()" />
       <bind nodeset="/data/fieldWorkerUuid" type="string" readonly="true()" />

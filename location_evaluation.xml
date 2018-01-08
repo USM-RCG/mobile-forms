@@ -5,13 +5,10 @@
     <model>
       <instance>
         <data id="location_evaluation" version="12">
-          <openhdsTagName>giga-gegenschein</openhdsTagName>
           <meta>
             <instanceID/>
           </meta>
           <collectionDateTime/>
-          <processedByMirth/>
-          <needsReview/>
           <entityUuid/>
           <entityExtId/>
           <fieldWorkerUuid/>
@@ -88,8 +85,6 @@
         </translation>
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/data/processedByMirth" type="boolean" readonly="true"/>
-      <bind nodeset="/data/needsReview" type="string" readonly="true()"/>
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/locationExtId" type="string" required="true()"/>
