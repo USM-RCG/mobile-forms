@@ -52,7 +52,7 @@
         </data>
       </instance>
       <itext>
-        <translation lang="Spanish">
+        <translation default="true()" lang="Español">
           <text id="/data/supervisorExtId:label">
             <value>Codigo de Supervisor</value>
           </text>

@@ -33,7 +33,7 @@
         </data>
       </instance>
       <itext>
-        <translation lang="Spanish">
+        <translation default="true()" lang="Español">
           <text id="/data/fieldWorkerExtId:label">
             <value>ID Externo del Encuestador</value>
           </text>
