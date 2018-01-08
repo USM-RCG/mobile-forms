@@ -76,6 +76,9 @@
                             tamano del dedo pulgar)?
                         </value>
           </text>
+          <text id="/data/ITNGoodN:jr:constraintMsg">
+            <value>Las buenas telas deben ser inferiores o iguales al número de telas Permanet 3.0 existentes</value>
+          </text>
           <text id="/data/netsRecommended:label">
             <value>Número recomendado de telas a distribuir</value>
           </text>
@@ -362,6 +365,9 @@
                             no holes)?
                         </value>
           </text>
+          <text id="/data/ITNGoodN:jr:constraintMsg">
+            <value>Good nets must be less than or equal to number of existing Permanet 3.0 nets</value>
+          </text>
           <text id="/data/netsRecommended:label">
             <value>Recommended number of nets to distribute</value>
           </text>
@@ -624,7 +630,7 @@
       <bind nodeset="/data/beds" type="int" required="true()"/>
       <bind nodeset="/data/netsCurrent" type="int" required="true()"/>
       <bind nodeset="/data/ITNsCurrent" type="int" required="true()" relevant="/data/netsCurrent &gt; 0"/>
-      <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent &gt; 0" constraint="not(. &gt; (/data/ITNsCurrent))" jr:constraintMsg="Cannot be greater than # of existing Permanet 3.0 nets"/>
+      <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent &gt; 0" constraint="not(. &gt; (/data/ITNsCurrent))" jr:constraintMsg="jr:itext('/data/ITNGoodN:jr:constraintMsg')"/>
       <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
       <bind nodeset="/data/netsSupplied" type="int" required="true()"/>
       <bind nodeset="/data/netCode" type="string" required="true()"/>
