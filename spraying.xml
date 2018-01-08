@@ -248,6 +248,18 @@
           <text id="/data/additionalNotes:label">
             <value>Hay algunas notas adicionales sobre esta casa?</value>
           </text>
+          <text id="sprayedSummaryPrompt:label">
+            <value>Ha ingresado un total de <output value="/data/totalSprayed"/> estructuras rociadas (<output value="/data/roomsSprayed"/> habitaciones + <output value="/data/kitchensSprayed"/> cocinas + <output value="/data/bathroomsSprayed"/> baños + <output value="/data/diningRoomsSprayed"/> comedores + <output value="/data/terracesSprayed"/> terrazas + <output value="/data/passageWaysSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</value>
+          </text>
+          <text id="notSprayedSummaryPrompt:label">
+            <value>Ha ingresado un total de <output value="/data/totalNotSprayed"/> estructuras NO rociadas (<output value="/data/roomsNotSprayed"/> habitaciones + <output value="/data/kitchensNotSprayed"/> cocinas + <output value="/data/bathroomsNotSprayed"/> baños + <output value="/data/diningRoomsNotSprayed"/> comedores + <output value="/data/terracesNotSprayed"/> terrazas + <output value="/data/passageWaysNotSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</value>
+          </text>
+          <text id="protectedSummaryPrompt:label">
+            <value>Ha ingresado un total de <output value="/data/totalPeopleProtected"/> personas protegidas (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> embarazadas + <output value="/data/peopleProtectedOther"/> otros). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</value>
+          </text>
+          <text id="continuePrompt:label">
+            <value>Quiere continuar?</value>
+          </text>
         </translation>
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
@@ -328,7 +340,7 @@
     </select1>
     <input ref="/data/sprayOperatorExtId">
       <label ref="jr:itext('/data/sprayOperatorExtId:label')"/>
-      <hint>p.ej. BO123</hint>
+      <hint ref="jr:itext('/data/sprayOperatorExtId:hint')"/>
     </input>
     <group appearance="field-list">
       <select1 ref="/data/sprayRound">
@@ -413,9 +425,9 @@
       </input>
     </group>
     <group appearance="field-list">
-      <label>Ha ingresado un total de <output value="/data/totalSprayed"/> estructuras rociadas (<output value="/data/roomsSprayed"/> habitaciones + <output value="/data/kitchensSprayed"/> cocinas + <output value="/data/bathroomsSprayed"/> baños + <output value="/data/diningRoomsSprayed"/> comedores + <output value="/data/terracesSprayed"/> terrazas + <output value="/data/passageWaysSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+      <label ref="jr:itext('sprayedSummaryPrompt:label')"/>
       <trigger ref="/data/widgets/prompt_trigger_1">
-        <label>Quiere continuar?</label>
+        <label ref="jr:itext('continuePrompt:label')"/>
       </trigger>
     </group>
     <group appearance="field-list">
@@ -446,9 +458,9 @@
       </input>
     </group>
     <group appearance="field-list">
-      <label>Ha ingresado un total de <output value="/data/totalNotSprayed"/> estructuras NO rociadas (<output value="/data/roomsNotSprayed"/> habitaciones + <output value="/data/kitchensNotSprayed"/> cocinas + <output value="/data/bathroomsNotSprayed"/> baños + <output value="/data/diningRoomsNotSprayed"/> comedores + <output value="/data/terracesNotSprayed"/> terrazas + <output value="/data/passageWaysNotSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+      <label ref="jr:itext('notSprayedSummaryPrompt:label')"/>
       <trigger ref="/data/widgets/prompt_trigger_2">
-        <label>Quiere continuar?</label>
+        <label ref="jr:itext('continuePrompt:label')"/>
       </trigger>
     </group>
     <input ref="/data/bedNetsObserved">
@@ -470,9 +482,9 @@
       </input>
     </group>
     <group appearance="field-list">
-      <label>Ha ingresado un total de <output value="/data/totalPeopleProtected"/> personas protegidas (<output value="/data/peopleProtectedUnderAge5"/> &lt; 5 + <output value="/data/peopleProtectedPregnant"/> embarazadas + <output value="/data/peopleProtectedOther"/> otros). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</label>
+      <label ref="jr:itext('protectedSummaryPrompt:label')"/>
       <trigger ref="/data/widgets/prompt_trigger_3">
-        <label>Quiere continuar?</label>
+        <label ref="jr:itext('continuePrompt:label')"/>
       </trigger>
     </group>
     <input ref="/data/additionalNotes">
