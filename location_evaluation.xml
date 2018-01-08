@@ -30,13 +30,13 @@
           <text id="/data/evaluation:label">
             <value>Locación Evaluación:</value>
           </text>
-          <text id="/data/evaluation:option0">
+          <text id="/data/evaluation:uninhabited">
             <value>La locación está deshabitada</value>
           </text>
-          <text id="/data/evaluation:option1">
+          <text id="/data/evaluation:refused">
             <value>El domicilio rechazó la intervención</value>
           </text>
-          <text id="/data/evaluation:option2">
+          <text id="/data/evaluation:unavailable">
             <value>Los miembros del domicilio no están disponibles</value>
           </text>
         </translation>
@@ -53,13 +53,13 @@
           <text id="/data/evaluation:label">
             <value>Location Evaluation:</value>
           </text>
-          <text id="/data/evaluation:option0">
+          <text id="/data/evaluation:uninhabited">
             <value>The location is uninhabited</value>
           </text>
-          <text id="/data/evaluation:option1">
+          <text id="/data/evaluation:refused">
             <value>The household rejected intervention</value>
           </text>
-          <text id="/data/evaluation:option2">
+          <text id="/data/evaluation:unavailable">
             <value>Member(s) of the household are never available</value>
           </text>
         </translation>
@@ -86,15 +86,15 @@
     <select ref="/data/evaluation">
       <label ref="jr:itext('/data/evaluation:label')"/>
       <item>
-        <label ref="jr:itext('/data/evaluation:option0')"/>
+        <label ref="jr:itext('/data/evaluation:uninhabited')"/>
         <value>uninhabited</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/evaluation:option1')"/>
+        <label ref="jr:itext('/data/evaluation:refused')"/>
         <value>rejectedIntervention</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/evaluation:option2')"/>
+        <label ref="jr:itext('/data/evaluation:unavailable')"/>
         <value>neverAvailable</value>
       </item>
     </select>
