@@ -19,7 +19,7 @@
       <itext>
         <translation default="true()" lang="Español">
           <text id="/data/fieldWorkerExtId:label">
-            <value>ID Externo del Encuestador</value>
+            <value>Encuestador</value>
           </text>
           <text id="/data/collectionDateTime:label">
             <value>Fecha de Colección</value>
@@ -42,7 +42,7 @@
         </translation>
         <translation lang="English">
           <text id="/data/fieldWorkerExtId:label">
-            <value>Field Worker Ext Id</value>
+            <value>Field Worker</value>
           </text>
           <text id="/data/collectionDateTime:label">
             <value>Collected Date Time</value>
