@@ -92,6 +92,9 @@
           <text id="/data/sprayOperatorExtId:hint">
             <value>p.ej. BO123</value>
           </text>
+          <text id="/data/sprayOperatorExtId:jr:constraintMsg">
+            <value>El codigo debe ser del formato BO _ _ _</value>
+          </text>
           <text id="/data/sprayRound:label">
             <value>Es la visita principal o secundaria?</value>
           </text>
@@ -255,7 +258,7 @@
       <bind nodeset="/data/supervisorExtId" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/evaluation" type="select1" required="true()"/>
-      <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" relevant="selected(/data/evaluation, '1')" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="el ID debe ser del formato BO _ _ _"/>
+      <bind nodeset="/data/sprayOperatorExtId" type="string" required="true()" relevant="selected(/data/evaluation, '1')" constraint="(regex(., '^[B]{1}[O]{1}[0-9]{3}$'))" jr:constraintMsg="jr:itext('/data/sprayOperatorExtId:jr:constraintMsg')"/>
       <bind nodeset="/data/sprayRound" type="select1" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/buildingType" type="select1" required="true()" relevant="selected(/data/evaluation, '1')"/>
       <bind nodeset="/data/iecResult" type="select1" required="true()" relevant="selected(/data/evaluation, '1')"/>
