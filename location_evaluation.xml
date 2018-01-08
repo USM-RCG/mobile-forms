@@ -13,8 +13,6 @@
           <entityExtId/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
-          <locationExtId/>
-          <locationUuid/>
           <evaluation/>
         </data>
       </instance>
@@ -26,8 +24,8 @@
           <text id="/data/collectionDateTime:label">
             <value>Fecha de Colección</value>
           </text>
-          <text id="/data/locationExtId:label">
-            <value>ID Externo de Locación</value>
+          <text id="/data/entityExtId:label">
+            <value>Locación</value>
           </text>
           <text id="/data/evaluation:label">
             <value>Locación Evaluación:</value>
@@ -49,8 +47,8 @@
           <text id="/data/collectionDateTime:label">
             <value>Collected Date Time</value>
           </text>
-          <text id="/data/locationExtId:label">
-            <value>Location Ext Id</value>
+          <text id="/data/entityExtId:label">
+            <value>Location</value>
           </text>
           <text id="/data/evaluation:label">
             <value>Location Evaluation:</value>
@@ -68,8 +66,8 @@
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
+      <bind nodeset="/data/entityExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
-      <bind nodeset="/data/locationExtId" type="string" required="true()"/>
       <bind nodeset="/data/evaluation" type="select"/>
     </model>
   </h:head>
@@ -78,11 +76,11 @@
       <input ref="/data/fieldWorkerExtId">
         <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
       </input>
+      <input ref="/data/entityExtId">
+        <label ref="jr:itext('/data/entityExtId:label')"/>
+      </input>
       <input ref="/data/collectionDateTime">
         <label ref="jr:itext('/data/collectionDateTime:label')"/>
-      </input>
-      <input ref="/data/locationExtId">
-        <label ref="jr:itext('/data/locationExtId:label')"/>
       </input>
     </group>
     <select ref="/data/evaluation">
