@@ -524,7 +524,7 @@
             <value>Ethnicity</value>
           </text>
           <text id="/data/individualEthnicity:hint">
-            <value>What are this person's ethnicity or ethnicities? Select all that apply.</value>
+            <value>What are this person's ethnicities? Select all that apply.</value>
           </text>
           <text id="/data/individualEthnicity:fang">
             <value>Fang</value>
