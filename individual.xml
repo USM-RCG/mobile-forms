@@ -615,6 +615,7 @@
       <bind nodeset="/data/individualLanguagePreference" type="select1" required="true()"/>
       <bind nodeset="/data/individualNationality" type="select1" required="true()"/>
       <bind nodeset="/data/individualEthnicity" type="select" required="true()" relevant="selected(/data/individualNationality, 'Equato Guinean')"/>
+      <bind nodeset="/data/individualMemberStatus" type="select1"/>
       <bind nodeset="/data/individualDip" type="int" constraint="not(. &lt; 0)"/>
     </model>
   </h:head>
