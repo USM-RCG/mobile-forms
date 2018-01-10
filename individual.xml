@@ -33,6 +33,7 @@
           <individualPointOfContactPhoneNumber/>
           <individualDip/>
           <individualMemberStatus/>
+          <individualEthnicity/>
           <ageRangeHelper/>
           <individualIsPregnantFlag/>
           <headPrefilledFlag/>
@@ -243,6 +244,33 @@
           </text>
           <text id="/data/individualNationality:option3">
             <value>Otro pais No-Africano</value>
+          </text>
+          <text id="/data/individualEthnicity:label">
+            <value>Etnicidad</value>
+          </text>
+          <text id="/data/individualEthnicity:hint">
+            <value>¿Cuáles son las etnicidades de esta persona? Seleccione todas las que correspondan.</value>
+          </text>
+          <text id="/data/individualEthnicity:fang">
+            <value>Fang</value>
+          </text>
+          <text id="/data/individualEthnicity:bubi">
+            <value>Bubi</value>
+          </text>
+          <text id="/data/individualEthnicity:pigmeo">
+            <value>Pigmeo</value>
+          </text>
+          <text id="/data/individualEthnicity:ndowé">
+            <value>Ndowé</value>
+          </text>
+          <text id="/data/individualEthnicity:bisio">
+            <value>Bisio</value>
+          </text>
+          <text id="/data/individualEthnicity:criollo">
+            <value>Criollo</value>
+          </text>
+          <text id="/data/individualEthnicity:annobonés">
+            <value>Annobonés</value>
           </text>
           <text id="/data/individualLanguagePreference:label">
             <value>Idioma de Preferencia</value>
@@ -492,6 +520,33 @@
           <text id="/data/individualNationality:option3">
             <value>Other Non-African Country</value>
           </text>
+          <text id="/data/individualEthnicity:label">
+            <value>Ethnicity</value>
+          </text>
+          <text id="/data/individualEthnicity:hint">
+            <value>What are this person's ethnicity or ethnicities? Select all that apply.</value>
+          </text>
+          <text id="/data/individualEthnicity:fang">
+            <value>Fang</value>
+          </text>
+          <text id="/data/individualEthnicity:bubi">
+            <value>Bubi</value>
+          </text>
+          <text id="/data/individualEthnicity:pigmeo">
+            <value>Pigmeo</value>
+          </text>
+          <text id="/data/individualEthnicity:ndowé">
+            <value>Ndowé</value>
+          </text>
+          <text id="/data/individualEthnicity:bisio">
+            <value>Bisio</value>
+          </text>
+          <text id="/data/individualEthnicity:criollo">
+            <value>Criollo</value>
+          </text>
+          <text id="/data/individualEthnicity:annobonés">
+            <value>Annobonés</value>
+          </text>
           <text id="/data/individualLanguagePreference:label">
             <value>Language Preference</value>
           </text>
@@ -559,6 +614,7 @@
       <bind nodeset="/data/individualPointOfContactPhoneNumber" type="int" required="string-length(string(/data/individualPhoneNumber)) = 0" relevant="string-length(string(/data/individualPhoneNumber)) = 0" constraint="(regex(., '^[0-9]{9}$'))" jr:constraintMsg="jr:itext('/data/IndividualPhoneNumber:jr:constraintMsg')"/>
       <bind nodeset="/data/individualLanguagePreference" type="select1" required="true()"/>
       <bind nodeset="/data/individualNationality" type="select1" required="true()"/>
+      <bind nodeset="/data/individualEthnicity" type="select" required="true()" relevant="selected(/data/individualNationality, 'Equato Guinean')"/>
       <bind nodeset="/data/individualDip" type="int" constraint="not(. &lt; 0)"/>
     </model>
   </h:head>
@@ -749,6 +805,38 @@
         <value>Other Non-African Country</value>
       </item>
     </select1>
+    <select ref="/data/individualEthnicity">
+      <label ref="jr:itext('/data/individualEthnicity:label')"/>
+      <hint ref="jr:itext('/data/individualEthnicity:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:fang')"/>
+        <value>fang</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:bubi')"/>
+        <value>bubi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:pigmeo')"/>
+        <value>pigmeo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:ndowé')"/>
+        <value>ndowé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:bisio')"/>
+        <value>bisio</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:criollo')"/>
+        <value>criollo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/individualEthnicity:annobonés')"/>
+        <value>annobonés</value>
+      </item>
+    </select>
     <select1 ref="/data/individualLanguagePreference">
       <label ref="jr:itext('/data/individualLanguagePreference:label')"/>
       <hint ref="jr:itext('/data/individualLanguagePreference:hint')"/>
