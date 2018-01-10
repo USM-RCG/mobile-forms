@@ -14,6 +14,7 @@
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <evaluation/>
+          <consent/>
         </data>
       </instance>
       <itext>
@@ -28,16 +29,43 @@
             <value>Locación</value>
           </text>
           <text id="/data/evaluation:label">
-            <value>Locación Evaluación:</value>
+            <value>Evaluación</value>
+          </text>
+          <text id="/data/evaluation:notfound">
+            <value>No se puede encontrar la locación</value>
+          </text>
+          <text id="/data/evaluation:destroyed">
+            <value>La locación fue destruida</value>
           </text>
           <text id="/data/evaluation:uninhabited">
             <value>La locación está deshabitada</value>
           </text>
-          <text id="/data/evaluation:refused">
-            <value>El domicilio rechazó la intervención</value>
-          </text>
           <text id="/data/evaluation:unavailable">
             <value>Los miembros del domicilio no están disponibles</value>
+          </text>
+          <text id="/data/evaluation:fullconsent">
+            <value>Consentido para todas las actividades</value>
+          </text>
+          <text id="/data/evaluation:partialconsent">
+            <value>Consentido para algunas actividades, pero no todas</value>
+          </text>
+          <text id="/data/evaluation:refused">
+            <value>Todas las actividades fueron rechazadas</value>
+          </text>
+          <text id="/data/consent:label">
+            <value>Actividades autorizadas</value>
+          </text>
+          <text id="/data/consent:hint">
+            <value>Por favor, seleccione todas las actividades consentidas.</value>
+          </text>
+          <text id="/data/consent:census">
+            <value>Censo</value>
+          </text>
+          <text id="/data/consent:biometrics">
+            <value>Biometría (huellas dactilares)</value>
+          </text>
+          <text id="/data/consent:nets">
+            <value>Telas mosquiteras</value>
           </text>
         </translation>
         <translation lang="English">
@@ -51,16 +79,43 @@
             <value>Location</value>
           </text>
           <text id="/data/evaluation:label">
-            <value>Location Evaluation:</value>
+            <value>Evaluation</value>
+          </text>
+          <text id="/data/evaluation:notfound">
+            <value>Unable to find location</value>
+          </text>
+          <text id="/data/evaluation:destroyed">
+            <value>The location was destroyed</value>
           </text>
           <text id="/data/evaluation:uninhabited">
             <value>The location is uninhabited</value>
           </text>
-          <text id="/data/evaluation:refused">
-            <value>The household rejected intervention</value>
-          </text>
           <text id="/data/evaluation:unavailable">
-            <value>Member(s) of the household are never available</value>
+            <value>Members of the household are unavailable</value>
+          </text>
+          <text id="/data/evaluation:fullconsent">
+            <value>Consented to all activities</value>
+          </text>
+          <text id="/data/evaluation:partialconsent">
+            <value>Consented to some, but not all, activities</value>
+          </text>
+          <text id="/data/evaluation:refused">
+            <value>All activities were refused</value>
+          </text>
+          <text id="/data/consent:label">
+            <value>Consented activities</value>
+          </text>
+          <text id="/data/consent:hint">
+            <value>Please select all activities the household consented to.</value>
+          </text>
+          <text id="/data/consent:census">
+            <value>Census</value>
+          </text>
+          <text id="/data/consent:biometrics">
+            <value>Biometrics (fingerprints)</value>
+          </text>
+          <text id="/data/consent:nets">
+            <value>Bed nets</value>
           </text>
         </translation>
       </itext>
@@ -68,7 +123,8 @@
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/entityExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
-      <bind nodeset="/data/evaluation" type="select"/>
+      <bind nodeset="/data/evaluation" type="select1" required="true()"/>
+      <bind nodeset="/data/consent" type="select" required="true()" relevant="selected(/data/evaluation, 'fullconsent') or selected(/data/evaluation, 'partialconsent')"/>
     </model>
   </h:head>
   <h:body>
@@ -83,19 +139,51 @@
         <label ref="jr:itext('/data/collectionDateTime:label')"/>
       </input>
     </group>
-    <select ref="/data/evaluation">
+    <select1 ref="/data/evaluation">
       <label ref="jr:itext('/data/evaluation:label')"/>
+      <item>
+        <label ref="jr:itext('/data/evaluation:notfound')"/>
+        <value>notfound</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/evaluation:destroyed')"/>
+        <value>destroyed</value>
+      </item>
       <item>
         <label ref="jr:itext('/data/evaluation:uninhabited')"/>
         <value>uninhabited</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/evaluation:refused')"/>
-        <value>rejectedIntervention</value>
+        <label ref="jr:itext('/data/evaluation:unavailable')"/>
+        <value>unavailable</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/evaluation:unavailable')"/>
-        <value>neverAvailable</value>
+        <label ref="jr:itext('/data/evaluation:fullconsent')"/>
+        <value>fullconsent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/evaluation:partialconsent')"/>
+        <value>partialconsent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/evaluation:refused')"/>
+        <value>refused</value>
+      </item>
+    </select1>
+    <select ref="/data/consent">
+      <label ref="jr:itext('/data/consent:label')"/>
+      <hint ref="jr:itext('/data/consent:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/consent:census')"/>
+        <value>census</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/consent:nets')"/>
+        <value>nets</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/consent:biometrics')"/>
+        <value>biometrics</value>
       </item>
     </select>
   </h:body>
