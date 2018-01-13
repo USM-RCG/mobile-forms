@@ -22,8 +22,6 @@
           <locationType/>
           <housingType/>
           <housingTypeOther/>
-          <communityName/>
-          <communityCode/>
           <mapAreaName/>
           <localityName/>
           <sectorName/>
@@ -129,18 +127,6 @@
           </text>
           <text id="/data/housingTypeOther:hint">
             <value>Describir la vivienda otra clasificación</value>
-          </text>
-          <text id="/data/communityName:label">
-            <value>Nombre de la Comunidad</value>
-          </text>
-          <text id="/data/communityName:hint">
-            <value/>
-          </text>
-          <text id="/data/communityCode:label">
-            <value>Codigo de la Comunidad</value>
-          </text>
-          <text id="/data/communityCode:hint">
-            <value/>
           </text>
           <text id="/data/mapAreaName:label">
             <value>Nombre de Area de Mapa</value>
@@ -273,18 +259,6 @@
           <text id="/data/housingTypeOther:hint">
             <value>Describe other housing type</value>
           </text>
-          <text id="/data/communityName:label">
-            <value>Community Name</value>
-          </text>
-          <text id="/data/communityName:hint">
-            <value/>
-          </text>
-          <text id="/data/communityCode:label">
-            <value>Community Code</value>
-          </text>
-          <text id="/data/communityCode:hint">
-            <value/>
-          </text>
           <text id="/data/mapAreaName:label">
             <value>Map Area Name</value>
           </text>
@@ -337,8 +311,6 @@
       <bind nodeset="/data/locationType" type="select1" required="true()"/>
       <bind nodeset="/data/housingType" type="select1" required="true()"/>
       <bind nodeset="/data/housingTypeOther" type="string" required="true()" relevant="selected(/data/housingType, 'other')"/>
-      <bind nodeset="/data/communityName" type="string" readonly="true()"/>
-      <bind nodeset="/data/communityCode" type="string" readonly="true()"/>
       <bind nodeset="/data/description" type="string"/>
       <bind nodeset="/data/location" type="geopoint"/>
     </model>
@@ -355,14 +327,6 @@
       </input>
     </group>
     <group appearance="field-list">
-      <input ref="/data/communityCode">
-        <label ref="jr:itext('/data/communityCode:label')"/>
-        <hint ref="jr:itext('/data/communityCode:hint')"/>
-      </input>
-      <input ref="/data/communityName">
-        <label ref="jr:itext('/data/communityName:label')"/>
-        <hint ref="jr:itext('/data/communityName:hint')"/>
-      </input>
       <input ref="/data/localityName">
         <label ref="jr:itext('/data/localityName:label')"/>
         <hint ref="jr:itext('/data/localityName:hint')"/>
