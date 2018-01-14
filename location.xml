@@ -23,7 +23,6 @@
           <housingType/>
           <housingTypeOther/>
           <mapAreaName/>
-          <localityName/>
           <sectorName/>
           <locationExtId/>
           <description/>
@@ -136,12 +135,6 @@
           </text>
           <text id="mapAreaName:invalid_format">
             <value>Área no válido. Debe ser 'M' y 4 dígitos</value>
-          </text>
-          <text id="/data/localityName:label">
-            <value>Nombre de la Localidad</value>
-          </text>
-          <text id="/data/localityName:hint">
-            <value/>
           </text>
           <text id="/data/sectorName:label">
             <value>Nombre del Sector</value>
@@ -268,12 +261,6 @@
           <text id="mapAreaName:invalid_format">
             <value>Invalid area, must be 'M' and four digits</value>
           </text>
-          <text id="/data/localityName:label">
-            <value>Locality Name</value>
-          </text>
-          <text id="/data/localityName:hint">
-            <value/>
-          </text>
           <text id="/data/sectorName:label">
             <value>Sector Name</value>
           </text>
@@ -302,7 +289,6 @@
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()" constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')"/>
-      <bind nodeset="/data/localityName" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/sectorName" type="string" required="true()" constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')"/>
       <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')"/>
       <bind nodeset="/data/locationFloorNumber" type="string" required="true()" constraint="regex(.,'[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
@@ -324,12 +310,6 @@
       <input ref="/data/collectionDateTime">
         <label ref="jr:itext('/data/collectionDateTime:label')"/>
         <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
-      </input>
-    </group>
-    <group appearance="field-list">
-      <input ref="/data/localityName">
-        <label ref="jr:itext('/data/localityName:label')"/>
-        <hint ref="jr:itext('/data/localityName:hint')"/>
       </input>
     </group>
     <group appearance="field-list">
