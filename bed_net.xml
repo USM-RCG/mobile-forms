@@ -67,13 +67,13 @@
             <value>¿Actualmente, Cuantas telas mosquiteras de cualquier tipo hay en el hogar?</value>
           </text>
           <text id="/data/ITNsCurrent:label">
-            <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP (OlysetPlus)?</value>
+            <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP?</value>
           </text>
           <text id="/data/ITNGoodN:label">
-            <value>¿Cuantas telas del PNLP (OlysetPlus) estan en buen estado (sin huecos o huecos del tamano del dedo pulgar)?</value>
+            <value>¿Cuantas telas estan en buen estado (sin huecos o huecos del tamano del dedo pulgar)?</value>
           </text>
           <text id="/data/ITNGoodN:jr:constraintMsg">
-            <value>Las buenas telas deben ser inferiores o iguales al número de telas OlysetPlus existentes</value>
+            <value>Las buenas telas deben ser inferiores o iguales al número de telas existentes</value>
           </text>
           <text id="/data/netsRecommended:label">
             <value>Número recomendado de telas a distribuir</value>
@@ -354,13 +354,13 @@
             <value>How many bed nets of any type does the household currently have?</value>
           </text>
           <text id="/data/ITNsCurrent:label">
-            <value>How many blue OlysetPlus nets does the household currently have?</value>
+            <value>How many nets from BIMCP does the household currently have?</value>
           </text>
           <text id="/data/ITNGoodN:label">
-            <value>How many of these blue OlysetPlus nets are in good condition (only thumb-sized holes or no holes)?</value>
+            <value>How many nets are in good condition (only thumb-sized holes or no holes)?</value>
           </text>
           <text id="/data/ITNGoodN:jr:constraintMsg">
-            <value>Good nets must be less than or equal to number of existing OlysetPlus nets</value>
+            <value>Good nets must be less than or equal to number of existing nets</value>
           </text>
           <text id="/data/netsRecommended:label">
             <value>Recommended number of nets to distribute</value>
