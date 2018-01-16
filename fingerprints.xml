@@ -25,6 +25,9 @@
           </text>
           <text id="right_hand:label">
             <value>Mano Derecha</value>
+            <value form="long">Escanee la mano derecha utilizando un escáner de huellas digitales</value>
+            <value form="buttonText">Iniciar escáner</value>
+            <value form="noAppErrorString">Aplicación de escaneo de huellas digitales no instalada</value>
           </text>
           <text id="right_index:label">
             <value>Índice Derecho</value>
@@ -34,6 +37,9 @@
           </text>
           <text id="left_hand:label">
             <value>Mano Izquierda</value>
+            <value form="long">Escanee la mano derecha utilizando un escáner de huellas digitales</value>
+            <value form="buttonText">Iniciar escáner</value>
+            <value form="noAppErrorString">Aplicación de escaneo de huellas digitales no instalada</value>
           </text>
           <text id="left_index:label">
             <value>Índice Izquierdo</value>
@@ -48,6 +54,9 @@
           </text>
           <text id="right_hand:label">
             <value>Right Hand</value>
+            <value form="long">Scan right hand using fingerprint scanner</value>
+            <value form="buttonText">Launch Scanner</value>
+            <value form="noAppErrorString">Fingerprint scanning app not installed</value>
           </text>
           <text id="right_index:label">
             <value>Right Index</value>
@@ -57,6 +66,9 @@
           </text>
           <text id="left_hand:label">
             <value>Left Hand</value>
+            <value form="long">Scan left hand using fingerprint scanner</value>
+            <value form="buttonText">Launch Scanner</value>
+            <value form="noAppErrorString">Fingerprint scanning app not installed</value>
           </text>
           <text id="left_index:label">
             <value>Left Index</value>
