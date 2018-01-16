@@ -20,6 +20,9 @@
       </instance>
       <itext>
         <translation default="true()" lang="Español">
+          <text id="scan_prompt:label">
+            <value>Escanee cada dedo tocando primero el dedo para escanear</value>
+          </text>
           <text id="right_hand:label">
             <value>Mano Derecha</value>
           </text>
@@ -40,6 +43,9 @@
           </text>
         </translation>
         <translation lang="English">
+          <text id="scan_prompt:label">
+            <value>Scan each finger by first tapping the finger to scan</value>
+          </text>
           <text id="right_hand:label">
             <value>Right Hand</value>
           </text>
@@ -72,7 +78,7 @@
     </model>
   </h:head>
   <h:body>
-    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(left_finger_assignment='left_thumb',right_finger_assignment='left_index',easy_skip='true')">
+    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(prompt=jr:itext('scan_prompt:label'),left_finger_assignment='left_thumb',right_finger_assignment='left_index',easy_skip='true')">
       <label ref="jr:itext('left_hand:label')"/>
       <input ref="left_thumb">
          <label ref="jr:itext('left_thumb:label')"/>
@@ -81,7 +87,7 @@
          <label ref="jr:itext('left_index:label')"/>
       </input>
     </group> 
-    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(left_finger_assignment='right_thumb',right_finger_assignment='right_index',easy_skip='true')">
+    <group ref="/data" appearance="field-list" intent="com.openandid.internal.SCAN(prompt=jr:itext('scan_prompt:label'),left_finger_assignment='right_thumb',right_finger_assignment='right_index',easy_skip='true')">
       <label ref="jr:itext('right_hand:label')"/>
       <input ref="right_thumb">
          <label ref="jr:itext('right_thumb:label')"/>
