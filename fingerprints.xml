@@ -18,6 +18,9 @@
           <right_index/>
         </data>
       </instance>
+      <submission method="form-data-post"
+                  action="https://cims-bioko.org/api/odk/submission"
+                  base64RsaPublicKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2fMkzJrS5F95sIcEJiD0Chvi6jTbZ0VVVPQ/1pT4tKsnEvFpXgVP4P3R0+mMafhcY41hIG6CQrKX7EYE562KBYFgILoSrTotuYF8K+UVN40kl+fwlqg72NH79Q0t4U5DiPT6+IK9+s3ZS7nVfDkucawmvaFioWtKnBuGqXXpX6DXNVXn4R3xoLlTweoS2iOn4Afo0CfkTpsAVg1Hk4ZYm2GmrfHlHOV9LAFPmp4l2Zcc3JlkwIKgOaLx/CjE+cwI3JtwsTP8mveOWje8XiL8iF/yCXCMDjI2RhlPDPWLIsrWOv7yYhtppPmoHUw2pgQlIqgUBO4ThA0TvljFnJJECQIDAQAB" />
       <itext>
         <translation default="true()" lang="Español">
           <text id="scan_prompt:label">
