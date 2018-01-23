@@ -85,7 +85,7 @@
             <value>Codigo de la Tela Mosquitera (Marcar en la Tela)</value>
           </text>
           <text id="/data/netsHung:label">
-            <value>¿La tela fue colgada?</value>
+            <value>¿Cuántas telas fueron colgadas?</value>
           </text>
           <text id="/data/walls:label">
             <value>Ingrese el tipo de material de construccion de la pared</value>
@@ -372,7 +372,7 @@
             <value>Bed Net Code</value>
           </text>
           <text id="/data/netsHung:label">
-            <value>Hung</value>
+            <value>How many nets were hung?</value>
           </text>
           <text id="/data/walls:label">
             <value>Enter the primary (most common) wall material</value>
