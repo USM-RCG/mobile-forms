@@ -12,6 +12,7 @@
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <localityUuid/>
+          <mapUuid/>
           <mapName/>
         </data>
       </instance>
@@ -44,6 +45,7 @@
       <bind nodeset="/data/fieldWorkerUuid" type="string" readonly="true()"/>
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/localityUuid" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/mapUuid" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/mapName" type="string" required="true()" constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapName:invalid_format')"/>
     </model>
   </h:head>
