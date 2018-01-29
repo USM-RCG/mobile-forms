@@ -54,7 +54,7 @@
             <value/>
           </text>
           <text id="/data/householdExtId:label">
-            <value>ID Externo del Hogar</value>
+            <value>ID Externo del Domicilio</value>
           </text>
           <text id="/data/householdExtId:hint">
             <value/>
