@@ -211,7 +211,7 @@
             <value>Todas las ventanas</value>
           </text>
           <text id="/data/aircondition:label">
-            <value>Ingrese si la casa tiene aire acondicionado</value>
+            <value>Ingrese si el domicilio tiene aire acondicionado</value>
           </text>
           <text id="/data/aircondition:option0">
             <value>No</value>
@@ -262,7 +262,7 @@
             <value>Otro</value>
           </text>
           <text id="/data/houseSprayed:label">
-            <value>¿Su casa fue rociada en los ultimos 12 meses?</value>
+            <value>¿Su domicilio fue rociada en los ultimos 12 meses?</value>
           </text>
           <text id="/data/houseSprayed:option0">
             <value>No</value>
@@ -274,22 +274,22 @@
             <value>No sabe / no esta seguro</value>
           </text>
           <text id="/data/reasonWhyNotSprayed:label">
-            <value>¿Por que no se rocio su casa en los ultimos 12 meses?</value>
+            <value>¿Por que no se rocio su domicilio en los ultimos 12 meses?</value>
           </text>
           <text id="/data/reasonWhyNotSprayed:option0">
-            <value>No me contactaron para rociar mi casa</value>
+            <value>No me contactaron para rociar mi domicilio</value>
           </text>
           <text id="/data/reasonWhyNotSprayed:option1">
-            <value>Nadie regreso para rociar mi casa</value>
+            <value>Nadie regreso para rociar mi domicilio</value>
           </text>
           <text id="/data/reasonWhyNotSprayed:option2">
             <value>No sabe / no esta seguro</value>
           </text>
           <text id="/data/reasonWhyNotSprayed:option3">
-            <value>No quiero que rocien mi casa</value>
+            <value>No quiero que rocien mi domicilio</value>
           </text>
           <text id="/data/whyNotSprayed:label">
-            <value>¿Por qué no quieren que rocien su casa?</value>
+            <value>¿Por qué no quieren que rocien su domicilio?</value>
           </text>
           <text id="/data/whyNotSprayed01:label">
             <value>Causa efectos secundarios contra la salud</value>

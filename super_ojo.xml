@@ -195,7 +195,7 @@
     <group ref="/data/medidas_preventativas">
       <label>Medidas Preventativas</label>
       <select1 ref="/data/medidas_preventativas/gorra">
-        <label>ha usado gorra al rociar la casa</label>
+        <label>ha usado gorra al rociar el domicilio</label>
         <item>
           <label>no</label>
           <value>0</value>
@@ -228,7 +228,7 @@
         <label>Especifique otro</label>
       </input>
       <select1 ref="/data/medidas_preventativas/mascarilla">
-        <label>Ha usado mascarilla al rociar la casa</label>
+        <label>Ha usado mascarilla al rociar el domicilio</label>
         <item>
           <label>no</label>
           <value>0</value>
@@ -261,7 +261,7 @@
         <label>Especifique otro</label>
       </input>
       <select1 ref="/data/medidas_preventativas/casco">
-        <label>Ha usado casco al rociar la casa</label>
+        <label>Ha usado casco al rociar el domicilio</label>
         <item>
           <label>no</label>
           <value>0</value>

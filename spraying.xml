@@ -66,7 +66,7 @@
             <value>Fecha de rociamiento</value>
           </text>
           <text id="/data/evaluation:label">
-            <value>Fue rociada la casa?</value>
+            <value>Fue rociada el domicilio?</value>
           </text>
           <text id="/data/evaluation:option0">
             <value>Sí, fue rociada</value>
@@ -246,7 +246,7 @@
             <value>Total</value>
           </text>
           <text id="/data/additionalNotes:label">
-            <value>Hay algunas notas adicionales sobre esta casa?</value>
+            <value>Hay algunas notas adicionales sobre este domicilio?</value>
           </text>
           <text id="sprayedSummaryPrompt:label">
             <value>Ha ingresado un total de <output value="/data/totalSprayed"/> estructuras rociadas (<output value="/data/roomsSprayed"/> habitaciones + <output value="/data/kitchensSprayed"/> cocinas + <output value="/data/bathroomsSprayed"/> baños + <output value="/data/diningRoomsSprayed"/> comedores + <output value="/data/terracesSprayed"/> terrazas + <output value="/data/passageWaysSprayed"/> passillos). Si este numero NO ES CORRECTO, volver atras y corregir sus respuestas.</value>
