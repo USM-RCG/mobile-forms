@@ -26,19 +26,19 @@
             <value>Fecha de Colección</value>
           </text>
           <text id="/data/entityExtId:label">
-            <value>Locación</value>
+            <value>Domicilio</value>
           </text>
           <text id="/data/evaluation:label">
             <value>Evaluación</value>
           </text>
           <text id="/data/evaluation:notfound">
-            <value>No se puede encontrar la locación</value>
+            <value>No se puede encontrar el domicilio</value>
           </text>
           <text id="/data/evaluation:destroyed">
-            <value>La locación fue destruida</value>
+            <value>El domicilio fue destruido</value>
           </text>
           <text id="/data/evaluation:uninhabited">
-            <value>La locación está deshabitada</value>
+            <value>El domicilio está deshabitado</value>
           </text>
           <text id="/data/evaluation:unavailable">
             <value>Los miembros del domicilio no están disponibles</value>

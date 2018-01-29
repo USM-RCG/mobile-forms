@@ -94,7 +94,7 @@
             <value>Fecha de colección</value>
           </text>
           <text id="/data/locationExtId:label">
-            <value>ID Externo de Locación</value>
+            <value>ID Externo del Domicilio</value>
           </text>
           <text id="/data/sprayOperatorExtId:label">
             <value>Codigo de Rociador</value>

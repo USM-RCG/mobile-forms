@@ -44,7 +44,7 @@
             <value/>
           </text>
           <text id="/data/locationExtId:label">
-            <value>ID Externo de Locación</value>
+            <value>ID Externo del Domicilio</value>
           </text>
           <text id="/data/locationExtId:hint">
             <value/>
@@ -71,7 +71,7 @@
             <value>Piso no válido. Debe ser 2 dígitos</value>
           </text>
           <text id="/data/locationName:label">
-            <value>Nombre de Locación</value>
+            <value>Nombre del Domicilio</value>
           </text>
           <text id="/data/locationName:hint">
             <value/>
