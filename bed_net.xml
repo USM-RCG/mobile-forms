@@ -61,10 +61,10 @@
             <value/>
           </text>
           <text id="/data/beds:label">
-            <value>¿Cuantas camas o lugares para dormir hay en el hogar?</value>
+            <value>¿Cuantas camas o lugares para dormir hay en el domicilio?</value>
           </text>
           <text id="/data/netsCurrent:label">
-            <value>¿Actualmente, Cuantas telas mosquiteras de cualquier tipo hay en el hogar?</value>
+            <value>¿Actualmente, Cuantas telas mosquiteras de cualquier tipo hay en el domicilio?</value>
           </text>
           <text id="/data/ITNsCurrent:label">
             <value>¿Cuantas telas fueron recibidas gratuitamente en el centro de salud o a traves del PNLP?</value>
@@ -223,7 +223,7 @@
             <value>Todos los cuartos</value>
           </text>
           <text id="/data/electricity:label">
-            <value>¿Que fuente de electricidad tiene el hogar?</value>
+            <value>¿Que fuente de electricidad tiene el domicilio?</value>
           </text>
           <text id="/data/electricity:option0">
             <value>No tiene luz</value>
