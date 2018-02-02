@@ -43,11 +43,8 @@
           <text id="/data/evaluation:unavailable">
             <value>Los miembros del domicilio no están disponibles</value>
           </text>
-          <text id="/data/evaluation:fullconsent">
-            <value>Consentido para todas las actividades</value>
-          </text>
-          <text id="/data/evaluation:partialconsent">
-            <value>Consentido para algunas actividades, pero no todas</value>
+          <text id="/data/evaluation:consent">
+            <value>Consentido para actividades</value>
           </text>
           <text id="/data/evaluation:refused">
             <value>Todas las actividades fueron rechazadas</value>
@@ -93,11 +90,8 @@
           <text id="/data/evaluation:unavailable">
             <value>Members of the household are unavailable</value>
           </text>
-          <text id="/data/evaluation:fullconsent">
-            <value>Consented to all activities</value>
-          </text>
-          <text id="/data/evaluation:partialconsent">
-            <value>Consented to some, but not all, activities</value>
+          <text id="/data/evaluation:consent">
+            <value>Consented to activities</value>
           </text>
           <text id="/data/evaluation:refused">
             <value>All activities were refused</value>
@@ -124,7 +118,7 @@
       <bind nodeset="/data/entityExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/evaluation" type="select1" required="true()"/>
-      <bind nodeset="/data/consent" type="select" required="true()" relevant="selected(/data/evaluation, 'fullconsent') or selected(/data/evaluation, 'partialconsent')"/>
+      <bind nodeset="/data/consent" type="select" required="true()" relevant="selected(/data/evaluation, 'consent')"/>
     </model>
   </h:head>
   <h:body>
@@ -162,12 +156,8 @@
         <value>refused</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/evaluation:fullconsent')"/>
-        <value>fullconsent</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/evaluation:partialconsent')"/>
-        <value>partialconsent</value>
+        <label ref="jr:itext('/data/evaluation:consent')"/>
+        <value>consent</value>
       </item>
     </select1>
     <select ref="/data/consent">
