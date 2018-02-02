@@ -158,16 +158,16 @@
         <value>unavailable</value>
       </item>
       <item>
+        <label ref="jr:itext('/data/evaluation:refused')"/>
+        <value>refused</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/evaluation:fullconsent')"/>
         <value>fullconsent</value>
       </item>
       <item>
         <label ref="jr:itext('/data/evaluation:partialconsent')"/>
         <value>partialconsent</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/evaluation:refused')"/>
-        <value>refused</value>
       </item>
     </select1>
     <select ref="/data/consent">
