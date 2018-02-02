@@ -13,7 +13,7 @@
           <entityExtId/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
-          <evaluation/>
+          <evaluation>consent</evaluation>
           <consent>census nets</consent>
         </data>
       </instance>
