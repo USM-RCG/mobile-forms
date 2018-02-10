@@ -627,7 +627,7 @@
       <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent &gt; 0" constraint="not(. &gt; (/data/ITNsCurrent))" jr:constraintMsg="jr:itext('/data/ITNGoodN:jr:constraintMsg')"/>
       <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
       <bind nodeset="/data/netsSupplied" type="int" required="true()"/>
-      <bind nodeset="/data/netCode" type="string" required="true()"/>
+      <bind nodeset="/data/netCode" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/netsHung" type="int" required="true()"/>
       <bind nodeset="/data/walls" type="select1" required="true()"/>
       <bind nodeset="/data/wallGaps" type="select1" required="true()"/>
