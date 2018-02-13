@@ -84,6 +84,9 @@
           <text id="/data/netCode:label">
             <value>Codigo de la Tela Mosquitera (Marcar en la Tela)</value>
           </text>
+          <text id="netCode:invalid_format">
+            <value>El formato del código de la tela mosquitera no es válido. Debe estar en el formato ##-M####S###E###.</value>
+          </text>
           <text id="/data/netsHung:label">
             <value>¿Cuántas telas fueron colgadas?</value>
           </text>
@@ -371,6 +374,9 @@
           <text id="/data/netCode:label">
             <value>Bed Net Code</value>
           </text>
+          <text id="netCode:invalid_format">
+            <value>Net code format is invalid. It must be in the format ##-M####S###E###.</value>
+          </text>
           <text id="/data/netsHung:label">
             <value>How many nets were hung?</value>
           </text>
@@ -627,7 +633,7 @@
       <bind nodeset="/data/ITNGoodN" type="int" required="true()" relevant="/data/ITNsCurrent &gt; 0" constraint="not(. &gt; (/data/ITNsCurrent))" jr:constraintMsg="jr:itext('/data/ITNGoodN:jr:constraintMsg')"/>
       <bind nodeset="/data/netsRecommended" type="int" readonly="true()" calculate="if((string(/data/ITNGoodN) = ''), /data/beds, (/data/beds - /data/ITNGoodN))"/>
       <bind nodeset="/data/netsSupplied" type="int" required="true()"/>
-      <bind nodeset="/data/netCode" type="string" required="true()" readonly="true()"/>
+      <bind nodeset="/data/netCode" type="string" required="true()" constraint="regex(.,'\d{2}-M\d{4}S\d{3}E\d{3}')" jr:constraintMsg="jr:itext('netCode:invalid_format')"/>
       <bind nodeset="/data/netsHung" type="int" required="true()"/>
       <bind nodeset="/data/walls" type="select1" required="true()"/>
       <bind nodeset="/data/wallGaps" type="select1" required="true()"/>
