@@ -621,24 +621,6 @@
   </h:head>
   <h:body>
     <group appearance="field-list">
-      <input ref="/data/fieldWorkerExtId">
-        <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-        <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
-      </input>
-      <input ref="/data/collectionDateTime">
-        <label ref="jr:itext('/data/collectionDateTime:label')"/>
-        <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
-      </input>
-      <input ref="/data/householdExtId">
-        <label ref="jr:itext('/data/householdExtId:label')"/>
-        <hint ref="jr:itext('/data/householdExtId:hint')"/>
-      </input>
-      <input ref="/data/individualExtId">
-        <label ref="jr:itext('/data/individualExtId:label')"/>
-        <hint ref="jr:itext('/data/individualExtId:hint')"/>
-      </input>
-    </group>
-    <group appearance="field-list">
       <input ref="/data/individualFirstName">
         <label ref="jr:itext('/data/individualFirstName:label')"/>
         <hint ref="jr:itext('/data/individualFirstName:hint')"/>

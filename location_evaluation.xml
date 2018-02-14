@@ -84,17 +84,6 @@
     </model>
   </h:head>
   <h:body>
-    <group appearance="field-list">
-      <input ref="/data/fieldWorkerExtId">
-        <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-      </input>
-      <input ref="/data/entityExtId">
-        <label ref="jr:itext('/data/entityExtId:label')"/>
-      </input>
-      <input ref="/data/collectionDateTime">
-        <label ref="jr:itext('/data/collectionDateTime:label')"/>
-      </input>
-    </group>
     <select1 ref="/data/evaluation">
       <label ref="jr:itext('/data/evaluation:label')"/>
       <item>

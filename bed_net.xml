@@ -651,20 +651,6 @@
     </model>
   </h:head>
   <h:body>
-    <group appearance="field-list">
-      <input ref="/data/fieldWorkerExtId">
-        <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-        <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
-      </input>
-      <input ref="/data/locationExtId">
-        <label ref="jr:itext('/data/locationExtId:label')"/>
-        <hint ref="jr:itext('/data/locationExtId:hint')"/>
-      </input>
-      <input ref="/data/distributionDateTime">
-        <label ref="jr:itext('/data/distributionDateTime:label')"/>
-        <hint ref="jr:itext('/data/distributionDateTime:hint')"/>
-      </input>
-    </group>
     <input ref="/data/beds">
       <label ref="jr:itext('/data/beds:label')"/>
     </input>

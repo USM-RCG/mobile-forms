@@ -303,16 +303,6 @@
   </h:head>
   <h:body>
     <group appearance="field-list">
-      <input ref="/data/fieldWorkerExtId">
-        <label ref="jr:itext('/data/fieldWorkerExtId:label')"/>
-        <hint ref="jr:itext('/data/fieldWorkerExtId:hint')"/>
-      </input>
-      <input ref="/data/collectionDateTime">
-        <label ref="jr:itext('/data/collectionDateTime:label')"/>
-        <hint ref="jr:itext('/data/collectionDateTime:hint')"/>
-      </input>
-    </group>
-    <group appearance="field-list">
       <input ref="/data/mapAreaName">
         <label ref="jr:itext('/data/mapAreaName:label')"/>
         <hint ref="jr:itext('/data/mapAreaName:hint')"/>
