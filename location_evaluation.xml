@@ -13,6 +13,7 @@
           <entityExtId/>
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
+          <description/>
           <evaluation>consent</evaluation>
           <consent>census nets</consent>
         </data>
@@ -27,6 +28,12 @@
           </text>
           <text id="/data/entityExtId:label">
             <value>Domicilio</value>
+          </text>
+          <text id="/data/description:label">
+            <value>Descripción</value>
+          </text>
+          <text id="/data/description:hint">
+            <value>Por favor, actualice la descripción del domicilio, si es necesario.</value>
           </text>
           <text id="/data/evaluation:label">
             <value>Evaluación</value>
@@ -75,6 +82,12 @@
           <text id="/data/entityExtId:label">
             <value>Location</value>
           </text>
+          <text id="/data/description:label">
+            <value>Description</value>
+          </text>
+          <text id="/data/description:hint">
+            <value>Please update the description of the house, if necessary.</value>
+          </text>
           <text id="/data/evaluation:label">
             <value>Evaluation</value>
           </text>
@@ -117,6 +130,7 @@
       <bind nodeset="/data/fieldWorkerExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/entityExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
+      <bind nodeset="/data/description" type="string"/>
       <bind nodeset="/data/evaluation" type="select1" required="true()"/>
       <bind nodeset="/data/consent" type="select" required="true()" relevant="selected(/data/evaluation, 'consent')"/>
     </model>
@@ -133,6 +147,10 @@
         <label ref="jr:itext('/data/collectionDateTime:label')"/>
       </input>
     </group>
+    <input ref="/data/description">
+      <label ref="jr:itext('/data/description:label')"/>
+      <hint ref="jr:itext('/data/description:hint')"/>
+    </input>
     <select1 ref="/data/evaluation">
       <label ref="jr:itext('/data/evaluation:label')"/>
       <item>
