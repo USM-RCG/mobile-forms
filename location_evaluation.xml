@@ -14,8 +14,7 @@
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <description/>
-          <evaluation>consent</evaluation>
-          <consent>census nets</consent>
+          <evaluation/>
         </data>
       </instance>
       <itext>
@@ -50,26 +49,8 @@
           <text id="/data/evaluation:unavailable">
             <value>Los miembros del domicilio no están disponibles</value>
           </text>
-          <text id="/data/evaluation:consent">
-            <value>Consentido para actividades</value>
-          </text>
           <text id="/data/evaluation:refused">
             <value>Todas las actividades fueron rechazadas</value>
-          </text>
-          <text id="/data/consent:label">
-            <value>Actividades autorizadas</value>
-          </text>
-          <text id="/data/consent:hint">
-            <value>Por favor, seleccione todas las actividades consentidas.</value>
-          </text>
-          <text id="/data/consent:census">
-            <value>Censo</value>
-          </text>
-          <text id="/data/consent:biometrics">
-            <value>Biometría (huellas dactilares)</value>
-          </text>
-          <text id="/data/consent:nets">
-            <value>Telas mosquiteras</value>
           </text>
         </translation>
         <translation lang="English">
@@ -103,26 +84,8 @@
           <text id="/data/evaluation:unavailable">
             <value>Members of the household are unavailable</value>
           </text>
-          <text id="/data/evaluation:consent">
-            <value>Consented to activities</value>
-          </text>
           <text id="/data/evaluation:refused">
             <value>All activities were refused</value>
-          </text>
-          <text id="/data/consent:label">
-            <value>Consented activities</value>
-          </text>
-          <text id="/data/consent:hint">
-            <value>Please select all activities the household consented to.</value>
-          </text>
-          <text id="/data/consent:census">
-            <value>Census</value>
-          </text>
-          <text id="/data/consent:biometrics">
-            <value>Biometrics (fingerprints)</value>
-          </text>
-          <text id="/data/consent:nets">
-            <value>Bed nets</value>
           </text>
         </translation>
       </itext>
@@ -132,7 +95,6 @@
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/description" type="string"/>
       <bind nodeset="/data/evaluation" type="select1" required="true()"/>
-      <bind nodeset="/data/consent" type="select" required="true()" relevant="selected(/data/evaluation, 'consent')"/>
     </model>
   </h:head>
   <h:body>
@@ -173,26 +135,6 @@
         <label ref="jr:itext('/data/evaluation:refused')"/>
         <value>refused</value>
       </item>
-      <item>
-        <label ref="jr:itext('/data/evaluation:consent')"/>
-        <value>consent</value>
-      </item>
     </select1>
-    <select ref="/data/consent">
-      <label ref="jr:itext('/data/consent:label')"/>
-      <hint ref="jr:itext('/data/consent:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/consent:census')"/>
-        <value>census</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/consent:nets')"/>
-        <value>nets</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/consent:biometrics')"/>
-        <value>biometrics</value>
-      </item>
-    </select>
   </h:body>
 </h:html>
