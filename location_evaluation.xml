@@ -14,6 +14,7 @@
           <fieldWorkerUuid/>
           <fieldWorkerExtId/>
           <evaluation/>
+          <description/>
         </data>
       </instance>
       <itext>
@@ -45,6 +46,15 @@
           <text id="/data/evaluation:refused">
             <value>Todas las actividades fueron rechazadas</value>
           </text>
+          <text id="/data/evaluation:baddesc">
+            <value>Descripción requiere actualización</value>
+          </text>
+          <text id="/data/description:label">
+            <value>Descripción</value>
+          </text>
+          <text id="/data/description:hint">
+            <value>Por favor, actualice la descripción del domicilio</value>
+          </text>
         </translation>
         <translation lang="English">
           <text id="/data/fieldWorkerExtId:label">
@@ -74,6 +84,15 @@
           <text id="/data/evaluation:refused">
             <value>All activities were refused</value>
           </text>
+          <text id="/data/evaluation:baddesc">
+            <value>Description requires updating</value>
+          </text>
+          <text id="/data/description:label">
+            <value>Description</value>
+          </text>
+          <text id="/data/description:hint">
+            <value>Please update the location's description</value>
+          </text>
         </translation>
       </itext>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
@@ -81,6 +100,7 @@
       <bind nodeset="/data/entityExtId" type="string" readonly="true()"/>
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/evaluation" type="select1" required="true()"/>
+      <bind nodeset="/data/description" type="string" required="true()" relevant="selected(/data/evaluation,'baddesc')"/>
     </model>
   </h:head>
   <h:body>
@@ -106,6 +126,14 @@
         <label ref="jr:itext('/data/evaluation:refused')"/>
         <value>refused</value>
       </item>
+      <item>
+        <label ref="jr:itext('/data/evaluation:baddesc')"/>
+        <value>baddesc</value>
+      </item>
     </select1>
+    <input ref="/data/description">
+      <label ref="jr:itext('/data/description:label')"/>
+      <hint ref="jr:itext('/data/description:hint')"/>
+    </input>
   </h:body>
 </h:html>
