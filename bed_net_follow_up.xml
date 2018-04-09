@@ -135,13 +135,13 @@
             <value>Television</value>
           </text>
           <text id="/data/general/what_LLIN:label">
-            <value>¿Que mensajes de telas escuchaste?</value>
+            <value>¿Cuales son los mensajes que escuchó sobre las telas?</value>
           </text>
           <text id="/data/general/activity/1:label">
             <value>Distribucion de telas</value>
           </text>
           <text id="/data/general/nets/rate:label">
-            <value>¿Que le parecen las telas distribuidas en 2018 en comparacion a las telas distribuidas anteriormente por el PNLP?</value>
+            <value>¿Que opina sobre las telas distribuidas de este año (2018) en comparacion a las telas distribuidas anteriormente por el PNLP?</value>
           </text>
           <text id="/data/general/news_LLIN/2:label">
             <value>Television</value>
@@ -150,10 +150,10 @@
             <value>¿Cual es su opinion sobre el trabajo de los distribuidores de telas?</value>
           </text>
           <text id="/data/general/news_LLIN:label">
-            <value>¿Donde escuchaste sobre las actividades de distribucion de telas?</value>
+            <value>¿En qué medio escuchaste sobre las actividades de distribucion de telas?</value>
           </text>
           <text id="/data/general/news_IRS:label">
-            <value>¿Donde escuchaste sobre las actividades de rociamiento?</value>
+            <value>¿En qué medio escuchaste sobre las actividades de rociamiento?</value>
           </text>
           <text id="/data/general/what_LLIN/3:label">
             <value>La tela puede ser colgada con cuerdas o nilon atados con clavos en la pared, en el techo o en el cielo raso</value>
@@ -252,7 +252,7 @@
             <value>Sí, a veces</value>
           </text>
           <text id="/data/general/what_IRS:label">
-            <value>¿Que mensajes de rociamiento escuchaste?</value>
+            <value>¿Cuales son los mensajes que escuchó sobre el rociamiento?</value>
           </text>
           <text id="/data/general/receive_LLIN/1:label">
             <value>Sí</value>
@@ -285,7 +285,7 @@
             <value>Ninguna</value>
           </text>
           <text id="/data/general/hear/3:label">
-            <value>Si, telas Mosquiteras y RRI</value>
+            <value>Si, telas Mosquiteras y Rociamiento</value>
           </text>
           <text id="/data/general/nets/whynotusenet/6:label">
             <value>Telas no son necesarias, tenemos tela metalica en las ventanas</value>
@@ -297,7 +297,7 @@
             <value>Sí</value>
           </text>
           <text id="/data/general/receive_IRS:label">
-            <value>¿Han rociado su casa?</value>
+            <value>¿Han rociado su casa este año (2018)?</value>
           </text>
           <text id="/data/general/nets/nets_note:hint">
             <value>Hablaremos de las telas que recibio</value>
@@ -399,7 +399,7 @@
             <value>Otro</value>
           </text>
           <text id="/data/general/nets/sleep:label">
-            <value>¿Cuantas veces duermes debajo la tela mosquitera anoche?</value>
+            <value>¿Duerme usted bajo la tela todas las noches?</value>
           </text>
           <text id="/data/general/other_behaviour_LLIN:label">
             <value>Otro</value>
@@ -426,7 +426,7 @@
             <value>Consentimiento: Corta encuesta para verificar si recibieron telas mosquiteras</value>
           </text>
           <text id="/data/general/mosquito:label">
-            <value>¿Sabe usted el tipo de mosquito que transmite el paludismo?</value>
+            <value>¿Conoce usted el tipo de mosquito que transmite el paludismo?</value>
           </text>
           <text id="/data/general/nets/whynotusenet/3:label">
             <value>No aplicable para nosotros</value>
@@ -752,7 +752,7 @@
             <value>Yes</value>
           </text>
           <text id="/data/general/receive_IRS:label">
-            <value>Did you receive IRS?</value>
+            <value>Did you receive IRS this year (2018)?</value>
           </text>
           <text id="/data/general/nets/nets_note:hint">
             <value>We will talk about the nets that you received</value>
