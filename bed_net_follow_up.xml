@@ -1,927 +1,922 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:oc="http://openclinica.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Bed Net Follow-Up</h:title>
     <model>
       <itext>
-        <translation default="true()" lang="Español">
-          <text id="/data/general/what_LLIN/5:label">
-            <value>Lavar la tela solo cuando esta sucia no mas de 4 veces al año</value>
-          </text>
-          <text id="/data/general/know:label">
-            <value>¿Alguien del PNLP ha llegado a su casa/comunidad recientemente?</value>
-          </text>
-          <text id="/data/general/news_IRS/4:label">
-            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
-          </text>
-          <text id="/data/general/news_LLIN/7:label">
-            <value>Folleto/afiche/pancarta</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/2:label">
-            <value>Dio a un miembro de la familia/amigo</value>
-          </text>
-          <text id="/data/general/nets/kids:label">
-            <value>¿Duermen los niños debajo de las telas que recibiste?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/11:label">
-            <value>Telas huele mal</value>
-          </text>
-          <text id="/data/general/mosquito_type/0:label">
-            <value>Anopheles</value>
-          </text>
-          <text id="/data/home/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/nets/nets_note:label">
-            <value>Atencion</value>
-          </text>
-          <text id="/data/general/general_note:label">
-            <value>Atencion</value>
-          </text>
-          <text id="/data/general/receive_IRS/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/nets:label">
-            <value>Telas Mosquiteras</value>
-          </text>
-          <text id="/data/general/news_LLIN/8:label">
-            <value>Charla en grupo</value>
-          </text>
-          <text id="/data/general/receive_IRS/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/mosquito_type:label">
-            <value>¿Qué tipo de mosquito transmite el paludismo?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/12:label">
-            <value>Telas esta picante</value>
-          </text>
-          <text id="/data/general/news_LLIN/3:label">
-            <value>Visita en casa por un voluntario</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/7:label">
-            <value>Telas no son necesarias esta temporada</value>
-          </text>
-          <text id="/data/general/whynotIRS/5:label">
-            <value>Actitud de rociadores</value>
-          </text>
-          <text id="/data/general/nets/kids/1:label">
-            <value>Sí, todas la noches</value>
-          </text>
-          <text id="/data/general/other_info_LLIN:hint">
-            <value>Otro lugar donde escuchaste las noticias</value>
-          </text>
-          <text id="/data/general/other_behaviour_IRS:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/news_IRS/7:label">
-            <value>Folleto/afiche/pancarta</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/9:label">
-            <value>No nos gustan las telas</value>
-          </text>
-          <text id="/data/general/whynotIRS/10:label">
-            <value>No tenemos tiempo</value>
-          </text>
-          <text id="/data/general/what_IRS/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/news_IRS/1:label">
-            <value>Radio</value>
-          </text>
-          <text id="/data/general/other_LLIN:hint">
-            <value>Otro mensaje de telas que escuchó</value>
-          </text>
-          <text id="/data/general/precise:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/know/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/news_LLIN/9:label">
-            <value>Proveedor de salud/establecimiento sanitario</value>
-          </text>
-          <text id="/data/agree:label">
-            <value>¿Aceptas ser entrevistado?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet:label">
-            <value>¿Por qué no?</value>
-          </text>
-          <text id="/data/general/whynotIRS/2:label">
-            <value>Provoca efectos malos de salud</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/8:label">
-            <value>No hay mosquitos</value>
-          </text>
-          <text id="/data/general/what_LLIN/2:label">
-            <value>Dormir todas las noches bajo una tela mosquitera que contiente insecticida de larga duracion para protegere del paludismo</value>
-          </text>
-          <text id="/data/general/nets/kids/0:label">
-            <value>Ninguna</value>
-          </text>
-          <text id="/data/general/opinion_IRS:label">
-            <value>¿Cual es su opinion sobre el trabajo de los rociadores?</value>
-          </text>
-          <text id="/data/general/news_IRS/9:label">
-            <value>Proveedor de salud/establecimiento sanitario</value>
-          </text>
-          <text id="/data/general/nets/pre_other:hint">
-            <value>Otra opinión de las telas distribuidas</value>
-          </text>
-          <text id="/data/general/opinion_IRS/1:label">
-            <value>Bien</value>
-          </text>
-          <text id="/data/general/news_IRS/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/general/what_LLIN:label">
-            <value>¿Cuales son los mensajes que escuchó sobre las telas?</value>
-          </text>
-          <text id="/data/general/activity/1:label">
-            <value>Distribucion de telas</value>
-          </text>
-          <text id="/data/general/nets/rate:label">
-            <value>¿Que opina sobre las telas distribuidas de este año (2018) en comparacion a las telas distribuidas anteriormente por el PNLP?</value>
-          </text>
-          <text id="/data/general/news_LLIN/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/general/opinion_LLIN:label">
-            <value>¿Cual es su opinion sobre el trabajo de los distribuidores de telas?</value>
-          </text>
-          <text id="/data/general/news_LLIN:label">
-            <value>¿En qué medio escuchaste sobre las actividades de distribucion de telas?</value>
-          </text>
-          <text id="/data/general/news_IRS:label">
-            <value>¿En qué medio escuchaste sobre las actividades de rociamiento?</value>
-          </text>
-          <text id="/data/general/what_LLIN/3:label">
-            <value>La tela puede ser colgada con cuerdas o nilon atados con clavos en la pared, en el techo o en el cielo raso</value>
-          </text>
-          <text id="/data/general/news_LLIN/1:label">
-            <value>Radio</value>
-          </text>
-          <text id="/data/general/hear/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/nets/whynotkids:label">
-            <value>¿Por qué no?</value>
-          </text>
-          <text id="/data/general/what_LLIN/8:label">
-            <value>Distribucion gratuito de las telas mosquiteras</value>
-          </text>
-          <text id="/data/general/know/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/news_IRS/5:label">
-            <value>Visita en casa por un miembro del equipo de distribucion de telas mosquiteras</value>
-          </text>
-          <text id="/data/general/news_IRS/6:label">
-            <value>Actuacion teatral</value>
-          </text>
-          <text id="/data/general/nets/pre_other:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/other_info_IRS:hint">
-            <value>Otro lugar donde escuchaste las noticias</value>
-          </text>
-          <text id="/data/general/opinion_IRS/0:label">
-            <value>Malo</value>
-          </text>
-          <text id="/data/general/nets/sleep/1:label">
-            <value>Sí, todas la noches</value>
-          </text>
-          <text id="/data/general/other_info_IRS:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/what_LLIN/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/agree/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/other_behaviour_IRS:hint">
-            <value>Otra opinión sobre el trabajo de los rociadores</value>
-          </text>
-          <text id="/data/general/nets/rate/1:label">
-            <value>Igual</value>
-          </text>
-          <text id="/data/general/opinion_LLIN/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/nets/kids/2:label">
-            <value>Sí, a veces</value>
-          </text>
-          <text id="/data/home:label">
-            <value>¿Hay alguien en casa?</value>
-          </text>
-          <text id="/data/general/activity/3:label">
-            <value>Communicacíon</value>
-          </text>
-          <text id="/data/general/whynotIRS/1:label">
-            <value>No he sido contactado/a</value>
-          </text>
-          <text id="/data/general/news_LLIN/6:label">
-            <value>Actuacion teatral</value>
-          </text>
-          <text id="/data/general/other_info_LLIN:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/news_LLIN/5:label">
-            <value>Visita en casa por un miembro del equipo de distribucion de telas mosquiteras</value>
-          </text>
-          <text id="/data/general/hear/1:label">
-            <value>Si, Rociamiento</value>
-          </text>
-          <text id="/data/general/mosquito_type/1:label">
-            <value>Culex</value>
-          </text>
-          <text id="/data/general/whynotIRS/7:label">
-            <value>No es efectivo</value>
-          </text>
-          <text id="/data/general/what_IRS/1:label">
-            <value>El rociamiento es totalmente seguro para los humanos y animales domesticos</value>
-          </text>
-          <text id="/data/general/whynotIRS:label">
-            <value>¿Por qué tu casa no fue rociada?</value>
-          </text>
-          <text id="/data/general/what_LLIN/7:label">
-            <value>Si la tela tiene agujeros, coserla con aguja e hilo</value>
-          </text>
-          <text id="/data/general/nets/sleep/2:label">
-            <value>Sí, a veces</value>
-          </text>
-          <text id="/data/general/what_IRS:label">
-            <value>¿Cuales son los mensajes que escuchó sobre el rociamiento?</value>
-          </text>
-          <text id="/data/general/receive_LLIN/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/1:label">
-            <value>Telas son muy inconvenientes</value>
-          </text>
-          <text id="/data/general/nets/number:label">
-            <value>¿Cuantas telas recibió usted?</value>
-          </text>
-          <text id="/data/general/opinion_IRS/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/other_activity:hint">
-            <value>Otra actividad que el PNLP estaba haciendo</value>
-          </text>
-          <text id="/data/general/whynotIRS/6:label">
-            <value>Daño muebles o paredes</value>
-          </text>
-          <text id="/data/general/news_IRS/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/news_LLIN/4:label">
-            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
-          </text>
-          <text id="/data/general/mosquito_type/2:label">
-            <value>Aedes</value>
-          </text>
-          <text id="/data/general/nets/sleep/0:label">
-            <value>Ninguna</value>
-          </text>
-          <text id="/data/general/hear/3:label">
-            <value>Si, telas Mosquiteras y Rociamiento</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/6:label">
-            <value>Telas no son necesarias, tenemos tela metalica en las ventanas</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/10:label">
-            <value>Casa esta rociada</value>
-          </text>
-          <text id="/data/general/mosquito/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/receive_IRS:label">
-            <value>¿Han rociado su casa este año (2018)?</value>
-          </text>
-          <text id="/data/general/nets/nets_note:hint">
-            <value>Hablaremos de las telas que recibio</value>
-          </text>
-          <text id="/data/general/what_LLIN/6:label">
-            <value>Secar las telas bajo sombra y no exponer a los rayos del sol</value>
-          </text>
-          <text id="/data/general/whynotIRS/13:label">
-            <value>No sabe / No esta segura</value>
-          </text>
-          <text id="/data/general/general_note:hint">
-            <value>Vamos a harcele una serie de preguntas sobre telas mousquiteras</value>
-          </text>
-          <text id="/data/general/nets/rate/0:label">
-            <value>Mejor que las anteriores</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/4:label">
-            <value>Telas no son efectivas</value>
-          </text>
-          <text id="/data/general/hear/2:label">
-            <value>Si, Telas Mosquiteras</value>
-          </text>
-          <text id="/data/general/other_LLIN:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/nets/rate/2:label">
-            <value>Peor</value>
-          </text>
-          <text id="/data/general/news_IRS/8:label">
-            <value>Charla en grupo</value>
-          </text>
-          <text id="/data/general/what_LLIN/4:label">
-            <value>Asegurese de meter los bordes de la tela mosquitera bajo el colchon</value>
-          </text>
-          <text id="/data/general/nets/other_reason:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/hear:label">
-            <value>¿Recibió alguna información acerca del rociamiento intra domiciliario y la distribución de telas mosquiteras?</value>
-          </text>
-          <text id="/data/home/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/news_IRS/3:label">
-            <value>Visita en casa por un voluntario</value>
-          </text>
-          <text id="/data/general/whynotIRS/8:label">
-            <value>No es aplicable a nosotros</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/5:label">
-            <value>Telas son muy incomodas</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/whynotIRS/3:label">
-            <value>Peligroso para animales</value>
-          </text>
-          <text id="/data/general/opinion_LLIN/1:label">
-            <value>Bien</value>
-          </text>
-          <text id="/data/general/other_IRS:hint">
-            <value>Otro mensaje de rociamiento que escuchó</value>
-          </text>
-          <text id="/data/general/activity/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/what_LLIN/1:label">
-            <value>Las telas mosquiteras son para protegerse de los mosquitos</value>
-          </text>
-          <text id="/data/general/nets/anykids:label">
-            <value>¿Hay niños que viven en esta casa?</value>
-          </text>
-          <text id="/data/general:label">
-            <value>General</value>
-          </text>
-          <text id="/data/general/other_activity:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/activity:label">
-            <value>¿Que hacían? Díganos la actividad concreta que estaban realizando.</value>
-          </text>
-          <text id="/data/general/news_LLIN/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/nets/anykids/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/what_IRS/2:label">
-            <value>El rociamento protégé contra el pauldismo</value>
-          </text>
-          <text id="/data/general/receive_LLIN/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/other_IRS:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/whynotIRS/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/nets/sleep:label">
-            <value>¿Duerme usted bajo la tela todas las noches?</value>
-          </text>
-          <text id="/data/general/other_behaviour_LLIN:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/activity/2:label">
-            <value>Rociamento</value>
-          </text>
-          <text id="/data/agree/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/nets/rate/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/general/whynotIRS/9:label">
-            <value>Usa mosquiteras en lugar</value>
-          </text>
-          <text id="/data/general/receive_LLIN:label">
-            <value>¿Ha recibido telas mosquiteras en 2018 del PNLP?</value>
-          </text>
-          <text id="/data/general/mosquito_type/99:label">
-            <value>Otro</value>
-          </text>
-          <text id="/data/agree:hint">
-            <value>Consentimiento: Corta encuesta para verificar si recibieron telas mosquiteras</value>
-          </text>
-          <text id="/data/general/mosquito:label">
-            <value>¿Conoce usted el tipo de mosquito que transmite el paludismo?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/3:label">
-            <value>No aplicable para nosotros</value>
-          </text>
-          <text id="/data/general/nets/other_reason:hint">
-            <value>Otra razón por la que no estás usando las telas mosquiteras</value>
-          </text>
-          <text id="/data/general/opinion_LLIN/0:label">
-            <value>Malo</value>
-          </text>
-          <text id="/data/general/nets/anykids/1:label">
-            <value>Sí</value>
-          </text>
-          <text id="/data/general/whynotIRS/11:label">
-            <value>Tiempo es inconveniente</value>
-          </text>
-          <text id="/data/general/other_behaviour_LLIN:hint">
-            <value>Otra opinión sobre el trabajo de los distribuidores de telas</value>
-          </text>
-          <text id="/data/general/mosquito/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/precise:hint">
-            <value>Otra razón por la que su casa no fue rociada</value>
-          </text>
-          <text id="/data/general/whynotIRS/12:label">
-            <value>Hay niños pequeños en la casa</value>
-          </text>
-          <text id="/data/general/whynotIRS/4:label">
-            <value>Negativo, molesto, desagradable</value>
-          </text>
-        </translation>
         <translation lang="English">
-          <text id="/data/general/what_LLIN/5:label">
-            <value>Wash when dirty, but no more than 4 times a year</value>
-          </text>
-          <text id="/data/general/know:label">
-            <value>Has anyone from the NMCP visited your community?</value>
-          </text>
-          <text id="/data/general/news_IRS/4:label">
-            <value>Home visit from IRS team member</value>
-          </text>
-          <text id="/data/general/news_LLIN/7:label">
-            <value>Pamphlet/poster</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/2:label">
-            <value>Gave it to family/friends</value>
-          </text>
-          <text id="/data/general/nets/kids:label">
-            <value>Do the kids sleep under the mosquito nets you received?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/11:label">
-            <value>Net smells bad</value>
-          </text>
-          <text id="/data/general/mosquito_type/0:label">
-            <value>Anopheles</value>
-          </text>
-          <text id="/data/home/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/general/nets/nets_note:label">
-            <value>Attention</value>
-          </text>
-          <text id="/data/general/general_note:label">
-            <value>Attention</value>
-          </text>
-          <text id="/data/general/receive_IRS/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/nets:label">
-            <value>Bed Nets</value>
-          </text>
-          <text id="/data/general/news_LLIN/8:label">
+          <text id="/data/general/news_IRS/8:label">
             <value>Group discussion</value>
-          </text>
-          <text id="/data/general/receive_IRS/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/general/mosquito_type:label">
-            <value>Which type of mosquito transmits malaria?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/12:label">
-            <value>Net is itchy</value>
-          </text>
-          <text id="/data/general/news_LLIN/3:label">
-            <value>Home visit from a volunteer</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/7:label">
-            <value>Net not needed this season</value>
-          </text>
-          <text id="/data/general/whynotIRS/5:label">
-            <value>Attitude of sprayers</value>
-          </text>
-          <text id="/data/general/nets/kids/1:label">
-            <value>Yes, some nights</value>
-          </text>
-          <text id="/data/general/other_info_LLIN:hint">
-            <value>Other place where you heard the news</value>
-          </text>
-          <text id="/data/general/other_behaviour_IRS:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/news_IRS/7:label">
-            <value>Pamphlet/poster</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/9:label">
-            <value>I don't like nets</value>
-          </text>
-          <text id="/data/general/whynotIRS/10:label">
-            <value>Don't have time</value>
-          </text>
-          <text id="/data/general/what_IRS/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/news_IRS/1:label">
-            <value>Radio</value>
-          </text>
-          <text id="/data/general/other_LLIN:hint">
-            <value>Other message you heard about LLIN</value>
-          </text>
-          <text id="/data/general/precise:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/know/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/general/news_LLIN/9:label">
-            <value>Health provider/health facility</value>
-          </text>
-          <text id="/data/agree:label">
-            <value>Do you agree to be interviewed?</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet:label">
-            <value>Why not?</value>
-          </text>
-          <text id="/data/general/whynotIRS/2:label">
-            <value>Causes ill health effects</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/8:label">
-            <value>No mosquitoes here now</value>
-          </text>
-          <text id="/data/general/what_LLIN/2:label">
-            <value>Sleep under LLIN every nights protects against malaria</value>
-          </text>
-          <text id="/data/general/nets/kids/0:label">
-            <value>Never</value>
-          </text>
-          <text id="/data/general/opinion_IRS:label">
-            <value>What is your opinion about the attitude of the sprayers?</value>
-          </text>
-          <text id="/data/general/news_IRS/9:label">
-            <value>Health provider/health facility</value>
-          </text>
-          <text id="/data/general/nets/pre_other:hint">
-            <value>Other opinion of the bed nets</value>
-          </text>
-          <text id="/data/general/opinion_IRS/1:label">
-            <value>Good attitude</value>
-          </text>
-          <text id="/data/general/news_IRS/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/general/what_LLIN:label">
-            <value>What messages did you hear about LLIN?</value>
-          </text>
-          <text id="/data/general/activity/1:label">
-            <value>Net distribution</value>
-          </text>
-          <text id="/data/general/nets/rate:label">
-            <value>How do you like these nets compared to previous nets?</value>
-          </text>
-          <text id="/data/general/news_LLIN/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/general/opinion_LLIN:label">
-            <value>What is your opinion about the attitude of the bed net distributors?</value>
-          </text>
-          <text id="/data/general/news_LLIN:label">
-            <value>where did you hear LLIN?</value>
-          </text>
-          <text id="/data/general/news_IRS:label">
-            <value>Where did you hear about IRS?</value>
-          </text>
-          <text id="/data/general/what_LLIN/3:label">
-            <value>Use nilon or ropes hang the net</value>
-          </text>
-          <text id="/data/general/news_LLIN/1:label">
-            <value>Radio</value>
-          </text>
-          <text id="/data/general/hear/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/nets/whynotkids:label">
-            <value>Why not?</value>
-          </text>
-          <text id="/data/general/what_LLIN/8:label">
-            <value>Free bed net distribution</value>
-          </text>
-          <text id="/data/general/know/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/news_IRS/5:label">
-            <value>Home visit from LLIN team member</value>
-          </text>
-          <text id="/data/general/news_IRS/6:label">
-            <value>Theater show</value>
-          </text>
-          <text id="/data/general/nets/pre_other:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/other_info_IRS:hint">
-            <value>Other place where you heard the news</value>
-          </text>
-          <text id="/data/general/opinion_IRS/0:label">
-            <value>Poor attitude</value>
-          </text>
-          <text id="/data/general/nets/sleep/1:label">
-            <value>Yes, some nights</value>
-          </text>
-          <text id="/data/general/other_info_IRS:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/what_LLIN/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/agree/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/other_behaviour_IRS:hint">
-            <value>Other opinion on the attitude of the sprayers</value>
-          </text>
-          <text id="/data/general/nets/rate/1:label">
-            <value>Same as before</value>
-          </text>
-          <text id="/data/general/opinion_LLIN/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/nets/kids/2:label">
-            <value>Yes, every night</value>
-          </text>
-          <text id="/data/home:label">
-            <value>Is there anyone home?</value>
-          </text>
-          <text id="/data/general/activity/3:label">
-            <value>Communication</value>
-          </text>
-          <text id="/data/general/whynotIRS/1:label">
-            <value>I have not been contacted</value>
-          </text>
-          <text id="/data/general/news_LLIN/6:label">
-            <value>Theater show</value>
-          </text>
-          <text id="/data/general/other_info_LLIN:label">
-            <value>precise other LLIN</value>
-          </text>
-          <text id="/data/general/news_LLIN/5:label">
-            <value>Home visit from LLIN team member</value>
-          </text>
-          <text id="/data/general/hear/1:label">
-            <value>Yes, IRS</value>
-          </text>
-          <text id="/data/general/mosquito_type/1:label">
-            <value>Culex</value>
-          </text>
-          <text id="/data/general/whynotIRS/7:label">
-            <value>Not effective</value>
-          </text>
-          <text id="/data/general/what_IRS/1:label">
-            <value>IRS is safe for humans and domestic animals</value>
-          </text>
-          <text id="/data/general/whynotIRS:label">
-            <value>Why was your house not sprayed?</value>
-          </text>
-          <text id="/data/general/what_LLIN/7:label">
-            <value>Fix net when torn</value>
-          </text>
-          <text id="/data/general/nets/sleep/2:label">
-            <value>Yes, every night</value>
           </text>
           <text id="/data/general/what_IRS:label">
             <value>What messages did you hear about IRS?</value>
           </text>
-          <text id="/data/general/receive_LLIN/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/1:label">
-            <value>Nets too inconvenient</value>
+          <text id="/data/general/receive_LLIN:label">
+            <value>Did you receive bednets this year from the NMCP?</value>
           </text>
           <text id="/data/general/nets/number:label">
             <value>How many nets did you receive?</value>
           </text>
-          <text id="/data/general/opinion_IRS/99:label">
-            <value>Other</value>
+          <text id="/data/general/activity:label">
+            <value>What activity were they carrying out?</value>
+          </text>
+          <text id="/data/general/news_LLIN:label">
+            <value>where did you hear LLIN?</value>
           </text>
           <text id="/data/general/other_activity:hint">
             <value>Other activity the NMCP was doing</value>
           </text>
-          <text id="/data/general/whynotIRS/6:label">
-            <value>Damages furniture or walls</value>
+          <text id="/data/general/other_info_LLIN:hint">
+            <value>Other place where you heard the news</value>
           </text>
-          <text id="/data/general/news_IRS/99:label">
-            <value>Other</value>
+          <text id="/data/general/nets/whynotusenet:label">
+            <value>Why not?</value>
           </text>
-          <text id="/data/general/news_LLIN/4:label">
-            <value>Home visit from IRS team member</value>
+          <text id="/data/general/news_LLIN/3:label">
+            <value>Home visit from a volunteer</value>
           </text>
-          <text id="/data/general/mosquito_type/2:label">
-            <value>Aedes</value>
+          <text id="/data/general/nets/whynotusenet/1:label">
+            <value>Nets too inconvenient</value>
           </text>
-          <text id="/data/general/nets/sleep/0:label">
-            <value>Never</value>
+          <text id="/data/general/hear/1:label">
+            <value>Yes, IRS</value>
           </text>
-          <text id="/data/general/hear/3:label">
-            <value>Yes, LLIN+IRS</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/6:label">
-            <value>Net not necessary, our house has screens</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/10:label">
-            <value>House sprayed</value>
-          </text>
-          <text id="/data/general/mosquito/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/general/receive_IRS:label">
-            <value>Did you receive IRS this year (2018)?</value>
-          </text>
-          <text id="/data/general/nets/nets_note:hint">
-            <value>We will talk about the nets that you received</value>
-          </text>
-          <text id="/data/general/what_LLIN/6:label">
-            <value>Do not dry nets in direct sun light</value>
-          </text>
-          <text id="/data/general/whynotIRS/13:label">
-            <value>Don't know / Not sure</value>
+          <text id="/data/general/news_LLIN/6:label">
+            <value>Theater show</value>
           </text>
           <text id="/data/general/general_note:hint">
             <value>We are going to ask you a series of questions concerning bednets</value>
           </text>
-          <text id="/data/general/nets/rate/0:label">
-            <value>Better than previous nets</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/4:label">
-            <value>Net not effective</value>
-          </text>
-          <text id="/data/general/hear/2:label">
-            <value>Yes, LLIN</value>
+          <text id="/data/general/mosquito_type/2:label">
+            <value>Aedes</value>
           </text>
           <text id="/data/general/other_LLIN:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/nets/rate/2:label">
-            <value>Worst than before</value>
+          <text id="/data/general/news_LLIN/5:label">
+            <value>Home visit from LLIN team member</value>
           </text>
-          <text id="/data/general/news_IRS/8:label">
-            <value>Group discussion</value>
-          </text>
-          <text id="/data/general/what_LLIN/4:label">
-            <value>Be sure to tuck the borders of the nets under the mattress</value>
-          </text>
-          <text id="/data/general/nets/other_reason:label">
-            <value>Other</value>
+          <text id="/data/general/nets/kids:label">
+            <value>Do the kids sleep under the mosquito nets you received?</value>
           </text>
           <text id="/data/general/hear:label">
             <value>Did you hear about bed nets distribution and household spraying in your community this year?</value>
           </text>
-          <text id="/data/home/0:label">
-            <value>No</value>
+          <text id="/data/general/whynotIRS/7:label">
+            <value>Not effective</value>
           </text>
-          <text id="/data/general/news_IRS/3:label">
-            <value>Home visit from a volunteer</value>
-          </text>
-          <text id="/data/general/whynotIRS/8:label">
-            <value>Not applicable to us</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/5:label">
-            <value>Net too unconfomfortable/claustrophobic/brings heat</value>
-          </text>
-          <text id="/data/general/nets/whynotusenet/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/whynotIRS/3:label">
-            <value>Dangerous for animals</value>
-          </text>
-          <text id="/data/general/opinion_LLIN/1:label">
-            <value>Good attitude</value>
-          </text>
-          <text id="/data/general/other_IRS:hint">
-            <value>Other message you heard about IRS</value>
-          </text>
-          <text id="/data/general/activity/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/what_LLIN/1:label">
-            <value>Nets protect against mosquitoes</value>
-          </text>
-          <text id="/data/general/nets/anykids:label">
-            <value>Are there kids living in this house?</value>
-          </text>
-          <text id="/data/general:label">
-            <value>General</value>
-          </text>
-          <text id="/data/general/other_activity:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/activity:label">
-            <value>What activity were they carrying out?</value>
-          </text>
-          <text id="/data/general/news_LLIN/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/general/nets/anykids/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/what_IRS/2:label">
-            <value>IRS protects against malaria</value>
-          </text>
-          <text id="/data/general/receive_LLIN/0:label">
-            <value>No</value>
-          </text>
-          <text id="/data/general/other_IRS:label">
-            <value>Other</value>
+          <text id="/data/general/news_LLIN/8:label">
+            <value>Group discussion</value>
           </text>
           <text id="/data/general/whynotIRS/99:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/nets/sleep:label">
-            <value>How often do you sleep under the mosquito nets?</value>
+          <text id="/data/general/news_IRS/4:label">
+            <value>Home visit from IRS team member</value>
+          </text>
+          <text id="/data/general/news_IRS/3:label">
+            <value>Home visit from a volunteer</value>
           </text>
           <text id="/data/general/other_behaviour_LLIN:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/activity/2:label">
-            <value>Spraying</value>
+          <text id="/data/general/whynotIRS/11:label">
+            <value>Time is inconvenient</value>
+          </text>
+          <text id="/data/general/news_LLIN/1:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/general/nets/rate/2:label">
+            <value>Worst than before</value>
+          </text>
+          <text id="/data/general/nets:label">
+            <value>Bed Nets</value>
+          </text>
+          <text id="/data/general/news_IRS/6:label">
+            <value>Theater show</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/6:label">
+            <value>Net not necessary, our house has screens</value>
+          </text>
+          <text id="/data/general/nets/sleep/2:label">
+            <value>Yes, every night</value>
+          </text>
+          <text id="/data/general/nets/anykids/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/general/whynotIRS/12:label">
+            <value>There are small children in the house</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/0:label">
+            <value>Poor attitude</value>
+          </text>
+          <text id="/data/general/precise:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/receive_IRS:label">
+            <value>Did you receive IRS this year (2018)?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/12:label">
+            <value>Net is itchy</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/1:label">
+            <value>Good attitude</value>
+          </text>
+          <text id="/data/general/mosquito/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/news_LLIN/7:label">
+            <value>Pamphlet/poster</value>
+          </text>
+          <text id="/data/general/news_LLIN/2:label">
+            <value>Television</value>
+          </text>
+          <text id="/data/general/nets/rate:label">
+            <value>How do you like these nets compared to previous nets?</value>
+          </text>
+          <text id="/data/general/whynotIRS:label">
+            <value>Why was your house not sprayed?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/7:label">
+            <value>Net not needed this season</value>
+          </text>
+          <text id="/data/general/nets/anykids/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/news_LLIN/4:label">
+            <value>Home visit from IRS team member</value>
+          </text>
+          <text id="/data/general/other_LLIN:hint">
+            <value>Other message you heard about LLIN</value>
+          </text>
+          <text id="/data/general/opinion_IRS/1:label">
+            <value>Good attitude</value>
+          </text>
+          <text id="/data/general/news_IRS:label">
+            <value>Where did you hear about IRS?</value>
+          </text>
+          <text id="/data/general/nets/sleep/0:label">
+            <value>Never</value>
+          </text>
+          <text id="/data/general/mosquito_type/0:label">
+            <value>Anopheles</value>
+          </text>
+          <text id="/data/general/receive_LLIN/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/pre_other:hint">
+            <value>Other opinion of the bed nets</value>
+          </text>
+          <text id="/data/general/opinion_LLIN:label">
+            <value>What is your opinion about the attitude of the bed net distributors?</value>
+          </text>
+          <text id="/data/general/receive_LLIN/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/general/whynotIRS/6:label">
+            <value>Damages furniture or walls</value>
+          </text>
+          <text id="/data/general/precise:hint">
+            <value>Other reason your house was not sprayed</value>
+          </text>
+          <text id="/data/general/nets/sleep/1:label">
+            <value>Yes, some nights</value>
+          </text>
+          <text id="/data/general/news_LLIN/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/news_IRS/1:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/general/activity/1:label">
+            <value>Net distribution</value>
+          </text>
+          <text id="/data/general/what_LLIN/8:label">
+            <value>Free bed net distribution</value>
+          </text>
+          <text id="/data/general/what_IRS/2:label">
+            <value>IRS protects against malaria</value>
+          </text>
+          <text id="/data/general/what_LLIN/7:label">
+            <value>Fix net when torn</value>
+          </text>
+          <text id="/data/general/activity/3:label">
+            <value>Communication</value>
+          </text>
+          <text id="/data/general/mosquito/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/general/hear/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/news_IRS/9:label">
+            <value>Health provider/health facility</value>
+          </text>
+          <text id="/data/general/whynotIRS/3:label">
+            <value>Dangerous for animals</value>
           </text>
           <text id="/data/agree/1:label">
             <value>Yes</value>
           </text>
-          <text id="/data/general/nets/rate/99:label">
+          <text id="/data/general/nets/whynotusenet/2:label">
+            <value>Gave it to family/friends</value>
+          </text>
+          <text id="/data/general/other_behaviour_IRS:hint">
+            <value>Other opinion on the attitude of the sprayers</value>
+          </text>
+          <text id="/data/general/what_LLIN/6:label">
+            <value>Do not dry nets in direct sun light</value>
+          </text>
+          <text id="/data/general/hear/3:label">
+            <value>Yes, LLIN+IRS</value>
+          </text>
+          <text id="/data/general/other_info_IRS:hint">
+            <value>Other place where you heard the news</value>
+          </text>
+          <text id="/data/general/whynotIRS/4:label">
+            <value>Disruptive, annoying or disagreeable</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/5:label">
+            <value>Net too unconfomfortable/claustrophobic/brings heat</value>
+          </text>
+          <text id="/data/general/other_info_IRS:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/whynotIRS/9:label">
-            <value>Use bed nets instead</value>
+          <text id="/data/general/opinion_IRS/99:label">
+            <value>Other</value>
           </text>
-          <text id="/data/general/receive_LLIN:label">
-            <value>Did you receive bednets this year from the NMCP?</value>
+          <text id="/data/general/nets/kids/0:label">
+            <value>Never</value>
           </text>
-          <text id="/data/general/mosquito_type/99:label">
+          <text id="/data/general/other_IRS:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/10:label">
+            <value>House sprayed</value>
+          </text>
+          <text id="/data/general/news_IRS/5:label">
+            <value>Home visit from LLIN team member</value>
+          </text>
+          <text id="/data/general/what_IRS/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/mosquito:label">
+            <value>Do you know the type of mosquito that transmits malaria?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/9:label">
+            <value>I don't like nets</value>
+          </text>
+          <text id="/data/general/other_behaviour_LLIN:hint">
+            <value>Other opinion on the attitude of the bed net distributors</value>
+          </text>
+          <text id="/data/general/know/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/8:label">
+            <value>No mosquitoes here now</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/4:label">
+            <value>Net not effective</value>
+          </text>
+          <text id="/data/general/news_IRS/7:label">
+            <value>Pamphlet/poster</value>
+          </text>
+          <text id="/data/general/nets/pre_other:label">
             <value>Other</value>
           </text>
           <text id="/data/agree:hint">
             <value>Consent: Short survey to verify if they received mosquito nets</value>
           </text>
-          <text id="/data/general/mosquito:label">
-            <value>Do you know the type of mosquito that transmits malaria?</value>
+          <text id="/data/general:label">
+            <value>General</value>
+          </text>
+          <text id="/data/general/nets/nets_note:label">
+            <value>Attention</value>
+          </text>
+          <text id="/data/general/what_LLIN/4:label">
+            <value>Be sure to tuck the borders of the nets under the mattress before sleeping</value>
+          </text>
+          <text id="/data/general/whynotIRS/5:label">
+            <value>Attitude of sprayers</value>
+          </text>
+          <text id="/data/general/news_IRS/2:label">
+            <value>Television</value>
+          </text>
+          <text id="/data/home/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/general/other_info_LLIN:label">
+            <value>precise other LLIN</value>
+          </text>
+          <text id="/data/general/nets/nets_note:hint">
+            <value>We will talk about the nets that you received</value>
+          </text>
+          <text id="/data/general/mosquito_type/1:label">
+            <value>Culex</value>
+          </text>
+          <text id="/data/general/other_IRS:hint">
+            <value>Other message you heard about IRS</value>
+          </text>
+          <text id="/data/general/news_LLIN/9:label">
+            <value>Health provider/health facility</value>
+          </text>
+          <text id="/data/general/mosquito_type:label">
+            <value>Which type of mosquito transmits malaria?</value>
+          </text>
+          <text id="/data/general/nets/sleep:label">
+            <value>How often do you sleep under the mosquito nets?</value>
+          </text>
+          <text id="/data/general/what_LLIN/1:label">
+            <value>Nets protect against mosquitoes</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/11:label">
+            <value>Net smells bad</value>
+          </text>
+          <text id="/data/general/whynotIRS/13:label">
+            <value>Don't know / Not sure</value>
+          </text>
+          <text id="/data/agree/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/whynotIRS/9:label">
+            <value>Use bed nets instead</value>
+          </text>
+          <text id="/data/general/nets/rate/0:label">
+            <value>Better than previous nets</value>
           </text>
           <text id="/data/general/nets/whynotusenet/3:label">
             <value>Not applicable to us</value>
           </text>
+          <text id="/data/general/activity/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/mosquito_type/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/know:label">
+            <value>Has anyone from the NMCP visited your community?</value>
+          </text>
+          <text id="/data/general/what_LLIN/2:label">
+            <value>Sleep under LLIN every nights protects against malaria</value>
+          </text>
+          <text id="/data/general/hear/2:label">
+            <value>Yes, LLIN</value>
+          </text>
+          <text id="/data/general/opinion_IRS:label">
+            <value>What is your opinion about the attitude of the sprayers?</value>
+          </text>
+          <text id="/data/general/nets/anykids:label">
+            <value>Are there kids living in this house?</value>
+          </text>
+          <text id="/data/general/whynotIRS/1:label">
+            <value>I have not been contacted</value>
+          </text>
           <text id="/data/general/nets/other_reason:hint">
             <value>Other reason why you are not using the nets</value>
           </text>
-          <text id="/data/general/opinion_LLIN/0:label">
+          <text id="/data/general/nets/kids/1:label">
+            <value>Yes, some nights</value>
+          </text>
+          <text id="/data/general/whynotIRS/10:label">
+            <value>Don't have time</value>
+          </text>
+          <text id="/data/general/news_IRS/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/opinion_IRS/0:label">
             <value>Poor attitude</value>
           </text>
-          <text id="/data/general/nets/anykids/1:label">
+          <text id="/data/general/other_behaviour_IRS:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/nets/rate/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/receive_IRS/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/rate/1:label">
+            <value>Same as before</value>
+          </text>
+          <text id="/data/general/whynotIRS/8:label">
+            <value>Not applicable to us</value>
+          </text>
+          <text id="/data/agree:label">
+            <value>Do you agree to be interviewed?</value>
+          </text>
+          <text id="/data/general/what_LLIN:label">
+            <value>What messages did you hear about LLIN?</value>
+          </text>
+          <text id="/data/general/general_note:label">
+            <value>Attention</value>
+          </text>
+          <text id="/data/general/nets/whynotkids:label">
+            <value>Why not?</value>
+          </text>
+          <text id="/data/home:label">
+            <value>Is there anyone home?</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/other_activity:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/receive_IRS/1:label">
             <value>Yes</value>
           </text>
-          <text id="/data/general/whynotIRS/11:label">
-            <value>Time is inconvenient</value>
+          <text id="/data/general/activity/2:label">
+            <value>Spraying</value>
           </text>
-          <text id="/data/general/other_behaviour_LLIN:hint">
-            <value>Other opinion on the attitude of the bed net distributors</value>
+          <text id="/data/general/what_LLIN/5:label">
+            <value>Wash when dirty, but no more than 4 times a year</value>
+          </text>
+          <text id="/data/general/whynotIRS/2:label">
+            <value>Causes ill health effects</value>
+          </text>
+          <text id="/data/general/what_LLIN/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/what_IRS/1:label">
+            <value>IRS is safe for humans and domestic animals</value>
+          </text>
+          <text id="/data/home/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/know/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/general/nets/kids/2:label">
+            <value>Yes, every night</value>
+          </text>
+          <text id="/data/general/nets/other_reason:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/general/what_LLIN/3:label">
+            <value>Use nilon or ropes hang the net</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Español">
+          <text id="/data/general/news_IRS/8:label">
+            <value>Charla en grupo</value>
+          </text>
+          <text id="/data/general/what_IRS:label">
+            <value>¿Cuales son los mensajes que escuchó sobre el rociamiento?</value>
+          </text>
+          <text id="/data/general/receive_LLIN:label">
+            <value>¿Ha recibido telas mosquiteras en 2018 del PNLP?</value>
+          </text>
+          <text id="/data/general/nets/number:label">
+            <value>¿Cuantas telas recibió usted?</value>
+          </text>
+          <text id="/data/general/activity:label">
+            <value>¿Que hacían? Díganos la actividad concreta que estaban realizando.</value>
+          </text>
+          <text id="/data/general/news_LLIN:label">
+            <value>¿En qué medio escuchaste sobre las actividades de distribucion de telas?</value>
+          </text>
+          <text id="/data/general/other_activity:hint">
+            <value>Otra actividad que el PNLP estaba haciendo</value>
+          </text>
+          <text id="/data/general/other_info_LLIN:hint">
+            <value>Otro lugar donde escuchaste las noticias</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet:label">
+            <value>¿Por qué no?</value>
+          </text>
+          <text id="/data/general/news_LLIN/3:label">
+            <value>Visita en casa por un voluntario</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/1:label">
+            <value>Telas son muy inconvenientes</value>
+          </text>
+          <text id="/data/general/hear/1:label">
+            <value>Si, Rociamiento</value>
+          </text>
+          <text id="/data/general/news_LLIN/6:label">
+            <value>Actuacion teatral</value>
+          </text>
+          <text id="/data/general/general_note:hint">
+            <value>Vamos a harcele una serie de preguntas sobre telas mousquiteras</value>
+          </text>
+          <text id="/data/general/mosquito_type/2:label">
+            <value>Aedes</value>
+          </text>
+          <text id="/data/general/other_LLIN:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/news_LLIN/5:label">
+            <value>Visita en casa por un miembro del equipo de distribucion de telas mosquiteras</value>
+          </text>
+          <text id="/data/general/nets/kids:label">
+            <value>¿Duermen los niños debajo de las telas que recibiste?</value>
+          </text>
+          <text id="/data/general/hear:label">
+            <value>¿Recibió alguna información acerca del rociamiento intra domiciliario y la distribución de telas mosquiteras?</value>
+          </text>
+          <text id="/data/general/whynotIRS/7:label">
+            <value>No es efectivo</value>
+          </text>
+          <text id="/data/general/news_LLIN/8:label">
+            <value>Charla en grupo</value>
+          </text>
+          <text id="/data/general/whynotIRS/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/news_IRS/4:label">
+            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
+          </text>
+          <text id="/data/general/news_IRS/3:label">
+            <value>Visita en casa por un voluntario</value>
+          </text>
+          <text id="/data/general/other_behaviour_LLIN:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/whynotIRS/11:label">
+            <value>Tiempo es inconveniente</value>
+          </text>
+          <text id="/data/general/news_LLIN/1:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/general/nets/rate/2:label">
+            <value>Peor</value>
+          </text>
+          <text id="/data/general/nets:label">
+            <value>Telas Mosquiteras</value>
+          </text>
+          <text id="/data/general/news_IRS/6:label">
+            <value>Actuacion teatral</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/6:label">
+            <value>Telas no son necesarias, tenemos tela metalica en las ventanas</value>
+          </text>
+          <text id="/data/general/nets/sleep/2:label">
+            <value>Sí, a veces</value>
+          </text>
+          <text id="/data/general/nets/anykids/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/whynotIRS/12:label">
+            <value>Hay niños pequeños en la casa</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/0:label">
+            <value>Malo</value>
+          </text>
+          <text id="/data/general/precise:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/receive_IRS:label">
+            <value>¿Han rociado su casa este año (2018)?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/12:label">
+            <value>Telas esta picante</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/1:label">
+            <value>Bien</value>
           </text>
           <text id="/data/general/mosquito/0:label">
             <value>No</value>
           </text>
-          <text id="/data/general/precise:hint">
-            <value>Other reason your house was not sprayed</value>
+          <text id="/data/general/news_LLIN/7:label">
+            <value>Folleto/afiche/pancarta</value>
           </text>
-          <text id="/data/general/whynotIRS/12:label">
-            <value>There are small children in the house</value>
+          <text id="/data/general/news_LLIN/2:label">
+            <value>Television</value>
+          </text>
+          <text id="/data/general/nets/rate:label">
+            <value>¿Que opina sobre las telas distribuidas de este año (2018) en comparacion a las telas distribuidas anteriormente por el PNLP?</value>
+          </text>
+          <text id="/data/general/whynotIRS:label">
+            <value>¿Por qué tu casa no fue rociada?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/7:label">
+            <value>Telas no son necesarias esta temporada</value>
+          </text>
+          <text id="/data/general/nets/anykids/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/news_LLIN/4:label">
+            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
+          </text>
+          <text id="/data/general/other_LLIN:hint">
+            <value>Otro mensaje de telas que escuchó</value>
+          </text>
+          <text id="/data/general/opinion_IRS/1:label">
+            <value>Bien</value>
+          </text>
+          <text id="/data/general/news_IRS:label">
+            <value>¿En qué medio escuchaste sobre las actividades de rociamiento?</value>
+          </text>
+          <text id="/data/general/nets/sleep/0:label">
+            <value>Ninguna</value>
+          </text>
+          <text id="/data/general/mosquito_type/0:label">
+            <value>Anopheles</value>
+          </text>
+          <text id="/data/general/receive_LLIN/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/pre_other:hint">
+            <value>Otra opinión de las telas distribuidas</value>
+          </text>
+          <text id="/data/general/opinion_LLIN:label">
+            <value>¿Cual es su opinion sobre la attitud de los distribuidores de telas?</value>
+          </text>
+          <text id="/data/general/receive_LLIN/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/whynotIRS/6:label">
+            <value>Daño muebles o paredes</value>
+          </text>
+          <text id="/data/general/precise:hint">
+            <value>Otra razón por la que su casa no fue rociada</value>
+          </text>
+          <text id="/data/general/nets/sleep/1:label">
+            <value>Sí, todas la noches</value>
+          </text>
+          <text id="/data/general/news_LLIN/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/news_IRS/1:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/general/activity/1:label">
+            <value>Distribucion de telas</value>
+          </text>
+          <text id="/data/general/what_LLIN/8:label">
+            <value>Distribucion gratuito de las telas mosquiteras</value>
+          </text>
+          <text id="/data/general/what_IRS/2:label">
+            <value>El rociamento protégé contra el pauldismo</value>
+          </text>
+          <text id="/data/general/what_LLIN/7:label">
+            <value>Si la tela tiene agujeros, coserla con aguja e hilo</value>
+          </text>
+          <text id="/data/general/activity/3:label">
+            <value>Communicacíon</value>
+          </text>
+          <text id="/data/general/mosquito/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/hear/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/news_IRS/9:label">
+            <value>Proveedor de salud/establecimiento sanitario</value>
+          </text>
+          <text id="/data/general/whynotIRS/3:label">
+            <value>Peligroso para animales</value>
+          </text>
+          <text id="/data/agree/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/2:label">
+            <value>Dio a un miembro de la familia/amigo</value>
+          </text>
+          <text id="/data/general/other_behaviour_IRS:hint">
+            <value>Otra opinión sobre el trabajo de los rociadores</value>
+          </text>
+          <text id="/data/general/what_LLIN/6:label">
+            <value>Secar las telas bajo sombra y no exponer a los rayos del sol</value>
+          </text>
+          <text id="/data/general/hear/3:label">
+            <value>Si, telas Mosquiteras y Rociamiento</value>
+          </text>
+          <text id="/data/general/other_info_IRS:hint">
+            <value>Otro lugar donde escuchaste las noticias</value>
           </text>
           <text id="/data/general/whynotIRS/4:label">
-            <value>Disruptive, annoying or disagreeable</value>
+            <value>Negativo, molesto, desagradable</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/5:label">
+            <value>Telas son muy incomodas</value>
+          </text>
+          <text id="/data/general/other_info_IRS:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/opinion_IRS/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/nets/kids/0:label">
+            <value>Ninguna</value>
+          </text>
+          <text id="/data/general/other_IRS:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/10:label">
+            <value>Casa esta rociada</value>
+          </text>
+          <text id="/data/general/news_IRS/5:label">
+            <value>Visita en casa por un miembro del equipo de distribucion de telas mosquiteras</value>
+          </text>
+          <text id="/data/general/what_IRS/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/mosquito:label">
+            <value>¿Conoce usted el tipo de mosquito que transmite el paludismo?</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/9:label">
+            <value>No nos gustan las telas</value>
+          </text>
+          <text id="/data/general/other_behaviour_LLIN:hint">
+            <value>Otra opinión sobre el trabajo de los distribuidores de telas</value>
+          </text>
+          <text id="/data/general/know/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/8:label">
+            <value>No hay mosquitos</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/4:label">
+            <value>Telas no son efectivas</value>
+          </text>
+          <text id="/data/general/news_IRS/7:label">
+            <value>Folleto/afiche/pancarta</value>
+          </text>
+          <text id="/data/general/nets/pre_other:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/agree:hint">
+            <value>Consentimiento: Corta encuesta para verificar si recibieron telas mosquiteras</value>
+          </text>
+          <text id="/data/general:label">
+            <value>General</value>
+          </text>
+          <text id="/data/general/nets/nets_note:label">
+            <value>ahora discutiremos sobre las telas que recibió del PNLP</value>
+          </text>
+          <text id="/data/general/what_LLIN/4:label">
+            <value>Asegurese de meter los bordes de la tela mosquitera bajo el colchon antes de dormir</value>
+          </text>
+          <text id="/data/general/whynotIRS/5:label">
+            <value>Actitud de rociadores</value>
+          </text>
+          <text id="/data/general/news_IRS/2:label">
+            <value>Television</value>
+          </text>
+          <text id="/data/home/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/other_info_LLIN:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/nets/nets_note:hint">
+            <value>Hablaremos de las telas que recibio</value>
+          </text>
+          <text id="/data/general/mosquito_type/1:label">
+            <value>Culex</value>
+          </text>
+          <text id="/data/general/other_IRS:hint">
+            <value>Otro mensaje de rociamiento que escuchó</value>
+          </text>
+          <text id="/data/general/news_LLIN/9:label">
+            <value>Proveedor de salud/establecimiento sanitario</value>
+          </text>
+          <text id="/data/general/mosquito_type:label">
+            <value>¿Qué tipo de mosquito transmite el paludismo?</value>
+          </text>
+          <text id="/data/general/nets/sleep:label">
+            <value>¿Duerme usted bajo la tela todas las noches?</value>
+          </text>
+          <text id="/data/general/what_LLIN/1:label">
+            <value>Las telas mosquiteras son para protegerse de los mosquitos</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/11:label">
+            <value>Telas huele mal</value>
+          </text>
+          <text id="/data/general/whynotIRS/13:label">
+            <value>No sabe / No esta segura</value>
+          </text>
+          <text id="/data/agree/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/whynotIRS/9:label">
+            <value>Usa mosquiteras en lugar</value>
+          </text>
+          <text id="/data/general/nets/rate/0:label">
+            <value>Mejor que las anteriores</value>
+          </text>
+          <text id="/data/general/nets/whynotusenet/3:label">
+            <value>No aplicable para nosotros</value>
+          </text>
+          <text id="/data/general/activity/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/mosquito_type/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/know:label">
+            <value>¿Alguien del PNLP ha llegado a su casa/comunidad recientemente?</value>
+          </text>
+          <text id="/data/general/what_LLIN/2:label">
+            <value>Dormir todas las noches bajo una tela mosquitera que contiente insecticida de larga duracion para protegere del paludismo</value>
+          </text>
+          <text id="/data/general/hear/2:label">
+            <value>Si, Telas Mosquiteras</value>
+          </text>
+          <text id="/data/general/opinion_IRS:label">
+            <value>¿Cual es su opinion sobre la attitud de los rociadores?</value>
+          </text>
+          <text id="/data/general/nets/anykids:label">
+            <value>¿Hay niños menores o igual a 5 anos, que viven en esta casa?</value>
+          </text>
+          <text id="/data/general/whynotIRS/1:label">
+            <value>No he sido contactado/a</value>
+          </text>
+          <text id="/data/general/nets/other_reason:hint">
+            <value>Otra razón por la que no estás usando las telas mosquiteras</value>
+          </text>
+          <text id="/data/general/nets/kids/1:label">
+            <value>Sí, todas la noches</value>
+          </text>
+          <text id="/data/general/whynotIRS/10:label">
+            <value>No tenemos tiempo</value>
+          </text>
+          <text id="/data/general/news_IRS/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/opinion_IRS/0:label">
+            <value>Malo</value>
+          </text>
+          <text id="/data/general/other_behaviour_IRS:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/nets/rate/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/receive_IRS/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/nets/rate/1:label">
+            <value>Igual</value>
+          </text>
+          <text id="/data/general/whynotIRS/8:label">
+            <value>No es aplicable a nosotros</value>
+          </text>
+          <text id="/data/agree:label">
+            <value>¿Aceptas ser entrevistado?</value>
+          </text>
+          <text id="/data/general/what_LLIN:label">
+            <value>¿Cuales son los mensajes que escuchó sobre las telas?</value>
+          </text>
+          <text id="/data/general/general_note:label">
+            <value>Atencion</value>
+          </text>
+          <text id="/data/general/nets/whynotkids:label">
+            <value>¿Por qué no?</value>
+          </text>
+          <text id="/data/home:label">
+            <value>¿Hay alguien en casa?</value>
+          </text>
+          <text id="/data/general/opinion_LLIN/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/other_activity:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/receive_IRS/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/activity/2:label">
+            <value>Rociamento</value>
+          </text>
+          <text id="/data/general/what_LLIN/5:label">
+            <value>Lavar la tela solo cuando esta sucia no mas de 4 veces al año</value>
+          </text>
+          <text id="/data/general/whynotIRS/2:label">
+            <value>Provoca efectos malos de salud</value>
+          </text>
+          <text id="/data/general/what_LLIN/99:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/what_IRS/1:label">
+            <value>El rociamiento es totalmente seguro para los humanos y animales domesticos</value>
+          </text>
+          <text id="/data/home/0:label">
+            <value>No</value>
+          </text>
+          <text id="/data/general/know/1:label">
+            <value>Sí</value>
+          </text>
+          <text id="/data/general/nets/kids/2:label">
+            <value>Sí, a veces</value>
+          </text>
+          <text id="/data/general/nets/other_reason:label">
+            <value>Otro</value>
+          </text>
+          <text id="/data/general/what_LLIN/3:label">
+            <value>La tela puede ser colgada con cuerdas o nilon atados con clavos en la pared, en el techo o en el cielo raso</value>
           </text>
         </translation>
       </itext>
       <instance>
         <data id="bed_net_follow_up" version="201801">
-          <collectionDateTime/>
-          <entityUuid/>
-          <entityExtId/>
-          <fieldWorkerUuid/>
-          <fieldWorkerExtId/>
           <home/>
           <agree/>
           <general>
