@@ -32,9 +32,6 @@
           <text id="/data/general/nets/whynotusenet:label">
             <value>Why not?</value>
           </text>
-          <text id="/data/general/news_LLIN/3:label">
-            <value>Home visit from a volunteer</value>
-          </text>
           <text id="/data/general/nets/whynotusenet/1:label">
             <value>Nets too inconvenient</value>
           </text>
@@ -143,8 +140,8 @@
           <text id="/data/general/nets/anykids/0:label">
             <value>No</value>
           </text>
-          <text id="/data/general/news_LLIN/4:label">
-            <value>Home visit from IRS team member</value>
+          <text id="/data/general/news_LLIN/3:label">
+            <value>Home visit from a volunteer</value>
           </text>
           <text id="/data/general/other_LLIN:hint">
             <value>Other message you heard about LLIN</value>
@@ -215,8 +212,8 @@
           <text id="/data/general/whynotIRS/3:label">
             <value>Dangerous for animals</value>
           </text>
-          <text id="/data/agree/1:label">
-            <value>Yes</value>
+          <text id="/data/general/news_LLIN/4:label">
+            <value>Home visit from IRS team member</value>
           </text>
           <text id="/data/general/nets/whynotusenet/2:label">
             <value>Gave it to family/friends</value>
@@ -224,8 +221,8 @@
           <text id="/data/general/other_behaviour_IRS:hint">
             <value>Other opinion on the attitude of the sprayers</value>
           </text>
-          <text id="/data/general/what_LLIN/6:label">
-            <value>Do not dry nets in direct sun light</value>
+          <text id="/data/general/news_IRS/2:label">
+            <value>Television</value>
           </text>
           <text id="/data/general/hear/3:label">
             <value>Yes, LLIN+IRS</value>
@@ -302,11 +299,8 @@
           <text id="/data/general/whynotIRS/5:label">
             <value>Attitude of sprayers</value>
           </text>
-          <text id="/data/general/news_IRS/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/home/1:label">
-            <value>Yes</value>
+          <text id="/data/general/what_IRS/1:label">
+            <value>IRS is safe for humans and domestic animals</value>
           </text>
           <text id="/data/general/other_info_LLIN:label">
             <value>precise other LLIN</value>
@@ -362,20 +356,23 @@
           <text id="/data/general/what_LLIN/2:label">
             <value>Sleep under LLIN every nights protects against malaria</value>
           </text>
-          <text id="/data/general/hear/2:label">
-            <value>Yes, LLIN</value>
-          </text>
           <text id="/data/general/opinion_IRS:label">
             <value>What is your opinion about the attitude of the sprayers?</value>
           </text>
           <text id="/data/general/nets/anykids:label">
             <value>Are there kids living in this house?</value>
           </text>
+          <text id="/data/general/opinion_IRS/0:label">
+            <value>Poor attitude</value>
+          </text>
           <text id="/data/general/whynotIRS/1:label">
             <value>I have not been contacted</value>
           </text>
           <text id="/data/general/nets/other_reason:hint">
             <value>Other reason why you are not using the nets</value>
+          </text>
+          <text id="/data/general/what_LLIN/6:label">
+            <value>Do not dry nets in direct sun light</value>
           </text>
           <text id="/data/general/nets/kids/1:label">
             <value>Yes, some nights</value>
@@ -386,8 +383,8 @@
           <text id="/data/general/news_IRS/99:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/opinion_IRS/0:label">
-            <value>Poor attitude</value>
+          <text id="/data/agree/1:label">
+            <value>Yes</value>
           </text>
           <text id="/data/general/other_behaviour_IRS:label">
             <value>Other</value>
@@ -416,9 +413,6 @@
           <text id="/data/general/nets/whynotkids:label">
             <value>Why not?</value>
           </text>
-          <text id="/data/home:label">
-            <value>Is there anyone home?</value>
-          </text>
           <text id="/data/general/opinion_LLIN/99:label">
             <value>Other</value>
           </text>
@@ -440,11 +434,8 @@
           <text id="/data/general/what_LLIN/99:label">
             <value>Other</value>
           </text>
-          <text id="/data/general/what_IRS/1:label">
-            <value>IRS is safe for humans and domestic animals</value>
-          </text>
-          <text id="/data/home/0:label">
-            <value>No</value>
+          <text id="/data/general/hear/2:label">
+            <value>Yes, LLIN</value>
           </text>
           <text id="/data/general/know/1:label">
             <value>Yes</value>
@@ -486,9 +477,6 @@
           </text>
           <text id="/data/general/nets/whynotusenet:label">
             <value>¿Por qué no?</value>
-          </text>
-          <text id="/data/general/news_LLIN/3:label">
-            <value>Visita en casa por un voluntario</value>
           </text>
           <text id="/data/general/nets/whynotusenet/1:label">
             <value>Telas son muy inconvenientes</value>
@@ -598,8 +586,8 @@
           <text id="/data/general/nets/anykids/0:label">
             <value>No</value>
           </text>
-          <text id="/data/general/news_LLIN/4:label">
-            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
+          <text id="/data/general/news_LLIN/3:label">
+            <value>Visita en casa por un voluntario</value>
           </text>
           <text id="/data/general/other_LLIN:hint">
             <value>Otro mensaje de telas que escuchó</value>
@@ -670,8 +658,8 @@
           <text id="/data/general/whynotIRS/3:label">
             <value>Peligroso para animales</value>
           </text>
-          <text id="/data/agree/1:label">
-            <value>Sí</value>
+          <text id="/data/general/news_LLIN/4:label">
+            <value>Visita en casa por un miembro del equipo de Rociamiento</value>
           </text>
           <text id="/data/general/nets/whynotusenet/2:label">
             <value>Dio a un miembro de la familia/amigo</value>
@@ -679,8 +667,8 @@
           <text id="/data/general/other_behaviour_IRS:hint">
             <value>Otra opinión sobre el trabajo de los rociadores</value>
           </text>
-          <text id="/data/general/what_LLIN/6:label">
-            <value>Secar las telas bajo sombra y no exponer a los rayos del sol</value>
+          <text id="/data/general/news_IRS/2:label">
+            <value>Television</value>
           </text>
           <text id="/data/general/hear/3:label">
             <value>Si, telas Mosquiteras y Rociamiento</value>
@@ -757,11 +745,8 @@
           <text id="/data/general/whynotIRS/5:label">
             <value>Actitud de rociadores</value>
           </text>
-          <text id="/data/general/news_IRS/2:label">
-            <value>Television</value>
-          </text>
-          <text id="/data/home/1:label">
-            <value>Sí</value>
+          <text id="/data/general/what_IRS/1:label">
+            <value>El rociamiento es totalmente seguro para los humanos y animales domesticos</value>
           </text>
           <text id="/data/general/other_info_LLIN:label">
             <value>Otro</value>
@@ -817,20 +802,23 @@
           <text id="/data/general/what_LLIN/2:label">
             <value>Dormir todas las noches bajo una tela mosquitera que contiente insecticida de larga duracion para protegere del paludismo</value>
           </text>
-          <text id="/data/general/hear/2:label">
-            <value>Si, Telas Mosquiteras</value>
-          </text>
           <text id="/data/general/opinion_IRS:label">
             <value>¿Cual es su opinion sobre la attitud de los rociadores?</value>
           </text>
           <text id="/data/general/nets/anykids:label">
             <value>¿Hay niños menores o igual a 5 anos, que viven en esta casa?</value>
           </text>
+          <text id="/data/general/opinion_IRS/0:label">
+            <value>Malo</value>
+          </text>
           <text id="/data/general/whynotIRS/1:label">
             <value>No he sido contactado/a</value>
           </text>
           <text id="/data/general/nets/other_reason:hint">
             <value>Otra razón por la que no estás usando las telas mosquiteras</value>
+          </text>
+          <text id="/data/general/what_LLIN/6:label">
+            <value>Secar las telas bajo sombra y no exponer a los rayos del sol</value>
           </text>
           <text id="/data/general/nets/kids/1:label">
             <value>Sí, todas la noches</value>
@@ -841,8 +829,8 @@
           <text id="/data/general/news_IRS/99:label">
             <value>Otro</value>
           </text>
-          <text id="/data/general/opinion_IRS/0:label">
-            <value>Malo</value>
+          <text id="/data/agree/1:label">
+            <value>Sí</value>
           </text>
           <text id="/data/general/other_behaviour_IRS:label">
             <value>Otro</value>
@@ -871,9 +859,6 @@
           <text id="/data/general/nets/whynotkids:label">
             <value>¿Por qué no?</value>
           </text>
-          <text id="/data/home:label">
-            <value>¿Hay alguien en casa?</value>
-          </text>
           <text id="/data/general/opinion_LLIN/99:label">
             <value>Otro</value>
           </text>
@@ -895,11 +880,8 @@
           <text id="/data/general/what_LLIN/99:label">
             <value>Otro</value>
           </text>
-          <text id="/data/general/what_IRS/1:label">
-            <value>El rociamiento es totalmente seguro para los humanos y animales domesticos</value>
-          </text>
-          <text id="/data/home/0:label">
-            <value>No</value>
+          <text id="/data/general/hear/2:label">
+            <value>Si, Telas Mosquiteras</value>
           </text>
           <text id="/data/general/know/1:label">
             <value>Sí</value>
@@ -917,7 +899,6 @@
       </itext>
       <instance>
         <data id="bed_net_follow_up" version="201801">
-          <home/>
           <agree/>
           <general>
             <general_note/>
@@ -961,8 +942,7 @@
           </meta>
         </data>
       </instance>
-      <bind nodeset="/data/home" required="true()" type="select1"/>
-      <bind nodeset="/data/agree" relevant=" /data/home =1" required="true()" type="select1"/>
+      <bind nodeset="/data/agree" required="true()" type="select1"/>
       <bind nodeset="/data/general" relevant=" /data/agree =1"/>
       <bind nodeset="/data/general/general_note" readonly="true()" type="string"/>
       <bind nodeset="/data/general/know" required="true()" type="select1"/>
@@ -1002,17 +982,6 @@
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/data/home">
-      <label ref="jr:itext('/data/home:label')"/>
-      <item>
-        <label ref="jr:itext('/data/home/0:label')"/>
-        <value>0</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/home/1:label')"/>
-        <value>1</value>
-      </item>
-    </select1>
     <select1 ref="/data/agree">
       <label ref="jr:itext('/data/agree:label')"/>
       <hint ref="jr:itext('/data/agree:hint')"/>
