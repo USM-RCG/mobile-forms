@@ -899,6 +899,11 @@
       </itext>
       <instance>
         <data id="bed_net_follow_up" version="201801">
+          <collectionDateTime/>
+          <entityUuid/>
+          <entityExtId/>
+          <fieldWorkerUuid/>
+          <fieldWorkerExtId/>
           <agree/>
           <general>
             <general_note/>
