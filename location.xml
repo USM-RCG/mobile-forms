@@ -289,7 +289,7 @@
       <bind nodeset="/data/collectionDateTime" type="datetime" readonly="true()"/>
       <bind nodeset="/data/hierarchyExtId" type="string" required="true()" readonly="true()"/>
       <bind nodeset="/data/mapAreaName" type="string" required="true()" readonly="true()" constraint="regex(.,'M[0-9]{4}')" jr:constraintMsg="jr:itext('mapAreaName:invalid_format')"/>
-      <bind nodeset="/data/sectorName" type="string" required="true()" constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')"/>
+      <bind nodeset="/data/sectorName" type="string" required="true()" readonly="true()" constraint="regex(.,'S[0-9]{3}')" jr:constraintMsg="jr:itext('sectorName:invalid_format')"/>
       <bind nodeset="/data/locationBuildingNumber" type="string" required="true()" constraint="regex(.,'[0-9]{3}')" jr:constraintMsg="jr:itext('locationBuildingNumber:invalid_format')"/>
       <bind nodeset="/data/locationFloorNumber" type="string" required="true()" constraint="regex(.,'[0-9]{2}')" jr:constraintMsg="jr:itext('locationFloorNumber:invalid_format')"/>
       <bind nodeset="/data/locationExtId" type="string" required="true()" readonly="true()" calculate="concat(/data/mapAreaName,/data/sectorName,'E',/data/locationBuildingNumber,'P',/data/locationFloorNumber)" constraint="regex(.,'M[0-9]{4}S[0-9]{3}E[0-9]{3}P[0-9]{2}')" jr:constraintMsg="jr:itext('locationId:invalid_format')"/>
